@@ -5,44 +5,44 @@ Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: abbrv.bst
 Reallocating 'name_of_file' (item size: 1) to 10 items.
 Database file #1: perimeter.bib
-You've used 2 entries,
+You've used 3 entries,
             2118 wiz_defined-function locations,
-            509 strings with 4093 characters,
-and the built_in function-call counts, 755 in all, are:
-= -- 72
-> -- 35
+            516 strings with 4242 characters,
+and the built_in function-call counts, 1142 in all, are:
+= -- 110
+> -- 53
 < -- 1
-+ -- 14
-- -- 12
-* -- 46
-:= -- 126
-add.period$ -- 7
-call.type$ -- 2
-change.case$ -- 11
++ -- 22
+- -- 18
+* -- 77
+:= -- 190
+add.period$ -- 10
+call.type$ -- 3
+change.case$ -- 17
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 33
-empty$ -- 61
-format.name$ -- 12
-if$ -- 163
+cite$ -- 3
+duplicate$ -- 44
+empty$ -- 91
+format.name$ -- 18
+if$ -- 243
 int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 3
-newline$ -- 13
-num.names$ -- 4
-pop$ -- 19
+int.to.str$ -- 3
+missing$ -- 4
+newline$ -- 18
+num.names$ -- 6
+pop$ -- 23
 preamble$ -- 1
-purify$ -- 10
+purify$ -- 15
 quote$ -- 0
-skip$ -- 21
+skip$ -- 28
 stack$ -- 0
-substring$ -- 34
-swap$ -- 10
+substring$ -- 73
+swap$ -- 11
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 6
+type$ -- 10
 warning$ -- 0
-while$ -- 7
-width$ -- 3
-write$ -- 24
+while$ -- 10
+width$ -- 4
+write$ -- 35

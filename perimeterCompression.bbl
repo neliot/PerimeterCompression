@@ -6,6 +6,11 @@ N.~Eliot.
   Robotic Systems}.
 \newblock University of Northumbria at Newcastle (United Kingdom), 2017.
 
+\bibitem{eliot2018metric}
+N.~{Eliot}, D.~{Kendall}, and M.~{Brockway}.
+\newblock A new metric for the analysis of swarms using potential fields.
+\newblock {\em IEEE Access}, 6:63258--63267, 2018.
+
 \bibitem{eliot2019void}
 N.~Eliot, D.~Kendall, A.~Moon, M.~Brockway, and M.~Amos.
 \newblock Void reduction in self-healing swarms.

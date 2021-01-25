@@ -60,6 +60,16 @@ In the Original work by Eliot et. al. the resultant vector of an agent was calcu
 	v(b) = k_cv_c(b,k_{cpc}) + k_rv_r(b,k_{rpc}) + k_dv_d(b) + k_ov_o(b)
 \end{equation}
 
+the effects of the addition of these additional weighting factors can be seen in Figure~\ref{fig:compressioneffect1}. The metric used in producing the graph is based upon the inter-agent magnitudes~\cite{eliot2018metric}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1.0\linewidth]{figures/CompressionEffect1}
+	\caption[Compression Effect]{Compression Effect based on Magnitude change}
+	\label{fig:compressioneffect1}
+\end{figure}
+
+
 \section{Repulsion}\label{repulsion}
 The repulsion component of an agent's movement is calculated from its interaction with its neighbours $nbr(b)$ that are within the agent's ($b$) repulsion field ($R_b$) (Eq.~\ref{eq:Repulsion1}) or from any agent in the swarm ($S$) that are within the agent's ($b$) repulsion field ($R_b$) (Eq.~\ref{eq:Repulsion2}). The resultant set will be the same.\\
 
