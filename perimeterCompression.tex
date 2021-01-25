@@ -43,7 +43,7 @@ Perimeter compression is a technique that creates a ``pull'' effect between peri
 \paragraph{}
 The aim of the algorithm is to reduce the spacing between perimeter-based agents by reducing the repulsion field (Figure. \ref{fig:stableswarm}) and increasing the cohesion affect on perimeter agents. $S_b$ is the sensor field. $O_b$ is the obstacle field. $C_b$ is the cohesion field. $R_b$ is the repulsion field. The implementation involves introducing two controlling factors; $k_{cpc}$ (Cohesion Perimeter Compression) which increases the cohesion vector ($C_b\rightarrow k_{cpc}C_b$) and $k_{rpc}$ (Repulsion Perimeter Compression) which reduces the size of the repulsion field ($R_b\rightarrow k_{cpc}R_b$) on the inter-perimeter agents.
 
-\begin{figure}
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.5\linewidth]{figures/stableswarm}
 	\caption[Agent Fields]{Agent Fields}
