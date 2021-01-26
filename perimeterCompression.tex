@@ -93,7 +93,7 @@ R(b) = \{b' \in nbr(b)~:~\magn{bb'} <= R_b\}
 
 To reduce the repulsion effect, the control factor ($k_{rpc}$) is applied to an agent's repulsion field if both itself and it's neighbour are perimeter agents. Where $per()$ returns an agent's perimeter status. An agent is identified as a perimeter agent using the technique shown by Eliot et.al. in \cite{eliot2019void}
 
-Therefore if the condition of both agents being a perimeter is met ($per(b)\wedge per(b')$), where $per()$ returns $true$ if an agent is on the perimeter and or $false$ if it is not, and $b'$ is within repulsion field distance multiplied by the compression factor, or both agents are not both perimeter agents ($\neg(per(b)\wedge per(b'))$) and $b'$ is within the `normal' repulsion field ($R_b$) then an agent is part of the repulsion set (Eq. \ref{eq:Repulsion3} or \ref{eq:Repulsion4})
+Therefore if the condition of both agents being a perimeter is met ($per(b)\wedge per(b')$), where $per()$ returns $true$ if an agent is on the perimeter and or $false$ if it is not, and $b'$ is within repulsion field distance multiplied by the compression factor, or both agents are not both perimeter agents ($\neg(per(b)\wedge per(b'))$) and $b'$ is within the `normal' repulsion field ($R_b$) then an agent is part of the repulsion set (Eq. \ref{eq:Repulsion3} or \ref{eq:Repulsion4}). Equation~\ref{eq:Repulsion4} being the least expensive.
 
 \begin{flalign}\label{eq:Repulsion3}
 \begin{split}
@@ -115,7 +115,7 @@ R(b) = & \{b' \in nbr(b)~:\\
 \end{split}
 \end{flalign}
 
-The effect of either is that perimeter-based agents will be allowed to be closer together before a repulsion vector is generated. 
+The effect of Equations \ref{eq:Repulsion3} and \ref{eq:Repulsion4} is that the perimeter-based agents will be closer together before a repulsion vector is generated. 
 
 \important{The repulsion vector that is generated is based upon the $R_b$, the full repulsion field, and not the reduced field. This is to reduce potential agent collisions.}
 
@@ -148,17 +148,18 @@ C(b) \equiv nbr(b)
 \end{equation}
 
 \subsection{Compression cohesion}
-The compression effect on the cohesion of the perimeter agents is that any perimeter-perimeter relationships should be re-enforced using the cohesion compression quotient ($k_{cpc}$). This is achieved by splitting the cohesion agents into two subsets. One subset being the perimeter agents (Eq.\ref{eq:cohesion3}), the other being internal agents (Eq.\ref{eq:cohesion4}).
+The compression effect on the cohesion of the perimeter agents is that any perimeter-perimeter relationships should be re-enforced using the cohesion compression quotient ($k_{cpc}$). This is achieved by identifying the relationship within the cohesion calculation.
 
 \begin{equation}\label{eq:cohesion3}
-C_{np}(b) = \{b' \in C(b)~:~\neg per(b')\}
+v_c(b) =
+\frac{-1}{\card{\mathcal C_b}}\left({\mathlarger{\sum_{b' \in
+			\mathcal C_b}}{b'}}\right)
 \end{equation}
-
-\begin{equation}\label{eq:cohesion4}
-C_p(b) = \{b' \in C(b)~:~per(b')\}
-\end{equation}
-
-
+=====================================\\
+PROBLEM\\
+=====================================\\
+I'm having a problem with my notation (more than usual here) I cannot work out how to specify that if the relationship between $b$ and $b'$ is perimeter to perimeter ($per(b)\wedge per(b')$) I need to multiple the resultant vector by $k_{cpc}$ to increase the cohesion between those two agents?\\
+=====================================\\
 
 \section{Conclusions}\label{conclusions}
 From the initial simulations it is possible to show that the technique is able to successfully remove voids and surround an obstacle as shown in the video \href{https://youtu.be/3eY1vvq0JWo}{https://youtu.be/3eY1vvq0JWo}.

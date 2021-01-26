@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.14)  26 JAN 2021 10:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.14)  26 JAN 2021 11:03
 entering extended mode
 **./perimeterCompression.tex
 (perimeterCompression.tex
@@ -923,16 +923,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
-[2 <./figures/CompressionEffect1.png>] [3] (perimeterCompression.bbl) [4]
-(perimeterCompression.aux)
+[2 <./figures/CompressionEffect1.png>] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 157--163
+
+ []
+
+(perimeterCompression.bbl) [4] (perimeterCompression.aux)
 Package rerunfilecheck Info: File `perimeterCompression.out' has not changed.
 (rerunfilecheck)             Checksum: E90B7E0EC505664312F7B1C642490AD0;382.
  ) 
 Here is how much of TeX's memory you used:
- 23206 strings out of 479584
- 482010 string characters out of 2861983
- 808887 words of memory out of 3000000
- 39937 multiletter control sequences out of 15000+200000
+ 23204 strings out of 479584
+ 481983 string characters out of 2861983
+ 808839 words of memory out of 3000000
+ 39936 multiletter control sequences out of 15000+200000
  411517 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,15n,108p,701b,873s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -953,9 +957,9 @@ Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/neil/App
 Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Use
 rs/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12
 .pfb>
-Output written on perimeterCompression.pdf (4 pages, 228604 bytes).
+Output written on perimeterCompression.pdf (4 pages, 229862 bytes).
 PDF statistics:
- 209 PDF objects out of 1000 (max. 8388607)
- 32 named destinations out of 1000 (max. 500000)
+ 213 PDF objects out of 1000 (max. 8388607)
+ 31 named destinations out of 1000 (max. 500000)
  223 words of extra memory for PDF output out of 10000 (max. 10000000)
 
