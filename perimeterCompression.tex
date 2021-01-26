@@ -8,9 +8,10 @@
 \date{\today}
 
 \documentclass[12pt,a4paper]{article}
-\usepackage[margin=0.5in]{geometry}
+\usepackage[margin=0.65in]{geometry}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{relsize}
 \usepackage{amsmath}
   {
 %	\theoremstyle{plain}
@@ -29,6 +30,7 @@
 
 \newcommand{\important}[1]{\begin{importantBox} \textbf{Important:} #1 \end{importantBox}}
 \newcommand{\magn}[1]{\Vert{#1}\Vert}
+\newcommand{\card}[1]{\vert{#1}\vert}
 
 
 \begin{document}
@@ -78,7 +80,7 @@ The repulsion component of an agent's movement is calculated from its interactio
 R(b) = \{b' \in S~:~\magn{bb'} <= R_b\}
 \end{equation}
 
-Given that the repulsion field is within the cohesion field (neighbours) then the repulsion set can also be identified as a subset of those neighbours where $nbr(b)$ is the set of all of the neighbours of $b$ \cite{eliot2017methods}:
+Given that the repulsion field is within the cohesion field (neighbours) then the repulsion set can also be identified as a subset of those neighbours where $nbr(b)$ (Eq.~\ref{eq:cohesion1}) is the set of all of the neighbours of $b$ \cite{eliot2017methods}:
 
 \begin{equation}\label{eq:Repulsion2}
 R(b) = \{b' \in nbr(b)~:~\magn{bb'} <= R_b\}
@@ -104,8 +106,6 @@ R(b) = & \{b' \in S~:\\
 \end{split}
 \end{flalign}
 
-or
-
 \begin{flalign}\label{eq:Repulsion4}
 \begin{split}
 R(b) = & \{b' \in nbr(b)~:\\
@@ -120,13 +120,36 @@ The effect of either is that perimeter-based agents will be allowed to be closer
 
 \important{The repulsion vector that is generated is based upon the $R_b$, the full repulsion field, and not the reduced field. This is to reduce potential agent collisions.}
 
+The final calculation for the repulsion having generated the set $R(b)$ is shown in Equation~\ref{eq:Repulsion5} .
+
+\begin{equation}\label{eq:Repulsion5}
+v_r(b) = 
+\frac{1}{\card{\mathcal R_b}}
+\left(
+\mathlarger{\mathlarger{\sum_{b' \in \mathcal R_b}}}
+{\left( 1-\frac{\magn{b'}}{R_b} \right)}
+b'
+\right)
+\end{equation}
+
 \section{Cohesion}\label{cohesion}
 
 \begin{assumption}
 	$k_{cpc} >= 1$
 \end{assumption}
 
-To be completed.
+The cohesion component of an agent is calculated in a similar way to the repulsion in that it is dependent upon the proximity of neighbours $nbr(b)$ (Eq. \ref{eq:cohesion1}). The determining factor for an agent being affected is determined using the cohesion field ($C_b$). The cohesion set $nbr(b)$ is equivalent to $C(b)$ (Eq.~\ref{eq:cohesion2}).
+
+\begin{equation}\label{eq:cohesion1}
+nbr(b) = \{b' \in S~:~\magn{bb'} <= C_b\}
+\end{equation}
+
+\begin{equation}\label{eq:cohesion2}
+C(b) \equiv nbr(b)
+\end{equation}
+
+\subsection{Compression cohesion}
+The compression effect on the cohesion of the perimeter agents is that any perimeter-perimeter relationships should be re-enforced using the cohesion compression quotient ($k_{cpc}$).
 
 \section{Conclusions}\label{conclusions}
 From the initial simulations it is possible to show that the technique is able to successfully remove voids and surround an obstacle as shown in the video \href{https://youtu.be/3eY1vvq0JWo}{https://youtu.be/3eY1vvq0JWo}.
