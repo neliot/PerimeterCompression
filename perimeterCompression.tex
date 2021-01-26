@@ -91,16 +91,16 @@ n_r(b) = \{b' \in n_c(b)~:~\magn{bb'} <= R_b\}
 
 \subsection{Compression repulsion}
 
-To reduce the repulsion effect, the control factor ($k_{rpc}$) is applied to an agent's repulsion field if both itself and it's neighbour are perimeter agents. Where $per()$ returns an agent's perimeter status. An agent is identified as a perimeter agent using the technique shown by Eliot et.al. in \cite{eliot2019void}
+To reduce the repulsion effect, the control factor ($k_{rpc}$) is applied to an agent's repulsion field if both itself and it's neighbour are perimeter agents. Where $\mathsf{per}()$ returns an agent's perimeter status. An agent is identified as a perimeter agent using the technique shown by Eliot et.al. in \cite{eliot2019void}
 
-Therefore if the condition of both agents being a perimeter is met ($per(b)\wedge per(b')$), where $per()$ returns $true$ if an agent is on the perimeter and or $false$ if it is not, and $b'$ is within repulsion field distance multiplied by the compression factor, or both agents are not both perimeter agents ($\neg(per(b)\wedge per(b'))$) and $b'$ is within the `normal' repulsion field ($R_b$) then an agent is part of the repulsion set (Eq. \ref{eq:Repulsion3} or \ref{eq:Repulsion4}). Equation~\ref{eq:Repulsion4} being the least expensive.
+Therefore if the condition of both agents being a perimeter is met ($\mathsf{per}(b)\wedge \mathsf{per}(b')$), where $\mathsf{per}()$ returns $\mathsf{true}$ if an agent is on the perimeter and or $\mathsf{false}$ if it is not, and $b'$ is within repulsion field distance multiplied by the compression factor, or both agents are not both perimeter agents ($\neg(\mathsf{per}(b)\wedge \mathsf{per}(b'))$) and $b'$ is within the `normal' repulsion field ($R_b$) then an agent is part of the repulsion set (Eq. \ref{eq:Repulsion3} or \ref{eq:Repulsion4}). Equation~\ref{eq:Repulsion4} being the least expensive.
 
 \begin{flalign}\label{eq:Repulsion3}
 \begin{split}
 n_r(b) = & \{b' \in S~:\\
-&((b' \neq b) \land per(b)\wedge per(b')\wedge\magn{bb'} <= k_{rpc}R_b) \\
+&((b' \neq b) \land \mathsf{per}(b)\wedge \mathsf{per}(b')\wedge\magn{bb'} <= k_{rpc}R_b) \\
 &\vee\\ 
-&((b' \neq b \land)\neg(per(b)\wedge per(b'))\wedge\magn{bb'} <= R_b)\\
+&((b' \neq b )\land \neg(\mathsf{per}(b)\wedge \mathsf{per}(b'))\wedge\magn{bb'} <= R_b)\\
 &\}
 \end{split}
 \end{flalign}
@@ -108,18 +108,18 @@ n_r(b) = & \{b' \in S~:\\
 \begin{flalign}\label{eq:Repulsion4}
 \begin{split}
 n_r(b) = & \{b' \in n_r(b)~:\\
-&(per(b)\wedge per(b')\wedge\magn{bb'} <= k_{rpc}R_b) \\
+&(\mathsf{per}(b)\wedge \mathsf{per}(b')\wedge\magn{bb'} <= k_{rpc}R_b) \\
 &\vee\\ 
-&(\neg(per(b)\wedge per(b'))\wedge\magn{bb'} <= R_b)\\
+&(\neg(\mathsf{per}(b)\wedge \mathsf{per}(b'))\wedge\magn{bb'} <= R_b)\\
 &\}
 \end{split}
 \end{flalign}
 
 The effect of Equations \ref{eq:Repulsion3} and \ref{eq:Repulsion4} is that the perimeter-based agents will be closer together before a repulsion vector is generated. 
 
-\important{The repulsion vector that is generated is based upon the $R_b$, the full repulsion field, and not the reduced field. This is to reduce potential agent collisions.}
+\important{The repulsion vector that is generated is based upon $R_b$, the full repulsion field, and not the reduced field. This is to reduce potential agent collisions.}
 
-The final calculation for the repulsion having generated the set $R(b)$ is shown in Equation~\ref{eq:Repulsion5}.
+The final calculation for the repulsion having generated the set $n_r(b)$ is shown in Equation~\ref{eq:Repulsion5}.
 
 \begin{equation}\label{eq:Repulsion5}
 v_r(b) = \frac{1}{\lvert n_r(b)\rvert} \sum_{b' \in n_r(b)}\left(\mathsf{ekr}(b, b') \, \left(\lVert\vec{b b'}\rVert - \mathsf{erf}(b, b') \, \right)\widehat{b b'}\right)
@@ -143,32 +143,26 @@ What do you think?\\
 
 \section{Cohesion}\label{cohesion}
 
-The cohesion component of an agent is calculated in a similar way to the repulsion in that it is dependent upon the proximity of neighbours $nbr(b)$ (Eq. \ref{eq:cohesion1}). The determining factor for an agent being affected is determined using the cohesion field ($C_b$). The cohesion set $nbr(b)$ is equivalent to $C(b)$ (Eq.~\ref{eq:cohesion2}).
+The cohesion component of an agent is calculated in a similar way to the repulsion in that it is dependent upon the proximity of neighbours $n_c(b)$ (Eq. \ref{eq:cohesion1}). The determining factor for an agent being affected is determined using the cohesion field ($C_b$).
 
 \begin{equation}\label{eq:cohesion1}
-nbr(b) = \{b' \in S~:~b' \neq b \land\magn{bb'} <= C_b\}
-\end{equation}
-
-\begin{equation}\label{eq:cohesion2}
-C(b) \equiv nbr(b)
+n_c(b) = \{b' \in S~:~b' \neq b \land\magn{bb'} <= C_b\}
 \end{equation}
 
 \subsection{Compression cohesion}
 The compression effect on the cohesion of the perimeter agents is that any perimeter-perimeter relationships should be re-enforced using the cohesion compression quotient ($k_{cpc}$). This is achieved by identifying the relationship within the cohesion calculation.
 
-%\begin{equation}\label{eq:cohesion3}
-%v_c(b) =
-%\frac{-1}{\card{\mathcal C_b}}\left({\mathlarger{\sum_{b' \in
-%			\mathcal C_b}}{b'}}\right)
-%\end{equation}
+\begin{equation}\label{eq:cohesion2}
+v_c(b) = \frac{1}{\lvert n_c(b)\rvert} \sum_{b' \in n_c(b)}\mathsf{ekc}(b, b')\, \vec{b b'}
+\end{equation}
 
 \begin{equation}\label{eq:cohesion3}
-v_r(b) = \frac{1}{\lvert n_r(b)\rvert} \sum_{b' \in n_r(b)}\left(\left(\frac{\lVert\vec{b b'}\rVert}{R_b} - 1\right)\vec{b b'}\right)
+\mathsf{ekc}(b, b') = \mathsf{if} \; \mathsf{per}(b) \; \mathsf{and} \; \mathsf{per}(b') \; \mathsf{then} \; k_{cpc}k_c \; \mathsf{else} \; k_c
 \end{equation}
 =====================================\\
 PROBLEM (WORKING ON IT NOW)\\
 =====================================\\
-I'm having a problem with my notation (more than usual here) I cannot work out how to specify that if the relationship between $b$ and $b'$ is perimeter to perimeter ($per(b)\wedge per(b')$) I need to multiple the resultant vector by $k_{cpc}$ to increase the cohesion between those two agents?\\ 
+I'm having a problem with my notation (more than usual here) I cannot work out how to specify that if the relationship between $b$ and $b'$ is perimeter to perimeter ($\mathsf{per}(b)\wedge \mathsf{per}(b')$) I need to multiple the resultant vector by $k_{cpc}$ to increase the cohesion between those two agents?\\ 
 =====================================\\
 
 \section{Conclusions}\label{conclusions}
