@@ -10,6 +10,7 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage[margin=0.65in]{geometry}
 \usepackage{graphicx}
+\usepackage{float}
 \usepackage{hyperref}
 \usepackage{relsize}
 \usepackage{amsmath}
@@ -43,8 +44,13 @@ Perimeter Compression is a technique where by a void reducing effect can be adde
 Perimeter compression is a technique that creates a ``pull'' effect between perimeter agents. It is dependant upon perimeter agent identification as discussed by Eliot et. al. in the Alife Paper \cite{eliot2019void}.
 \paragraph{}
 The aim of the algorithm is to reduce the spacing between perimeter-based agents by reducing the repulsion field (Figure. \ref{fig:stableswarm}) and increasing the cohesion affect on perimeter agents. $S_b$ is the sensor field. $O_b$ is the obstacle field. $C_b$ is the cohesion field. $R_b$ is the repulsion field. The implementation involves introducing two controlling factors; $k_{cpc}$ (Cohesion Perimeter Compression) which increases the cohesion vector ($C_b\rightarrow k_{cpc}C_b$) and $k_{rpc}$ (Repulsion Perimeter Compression) which reduces the size of the repulsion field ($R_b\rightarrow k_{cpc}R_b$) on the inter-perimeter agents.
-
-\begin{figure}[h]
+\begin{assumption}
+	$k_{cpc} >= 1$
+\end{assumption}
+\begin{assumption}
+	$k_{rpc} <= 1$
+\end{assumption}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\linewidth]{figures/stableswarm}
 	\caption[Agent Fields]{Agent Fields}
@@ -52,44 +58,38 @@ The aim of the algorithm is to reduce the spacing between perimeter-based agents
 \end{figure}
 
 \section{Resultant Vector Calculation}
-In the Original work by Eliot et. al. the resultant vector of an agent was calculated using Equation~\ref{eq:resultantVector}. Where $k_c,k_r,k_d,k_o$ are weighting factors for the summed vectors associated with each interaction. The new algorithm requires each individual agent to have a variation to the vector generated inside each calculation based on the perimeter status of the agent and each neighbour. The equation therefore needs to have an additional weighting factor applied to specific agents within the cohesion and repulsion vector calculations ($k_{cpc}$,$k_{rpc}$) as shown is Equation~\ref{eq:newResultantVector}).
+In the Original work by Eliot et. al. the resultant vector of an agent was calculated using Equation~\ref{eq:resultantVector}. Where $k_c,k_r,k_d,k_o$ are weighting factors for the summed vectors associated with each interaction. The new algorithm requires each individual agent to have a variation to the vector generated inside each calculation based on the perimeter status of the agent and each neighbour. The equation has been simplified (Eq.~\ref{eq:newResultantVector}) and the weighting factors have been transposed into the calculations along with additional weighting factors that are applied to specific agents within the cohesion and repulsion vector calculations ($k_{cpc}$ - cohesion compression, $k_{rpc}$ - repulsion compression).
 
 \begin{equation}\label{eq:resultantVector}
 	v(b) = k_cv_c(b) + k_rv_r(b) + k_dv_d(b) + k_ov_o(b)
 \end{equation}
-	
 \begin{equation}\label{eq:newResultantVector}
-	v(b) = k_cv_c(b,k_{cpc}) + k_rv_r(b,k_{rpc}) + k_dv_d(b) + k_ov_o(b)
+	v(b) = v_c(b) + v_r(b) + v_d(b) + v_o(b)
 \end{equation}
 
-the effects of the addition of these additional weighting factors can be seen in Figure~\ref{fig:compressioneffect1}. The metric used in producing the graph is based upon the inter-agent magnitudes~\cite{eliot2018metric}.
+The effect of these weighting factors can be seen in Figure~\ref{fig:compressioneffect1}. The metric used in producing the graph is based upon the inter-agent magnitudes~\cite{eliot2018metric}.
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.75\linewidth]{figures/CompressionEffect1}
 	\caption[Compression Effect]{Compression Effect based on Magnitude change}
 	\label{fig:compressioneffect1}
 \end{figure}
 
-
 \section{Repulsion}\label{repulsion}
-The repulsion component of an agent's movement is calculated from its interaction with its neighbours $nbr(b)$ that are within the agent's ($b$) repulsion field ($R_b$) (Eq.~\ref{eq:Repulsion1}) or from any agent in the swarm ($S$) that are within the agent's ($b$) repulsion field ($R_b$) (Eq.~\ref{eq:Repulsion2}). The resultant set will be the same.\\
+The repulsion component of an agent's movement is calculated from its interaction with its neighbours $n_r(b)$ that are within the agent's ($b$) repulsion field ($R_b$) (Eq.~\ref{eq:Repulsion1}) or from any agent in the swarm ($S$) that are within the agent's ($b$) repulsion field ($R_b$) (Eq.~\ref{eq:Repulsion2}). The resultant set will be the same.\\
 
 \begin{equation}\label{eq:Repulsion1}
-R(b) = \{b' \in S~:~\magn{bb'} <= R_b\}
+n_r(b) = \{b' \in S~:~b' \neq b \land\magn{bb'} <= R_b\}
 \end{equation}
 
-Given that the repulsion field is within the cohesion field (neighbours) then the repulsion set can also be identified as a subset of those neighbours where $nbr(b)$ (Eq.~\ref{eq:cohesion1}) is the set of all of the neighbours of $b$ \cite{eliot2017methods}:
+Given that the repulsion field is within the cohesion field (neighbours) then the repulsion set can also be identified as a subset of those neighbours where $n_r(b)$ (Eq.~\ref{eq:cohesion1}) is the set of all of the neighbours of $b$ \cite{eliot2017methods}:
 
 \begin{equation}\label{eq:Repulsion2}
-R(b) = \{b' \in nbr(b)~:~\magn{bb'} <= R_b\}
+n_r(b) = \{b' \in n_c(b)~:~\magn{bb'} <= R_b\}
 \end{equation}
 
 \subsection{Compression repulsion}
-
-\begin{assumption}
-	$k_{rpc} <= 1$
-\end{assumption}
 
 To reduce the repulsion effect, the control factor ($k_{rpc}$) is applied to an agent's repulsion field if both itself and it's neighbour are perimeter agents. Where $per()$ returns an agent's perimeter status. An agent is identified as a perimeter agent using the technique shown by Eliot et.al. in \cite{eliot2019void}
 
@@ -97,17 +97,17 @@ Therefore if the condition of both agents being a perimeter is met ($per(b)\wedg
 
 \begin{flalign}\label{eq:Repulsion3}
 \begin{split}
-R(b) = & \{b' \in S~:\\
-&(per(b)\wedge per(b')\wedge\magn{bb'} <= k_{rpc}R_b) \\
+n_r(b) = & \{b' \in S~:\\
+&((b' \neq b) \land per(b)\wedge per(b')\wedge\magn{bb'} <= k_{rpc}R_b) \\
 &\vee\\ 
-&(\neg(per(b)\wedge per(b'))\wedge\magn{bb'} <= R_b)\\
+&((b' \neq b \land)\neg(per(b)\wedge per(b'))\wedge\magn{bb'} <= R_b)\\
 &\}
 \end{split}
 \end{flalign}
 
 \begin{flalign}\label{eq:Repulsion4}
 \begin{split}
-R(b) = & \{b' \in nbr(b)~:\\
+n_r(b) = & \{b' \in n_r(b)~:\\
 &(per(b)\wedge per(b')\wedge\magn{bb'} <= k_{rpc}R_b) \\
 &\vee\\ 
 &(\neg(per(b)\wedge per(b'))\wedge\magn{bb'} <= R_b)\\
@@ -119,28 +119,34 @@ The effect of Equations \ref{eq:Repulsion3} and \ref{eq:Repulsion4} is that the 
 
 \important{The repulsion vector that is generated is based upon the $R_b$, the full repulsion field, and not the reduced field. This is to reduce potential agent collisions.}
 
-The final calculation for the repulsion having generated the set $R(b)$ is shown in Equation~\ref{eq:Repulsion5} .
+The final calculation for the repulsion having generated the set $R(b)$ is shown in Equation~\ref{eq:Repulsion5}.
 
 \begin{equation}\label{eq:Repulsion5}
-v_r(b) = 
-\frac{1}{\card{\mathcal R_b}}
-\left(
-\mathlarger{\mathlarger{\sum_{b' \in \mathcal R_b}}}
-{\left( 1-\frac{\magn{b'}}{R_b} \right)}
-b'
-\right)
+v_r(b) = \frac{1}{\lvert n_r(b)\rvert} \sum_{b' \in n_r(b)}\left(\mathsf{ekr}(b, b') \, \left(\lVert\vec{b b'}\rVert - \mathsf{erf}(b, b') \, \right)\widehat{b b'}\right)
+\end{equation}
+\begin{equation}
+\mathsf{ekr}(b, b') = \mathsf{if} \; \mathsf{per}(b) \; \mathsf{and} \; \mathsf{per}(b') \; \mathsf{then} \; k_r \; \mathrm{pscale} \; \mathsf{else} \; k_r
+\end{equation}
+\begin{equation}
+\mathsf{erf}(b, b') = \mathsf{if} \; \mathsf{per}(b) \; \mathsf{and} \; \mathsf{per}(b') \; \mathsf{then} \; R_b \; \mathrm{pscale} \; \mathsf{else} \; R_b
 \end{equation}
 
-\section{Cohesion}\label{cohesion}
+\noindent======================================\\
+ISSUE\\
+======================================\\
+The methodology applied is to remove agents from the repulsion set if they are on the perimeter until they are at the altered range (Eq. \ref{eq:Repulsion3},\ref{eq:Repulsion4}). As such $\mathsf{erf()}$ isn't required as the calculation should still use the $R_b$ field to generate a `suitable' repulsion vector which will prevent a collision.\\
+or\\
+should $\mathsf{erf()}$ be left in and discussed as an alternative approach allowing greater flexibility in the application of the compression algorithm?\\
+======================================\\
+What do you think?\\
+======================================\\
 
-\begin{assumption}
-	$k_{cpc} >= 1$
-\end{assumption}
+\section{Cohesion}\label{cohesion}
 
 The cohesion component of an agent is calculated in a similar way to the repulsion in that it is dependent upon the proximity of neighbours $nbr(b)$ (Eq. \ref{eq:cohesion1}). The determining factor for an agent being affected is determined using the cohesion field ($C_b$). The cohesion set $nbr(b)$ is equivalent to $C(b)$ (Eq.~\ref{eq:cohesion2}).
 
 \begin{equation}\label{eq:cohesion1}
-nbr(b) = \{b' \in S~:~\magn{bb'} <= C_b\}
+nbr(b) = \{b' \in S~:~b' \neq b \land\magn{bb'} <= C_b\}
 \end{equation}
 
 \begin{equation}\label{eq:cohesion2}
@@ -150,13 +156,17 @@ C(b) \equiv nbr(b)
 \subsection{Compression cohesion}
 The compression effect on the cohesion of the perimeter agents is that any perimeter-perimeter relationships should be re-enforced using the cohesion compression quotient ($k_{cpc}$). This is achieved by identifying the relationship within the cohesion calculation.
 
+%\begin{equation}\label{eq:cohesion3}
+%v_c(b) =
+%\frac{-1}{\card{\mathcal C_b}}\left({\mathlarger{\sum_{b' \in
+%			\mathcal C_b}}{b'}}\right)
+%\end{equation}
+
 \begin{equation}\label{eq:cohesion3}
-v_c(b) =
-\frac{-1}{\card{\mathcal C_b}}\left({\mathlarger{\sum_{b' \in
-			\mathcal C_b}}{b'}}\right)
+v_r(b) = \frac{1}{\lvert n_r(b)\rvert} \sum_{b' \in n_r(b)}\left(\left(\frac{\lVert\vec{b b'}\rVert}{R_b} - 1\right)\vec{b b'}\right)
 \end{equation}
 =====================================\\
-PROBLEM\\
+PROBLEM (WORKING ON IT NOW)\\
 =====================================\\
 I'm having a problem with my notation (more than usual here) I cannot work out how to specify that if the relationship between $b$ and $b'$ is perimeter to perimeter ($per(b)\wedge per(b')$) I need to multiple the resultant vector by $k_{cpc}$ to increase the cohesion between those two agents?\\ 
 =====================================\\

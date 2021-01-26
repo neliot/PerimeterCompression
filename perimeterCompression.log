@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.14)  26 JAN 2021 11:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.14)  26 JAN 2021 17:20
 entering extended mode
 **./perimeterCompression.tex
 (perimeterCompression.tex
@@ -74,6 +74,14 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 \Gin@req@height=\dimen147
 \Gin@req@width=\dimen148
 )
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count188
+\float@exts=\toks17
+\float@box=\box47
+\@float@everytoks=\toks18
+\@floatcapt=\box48
+)
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperref.s
 ty"
 Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
@@ -124,8 +132,8 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
 \@linkdim=\dimen149
-\Hy@linkcounter=\count188
-\Hy@pagecounter=\count189
+\Hy@linkcounter=\count189
+\Hy@pagecounter=\count190
 
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def
 "
@@ -141,7 +149,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 .sty"
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count190
+\Hy@SavedSpaceFactor=\count191
 Package hyperref Info: Hyper figures OFF on input line 4464.
 Package hyperref Info: Link nesting OFF on input line 4469.
 Package hyperref Info: Hyper index ON on input line 4472.
@@ -149,7 +157,7 @@ Package hyperref Info: Plain pages OFF on input line 4479.
 Package hyperref Info: Backreferencing OFF on input line 4484.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4717.
-\c@Hy@tempcnt=\count191
+\c@Hy@tempcnt=\count192
  ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -166,7 +174,7 @@ calc.sty"
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count192
+\Fld@menulength=\count193
 \Field@Width=\dimen151
 \Fld@charsize=\dimen152
 Package hyperref Info: Hyper figures OFF on input line 6347.
@@ -185,9 +193,9 @@ Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
 ge
 with kernel methods
 )
-\Hy@abspage=\count193
-\c@Item=\count194
-\c@Hfootnote=\count195
+\Hy@abspage=\count194
+\c@Item=\count195
+\c@Hfootnote=\count196
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -201,8 +209,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
 e
 with kernel methods
 )
-\Fld@listcount=\count196
-\c@bookmark@seq@number=\count197
+\Fld@listcount=\count197
+\c@bookmark@seq@number=\count198
 
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/rerunfilecheck\reru
 nfilecheck.sty"
@@ -233,7 +241,7 @@ Package: amstext 2000/06/29 v2.01 AMS text
  ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty
 "
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks17
+\@emptytoks=\toks19
 \ex@=\dimen153
 ))
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
@@ -243,45 +251,45 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 y"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count198
+\inf@bad=\count199
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count199
-\leftroot@=\count266
+\uproot@=\count266
+\leftroot@=\count267
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count267
-\DOTSCASE@=\count268
+\classnum@=\count268
+\DOTSCASE@=\count269
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box47
-\strutbox@=\box48
+\Mathstrutbox@=\box49
+\strutbox@=\box50
 \big@size=\dimen155
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count269
-\c@MaxMatrixCols=\count270
+\macc@depth=\count270
+\c@MaxMatrixCols=\count271
 \dotsspace@=\muskip17
-\c@parentequation=\count271
-\dspbrk@lvl=\count272
-\tag@help=\toks18
-\row@=\count273
-\column@=\count274
-\maxfields@=\count275
-\andhelp@=\toks19
+\c@parentequation=\count272
+\dspbrk@lvl=\count273
+\tag@help=\toks20
+\row@=\count274
+\column@=\count275
+\maxfields@=\count276
+\andhelp@=\toks21
 \eqnshift@=\dimen156
 \alignsep@=\dimen157
 \tagshift@=\dimen158
 \tagwidth@=\dimen159
 \totwidth@=\dimen160
 \lineht@=\dimen161
-\@envbody=\toks20
+\@envbody=\toks22
 \multlinegap=\skip51
 \multlinetaggap=\skip52
-\mathdisplay@stack=\toks21
+\mathdisplay@stack=\toks23
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
 )
-\c@assumption=\count276
+\c@assumption=\count277
 
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcolorbox
 .sty"
@@ -293,7 +301,7 @@ sty"
 s.sty"
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgf
 util-common.tex"
-\pgfutil@everybye=\toks22
+\pgfutil@everybye=\toks24
 \pgfutil@tempdima=\dimen162
 \pgfutil@tempdimb=\dimen163
 
@@ -301,7 +309,7 @@ util-common.tex"
 util-common-lists.tex"))
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgf
 util-latex.def"
-\pgfutil@abb=\box49
+\pgfutil@abb=\box51
 )
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgf
 rcs.code.tex"
@@ -321,12 +329,12 @@ Package: pgfsys 2020/12/27 v3.1.8b (3.1.8b)
 
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgf
 keys.code.tex"
-\pgfkeys@pathtoks=\toks23
-\pgfkeys@temptoks=\toks24
+\pgfkeys@pathtoks=\toks25
+\pgfkeys@temptoks=\toks26
 
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgf
 keysfiltered.code.tex"
-\pgfkeys@tmptoks=\toks25
+\pgfkeys@tmptoks=\toks27
 ))
 \pgf@x=\dimen164
 \pgf@y=\dimen165
@@ -340,14 +348,14 @@ keysfiltered.code.tex"
 \pgf@yd=\dimen173
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count277
-\c@pgf@countb=\count278
-\c@pgf@countc=\count279
-\c@pgf@countd=\count280
-\t@pgf@toka=\toks26
-\t@pgf@tokb=\toks27
-\t@pgf@tokc=\toks28
-\pgf@sys@id@count=\count281
+\c@pgf@counta=\count278
+\c@pgf@countb=\count279
+\c@pgf@countc=\count280
+\c@pgf@countd=\count281
+\t@pgf@toka=\toks28
+\t@pgf@tokb=\toks29
+\t@pgf@tokc=\toks30
+\pgf@sys@id@count=\count282
 
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\p
 gf.cfg"
@@ -366,8 +374,8 @@ File: pgfsys-common-pdf.def 2020/12/27 v3.1.8b (3.1.8b)
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\p
 gfsyssoftpath.code.tex"
 File: pgfsyssoftpath.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfsyssoftpath@smallbuffer@items=\count282
-\pgfsyssoftpath@bigbuffer@items=\count283
+\pgfsyssoftpath@smallbuffer@items=\count283
+\pgfsyssoftpath@bigbuffer@items=\count284
 )
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\p
 gfsysprotocol.code.tex"
@@ -404,11 +412,11 @@ til.code.tex")
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathp
 arser.code.tex"
 \pgfmath@dimen=\dimen174
-\pgfmath@count=\count284
-\pgfmath@box=\box50
-\pgfmath@toks=\toks29
-\pgfmath@stack@operand=\toks30
-\pgfmath@stack@operation=\toks31
+\pgfmath@count=\count285
+\pgfmath@box=\box52
+\pgfmath@toks=\toks31
+\pgfmath@stack@operand=\toks32
+\pgfmath@stack@operation=\toks33
 )
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathf
 unctions.code.tex"
@@ -430,7 +438,7 @@ unctions.misc.code.tex")
 unctions.integerarithmetics.code.tex")))
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathf
 loat.code.tex"
-\c@pgfmathroundto@lastzeros=\count285
+\c@pgfmathroundto@lastzeros=\count286
 ))
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfint.c
 ode.tex")
@@ -467,10 +475,10 @@ File: pgfcorepathusage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
 fcorescopes.code.tex"
 File: pgfcorescopes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfpic=\box51
-\pgf@hbox=\box52
-\pgf@layerbox@main=\box53
-\pgf@picture@serial@count=\count286
+\pgfpic=\box53
+\pgf@hbox=\box54
+\pgf@layerbox@main=\box55
+\pgf@picture@serial@count=\count287
 )
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
 fcoregraphicstate.code.tex"
@@ -505,8 +513,8 @@ File: pgfcorearrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 fcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@max=\dimen198
-\pgf@sys@shading@range@num=\count287
-\pgf@shadingcount=\count288
+\pgf@sys@shading@range@num=\count288
+\pgf@shadingcount=\count289
 )
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
 fcoreimage.code.tex"
@@ -515,7 +523,7 @@ File: pgfcoreimage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
 fcoreexternal.code.tex"
 File: pgfcoreexternal.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfexternal@startupbox=\box54
+\pgfexternal@startupbox=\box56
 ))
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
 fcorelayers.code.tex"
@@ -536,7 +544,7 @@ File: pgfcorerdf.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfmo
 duleshapes.code.tex"
 File: pgfmoduleshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfnodeparttextbox=\box55
+\pgfnodeparttextbox=\box57
 )
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfmo
 duleplot.code.tex"
@@ -555,8 +563,8 @@ Package: pgfcomp-version-1-18 2020/12/27 v3.1.8b (3.1.8b)
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/latex-tools\verbati
 m.sty"
 Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks32
-\verbatim@line=\toks33
+\every@verbatim=\toks34
+\verbatim@line=\toks35
 \verbatim@in@stream=\read3
 )
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/environ\environ.sty
@@ -570,28 +578,28 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.s
 ty"
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count289
+\etb@tempcnta=\count290
 )
-\tcb@titlebox=\box56
-\tcb@upperbox=\box57
-\tcb@lowerbox=\box58
-\tcb@phantombox=\box59
-\c@tcbbreakpart=\count290
-\c@tcblayer=\count291
-\c@tcolorbox@number=\count292
-\tcb@temp=\box60
-\tcb@temp=\box61
+\tcb@titlebox=\box58
+\tcb@upperbox=\box59
+\tcb@lowerbox=\box60
+\tcb@phantombox=\box61
+\c@tcbbreakpart=\count291
+\c@tcblayer=\count292
+\c@tcolorbox@number=\count293
 \tcb@temp=\box62
 \tcb@temp=\box63
+\tcb@temp=\box64
+\tcb@temp=\box65
 \tcb@out=\write4
 \tcb@record@out=\write5
 
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbraster
 .code.tex"
 Library (tcolorbox): 'tcbraster.code.tex' version '4.42'
-\c@tcbrastercolumn=\count293
-\c@tcbrasterrow=\count294
-\c@tcbraster=\count295
+\c@tcbrastercolumn=\count294
+\c@tcbrasterrow=\count295
+\c@tcbraster=\count296
 )
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbskins.
 code.tex"
@@ -617,8 +625,8 @@ Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
 code.tex")
 \pgffor@iter=\dimen257
 \pgffor@skip=\dimen258
-\pgffor@stack=\toks34
-\pgffor@toks=\toks35
+\pgffor@stack=\toks36
+\pgffor@toks=\toks37
 ))
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer
 /tikz\tikz.code.tex"
@@ -627,7 +635,7 @@ Package: tikz 2020/12/27 v3.1.8b (3.1.8b)
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\pgf
 libraryplothandlers.code.tex"
 File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@plot@mark@count=\count296
+\pgf@plot@mark@count=\count297
 \pgfplotmarksize=\dimen259
 )
 \tikz@lastx=\dimen260
@@ -638,29 +646,29 @@ File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \tikz@lastmovetoy=\dimen265
 \tikzleveldistance=\dimen266
 \tikzsiblingdistance=\dimen267
-\tikz@figbox=\box64
-\tikz@figbox@bg=\box65
-\tikz@tempbox=\box66
-\tikz@tempbox@bg=\box67
-\tikztreelevel=\count297
-\tikznumberofchildren=\count298
-\tikznumberofcurrentchild=\count299
-\tikz@fig@count=\count300
+\tikz@figbox=\box66
+\tikz@figbox@bg=\box67
+\tikz@tempbox=\box68
+\tikz@tempbox@bg=\box69
+\tikztreelevel=\count298
+\tikznumberofchildren=\count299
+\tikznumberofcurrentchild=\count300
+\tikz@fig@count=\count301
 
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfmo
 dulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfmatrixcurrentrow=\count301
-\pgfmatrixcurrentcolumn=\count302
-\pgf@matrix@numberofcolumns=\count303
+\pgfmatrixcurrentrow=\count302
+\pgfmatrixcurrentcolumn=\count303
+\pgf@matrix@numberofcolumns=\count304
 )
-\tikz@expandcount=\count304
+\tikz@expandcount=\count305
 
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer
 /tikz/libraries\tikzlibrarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )))
-\tcb@waterbox=\box68
+\tcb@waterbox=\box70
 
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbskinsj
 igsaw.code.tex"
@@ -675,9 +683,9 @@ ty"
 Package: pdfcol 2019/12/29 v1.6 Handle new color stacks for pdfTeX (HO)
 )
 Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
-\tcb@testbox=\box69
-\tcb@totalupperbox=\box70
-\tcb@totallowerbox=\box71
+\tcb@testbox=\box71
+\tcb@totalupperbox=\box72
+\tcb@totallowerbox=\box73
 )
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbhooks.
 code.tex"
@@ -693,7 +701,7 @@ Library (tcolorbox): 'tcbfitting.code.tex' version '4.42'
 \tcbfitdim=\dimen268
 \tcb@lowerfitdim=\dimen269
 \tcb@upperfitdim=\dimen270
-\tcb@cur@hbadness=\count305
+\tcb@cur@hbadness=\count306
 )
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbxparse
 .code.tex"
@@ -707,8 +715,8 @@ Package: expl3 2021-01-09 L3 programming layer (loader)
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backend
 -pdftex.def"
 File: l3backend-pdftex.def 2021-01-09 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count306
-\l__pdf_internal_box=\box72
+\l__kernel_color_stack_int=\count307
+\l__pdf_internal_box=\box74
 ))
 Package: xparse 2020-10-27 L3 Experimental document command parser
 
@@ -724,25 +732,25 @@ Library (tcolorbox): 'tcblistings.code.tex' version '4.42'
 
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.s
 ty"
-\lst@mode=\count307
-\lst@gtempboxa=\box73
-\lst@token=\toks36
-\lst@length=\count308
+\lst@mode=\count308
+\lst@gtempboxa=\box75
+\lst@token=\toks38
+\lst@length=\count309
 \lst@currlwidth=\dimen271
-\lst@column=\count309
-\lst@pos=\count310
+\lst@column=\count310
+\lst@pos=\count311
 \lst@lostspace=\dimen272
 \lst@width=\dimen273
-\lst@newlines=\count311
-\lst@lineno=\count312
+\lst@newlines=\count312
+\lst@lineno=\count313
 \lst@maxwidth=\dimen274
 
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.st
 y"
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count313
-\lst@skipnumbers=\count314
-\lst@framebox=\box74
+\c@lstnumber=\count314
+\lst@skipnumbers=\count315
+\lst@framebox=\box76
 )
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.c
 fg"
@@ -763,7 +771,7 @@ c.sty"
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
 Package shellesc Info: Restricted shell escape enabled on input line 77.
 ))
-\c@tcblisting=\count315
+\c@tcblisting=\count316
 ))
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listingsutf8\listin
 gsutf8.sty"
@@ -800,22 +808,22 @@ Library (tcolorbox): 'tcbposter.code.tex' version '4.42'
 )) (perimeterCompression.aux)
 \openout1 = `perimeterCompression.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -855,17 +863,17 @@ LaTeX Font Info:    ... okay on input line 35.
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pd
 f.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count316
+\scratchcounter=\count317
 \scratchdimen=\dimen275
-\scratchbox=\box75
-\nofMPsegments=\count317
-\nofMParguments=\count318
-\everyMPshowfont=\toks37
-\MPscratchCnt=\count319
+\scratchbox=\box77
+\nofMPsegments=\count318
+\nofMParguments=\count319
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count320
 \MPscratchDim=\dimen276
-\MPnumerator=\count320
-\makeMPintoPDFobject=\count321
-\everyMPtoPDFconversion=\toks38
+\MPnumerator=\count321
+\makeMPintoPDFobject=\count322
+\everyMPtoPDFconversion=\toks40
 )
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstop
 df-base.sty"
@@ -873,7 +881,7 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-Package hyperref Info: Link coloring OFF on input line 35.
+Package hyperref Info: Link coloring OFF on input line 36.
 
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.st
 y"
@@ -887,44 +895,49 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ttitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count322
+\c@section@level=\count323
 )
-LaTeX Info: Redefining \ref on input line 35.
-LaTeX Info: Redefining \pageref on input line 35.
-LaTeX Info: Redefining \nameref on input line 35.
+LaTeX Info: Redefining \ref on input line 36.
+LaTeX Info: Redefining \pageref on input line 36.
+LaTeX Info: Redefining \nameref on input line 36.
  (perimeterCompression.out) (perimeterCompression.out)
 \@outlinefile=\write6
 \openout6 = `perimeterCompression.out'.
 
-\c@lstlisting=\count323
+\c@lstlisting=\count324
 
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.sty"
 Package: inputenc 2020/08/01 v1.3d Input encoding file
-\inpenc@prehook=\toks39
-\inpenc@posthook=\toks40
+\inpenc@prehook=\toks41
+\inpenc@posthook=\toks42
 )
 <figures/stableswarm.pdf, id=72, 210.90294pt x 171.11629pt>
 File: figures/stableswarm.pdf Graphic file (type pdf)
 <use figures/stableswarm.pdf>
-Package pdftex.def Info: figures/stableswarm.pdf  used on input line 49.
+Package pdftex.def Info: figures/stableswarm.pdf  used on input line 55.
 (pdftex.def)             Requested size: 251.77888pt x 204.29149pt.
 [1
 
 {C:/Users/neil/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./figures/st
 ableswarm.pdf>]
-<figures/CompressionEffect1.png, id=114, 582.4962pt x 398.9304pt>
+<figures/CompressionEffect1.png, id=116, 582.4962pt x 398.9304pt>
 File: figures/CompressionEffect1.png Graphic file (type png)
 <use figures/CompressionEffect1.png>
-Package pdftex.def Info: figures/CompressionEffect1.png  used on input line 69.
+Package pdftex.def Info: figures/CompressionEffect1.png  used on input line 74.
 
 (pdftex.def)             Requested size: 377.66832pt x 258.66254pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
 
-[2 <./figures/CompressionEffect1.png>] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 157--163
+[2 <./figures/CompressionEffect1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 134--143
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 167--173
 
  []
 
@@ -933,33 +946,37 @@ Package rerunfilecheck Info: File `perimeterCompression.out' has not changed.
 (rerunfilecheck)             Checksum: E90B7E0EC505664312F7B1C642490AD0;382.
  ) 
 Here is how much of TeX's memory you used:
- 23204 strings out of 479584
- 481983 string characters out of 2861983
- 808839 words of memory out of 3000000
- 39936 multiletter control sequences out of 15000+200000
- 411517 words of font info for 55 fonts, out of 3000000 for 9000
+ 23264 strings out of 479584
+ 482802 string characters out of 2861983
+ 811251 words of memory out of 3000000
+ 39988 multiletter control sequences out of 15000+200000
+ 411585 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,15n,108p,701b,873s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 101i,15n,108p,799b,873s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmbx10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmbx12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/neil/AppData/Local/Programs/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/neil/AppData/Local/
 Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/neil/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Us
-ers/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Us
+ers/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7
 .pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmr12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/neil/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/neil/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/neil/App
-Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Use
-rs/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12
-.pfb>
-Output written on perimeterCompression.pdf (4 pages, 229862 bytes).
+ts/cm/cmmi8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/neil/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/neil/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/neil/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/User
+s/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmsy6.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmsy7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/neil/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on perimeterCompression.pdf (4 pages, 262944 bytes).
 PDF statistics:
- 213 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
+ 227 PDF objects out of 1000 (max. 8388607)
+ 33 named destinations out of 1000 (max. 500000)
  223 words of extra memory for PDF output out of 10000 (max. 10000000)
 
