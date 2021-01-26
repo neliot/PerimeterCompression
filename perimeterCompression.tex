@@ -32,7 +32,6 @@
 \newcommand{\magn}[1]{\Vert{#1}\Vert}
 \newcommand{\card}[1]{\vert{#1}\vert}
 
-
 \begin{document}
 \maketitle
 
@@ -149,7 +148,17 @@ C(b) \equiv nbr(b)
 \end{equation}
 
 \subsection{Compression cohesion}
-The compression effect on the cohesion of the perimeter agents is that any perimeter-perimeter relationships should be re-enforced using the cohesion compression quotient ($k_{cpc}$).
+The compression effect on the cohesion of the perimeter agents is that any perimeter-perimeter relationships should be re-enforced using the cohesion compression quotient ($k_{cpc}$). This is achieved by splitting the cohesion agents into two subsets. One subset being the perimeter agents (Eq.\ref{eq:cohesion3}), the other being internal agents (Eq.\ref{eq:cohesion4}).
+
+\begin{equation}\label{eq:cohesion3}
+C_{np}(b) = \{b' \in C(b)~:~\neg per(b')\}
+\end{equation}
+
+\begin{equation}\label{eq:cohesion4}
+C_p(b) = \{b' \in C(b)~:~per(b')\}
+\end{equation}
+
+
 
 \section{Conclusions}\label{conclusions}
 From the initial simulations it is possible to show that the technique is able to successfully remove voids and surround an obstacle as shown in the video \href{https://youtu.be/3eY1vvq0JWo}{https://youtu.be/3eY1vvq0JWo}.
