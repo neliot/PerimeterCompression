@@ -57,7 +57,7 @@ The aim of the algorithm is to reduce the spacing between perimeter-based agents
 	\label{fig:stableswarm}
 \end{figure}
 
-\section{Resultant Vector Calculation}
+\section{Resultant Vector Calculation}\label{resultantVector}
 In the Original work by Eliot et. al. the resultant vector of an agent was calculated using Equation~\ref{eq:resultantVector}. Where $k_c,k_r,k_d,k_o$ are weighting factors for the summed vectors associated with each interaction. The new algorithm requires each individual agent to have a variation to the vector generated inside each calculation based on the perimeter status of the agent and each neighbour. The equation has been simplified (Eq.~\ref{eq:newResultantVector}) and the weighting factors have been transposed into the calculations along with additional weighting factors that are applied to specific agents within the cohesion and repulsion vector calculations ($k_{cpc}$ - cohesion compression, $k_{rpc}$ - repulsion compression).
 
 \begin{equation}\label{eq:resultantVector}
@@ -122,13 +122,10 @@ The effect of Equations \ref{eq:Repulsion3} and \ref{eq:Repulsion4} is that the 
 The final calculation for the repulsion having generated the set $n_r(b)$ is shown in Equation~\ref{eq:Repulsion5}.
 
 \begin{equation}\label{eq:Repulsion5}
-v_r(b) = \frac{1}{\lvert n_r(b)\rvert} \sum_{b' \in n_r(b)}\left(\mathsf{ekr}(b, b') \, \left(\lVert\vec{b b'}\rVert - \mathsf{erf}(b, b') \, \right)\widehat{b b'}\right)
+v_r(b) = \frac{1}{\lvert n_r(b)\rvert} \sum_{b' \in n_r(b)}\left(\mathsf{ekr}(b, b') \, \left(\lVert\vec{b b'}\rVert - R_b \, \right)\widehat{b b'}\right)
 \end{equation}
 \begin{equation}
-\mathsf{ekr}(b, b') = \mathsf{if} \; \mathsf{per}(b) \; \mathsf{and} \; \mathsf{per}(b') \; \mathsf{then} \; k_r \; \mathrm{pscale} \; \mathsf{else} \; k_r
-\end{equation}
-\begin{equation}
-\mathsf{erf}(b, b') = \mathsf{if} \; \mathsf{per}(b) \; \mathsf{and} \; \mathsf{per}(b') \; \mathsf{then} \; R_b \; \mathrm{pscale} \; \mathsf{else} \; R_b
+\mathsf{ekr}(b, b') = \mathsf{if} \; \mathsf{per}(b) \; \mathsf{and} \; \mathsf{per}(b') \; \mathsf{then} \; k_{cpc}k_r \; \mathsf{else} \; k_r
 \end{equation}
 
 \noindent======================================\\
@@ -149,20 +146,26 @@ The cohesion component of an agent is calculated in a similar way to the repulsi
 n_c(b) = \{b' \in S~:~b' \neq b \land\magn{bb'} <= C_b\}
 \end{equation}
 
+The affect of an agent being within this set is that it will generate a vector that should `encourage' agents to maintain their proximity. i.e. generate a cohesive swarm. The general formula for agents to maintain their proximity is to direct their motion towards the central point of all neighbouring agents as shown in Equation~\ref{eq:cohesion2}. This formula includes the $k_c$ quotient that allows the cohesion effect to be `balanced' with respect to other vector influences as described in Section~\ref{resultantVector} 
+
+\begin{equation}\label{eq:cohesion2}
+v_c(b) = \frac{1}{\lvert n_c(b)\rvert} \sum_{b' \in n_c(b)}k_c\vec{b b'}
+\end{equation}
+
 \subsection{Compression cohesion}
 The compression effect on the cohesion of the perimeter agents is that any perimeter-perimeter relationships should be re-enforced using the cohesion compression quotient ($k_{cpc}$). This is achieved by identifying the relationship within the cohesion calculation.
 
-\begin{equation}\label{eq:cohesion2}
+\begin{equation}\label{eq:cohesion3}
 v_c(b) = \frac{1}{\lvert n_c(b)\rvert} \sum_{b' \in n_c(b)}\mathsf{ekc}(b, b')\, \vec{b b'}
 \end{equation}
 
-\begin{equation}\label{eq:cohesion3}
+\begin{equation}\label{eq:cohesion4}
 \mathsf{ekc}(b, b') = \mathsf{if} \; \mathsf{per}(b) \; \mathsf{and} \; \mathsf{per}(b') \; \mathsf{then} \; k_{cpc}k_c \; \mathsf{else} \; k_c
 \end{equation}
 =====================================\\
 PROBLEM (WORKING ON IT NOW)\\
 =====================================\\
-I'm having a problem with my notation (more than usual here) I cannot work out how to specify that if the relationship between $b$ and $b'$ is perimeter to perimeter ($\mathsf{per}(b)\wedge \mathsf{per}(b')$) I need to multiple the resultant vector by $k_{cpc}$ to increase the cohesion between those two agents?\\ 
+Are you happy with the notation to apply $k_{cpc}$\\
 =====================================\\
 
 \section{Conclusions}\label{conclusions}

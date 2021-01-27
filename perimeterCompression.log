@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.14)  26 JAN 2021 21:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.14)  27 JAN 2021 08:59
 entering extended mode
 **./perimeterCompression.tex
 (perimeterCompression.tex
@@ -932,24 +932,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--81
  []
 
 [2 <./figures/CompressionEffect1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 134--143
+Underfull \hbox (badness 10000) in paragraph at lines 131--140
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 161--167
+Underfull \hbox (badness 10000) in paragraph at lines 164--170
 
  []
 
-(perimeterCompression.bbl) [4] (perimeterCompression.aux)
+(perimeterCompression.bbl [4]) [5] (perimeterCompression.aux)
 Package rerunfilecheck Info: File `perimeterCompression.out' has not changed.
 (rerunfilecheck)             Checksum: E90B7E0EC505664312F7B1C642490AD0;382.
  ) 
 Here is how much of TeX's memory you used:
- 23264 strings out of 479584
- 482802 string characters out of 2861983
- 811263 words of memory out of 3000000
- 39988 multiletter control sequences out of 15000+200000
+ 23267 strings out of 479584
+ 482839 string characters out of 2861983
+ 810348 words of memory out of 3000000
+ 39990 multiletter control sequences out of 15000+200000
  411585 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,15n,108p,799b,873s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -974,9 +974,9 @@ s/cm/cmsy6.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmsy7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/neil/AppData/Local/Programs/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on perimeterCompression.pdf (4 pages, 260604 bytes).
+Output written on perimeterCompression.pdf (5 pages, 261850 bytes).
 PDF statistics:
- 226 PDF objects out of 1000 (max. 8388607)
- 33 named destinations out of 1000 (max. 500000)
+ 232 PDF objects out of 1000 (max. 8388607)
+ 34 named destinations out of 1000 (max. 500000)
  223 words of extra memory for PDF output out of 10000 (max. 10000000)
 
