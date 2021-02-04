@@ -1,7 +1,9 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.2}{Resultant Vector Calculation}{}% 2
 \BOOKMARK [1][-]{section.3}{Repulsion}{}% 3
-\BOOKMARK [2][-]{subsection.3.1}{Compression repulsion}{section.3}% 4
-\BOOKMARK [1][-]{section.4}{Cohesion}{}% 5
-\BOOKMARK [2][-]{subsection.4.1}{Compression cohesion}{section.4}% 6
-\BOOKMARK [1][-]{section.5}{Conclusions}{}% 7
+\BOOKMARK [2][-]{subsection.3.1}{Repulsion neighbours}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Repulsion compression}{section.3}% 5
+\BOOKMARK [1][-]{section.4}{Cohesion}{}% 6
+\BOOKMARK [2][-]{subsection.4.1}{Cohesion neighbours}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.2}{Compression cohesion}{section.4}% 8
+\BOOKMARK [1][-]{section.5}{Conclusions}{}% 9
