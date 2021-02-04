@@ -1,7 +1,7 @@
-PWD c:\Users\neil\Google Drive\Research\Perimeter Compression
+PWD c:\Users\neil\Google Drive\Research\PerimeterCompression
 INPUT C:\Users\neil\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\perimeterCompression.tex
-OUTPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\perimeterCompression.log
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.tex
+OUTPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.log
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls
@@ -851,12 +851,12 @@ INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendla
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryfadings.code.tex
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryfadings.code.tex
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryfadings.code.tex
-OUTPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\perimeterCompression.pdf
+OUTPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.pdf
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tcolorbox\tcbposter.code.tex
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\perimeterCompression.aux
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\perimeterCompression.aux
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\perimeterCompression.aux
-OUTPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\perimeterCompression.aux
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.aux
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.aux
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.aux
+OUTPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.aux
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
@@ -909,17 +909,17 @@ INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex\generic\gettitlestring
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex\generic\gettitlestring\gettitlestring.sty
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\kvoptions\kvoptions.sty
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ltxcmds\ltxcmds.sty
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\perimeterCompression.out
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\perimeterCompression.out
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\perimeterCompression.out
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\perimeterCompression.out
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\perimeterCompression.out
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\perimeterCompression.out
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\perimeterCompression.out
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\perimeterCompression.out
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\perimeterCompression.out
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\perimeterCompression.out
-OUTPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\perimeterCompression.out
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.out
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.out
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.out
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.out
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.out
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.out
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.out
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.out
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.out
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.out
+OUTPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.out
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.sty
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.sty
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.sty
@@ -954,29 +954,29 @@ INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmex10
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmti12.tfm
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\figures\stableswarm.pdf
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\figures\stableswarm.pdf
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\figures\stableswarm.pdf
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\figures\stableswarm.pdf
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\figures\stableswarm.pdf
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\figures\stableswarm.pdf
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\figures\stableswarm.pdf
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\figures\stableswarm.pdf
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\figures\stableswarm.pdf
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\figures\stableswarm.pdf
 INPUT C:\Users\neil\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\figures\CompressionEffect1.png
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\figures\CompressionEffect1.png
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\figures\CompressionEffect1.png
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\figures\CompressionEffect1.png
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\figures\CompressionEffect1.png
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\figures\CompressionEffect1.png
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\figures\CompressionEffect1.png
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\figures\CompressionEffect1.png
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\figures\CompressionEffect1.png
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\figures\CompressionEffect1.png
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\figures\CompressionEffect1.png
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\figures\CompressionEffect1.png
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmss12.tfm
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmss8.tfm
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmss8.tfm
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\perimeterCompression.bbl
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\perimeterCompression.bbl
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\perimeterCompression.bbl
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\perimeterCompression.bbl
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\perimeterCompression.aux
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\perimeterCompression.out
-INPUT c:\Users\neil\Google Drive\Research\Perimeter Compression\perimeterCompression.out
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.bbl
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.bbl
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.bbl
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.bbl
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.aux
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.out
+INPUT c:\Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.out
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
