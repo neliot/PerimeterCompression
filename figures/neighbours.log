@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  5 FEB 2021 14:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  5 FEB 2021 15:55
 entering extended mode
 **"c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/neighbours.tex"
 ("c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/neighbours.tex"
@@ -309,15 +309,15 @@ Missing character: There is no ; in font nullfont!
 
 {C:/Users/neil/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] ("c:/Users\neil\Google Drive\Research\PerimeterCompression\figures\neighbours.aux") ) 
 Here is how much of TeX's memory you used:
- 13142 strings out of 479584
- 278981 string characters out of 2861984
- 531520 words of memory out of 3000000
- 30126 multiletter control sequences out of 15000+200000
+ 13150 strings out of 479584
+ 279124 string characters out of 2861984
+ 532655 words of memory out of 3000000
+ 30134 multiletter control sequences out of 15000+200000
  403430 words of font info for 27 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,7n,130p,496b,792s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-Output written on "c:/Users\neil\Google Drive\Research\PerimeterCompression\figures\neighbours.pdf" (1 page, 20542 bytes).
+Output written on "c:/Users\neil\Google Drive\Research\PerimeterCompression\figures\neighbours.pdf" (1 page, 20523 bytes).
 PDF statistics:
  17 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
