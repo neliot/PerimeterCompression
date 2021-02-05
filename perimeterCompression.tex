@@ -58,6 +58,85 @@ The aim of the algorithm is to reduce the spacing between perimeter-based agents
 	\label{fig:stableswarm}
 \end{figure}
 
+\section{Perimeter detection}\label{perimeterDetection}
+For perimeter compression to be applied to a swarm the perimeter needs to be detected. A perimeter can be defined as a continious `surface' of agents that are not enclosed by other agents~\ref{fig:innerOuterPerimeters}. These agents may form an outer ({\color{green}green}) or inner ({\color{red}red}) boundary.
+
+\begin{figure}[H]
+	\begin{center}
+	\includegraphics[width=5cm]{figures/PerimeterBots1}
+	\end{center}
+	\caption{{\color{green}Outer} and {\color{red}inner} swarm perimeters. \label{fig:innerOuterPerimeters}}
+\end{figure}
+
+
+The detection process is achieved using a cyclic analysis of the agents that surround an agent~(Fig.~\ref{fig:neighbours}). Ghrist et al. discusses a similar technique using sweep angles~\cite{ghrist2008surrounding} as does McLurkin et al~\cite{mclurkin2009}. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{figures/neighbours}
+	\caption[Agent neighbours]{Agent neighbours}
+	\label{fig:neighbours}
+\end{figure}
+
+The initial detection of the agents is based on the distance that each agent in the swarm is away from the current agent as described in \S~\ref{cohesion} and shown in Equation~\ref{eq:cohesion1}. The perimeter detection set is based on the range and bearing of each neighbour agent, where $r$ is the \textit{range} and $\beta$ is the \textit{bearing}~\ref{eq:neighbourBearingSet}.
+
+\begin{equation}\label{eq:neighbourBearingSet}
+	\mathcal{N}_b = \{ (r,\beta) \ldots \} 
+\end{equation}
+
+The set is then sorted in ascending order such that $\beta_0 < \beta_1 < \ldots < \beta_n$. Each consecutive pair of agents in the sequence defines an \textit{edge}, which has length $d$ and an angle $\theta$ given by the difference in bearings of successive neighbours. The sequence of edges that forms this polygon are expressed in Equation~\ref{sortedBearing}.
+
+\begin{equation}\label{sortedBearing}
+	\mathcal{P}_e = \langle (d_0,\theta_0), \ldots , (d_n,\theta_n) \rangle
+\end{equation}
+where
+\begin{equation}
+	\theta_i = \beta_{i+1} - \beta_i
+\end{equation}
+
+The index addition is modulo $|\mathcal N_b|$, making $\beta_0$ the successor bearing to $\beta_n$ ($n+1 = 0$).  The angles $\theta$ must lie in the range $0<\theta\leq2\pi$. This restriction on the values of $\theta$ enforce the condition that
+
+\begin{equation}
+	\sum\theta_i = 2\pi
+\end{equation}
+
+The length of a perimeter edge is given by the cosine rule
+
+\begin{equation}
+	d_i^2 = r_{i+1}^2 + r_i^2 -2r_{i+1}r_i \cos\theta_i
+\end{equation}
+
+An agent is therefore on the perimeter of the swarm if it is not enclosed by the polygon defined in $\mathcal{P}_e$.  Simple geometry shows that this is the case, given by the predicate in Equation ~\ref{enclosing}.
+
+\begin{equation}
+	\exists \theta_i \in \mathcal{P}_e : \theta_i\geq\pi
+	\label{enclosing}
+\end{equation}
+
+The polygon is considered to be ``open" if two successive agents on the perimeter are unable to ``see" one another; that is, their separation, $d$, is greater than the range of the attractive field.  An open polygon does not enclose the agent $b$, so it is considered to be on the perimeter. 
+
+Formally, an agent, $b$, is on the perimeter of the swarm if the predicate in Equation ~\ref{perimeter-predicate} is true.
+
+\begin{equation}
+	\exists d_i\in\mathcal{P}_e:d_i>C_b \vee
+	\exists\theta_i\in\mathcal{P}_e:\theta_i\geq\pi
+	\label{perimeter-predicate}
+\end{equation}
+
+An agent is at the apex of a concave region of the perimeter if
+
+\begin{equation}
+	\exists(\theta_i,d_i)\in\mathcal{P}_e : d_i>C_b\wedge\theta_i<\pi
+	\label{concave-predicate}
+\end{equation}
+
+The orientation is independent in so much as: if the agent $b$ is rotated through an angle of $\gamma$ then the bearings are rotated by $-\gamma$, \[ \beta_i\mapsto\beta_i-\gamma \] The  angle between successive agents is now
+\[
+	\theta_i  =  (\beta_{i+1}-\gamma) - (\beta_i-\gamma)
+	 = \beta_{i+1}-\beta_i-\gamma+\gamma
+	 = \beta_{i+1}-\beta_i
+\]
+
 \section{Resultant Vector Calculation}\label{resultantVector}
 In the Original work by Eliot et. al. the resultant vector of an agent was calculated using Equation~\ref{eq:resultantVector}. Where $k_c,k_r,k_d,k_o$ are weighting factors for the summed vectors associated with each interaction. The new algorithm requires each individual agent to have a variation to the vector generated inside each calculation based on the perimeter status of the agent and each neighbour. The equation has been simplified (Eq.~\ref{eq:newResultantVector}) and the weighting factors have been transfered into the calculations along with the additional weighting factors that are applied to specific agents within the cohesion and repulsion vector calculations.
 

@@ -17,4 +17,16 @@ N.~Eliot, D.~Kendall, A.~Moon, M.~Brockway, and M.~Amos.
 \newblock In {\em Artificial Life Conference Proceedings}, pages 87--94. MIT
   Press, 2019.
 
+\bibitem{ghrist2008surrounding}
+R.~Ghrist, D.~Lipsky, S.~Poduri, and G.~Sukhatme.
+\newblock Surrounding nodes in coordinate-free networks.
+\newblock In {\em Algorithmic Foundation of Robotics VII}, pages 409--424.
+  Springer, 2008.
+
+\bibitem{mclurkin2009}
+J.~McLurkin and E.~D. Demaine.
+\newblock A distributed boundary detection algorithm for multi-robot systems.
+\newblock In {\em Intelligent Robots and Systems, 2009. IROS 2009. IEEE/RSJ
+  International Conference on}, pages 4791--4798. IEEE, 2009.
+
 \end{thebibliography}
