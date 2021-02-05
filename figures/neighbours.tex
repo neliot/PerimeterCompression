@@ -3,7 +3,7 @@
 \usepackage{xcolor}
 \begin{document}
 \begin{tikzpicture}[>=Stealth]
-	\node[circle,fill=black!50,draw,label=above right:$b$]{};
+	\node[circle,fill=black!50,draw,label= right:$b$]{};
 	\draw (0,0)--(up:1.5cm);
 	\foreach \n/\d/\l/\a/\r in { 
 			0/1.4cm/b_0/10/3cm, 
@@ -13,7 +13,7 @@
 			4/1.0cm/b_4/220/3cm 
 			} {
 		\draw[->] (0,0)--node[above,sloped, very near end]{$r_{\n}$} (90-\a:\r) 
-					node[circle,fill=black!50,draw,label=above right:$\l$]{};
+					node[circle,fill=black!50,draw,label=right:$\l$]{};
 		\draw[->,dashed] (up:\d) arc[start angle=90, delta angle=-\a,
 		radius=\d] node[right]{$\beta_\n$};
 
