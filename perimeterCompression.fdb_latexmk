@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex perimeterCompression"] 1612521871 "perimeterCompression.aux" "perimeterCompression.bbl" "perimeterCompression" 1612521877
+["bibtex perimeterCompression"] 1612521871 "perimeterCompression.aux" "perimeterCompression.bbl" "perimeterCompression" 1612535595
   "C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/bibtex/bst/bibtex/abbrv.bst" 1291864736 20329 b5fed53e10044d0f8112183785c759b1 ""
   "perimeter.bib" 1612518426 11631 f39231ba50562b7963ff2b7ef7154cba ""
-  "perimeterCompression.aux" 1612521876 5024 caf1ad90f4a2d5966e5f7d72044a0f13 "pdflatex"
+  "perimeterCompression.aux" 1612535594 5024 caf1ad90f4a2d5966e5f7d72044a0f13 "pdflatex"
   (generated)
-  "perimeterCompression.blg"
   "perimeterCompression.bbl"
-["pdflatex"] 1612521871 "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.tex" "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.pdf" "perimeterCompression" 1612521877
+  "perimeterCompression.blg"
+["pdflatex"] 1612535589 "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.tex" "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.pdf" "perimeterCompression" 1612535595
   "C:/Users/neil/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1594800491 14064 98f2e9cefea955c4f798c9cc83375ecc ""
   "C:/Users/neil/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1612445478 9796363 a2357cdf724b7e81998a91a83127b405 ""
   "C:/Users/neil/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1612445263 83930 a60ec061f757cf348be11677879bca0c ""
@@ -197,21 +197,22 @@
   "C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/tex/latex/trimspaces/trimspaces.sty" 1253165583 1380 971a51b00a14503ddf754cab24c3f209 ""
   "C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty" 1463131981 57049 34128738f682d033422ca125f82e5d62 ""
-  "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.aux" 1612521876 5024 caf1ad90f4a2d5966e5f7d72044a0f13 ""
+  "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.aux" 1612535594 5024 caf1ad90f4a2d5966e5f7d72044a0f13 ""
   "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.tex" 1612521865 13214 1f23001c6439215d5023eb9877e845b5 ""
   "figures/CompressionEffect1.png" 1612446488 43518 58b262a76522e93787492f3150a7af72 ""
   "figures/PerimeterBots1.pdf" 1544612868 93812 75535b3c25ea69cf38e12293a226e715 ""
   "figures/PerimeterBots1.tex" 1612520801 58221 9b426b15496fbf6d8d0ac9122a431047 ""
-  "figures/neighbours.pdf" 1612516745 28017 31fc669355c700f9f6f2940d148d9243 ""
+  "figures/neighbours.pdf" 1612535572 20542 de0ea277ed76ddd027682e5f5664d32f ""
+  "figures/neighbours.tex" 1612535564 875 89f9ab2868c0b62a846b0d07c436e809 ""
   "figures/stableswarm.pdf" 1612448468 37432 f596509e31d6d90b8970cd9da950111d ""
-  "perimeterCompression.aux" 1612521876 5024 caf1ad90f4a2d5966e5f7d72044a0f13 "pdflatex"
+  "perimeterCompression.aux" 1612535594 5024 caf1ad90f4a2d5966e5f7d72044a0f13 "pdflatex"
   "perimeterCompression.bbl" 1612521871 1215 36953de0f83f7a0eb98ab22c7cf82ec6 "bibtex perimeterCompression"
-  "perimeterCompression.out" 1612521876 574 1332352cfd13631326efcd6fcb2898ac "pdflatex"
+  "perimeterCompression.out" 1612535594 574 1332352cfd13631326efcd6fcb2898ac "pdflatex"
   "perimeterCompression.tex" 1612521865 13214 1f23001c6439215d5023eb9877e845b5 ""
   (generated)
-  "perimeterCompression.pdf"
   "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.pdf"
+  "perimeterCompression.log"
+  "perimeterCompression.pdf"
   "perimeterCompression.aux"
   "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.log"
-  "perimeterCompression.log"
   "perimeterCompression.out"
