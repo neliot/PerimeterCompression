@@ -125,6 +125,13 @@ F.~E. Schneider and D.~Wildermuth.
   Proceedings. 2003 IEEE International Conference on}, volume~1, pages 680--685
   vol.1, Oct 2003.
 
+\bibitem{Son2017}
+J.~{Son}, H.~{Ahn}, and J.~{Cha}.
+\newblock Lennard-jones potential field-based swarm systems for aggregation and
+  obstacle avoidance.
+\newblock In {\em 2017 17th International Conference on Control, Automation and
+  Systems (ICCAS)}, pages 1068--1072, 2017.
+
 \bibitem{TIBW:16}
 J.~Timmis, A.~Ismail, J.~Bjerknes, and A.~Winfield.
 \newblock An immune-inspired swarm aggregation algorithm for self-healing swarm
