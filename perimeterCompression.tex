@@ -46,10 +46,8 @@ Perimeter Compression is a technique where by a void reducing effect can be adde
 \end{abstract}
 
 \section{Introduction}
-When cohesion and repulsion field effects are used to create a swarming effect, the stable structures that develop are limited to either straight edges or partial lattices \cite{eliot2017methods}. The maintenance of a well-structured swarm is crucial to effective deployment, including reconnaissance or artificial pollination, where `blind spots' are best  eliminated \cite{elamvazhuthi2015optimal}, and containment, where the swarm is used to surround an object or region \cite{cao2012distributed}. Over time swarms form regular shapes~\cite{RAZ:13} and perimeters form of partial lattices may contain so-called \textit{anomalies}, such as concave `dents' or convex `peaks'. These anomalies contribute to the disruption of an otherwise well-structured swarm. The key, therefore, is to ensure that these \textit{anomalies} are dynamically removed from a swarm.
-\paragraph{}
-Perimeter compression is a technique that creates a `pull' effect between perimeter agents. It is dependant upon perimeter agent identification as discussed by Eliot et. al. in \cite{eliot2017methods, eliot2018metric, eliot2019void} and shown in \S~\ref{perimeterDetection}.
-\paragraph{}
+When cohesion and repulsion field effects are used to create a swarming effect, the stable structures that develop are limited to either straight edges or partial lattices \cite{eliot2017methods}. The maintenance of a well-structured swarm is crucial to effective deployment, including reconnaissance or artificial pollination, where `blind spots' are best  eliminated \cite{elamvazhuthi2015optimal}, and containment, where the swarm is used to surround an object or region \cite{cao2012distributed}. Over time swarms form regular shapes~\cite{RAZ:13} and perimeters form of partial lattices may contain so-called \textit{anomalies}, such as concave `dents' or convex `peaks'. These anomalies contribute to the disruption of an otherwise well-structured swarm. The key, therefore, is to ensure that these \textit{anomalies} are dynamically removed from a swarm.\\
+Perimeter compression is a technique that creates a `pull' effect between perimeter agents. It is dependant upon perimeter agent identification as discussed by Eliot et. al. in \cite{eliot2017methods, eliot2018metric, eliot2019void} and shown in Section~\ref{perimeterDetection}.\\
 The aim of the algorithm is to reduce the spacing between perimeter-based agents by reducing the repulsion field and increasing the cohesion affect on perimeter agents. Figure \ref{fig:stableswarm}) shows an agent and it fields. $S_b$ is the sensor field. $O_b$ is the obstacle field. $C_b$ is the cohesion field and $R_b$ is the repulsion field. The implementation involves introducing two controlling weights; $p_c$ (Perimeter Compression Cohesion) which increases the cohesion vector ($k_c\rightarrow p_ck_c$) and $p_r$ (Perimeter Compression Repulsion) which reduces the size of the repulsion field ($k_r\rightarrow p_rk_r$) of the perimeter-based agents.
 \begin{assumption}
 	$p_c >= 1$
@@ -118,7 +116,7 @@ The new algorithm requires each individual agent to modify the vector generated 
 v(b) = v_c(b) + v_r(b) + v_d(b) + v_o(b)
 \end{equation}
 
-As in the basic model (\S~\ref{basicModel}) the formula is simplified to only account for cohesion and repulsion~(Eq.~\ref{eq:newModel2}).
+As in the basic model (Section~\ref{basicModel}) the formula is simplified to only account for cohesion and repulsion~(Eq.~\ref{eq:newModel2}).
 
 \begin{equation}\label{eq:newModel2}
 v(b) = v_c(b) + v_r(b)
@@ -173,7 +171,7 @@ The detection process is achieved using a cyclic analysis of the agents that sur
 	\label{fig:neighbours}
 \end{figure}
 
-The initial detection of the agents is based on the distance that each agent in the swarm is away from the current agent as described in \S~\ref{cohesion} and shown in Equation~\ref{eq:cohesion1}. The perimeter detection set is based on the range and bearing of each neighbour agent, where $r$ is the \textit{range} and $\beta$ is the \textit{bearing}~\ref{eq:neighbourBearingSet}.
+The initial detection of the agents is based on the distance that each agent in the swarm is away from the current agent as described in Section~\ref{cohesion} and shown in Equation~\ref{eq:cohesion1}. The perimeter detection set is based on the range and bearing of each neighbour agent, where $r$ is the \textit{range} and $\beta$ is the \textit{bearing}~\ref{eq:neighbourBearingSet}.
 
 \begin{equation}\label{eq:neighbourBearingSet}
 \mathcal{N}_b = \{ (r,\beta) \ldots \} 
@@ -254,7 +252,7 @@ p_rR_b \; \mathsf{else} \; R_b
 n_r(b) = \{b' \in n_c(b)~:~\magn{bb'} <= \mathsf{erf}(b,b')\}
 \end{equation}
 
-An agent is identified as a perimeter agent using the technique shown by Eliot et.al. in \cite{eliot2019void} which uses a cyclic-check of neighbour agent angles to identify ``gaps'' in the neighbours as shown in \S~\ref{perimeterDetection}.
+An agent is identified as a perimeter agent using the technique shown by Eliot et.al. in \cite{eliot2019void} which uses a cyclic-check of neighbour agent angles to identify ``gaps'' in the neighbours as shown in Section~\ref{perimeterDetection}.
 
 If the condition of both agents being a perimeter is met ($\mathsf{per}(b) \; \mathsf{and} \; \mathsf{per}(b')$) the repulsion field distance is multiplied by the compression factor ($p_r$) and the new field effect is used to generate a resultant-repulsion-vector (Eq.~\ref{eq:repulsion5}). 
 
