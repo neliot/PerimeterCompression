@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex perimeterCompression"] 1612873732 "perimeterCompression.aux" "perimeterCompression.bbl" "perimeterCompression" 1612873778
+["bibtex perimeterCompression"] 1612873732 "perimeterCompression.aux" "perimeterCompression.bbl" "perimeterCompression" 1612874951
   "C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/bibtex/bst/bibtex/abbrv.bst" 1291864736 20329 b5fed53e10044d0f8112183785c759b1 ""
   "perimeter.bib" 1612863238 23760 6ed0b26ab764e9e4fe0d9fda51cf51ce ""
-  "perimeterCompression.aux" 1612873777 7058 8d31c61a4b0a69b692dbb5e6b82ee258 "pdflatex"
+  "perimeterCompression.aux" 1612874951 7058 8d31c61a4b0a69b692dbb5e6b82ee258 "pdflatex"
   (generated)
-  "perimeterCompression.blg"
   "perimeterCompression.bbl"
-["pdflatex"] 1612873772 "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.tex" "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.pdf" "perimeterCompression" 1612873778
+  "perimeterCompression.blg"
+["pdflatex"] 1612874946 "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.tex" "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.pdf" "perimeterCompression" 1612874951
   "C:/Users/neil/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1612445478 9796363 a2357cdf724b7e81998a91a83127b405 ""
   "C:/Users/neil/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1612868851 83930 a60ec061f757cf348be11677879bca0c ""
   "C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -224,8 +224,8 @@
   "C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/tex/latex/trimspaces/trimspaces.sty" 1253165583 1380 971a51b00a14503ddf754cab24c3f209 ""
   "C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty" 1463131981 57049 34128738f682d033422ca125f82e5d62 ""
-  "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.aux" 1612873777 7058 8d31c61a4b0a69b692dbb5e6b82ee258 ""
-  "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.tex" 1612873771 18665 7e4727b00c1a8caaa6c07a2bdf839709 ""
+  "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.aux" 1612874951 7058 8d31c61a4b0a69b692dbb5e6b82ee258 ""
+  "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.tex" 1612874945 18668 edf7a48e48cd0d8f23128e8c48ae92e2 ""
   "figures/CompressionEffect1.png" 1612446488 43518 58b262a76522e93787492f3150a7af72 ""
   "figures/PerimeterBots1.pdf" 1544612868 93812 75535b3c25ea69cf38e12293a226e715 ""
   "figures/PerimeterBots1.tex" 1612520801 58221 9b426b15496fbf6d8d0ac9122a431047 ""
@@ -234,14 +234,14 @@
   "figures/stableswarm.pdf" 1612448468 37432 f596509e31d6d90b8970cd9da950111d ""
   "figures/voidRemoval1.png" 1612782035 48195 5bf88855e42596beb972737a5c03b875 ""
   "figures/voidRemoval2.png" 1612782107 49176 922746fd1a3f43e914a4a8cbe7634879 ""
-  "perimeterCompression.aux" 1612873777 7058 8d31c61a4b0a69b692dbb5e6b82ee258 "pdflatex"
+  "perimeterCompression.aux" 1612874951 7058 8d31c61a4b0a69b692dbb5e6b82ee258 "pdflatex"
   "perimeterCompression.bbl" 1612873732 5674 d07084d9bcf3151a400455ec44b010fc "bibtex perimeterCompression"
-  "perimeterCompression.out" 1612873777 594 ae08d7f5628b613905b89ecd7f8382b8 "pdflatex"
-  "perimeterCompression.tex" 1612873771 18665 7e4727b00c1a8caaa6c07a2bdf839709 ""
+  "perimeterCompression.out" 1612874951 594 ae08d7f5628b613905b89ecd7f8382b8 "pdflatex"
+  "perimeterCompression.tex" 1612874945 18668 edf7a48e48cd0d8f23128e8c48ae92e2 ""
   (generated)
+  "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.log"
   "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.pdf"
+  "perimeterCompression.pdf"
+  "perimeterCompression.log"
   "perimeterCompression.aux"
   "perimeterCompression.out"
-  "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.log"
-  "perimeterCompression.log"
-  "perimeterCompression.pdf"
