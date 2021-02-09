@@ -1,4 +1,50 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{BAFVM:06}
+L.~Barnes, W.~Alvis, M.~Fields, K.~Valavanis, and W.~Moreno.
+\newblock Heterogeneous swarm formation control using bivariate normal
+  functions to generate potential fields.
+\newblock In {\em Distributed Intelligent Systems: Collective Intelligence and
+  Its Applications, 2006. DIS 2006. IEEE Workshop on}, pages 85--94. IEEE,
+  2006.
+
+\bibitem{BAF:06}
+L.~Barnes, W.~Alvis, M.~Fields, K.~Valavanis, and W.~Moreno.
+\newblock Swarm formation control with potential fields formed by bivariate
+  normal functions.
+\newblock In {\em Control and Automation, 2006. MED'06. 14th Mediterranean
+  Conference on}, pages 1--7. IEEE, 2006.
+
+\bibitem{BFV:07}
+L.~Barnes, M.~Fields, and K.~Valavanis.
+\newblock Unmanned ground vehicle swarm formation control using potential
+  fields.
+\newblock In {\em Control \& Automation, 2007. MED'07. Mediterranean Conference
+  on}, pages 1--8. IEEE, 2007.
+
+\bibitem{BM:09}
+D.~Bennet and C.~McInnes.
+\newblock Verifiable control of a swarm of unmanned aerial vehicles.
+\newblock {\em Journal of Aerospace Engineering}, 223(7):939--953, 2009.
+
+\bibitem{cao2012distributed}
+Y.~Cao, W.~Ren, and M.~Egerstedt.
+\newblock Distributed containment control with multiple stationary or dynamic
+  leaders in fixed and switching directed networks.
+\newblock {\em Automatica}, 48(8):1586--1597, 2012.
+
+\bibitem{DHMRZ:06}
+Y.~Dai, M.~Hinchey, M.~Madhusoodan, J.~Rash, and X.~Zou.
+\newblock A prototype model for self-healing and self-reproduction in swarm
+  robotics system.
+\newblock In {\em 2006 2nd IEEE International Symposium on Dependable,
+  Autonomic and Secure Computing}, pages 3--10, Sept 2006.
+
+\bibitem{elamvazhuthi2015optimal}
+K.~Elamvazhuthi and S.~Berman.
+\newblock Optimal control of stochastic coverage strategies for robotic swarms.
+\newblock In {\em 2015 IEEE International Conference on Robotics and Automation
+  (ICRA)}, pages 1822--1829. IEEE, 2015.
 
 \bibitem{eliot2017methods}
 N.~Eliot.
@@ -17,16 +63,80 @@ N.~Eliot, D.~Kendall, A.~Moon, M.~Brockway, and M.~Amos.
 \newblock In {\em Artificial Life Conference Proceedings}, pages 87--94. MIT
   Press, 2019.
 
+\bibitem{VG:05}
+V.~Gazi.
+\newblock Swarm aggregations using artificial potentials and sliding-mode
+  control.
+\newblock {\em IEEE Transactions on Robotics}, 21(6):1208--1214, Dec 2005.
+
 \bibitem{ghrist2008surrounding}
 R.~Ghrist, D.~Lipsky, S.~Poduri, and G.~Sukhatme.
 \newblock Surrounding nodes in coordinate-free networks.
 \newblock In {\em Algorithmic Foundation of Robotics VII}, pages 409--424.
   Springer, 2008.
 
+\bibitem{HC:09}
+S.~P. Hou and C.~C. Cheah.
+\newblock Multiplicative potential energy function for swarm control.
+\newblock In {\em Intelligent Robots and Systems, 2009. IROS 2009. IEEE/RSJ
+  International Conference on}, pages 4363--4368, Oct 2009.
+
+\bibitem{IT:10}
+A.~R. Ismail and J.~Timmis.
+\newblock Towards self-healing swarm robotic systems inspired by granuloma
+  formation.
+\newblock In {\em Engineering of Complex Computer Systems (ICECCS), 2010 15th
+  IEEE International Conference on}, pages 313--314. IEEE, 2010.
+
+\bibitem{GN:08}
+G.~Lee and N.~Y. Chong.
+\newblock Self-configurable mobile robot swarms with hole repair capability.
+\newblock In {\em Intelligent Robots and Systems, 2008. IROS 2008. IEEE/RSJ
+  International Conference on}, pages 1403--1408, Sept 2008.
+
 \bibitem{mclurkin2009}
 J.~McLurkin and E.~D. Demaine.
 \newblock A distributed boundary detection algorithm for multi-robot systems.
 \newblock In {\em Intelligent Robots and Systems, 2009. IROS 2009. IEEE/RSJ
   International Conference on}, pages 4791--4798. IEEE, 2009.
+
+\bibitem{RAZ:13}
+T.~R{\"a}z.
+\newblock On the application of the honeycomb conjecture to the bee's
+  honeycomb.
+\newblock {\em Philosophia Mathematica}, page nkt022, 2013.
+
+\bibitem{REY:87}
+C.~W. Reynolds.
+\newblock Flocks, herds and schools: A distributed behavioral model.
+\newblock In {\em ACM SIGGRAPH computer graphics}, volume~21, pages 25--34.
+  ACM, 1987.
+
+\bibitem{RMT:15}
+J.~H. Roach, R.~J. Marks, and B.~B. Thompson.
+\newblock Recovery from sensor failure in an evolving multiobjective swarm.
+\newblock {\em IEEE Transactions on Systems, Man, and Cybernetics: Systems},
+  45(1):170--174, Jan 2015.
+
+\bibitem{SW:03}
+F.~E. Schneider and D.~Wildermuth.
+\newblock A potential field based approach to multi robot formation navigation.
+\newblock In {\em Robotics, Intelligent Systems and Signal Processing, 2003.
+  Proceedings. 2003 IEEE International Conference on}, volume~1, pages 680--685
+  vol.1, Oct 2003.
+
+\bibitem{TIBW:16}
+J.~Timmis, A.~Ismail, J.~Bjerknes, and A.~Winfield.
+\newblock An immune-inspired swarm aggregation algorithm for self-healing swarm
+  robotic systems.
+\newblock {\em Biosystems}, 146:60 -- 76, 2016.
+\newblock Information Processing in Cells and Tissues.
+
+\bibitem{VH:09}
+E.~Vassev and M.~Hinchey.
+\newblock Assl specification and code generation of self-healing behavior for
+  nasa swarm-based systems.
+\newblock In {\em 2009 Sixth IEEE Conference and Workshops on Engineering of
+  Autonomic and Autonomous Systems}, pages 77--86, April 2009.
 
 \end{thebibliography}
