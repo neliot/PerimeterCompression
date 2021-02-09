@@ -46,9 +46,9 @@ Perimeter Compression is a technique where by a void reducing effect can be adde
 \end{abstract}
 
 \section{Introduction}
-When cohesion and repulsion field effects are used to create a swarming effect, the stable structures that develop are limited to either straight edges or partial lattices \cite{eliot2017methods}. The maintenance of a well-structured swarm is crucial to effective deployment, including reconnaissance or artificial pollination, where ``blind spots" are best  eliminated \cite{elamvazhuthi2015optimal}, and containment, where the swarm is used to surround an object or region \cite{cao2012distributed}. Over time swarms form regular shapes~\cite{RAZ:13} and perimeters form of partial lattices may contain so-called \textit{anomalies}, such as concave ``dents" or convex ``peaks". These anomalies contribute to the disruption of an otherwise well-structured swarm. The key, therefore, is to ensure that these \textit{anomalies} are dynamically removed from a swarm.
+When cohesion and repulsion field effects are used to create a swarming effect, the stable structures that develop are limited to either straight edges or partial lattices \cite{eliot2017methods}. The maintenance of a well-structured swarm is crucial to effective deployment, including reconnaissance or artificial pollination, where `blind spots' are best  eliminated \cite{elamvazhuthi2015optimal}, and containment, where the swarm is used to surround an object or region \cite{cao2012distributed}. Over time swarms form regular shapes~\cite{RAZ:13} and perimeters form of partial lattices may contain so-called \textit{anomalies}, such as concave `dents' or convex `peaks'. These anomalies contribute to the disruption of an otherwise well-structured swarm. The key, therefore, is to ensure that these \textit{anomalies} are dynamically removed from a swarm.
 \paragraph{}
-Perimeter compression is a technique that creates a ``pull'' effect between perimeter agents. It is dependant upon perimeter agent identification as discussed by Eliot et. al. in \cite{eliot2017methods, eliot2018metric, eliot2019void} and shown in \S~\ref{perimeterDetection}.
+Perimeter compression is a technique that creates a `pull' effect between perimeter agents. It is dependant upon perimeter agent identification as discussed by Eliot et. al. in \cite{eliot2017methods, eliot2018metric, eliot2019void} and shown in \S~\ref{perimeterDetection}.
 \paragraph{}
 The aim of the algorithm is to reduce the spacing between perimeter-based agents by reducing the repulsion field and increasing the cohesion affect on perimeter agents. Figure \ref{fig:stableswarm}) shows an agent and it fields. $S_b$ is the sensor field. $O_b$ is the obstacle field. $C_b$ is the cohesion field and $R_b$ is the repulsion field. The implementation involves introducing two controlling weights; $p_c$ (Perimeter Compression Cohesion) which increases the cohesion vector ($k_c\rightarrow p_ck_c$) and $p_r$ (Perimeter Compression Repulsion) which reduces the size of the repulsion field ($k_r\rightarrow p_rk_r$) of the perimeter-based agents.
 \begin{assumption}
@@ -208,7 +208,7 @@ An agent is therefore on the perimeter of the swarm if it is not enclosed by the
 \label{enclosing}
 \end{equation}
 
-The polygon is considered to be ``open" if two successive agents on the perimeter are unable to ``see" one another; that is, their separation, $d$, is greater than the range of the attractive field.  An open polygon does not enclose the agent $b$, so it is considered to be on the perimeter. 
+The polygon is considered to be `open' if two successive agents on the perimeter are unable to `see' one another; that is, their separation, $d$, is greater than the range of the attractive field.  An open polygon does not enclose the agent $b$, so it is considered to be on the perimeter. 
 
 Formally, an agent, $b$, is on the perimeter of the swarm if the predicate in Equation ~\ref{perimeter-predicate} is true.
 
