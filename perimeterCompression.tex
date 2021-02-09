@@ -226,11 +226,13 @@ An agent is at the apex of a concave region of the perimeter if
 \end{equation}
 
 The orientation is independent in so much as: if the agent $b$ is rotated through an angle of $\gamma$ then the bearings are rotated by $-\gamma$, \[ \beta_i\mapsto\beta_i-\gamma \] The  angle between successive agents is now
+\footnotesize
 \[
 \theta_i  =  (\beta_{i+1}-\gamma) - (\beta_i-\gamma)
 = \beta_{i+1}-\beta_i-\gamma+\gamma
 = \beta_{i+1}-\beta_i
 \]
+\normalsize
 
 \subsection{Repulsion compression}\label{repulsion:compression}
 The repulsion compression component of the perimeter is applied by adjusted the effective range ($\mathsf{erf}(b,b')$) if the agents are both perimeter-based. Equation~\ref{eq:repulsion2} shows the new formula to calculate the adjusted repulsion. Equation~\ref{eq:repulsion2} shows the calculation of the effective field. As the agent's repulsion field is always within the cohesion field (Eq.~\ref{eq:cohesion1}), the repulsion neighbours can also be defined as a subset of the cohesion neighbours $n_c(b)$~(Eq.~\ref{eq:repulsion3}).\\
@@ -239,11 +241,14 @@ The repulsion compression component of the perimeter is applied by adjusted the 
 n_r(b) = \{b' \in \mathcal{S} : b \neq b' \land \lVert\vec{b b'}\rVert \leq \mathsf{erf}(b,b')\}
 \end{equation}
 
+\small
 \begin{equation}\label{eq:repulsion2}
 \mathsf{erf}(b, b') = \mathsf{if} \;
 \mathsf{per}(b) \; \mathsf{and} \; \mathsf{per}(b') \; \mathsf{then} \;
 p_rR_b \; \mathsf{else} \; R_b
 \end{equation}
+\normalsize
+
 
 \begin{equation}\label{eq:repulsion3}
 n_r(b) = \{b' \in n_c(b)~:~\magn{bb'} <= \mathsf{erf}(b,b')\}
@@ -256,17 +261,18 @@ If the condition of both agents being a perimeter is met ($\mathsf{per}(b) \; \m
 The effect of Equation \ref{eq:repulsion4} will be to reduce the repulsion of inter-perimeter-based agents allowing them to be closer together before a reduced repulsion-vector is applied. 
 
 \important{The repulsion-vector that is generated is based upon $p_rR_b$, the reduced repulsion field, and not the full $R_b$ field. This is to scale the resultant-repulsion-vector as well as reducing the repulsion field.}
-
+\small
 \begin{equation}\label{eq:repulsion4}
 v_r(b) = \frac{1}{\lvert n_r(b)\rvert}\sum_{b' \in n_r(b)} k_r\left(\lVert\vec{b b'}\rVert - \mathsf{erf}(b,b') \, \right)\widehat{bb'}
 \end{equation}
-
+\normalsize
+\small
 \begin{equation}\label{eq:repulsion5}
 \mathsf{erf}(b, b') = \mathsf{if} \;
 \mathsf{per}(b) \; \mathsf{and} \; \mathsf{per}(b') \; \mathsf{then} \;
 p_rR_b \; \mathsf{else} \; R_b
 \end{equation}
-
+\normalsize
 \subsection{Compression cohesion}
 The cohesion component of the compression effect ($p_c$) is applied when an agent ($b$) and its neighbour ($b'$) are both perimeter-based. If the agents are not both perimeter-based then the agents vector is only scaled by $k_c$ (Eq.~\ref{eq:cohesion4}). The effect of the additional cohesion-compression weighting is to increases the size of the generated cohesion-vector $\mathsf{efc}(b,b')$ (Eq.~\ref{eq:cohesion3}). 
 
@@ -274,9 +280,11 @@ The cohesion component of the compression effect ($p_c$) is applied when an agen
 v_c(b) = \frac{1}{\lvert n_c(b)\rvert} \sum_{b' \in n_c(b)}\mathsf{ekc}(b, b')\, \vec{b b'}
 \end{equation}
 
+\small
 \begin{equation}\label{eq:cohesion4}
 \mathsf{ekc}(b, b') = \mathsf{if} \; \mathsf{per}(b) \; \mathsf{and} \; \mathsf{per}(b') \; \mathsf{then} \; \mathrm{p}_ck_c \; \mathsf{else} \; k_c
 \end{equation}
+\normalsize
 
 \section{Conclusions}\label{conclusions}
 From the initial simulations it is possible to show that the technique is able to successfully remove voids and surround an obstacle as shown in the video \href{https://youtu.be/3eY1vvq0JWo}{https://youtu.be/3eY1vvq0JWo}.
