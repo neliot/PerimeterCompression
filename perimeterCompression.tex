@@ -70,7 +70,7 @@ In the context of swarm structure maintenance, Roach et al. focussed on the effe
 
 This void reduction effect is an extension of the work presented by Eliot et al. \cite{eliot2019void}, Ismail and Timmis \cite{IT:10,TIBW:16}, and also builds on the work of Lee and Chong on concave edge identification \cite{GN:08}, and on the work of McLurkin and Demaine on the detection of perimeter types \cite{mclurkin2009}. However, perimeter type identification requires a communications infrastructure. The technique employed in this paper does not explicitly require the identification of the perimeter type as it would limit the size of the swarm\cite{eliot2019void,GN:08} and is therefore a reduced algorithm to identify any perimeter.
 
-\section{Basic model}\label{basicModel}
+\section{Basic swarming model}\label{basicModel}
 In the Original work by Eliot et. al. the resultant vector of an agent was calculated using Equation~\ref{eq:resultantVector1a}. Where $k_c,k_r,k_d,k_o$ are weighting factors for the summed vectors associated with each interaction. 
 
 \begin{equation}\label{eq:resultantVector1a}
@@ -109,7 +109,7 @@ The affect of an agent being within this set is that it will generate a vector t
 v_c(b) = \frac{1}{\lvert n_c(b)\rvert} \sum_{b' \in n_c(b)}k_c\vec{b b'}
 \end{equation}
 
-\section{Compression model}
+\section{New compression model}
 The new algorithm requires each individual agent to modify the vector generated based upon the perimeter status of the agent and each neighbour. The equation has been simplified (Eq.~\ref{eq:newModel1}) and the weighting factors have been transferred into the calculations along with the additional weighting factors that are applied to specific agents within the cohesion and repulsion vector calculations.
 
 \begin{equation}\label{eq:newModel1}
