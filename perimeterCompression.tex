@@ -171,13 +171,9 @@ The detection process is achieved using a cyclic analysis of the agents that sur
 	\label{fig:neighbours}
 \end{figure}
 
-The initial detection of the agents is based on the distance that each agent in the swarm is away from the current agent as described in Section~\ref{cohesion} and shown in Equation~\ref{eq:cohesion1}. The perimeter detection set is based on the range and bearing of each neighbour agent, where $r$ is the \textit{range} and $\beta$ is the \textit{bearing}~\ref{eq:neighbourBearingSet}.
+The initial detection of the agents is based on the distance that each agent in the swarm is away from the current agent as described in Section~\ref{cohesion} and shown in Equation~\ref{eq:cohesion1}. The perimeter detection set is based on the range and bearing of each neighbour agent, where $r$ is the \textit{range} and $\beta$ is the \textit{bearing}~Fig.~\ref{fig:neighbours} The values are calculated  from each agent respect to $b$.
 
-\begin{equation}\label{eq:neighbourBearingSet}
-\mathcal{N}_b = \{ (r,\beta) \ldots \} 
-\end{equation}
-
-The set is then sorted in ascending order such that $\beta_0 < \beta_1 < \ldots < \beta_n$. Each consecutive pair of agents in the sequence defines an \textit{edge}, which has length $d$ and an angle $\theta$ given by the difference in bearings of successive neighbours. The sequence of edges that forms this polygon are expressed in Equation~\ref{sortedBearing}.
+The neighbour set $N_r(b)$ is then sorted in ascending order such that $\beta_0 < \beta_1 < \ldots < \beta_n$. Each consecutive pair of agents in the sequence defines an \textit{edge}, which has length $d$ and an angle $\theta$ given by the difference in bearings of successive neighbours. The sequence of edges form a polygon that can be expressed as Equation~\ref{sortedBearing}.
 
 \begin{equation}\label{sortedBearing}
 \mathcal{P}_e = \langle (d_0,\theta_0), \ldots , (d_n,\theta_n) \rangle
@@ -187,7 +183,7 @@ where
 \theta_i = \beta_{i+1} - \beta_i
 \end{equation}
 
-The index addition is modulo $|\mathcal N_b|$, making $\beta_0$ the successor bearing to $\beta_n$ ($n+1 = 0$).  The angles $\theta$ must lie in the range $0<\theta\leq2\pi$. This restriction on the values of $\theta$ enforce the condition that
+The index addition is modulo $|\mathcal{P}_e|$, making $\beta_0$ the successor bearing to $\beta_n$ ($n+1 = 0$).  The angles $\theta$ must lie in the range $0<\theta\leq2\pi$. This restriction on the values of $\theta$ enforce the condition that
 
 \begin{equation}
 \sum\theta_i = 2\pi
@@ -206,7 +202,7 @@ An agent is therefore on the perimeter of the swarm if it is not enclosed by the
 \label{enclosing}
 \end{equation}
 
-The polygon is considered to be `open' if two successive agents on the perimeter are unable to `see' one another; that is, their separation, $d$, is greater than the range of the attractive field.  An open polygon does not enclose the agent $b$, so it is considered to be on the perimeter. 
+The polygon is considered to be `open' if two successive agents on the perimeter are unable to `see' one another; that is, their separation, $d$, is greater than the range of the attractive field $b_r$.  An open polygon does not enclose the agent $b$, so it is considered to be on the perimeter. 
 
 Formally, an agent, $b$, is on the perimeter of the swarm if the predicate in Equation ~\ref{perimeter-predicate} is true.
 
@@ -232,7 +228,7 @@ The orientation is independent in so much as: if the agent $b$ is rotated throug
 \]
 \normalsize
 
-\subsection{Repulsion compression}\label{repulsion:compression}
+\section{Repulsion compression}\label{repulsion:compression}
 The repulsion compression component of the perimeter is applied by adjusted the effective range ($\mathsf{erf}(b,b')$) if the agents are both perimeter-based. Equation~\ref{eq:repulsion2} shows the new formula to calculate the adjusted repulsion. Equation~\ref{eq:repulsion2} shows the calculation of the effective field. As the agent's repulsion field is always within the cohesion field (Eq.~\ref{eq:cohesion1}), the repulsion neighbours can also be defined as a subset of the cohesion neighbours $n_c(b)$~(Eq.~\ref{eq:repulsion3}).\\
 
 \begin{equation}\label{eq:repulsion1}
@@ -271,7 +267,7 @@ v_r(b) = \frac{1}{\lvert n_r(b)\rvert}\sum_{b' \in n_r(b)} k_r\left(\lVert\vec{b
 p_rR_b \; \mathsf{else} \; R_b
 \end{equation}
 \normalsize
-\subsection{Compression cohesion}
+\section{Cohesion compression }
 The cohesion component of the compression effect ($p_c$) is applied when an agent ($b$) and its neighbour ($b'$) are both perimeter-based. If the agents are not both perimeter-based then the agents vector is only scaled by $k_c$ (Eq.~\ref{eq:cohesion4}). The effect of the additional cohesion-compression weighting is to increases the size of the generated cohesion-vector $\mathsf{efc}(b,b')$ (Eq.~\ref{eq:cohesion3}). 
 
 \begin{equation}\label{eq:cohesion3}
@@ -284,8 +280,15 @@ v_c(b) = \frac{1}{\lvert n_c(b)\rvert} \sum_{b' \in n_c(b)}\mathsf{ekc}(b, b')\,
 \end{equation}
 \normalsize
 
+\section{Results}
+\subsection{Gap compression}
+\subsection{Perimeter compression}
+\subsection{Comparison}
+
 \section{Conclusions}\label{conclusions}
 From the initial simulations it is possible to show that the technique is able to successfully remove voids and surround an obstacle as shown in the video \href{https://youtu.be/3eY1vvq0JWo}{https://youtu.be/3eY1vvq0JWo}.
+
+\section{Future Work}
 
 \bibliographystyle{abbrv}
 \bibliography{perimeter}
