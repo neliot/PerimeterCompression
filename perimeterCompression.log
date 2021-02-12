@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  11 FEB 2021 11:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  12 FEB 2021 11:15
 entering extended mode
 **./perimeterCompression.tex
 (perimeterCompression.tex
@@ -1132,10 +1132,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 233--234
 
 [4]
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 2
-92.
+93.
  ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) (perimeterCompression.bbl [5]
+)
+<figures/baselineSwarm.png, id=314, 440.64626pt x 442.65375pt>
+File: figures/baselineSwarm.png Graphic file (type png)
+<use figures/baselineSwarm.png>
+Package pdftex.def Info: figures/baselineSwarm.png  used on input line 304.
+(pdftex.def)             Requested size: 142.26378pt x 142.90839pt.
+ (perimeterCompression.bbl [5 <./figures/baselineSwarm.png>]
 Underfull \hbox (badness 2529) in paragraph at lines 136--141
 \OT1/ptm/m/n/9 immune-inspired swarm ag-gre-ga-tion al-go-rithm for self-
  []
@@ -1144,14 +1150,14 @@ Underfull \hbox (badness 2529) in paragraph at lines 136--141
 
 ] (perimeterCompression.aux)
 Package rerunfilecheck Info: File `perimeterCompression.out' has not changed.
-(rerunfilecheck)             Checksum: 4BCEC5D46FC963D21754ED5BEF6CE95E;867.
+(rerunfilecheck)             Checksum: 20145ABA4ADF7EFE1CCF124BFAFE3CDB;880.
  ) 
 Here is how much of TeX's memory you used:
- 25728 strings out of 479584
- 530071 string characters out of 2861984
- 864171 words of memory out of 3000000
- 42360 multiletter control sequences out of 15000+200000
- 448207 words of font info for 111 fonts, out of 3000000 for 9000
+ 25737 strings out of 479584
+ 530300 string characters out of 2861984
+ 864245 words of memory out of 3000000
+ 42367 multiletter control sequences out of 15000+200000
+ 448979 words of font info for 111 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,11n,108p,1006b,849s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}
@@ -1186,9 +1192,9 @@ mes/utmb8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw
 /times/utmbi8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /urw/times/utmr8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/urw/times/utmri8a.pfb>
-Output written on perimeterCompression.pdf (6 pages, 531060 bytes).
+Output written on perimeterCompression.pdf (6 pages, 543299 bytes).
 PDF statistics:
- 424 PDF objects out of 1000 (max. 8388607)
- 77 named destinations out of 1000 (max. 500000)
- 315 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 427 PDF objects out of 1000 (max. 8388607)
+ 78 named destinations out of 1000 (max. 500000)
+ 320 words of extra memory for PDF output out of 10000 (max. 10000000)
 

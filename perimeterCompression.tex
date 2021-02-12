@@ -281,10 +281,11 @@ v_c(b) = \frac{1}{\lvert n_c(b)\rvert} \sum_{b' \in n_c(b)}\mathsf{ekc}(b, b')\,
 \end{equation}
 \normalsize
 
-\section{Results}
-For all the experiments the parameters used to create the basic swarming effect are shown in Table~\ref{tab:swarmingEffect}. The compression effect parameters are shown in Table~\ref{tab:compressionEffect} (NOTE:Probably be more than one set for the comparison - work in progress)
+\section{Experimental results}
+For all the experiments the parameters used to create the basic swarming effect are shown in Table~\ref{tab:swarmingEffect}. The parameters create a very basic hexagonal-based distribution of agents that will stabilise as shown in Figure~\ref{fig:baselineSwarm}. The compression effect parameters are shown in Table~\ref{tab:compressionEffect} (NOTE:Probably be more than one set for the comparison - work in progress)
 \begin{table}[h]
 	\centering
+	\tiny
 	\begin{tabular}{|c|r|}
 		\hline
 		\rowcolor[HTML]{000000} 
@@ -293,21 +294,27 @@ For all the experiments the parameters used to create the basic swarming effect 
 		$k_c$ & \texttt{0.15}  \\ \hline
 		$R_b$ & \texttt{40.00} \\ \hline
 		$k_r$ & \texttt{50.00} \\ \hline
-		$p_r$ & \texttt{0.25}  \\ \hline
-		$p_c$ & \texttt{50.00} \\ \hline
 	\end{tabular}
   	\caption{Swarming effect parameters}
   	\label{tab:swarmingEffect}
 \end{table}
 
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=5cm]{figures/baselineSwarm}
+	\end{center}
+	\caption{Baseline swarm in stablised configuration. \label{fig:baselineSwarm}}
+\end{figure}
+
 \begin{table}[h]
 	\centering
-	\begin{tabular}{|c|r|}
+	\tiny
+	\begin{tabular}{|c|r|r|r|r|r|r|}
 		\hline
 		\rowcolor[HTML]{000000} 
-		{\color[HTML]{FFFFFF} Compression} & {\color[HTML]{FFFFFF} Value} \\ \hline
-		$p_r$ & \texttt{0.25}  \\ \hline
-		$p_c$ & \texttt{50.00} \\ \hline
+		{\color[HTML]{FFFFFF} Comp.} & {\color[HTML]{FFFFFF} 1} & {\color[HTML]{FFFFFF} 2} & {\color[HTML]{FFFFFF} 3} & {\color[HTML]{FFFFFF} 4} & {\color[HTML]{FFFFFF} 5} & {\color[HTML]{FFFFFF} 6}\\ \hline
+		$p_r$ & \texttt{0.10} & \texttt{0.15} & \texttt{0.20} & \texttt{0.25} & \texttt{0.30} & \texttt{0.35} \\ \hline
+		$p_c$ & \texttt{20.00}  & \texttt{30.00} & \texttt{40.00} & \texttt{50.00} & \texttt{60.00} & \texttt{70.00}\\ \hline
 	\end{tabular}
   	\caption{Compression effect parameters}
 	\label{tab:compressionEffect}
