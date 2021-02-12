@@ -107,15 +107,15 @@ n_c(b) = \{b' \in S~:~b' \neq b \land\magn{bb'} <= C_b\}
 The affect of an agent being within this set is that it will generate a vector that should `encourage' agents to maintain their proximity. i.e. generate a cohesive swarm. The general weighted ($k_c$) formula for agents to maintain their proximity is to direct their motion towards the central point of all neighbouring agents as shown in Equation~\ref{eq:cohesion2}. This formula includes the $k_c$ quotient that allows the cohesion effect to be `balanced' with respect to other vector influences as described in ~\cite{eliot2017methods,eliot2018metric,eliot2019void} 
 
 \begin{equation}\label{eq:cohesion2}
-v_c(b) = \frac{1}{\lvert n_c(b)\rvert} \sum_{b' \in n_c(b)}k_c\vec{b b'}
+v_c(b) = \frac{1}{\lvert n_c(b)\rvert} \sum_{b' \in n_c(b)}\vec{b b'}
 \end{equation}
 
-\section{New compression model}
-The new algorithm requires each individual agent to modify the vector generated based upon the perimeter status of the agent and each neighbour. The equation has been simplified (Eq.~\ref{eq:newModel1}) and the weighting factors have been transferred into the calculations along with the additional weighting factors that are applied to specific agents within the cohesion and repulsion vector calculations.
+\section{Perimeter compression model}
+The new algorithm requires each individual agent to modify the vector generated based upon the perimeter status of the agent and each neighbour. The equation has been simplified (Eq.~\ref{eq:newModel2}) and the weighting factors have been transferred into the calculations along with the additional weighting factors that are applied to specific agents within the cohesion and repulsion vector calculations.
 
-\begin{equation}\label{eq:newModel1}
-v(b) = v_c(b) + v_r(b) + v_d(b) + v_o(b)
-\end{equation}
+% \begin{equation}\label{eq:newModel1}
+% v(b) = v_c(b) + v_r(b) + v_d(b) + v_o(b)
+% \end{equation}
 
 As in the basic model (Section~\ref{basicModel}) the formula is simplified to only account for cohesion and repulsion~(Eq.~\ref{eq:newModel2}).
 
@@ -136,13 +136,13 @@ The graph shows that the agents inter-magnitudes are effected and the swarm stab
 
 \begin{figure}
 \centering
-\begin{subfigure}{.4\textwidth}
+\begin{subfigure}{0.4\textwidth}
 	\centering	
 	\includegraphics[width=1.0\linewidth]{figures/voidRemoval1}
 	\caption[Void removal start]{Void removal start}
 	\label{fig:voidRemovalStart}
 \end{subfigure}
-\begin{subfigure}{.4\textwidth}
+\begin{subfigure}{0.4\textwidth}
 	\centering
 	\includegraphics[width=1.0\linewidth]{figures/voidRemoval2}
 	\caption[Void removal finish]{Void removal finish}
