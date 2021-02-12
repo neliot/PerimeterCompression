@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  12 FEB 2021 16:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  12 FEB 2021 16:24
 entering extended mode
 **"c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.tex"
 ("c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.tex"
@@ -854,18 +854,18 @@ Underfull \hbox (badness 2529) in paragraph at lines 136--141
 
 ) [6 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baselineSwarmMagnitude1.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baselineSwarmPerimeter1.png>] ("c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.aux")
 Package rerunfilecheck Info: File `perimeterCompression.out' has not changed.
-(rerunfilecheck)             Checksum: 7FE84211D8B2E83C3010568CDD254B61;914.
+(rerunfilecheck)             Checksum: 8BFABFF1D713022B93CEE324113CC876;918.
  ) 
 Here is how much of TeX's memory you used:
  25786 strings out of 479584
  532373 string characters out of 2861984
- 861618 words of memory out of 3000000
+ 861641 words of memory out of 3000000
  42406 multiletter control sequences out of 15000+200000
  448979 words of font info for 111 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,11n,108p,1063b,849s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.pdf" (6 pages, 2293530 bytes).
+Output written on "c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.pdf" (6 pages, 2293540 bytes).
 PDF statistics:
  441 PDF objects out of 1000 (max. 8388607)
  82 named destinations out of 1000 (max. 500000)
