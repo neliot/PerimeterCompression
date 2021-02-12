@@ -84,19 +84,6 @@ In this paper we will only be considering the cohesion and repulsion components 
 v(b) = k_cv_c(b) + k_rv_r(b)
 \end{equation}
 
-\subsection{Repulsion}\label{repulsion:neighbours}
-The repulsion component of an agent's movement is calculated from interaction with its neighbours $n_r(b)$ (Eq.~\ref{eq:repulsion1a}) in a swarm ($\mathcal{S}$) that are within the agent's ($b$) repulsion field ($R_b$).
-
-\begin{equation}\label{eq:repulsion1a}
-n_r(b) = \{b' \in \mathcal{S} : b \neq b' \land \lVert\vec{b b'}\rVert \leq R_b)\}
-\end{equation}
-
-The repulsion is then calculated as the average of all the vectors created by the agent ($b$) to the neighbours ($b'$) (Eg.~\ref{eq:repulsion2a}) and its proximity ($\lVert\vec{bb'}\rVert - R_b$).
-
-\begin{equation}\label{eq:repulsion2a}
-v_r(b) = \frac{1}{\lvert n_r(b)\rvert}\sum_{b' \in n_r(b)} \left(\lVert\vec{b b'}\rVert - R_b \, \right)\widehat{bb'}
-\end{equation}
-
 \subsection{Cohesion}\label{cohesion}
 The cohesion component of an agent is calculated in a similar way to the repulsion in that it is dependent upon the proximity of neighbours. Where $n_c(b)$ is the set of neighbour agents for $b$ (Eq. \ref{eq:cohesion1}). The inclusion of an agent from a swarm ($S$) in by the agent's cohesion field ($C_b$).
 
@@ -108,6 +95,19 @@ The affect of an agent being within this set is that it will generate a vector t
 
 \begin{equation}\label{eq:cohesion2}
 v_c(b) = \frac{1}{\lvert n_c(b)\rvert} \sum_{b' \in n_c(b)}\vec{b b'}
+\end{equation}
+
+\subsection{Repulsion}\label{repulsion:neighbours}
+The repulsion component of an agent's movement is calculated from interaction with its neighbours $n_r(b)$ (Eq.~\ref{eq:repulsion1a}) in a swarm ($\mathcal{S}$) that are within the agent's ($b$) repulsion field ($R_b$).
+
+\begin{equation}\label{eq:repulsion1a}
+n_r(b) = \{b' \in \mathcal{S} : b \neq b' \land \lVert\vec{b b'}\rVert \leq R_b)\}
+\end{equation}
+
+The repulsion is then calculated as the average of all the vectors created by the agent ($b$) to the neighbours ($b'$) (Eg.~\ref{eq:repulsion2a}) and its proximity ($\lVert\vec{bb'}\rVert - R_b$).
+
+\begin{equation}\label{eq:repulsion2a}
+v_r(b) = \frac{1}{\lvert n_r(b)\rvert}\sum_{b' \in n_r(b)} \left(\lVert\vec{b b'}\rVert - R_b \, \right)\widehat{bb'}
 \end{equation}
 
 \section{Perimeter compression model}
