@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  12 FEB 2021 11:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  12 FEB 2021 12:57
 entering extended mode
 **./perimeterCompression.tex
 (perimeterCompression.tex
@@ -1136,27 +1136,58 @@ LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 2
  ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-<figures/baselineSwarm.png, id=314, 440.64626pt x 442.65375pt>
+<figures/baselineSwarm.png, id=314, 1154.3125pt x 1177.39874pt>
 File: figures/baselineSwarm.png Graphic file (type png)
 <use figures/baselineSwarm.png>
 Package pdftex.def Info: figures/baselineSwarm.png  used on input line 304.
-(pdftex.def)             Requested size: 142.26378pt x 142.90839pt.
- (perimeterCompression.bbl [5 <./figures/baselineSwarm.png>]
+(pdftex.def)             Requested size: 142.26378pt x 145.10843pt.
+<figures/baselineSwarmMagnitude.png, id=315, 1927.2pt x 974.64125pt>
+File: figures/baselineSwarmMagnitude.png Graphic file (type png)
+<use figures/baselineSwarmMagnitude.png>
+Package pdftex.def Info: figures/baselineSwarmMagnitude.png  used on input line
+ 311.
+(pdftex.def)             Requested size: 227.62204pt x 115.10779pt.
+<figures/baselineSwarmPerimeter.png, id=316, 1927.2pt x 974.64125pt>
+File: figures/baselineSwarmPerimeter.png Graphic file (type png)
+<use figures/baselineSwarmPerimeter.png>
+Package pdftex.def Info: figures/baselineSwarmPerimeter.png  used on input line
+ 318.
+(pdftex.def)             Requested size: 227.62204pt x 115.10779pt.
+<figures/baselineSwarm1.png, id=317, 1056.94875pt x 1036.87375pt>
+File: figures/baselineSwarm1.png Graphic file (type png)
+<use figures/baselineSwarm1.png>
+Package pdftex.def Info: figures/baselineSwarm1.png  used on input line 343.
+(pdftex.def)             Requested size: 142.26378pt x 139.56055pt.
+<figures/baselineSwarmMagnitude1.png, id=318, 1927.2pt x 974.64125pt>
+File: figures/baselineSwarmMagnitude1.png Graphic file (type png)
+<use figures/baselineSwarmMagnitude1.png>
+Package pdftex.def Info: figures/baselineSwarmMagnitude1.png  used on input lin
+e 350.
+(pdftex.def)             Requested size: 227.62204pt x 115.10779pt.
+ [5 <./figures/baselineSwarm.png> <./figures/baselineSwarmMagnitude.png> <./fig
+ures/baselineSwarmPerimeter.png> <./figures/baselineSwarm1.png>]
+<figures/baselineSwarmPerimeter1.png, id=334, 1927.2pt x 974.64125pt>
+File: figures/baselineSwarmPerimeter1.png Graphic file (type png)
+<use figures/baselineSwarmPerimeter1.png>
+Package pdftex.def Info: figures/baselineSwarmPerimeter1.png  used on input lin
+e 357.
+(pdftex.def)             Requested size: 227.62204pt x 115.10779pt.
+
+(perimeterCompression.bbl
 Underfull \hbox (badness 2529) in paragraph at lines 136--141
 \OT1/ptm/m/n/9 immune-inspired swarm ag-gre-ga-tion al-go-rithm for self-
  []
 
-) [6
-
-] (perimeterCompression.aux)
+) [6 <./figures/baselineSwarmMagnitude1.png> <./figures/baselineSwarmPerimeter1
+.png>] (perimeterCompression.aux)
 Package rerunfilecheck Info: File `perimeterCompression.out' has not changed.
-(rerunfilecheck)             Checksum: 20145ABA4ADF7EFE1CCF124BFAFE3CDB;880.
+(rerunfilecheck)             Checksum: 3F07DF9C3FF6BC27DAB65F7FB16AAC20;881.
  ) 
 Here is how much of TeX's memory you used:
- 25737 strings out of 479584
- 530300 string characters out of 2861984
- 864245 words of memory out of 3000000
- 42367 multiletter control sequences out of 15000+200000
+ 25787 strings out of 479584
+ 531867 string characters out of 2861984
+ 861645 words of memory out of 3000000
+ 42407 multiletter control sequences out of 15000+200000
  448979 words of font info for 111 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,11n,108p,1006b,849s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1192,9 +1223,9 @@ mes/utmb8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw
 /times/utmbi8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /urw/times/utmr8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/urw/times/utmri8a.pfb>
-Output written on perimeterCompression.pdf (6 pages, 543299 bytes).
+Output written on perimeterCompression.pdf (6 pages, 2293283 bytes).
 PDF statistics:
- 427 PDF objects out of 1000 (max. 8388607)
- 78 named destinations out of 1000 (max. 500000)
- 320 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 442 PDF objects out of 1000 (max. 8388607)
+ 83 named destinations out of 1000 (max. 500000)
+ 345 words of extra memory for PDF output out of 10000 (max. 10000000)
 
