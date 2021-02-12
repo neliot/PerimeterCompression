@@ -186,7 +186,7 @@ The orientation is independent in so much as: if the agent $b$ is rotated throug
 \]
 \normalsize
 
-\section{Repulsion compression}\label{repulsion:compression}
+\subsection{Repulsion compression}\label{repulsion:compression}
 The repulsion compression component of the perimeter is applied by adjusted the effective range ($\mathsf{erf}(b,b')$) if the agents are both perimeter-based. Equation~\ref{eq:repulsion2} shows the new formula to calculate the adjusted repulsion. Equation~\ref{eq:repulsion2} shows the calculation of the effective field. As the agent's repulsion field is always within the cohesion field (Eq.~\ref{eq:cohesion1}), the repulsion neighbours can also be defined as a subset of the cohesion neighbours $n_c(b)$~(Eq.~\ref{eq:repulsion3}).\\
 
 \begin{equation}\label{eq:repulsion1}
@@ -224,7 +224,8 @@ v_r(b) = \frac{1}{\lvert n_r(b)\rvert}\sum_{b' \in n_r(b)} k_r\left(\lVert\vec{b
 p_rR_b \; \mathsf{else} \; R_b
 \end{equation}
 \normalsize
-\section{Cohesion compression }
+
+\subsection{Cohesion compression }
 The cohesion component of the compression effect ($p_c$) is applied when an agent ($b$) and its neighbour ($b'$) are both perimeter-based. If the agents are not both perimeter-based then the agents vector is only scaled by $k_c$ (Eq.~\ref{eq:cohesion4}). The effect of the additional cohesion-compression weighting is to increases the size of the generated cohesion-vector $\mathsf{efc}(b,b')$ (Eq.~\ref{eq:cohesion3}). 
 
 \begin{equation}\label{eq:cohesion3}
