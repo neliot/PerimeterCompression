@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  12 FEB 2021 16:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  12 FEB 2021 16:15
 entering extended mode
 **"c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.tex"
 ("c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.tex"
@@ -764,84 +764,88 @@ Package pdftex.def Info: figures/stableswarm.pdf  used on input line 61.
 
 
  <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/stableswarm.pdf>]
-<figures/CompressionEffect1.png, id=207, 582.4962pt x 398.9304pt>
-File: figures/CompressionEffect1.png Graphic file (type png)
-<use figures/CompressionEffect1.png>
-Package pdftex.def Info: figures/CompressionEffect1.png  used on input line 130.
-(pdftex.def)             Requested size: 196.62386pt x 134.66058pt.
- [2]
-Underfull \hbox (badness 6675) in paragraph at lines 135--136
-[]\OT1/ptm/m/n/12 The graph shows that the agents inter-
- []
-
-<figures/voidRemoval1.png, id=233, 831.105pt x 837.1275pt>
-File: figures/voidRemoval1.png Graphic file (type png)
-<use figures/voidRemoval1.png>
-Package pdftex.def Info: figures/voidRemoval1.png  used on input line 141.
-(pdftex.def)             Requested size: 201.42003pt x 202.88182pt.
-<figures/voidRemoval2.png, id=234, 764.8575pt x 761.84625pt>
-File: figures/voidRemoval2.png Graphic file (type png)
-<use figures/voidRemoval2.png>
-Package pdftex.def Info: figures/voidRemoval2.png  used on input line 147.
-(pdftex.def)             Requested size: 201.42003pt x 200.62119pt.
-<figures/PerimeterBots1.pdf, id=236, 432.61626pt x 430.60875pt>
+<figures/PerimeterBots1.pdf, id=203, 432.61626pt x 430.60875pt>
 File: figures/PerimeterBots1.pdf Graphic file (type pdf)
 <use figures/PerimeterBots1.pdf>
-Package pdftex.def Info: figures/PerimeterBots1.pdf  used on input line 161.
+Package pdftex.def Info: figures/PerimeterBots1.pdf  used on input line 118.
 (pdftex.def)             Requested size: 142.26378pt x 141.60196pt.
 
-Underfull \hbox (badness 1824) in paragraph at lines 166--167
+Underfull \hbox (badness 1824) in paragraph at lines 123--124
 []\OT1/ptm/m/n/12 The de-tec-tion pro-cess is achieved us-ing a
  []
 
-<figures/neighbours.pdf, id=240, 183.77559pt x 183.23456pt>
+<figures/neighbours.pdf, id=207, 183.77559pt x 183.23456pt>
 File: figures/neighbours.pdf Graphic file (type pdf)
 <use figures/neighbours.pdf>
-Package pdftex.def Info: figures/neighbours.pdf  used on input line 170.
+Package pdftex.def Info: figures/neighbours.pdf  used on input line 127.
 (pdftex.def)             Requested size: 196.62386pt x 196.05344pt.
-
-Underfull \vbox (badness 7238) has occurred while \output is active []
-
- [3 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/CompressionEffect1.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/PerimeterBots1.pdf> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/voidRemoval1.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/voidRemoval2.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/neighbours.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 233--234
+[2 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/PerimeterBots1.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
  []
 
-[4]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 293.
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1pcr.fd"
+[3 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/neighbours.pdf>]
+<figures/CompressionEffect1.png, id=291, 582.4962pt x 398.9304pt>
+File: figures/CompressionEffect1.png Graphic file (type png)
+<use figures/CompressionEffect1.png>
+Package pdftex.def Info: figures/CompressionEffect1.png  used on input line 257.
+(pdftex.def)             Requested size: 196.62386pt x 134.66058pt.
+
+Underfull \hbox (badness 6675) in paragraph at lines 262--263
+[]\OT1/ptm/m/n/12 The graph shows that the agents inter-
+ []
+
+<figures/voidRemoval1.png, id=295, 831.105pt x 837.1275pt>
+File: figures/voidRemoval1.png Graphic file (type png)
+<use figures/voidRemoval1.png>
+Package pdftex.def Info: figures/voidRemoval1.png  used on input line 268.
+(pdftex.def)             Requested size: 201.42003pt x 202.88182pt.
+<figures/voidRemoval2.png, id=296, 764.8575pt x 761.84625pt>
+File: figures/voidRemoval2.png Graphic file (type png)
+<use figures/voidRemoval2.png>
+Package pdftex.def Info: figures/voidRemoval2.png  used on input line 274.
+(pdftex.def)             Requested size: 201.42003pt x 200.62119pt.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 291.
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-<figures/baselineSwarm.png, id=313, 1154.3125pt x 1177.39874pt>
+<figures/baselineSwarm.png, id=300, 1154.3125pt x 1177.39874pt>
 File: figures/baselineSwarm.png Graphic file (type png)
 <use figures/baselineSwarm.png>
-Package pdftex.def Info: figures/baselineSwarm.png  used on input line 304.
+Package pdftex.def Info: figures/baselineSwarm.png  used on input line 302.
 (pdftex.def)             Requested size: 142.26378pt x 145.10843pt.
-<figures/baselineSwarmMagnitude.png, id=314, 1927.2pt x 974.64125pt>
+
+Underfull \vbox (badness 1142) has occurred while \output is active []
+
+ [4 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/CompressionEffect1.png>]
+<figures/baselineSwarmMagnitude.png, id=320, 1927.2pt x 974.64125pt>
 File: figures/baselineSwarmMagnitude.png Graphic file (type png)
 <use figures/baselineSwarmMagnitude.png>
-Package pdftex.def Info: figures/baselineSwarmMagnitude.png  used on input line 311.
+Package pdftex.def Info: figures/baselineSwarmMagnitude.png  used on input line 309.
 (pdftex.def)             Requested size: 227.62204pt x 115.10779pt.
-<figures/baselineSwarmPerimeter.png, id=315, 1927.2pt x 974.64125pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+<figures/baselineSwarmPerimeter.png, id=321, 1927.2pt x 974.64125pt>
 File: figures/baselineSwarmPerimeter.png Graphic file (type png)
 <use figures/baselineSwarmPerimeter.png>
-Package pdftex.def Info: figures/baselineSwarmPerimeter.png  used on input line 318.
+Package pdftex.def Info: figures/baselineSwarmPerimeter.png  used on input line 316.
 (pdftex.def)             Requested size: 227.62204pt x 115.10779pt.
-<figures/baselineSwarm1.png, id=316, 1056.94875pt x 1036.87375pt>
+<figures/baselineSwarm1.png, id=322, 1056.94875pt x 1036.87375pt>
 File: figures/baselineSwarm1.png Graphic file (type png)
 <use figures/baselineSwarm1.png>
-Package pdftex.def Info: figures/baselineSwarm1.png  used on input line 343.
+Package pdftex.def Info: figures/baselineSwarm1.png  used on input line 341.
 (pdftex.def)             Requested size: 142.26378pt x 139.56055pt.
-<figures/baselineSwarmMagnitude1.png, id=317, 1927.2pt x 974.64125pt>
+<figures/baselineSwarmMagnitude1.png, id=323, 1927.2pt x 974.64125pt>
 File: figures/baselineSwarmMagnitude1.png Graphic file (type png)
 <use figures/baselineSwarmMagnitude1.png>
-Package pdftex.def Info: figures/baselineSwarmMagnitude1.png  used on input line 350.
+Package pdftex.def Info: figures/baselineSwarmMagnitude1.png  used on input line 348.
 (pdftex.def)             Requested size: 227.62204pt x 115.10779pt.
- [5 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baselineSwarm.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baselineSwarmMagnitude.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baselineSwarmPerimeter.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baselineSwarm1.png>]
+ [5 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/voidRemoval1.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/voidRemoval2.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baselineSwarm.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baselineSwarmMagnitude.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baselineSwarmPerimeter.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baselineSwarm1.png>]
 <figures/baselineSwarmPerimeter1.png, id=333, 1927.2pt x 974.64125pt>
 File: figures/baselineSwarmPerimeter1.png Graphic file (type png)
 <use figures/baselineSwarmPerimeter1.png>
-Package pdftex.def Info: figures/baselineSwarmPerimeter1.png  used on input line 357.
+Package pdftex.def Info: figures/baselineSwarmPerimeter1.png  used on input line 355.
 (pdftex.def)             Requested size: 227.62204pt x 115.10779pt.
  ("c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.bbl"
 Underfull \hbox (badness 2529) in paragraph at lines 136--141
@@ -850,18 +854,18 @@ Underfull \hbox (badness 2529) in paragraph at lines 136--141
 
 ) [6 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baselineSwarmMagnitude1.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baselineSwarmPerimeter1.png>] ("c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.aux")
 Package rerunfilecheck Info: File `perimeterCompression.out' has not changed.
-(rerunfilecheck)             Checksum: C519675C8036206B7BDCD11696053455;887.
+(rerunfilecheck)             Checksum: 310C4025B8AF3876F54A11F73221E0C4;887.
  ) 
 Here is how much of TeX's memory you used:
  25786 strings out of 479584
  532355 string characters out of 2861984
- 861604 words of memory out of 3000000
+ 861606 words of memory out of 3000000
  42406 multiletter control sequences out of 15000+200000
  448979 words of font info for 111 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,11n,108p,1063b,849s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.pdf" (6 pages, 2293324 bytes).
+Output written on "c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.pdf" (6 pages, 2293571 bytes).
 PDF statistics:
  441 PDF objects out of 1000 (max. 8388607)
  82 named destinations out of 1000 (max. 500000)

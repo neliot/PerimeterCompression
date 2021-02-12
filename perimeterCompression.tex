@@ -110,49 +110,6 @@ The repulsion is then calculated as the average of all the vectors created by th
 v_r(b) = \frac{1}{\lvert n_r(b)\rvert}\sum_{b' \in n_r(b)} \left(\lVert\vec{b b'}\rVert - R_b \, \right)\widehat{bb'}
 \end{equation}
 
-\section{Perimeter compression model}
-The new algorithm requires each individual agent to modify the vector generated based upon the perimeter status of the agent and each neighbour. The equation has been simplified (Eq.~\ref{eq:newModel2}) and the weighting factors have been transferred into the calculations along with the additional weighting factors that are applied to specific agents within the cohesion and repulsion vector calculations.
-
-% \begin{equation}\label{eq:newModel1}
-% v(b) = v_c(b) + v_r(b) + v_d(b) + v_o(b)
-% \end{equation}
-
-As in the basic model (Section~\ref{basicModel}) the formula is simplified to only account for cohesion and repulsion~(Eq.~\ref{eq:newModel2}).
-
-\begin{equation}\label{eq:newModel2}
-v(b) = v_c(b) + v_r(b)
-\end{equation}
-
-The effect of introducing the additional weighting factors ($p_c$ and $p_r$) can be seen in Figure~\ref{fig:compressioneffect1} which shows the additional internal disturbance of the swarm caused by the compression algorithm but also the increased speed at which a void can be reduced. The metric used to producing the graph is based upon the inter-agent magnitudes~\cite{eliot2018metric}. 
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\linewidth]{figures/CompressionEffect1}
-	\caption[Compression Effect]{Comparison of magnitude change using gap reduction and perimeter compression}
-	\label{fig:compressioneffect1}
-\end{figure}
-
-The graph shows that the agents inter-magnitudes are effected and the swarm stablises rapidly removing internal voids (Fig.~\ref{fig:voidRemoval}). The graph shows a comparison of the new method to the existing method by Eliot et al.~\cite{eliot2019void}.
-
-\begin{figure}
-\centering
-\begin{subfigure}{0.4\textwidth}
-	\centering	
-	\includegraphics[width=1.0\linewidth]{figures/voidRemoval1}
-	\caption[Void removal start]{Void removal start}
-	\label{fig:voidRemovalStart}
-\end{subfigure}
-\begin{subfigure}{0.4\textwidth}
-	\centering
-	\includegraphics[width=1.0\linewidth]{figures/voidRemoval2}
-	\caption[Void removal finish]{Void removal finish}
-	\label{fig:voidRemovalFinish}
-\end{subfigure}
-\caption{Void removal through perimeter compression}
-\label{fig:voidRemoval}
-\end{figure}
-
-
 \section{Perimeter detection}\label{perimeterDetection}
 For perimeter compression to be applied to a swarm the perimeter needs to be detected. A perimeter can be defined as a continuous `surface' of agents that are not enclosed by other agents~\ref{fig:innerOuterPerimeters}. These agents may form an outer ({\color{green}green}) or inner ({\color{red}red}) boundary.
 
@@ -244,7 +201,6 @@ p_rR_b \; \mathsf{else} \; R_b
 \end{equation}
 \normalsize
 
-
 \begin{equation}\label{eq:repulsion3}
 n_r(b) = \{b' \in n_c(b)~:~\magn{bb'} <= \mathsf{erf}(b,b')\}
 \end{equation}
@@ -280,6 +236,48 @@ v_c(b) = \frac{1}{\lvert n_c(b)\rvert} \sum_{b' \in n_c(b)}\mathsf{ekc}(b, b')\,
 \mathsf{ekc}(b, b') = \mathsf{if} \; \mathsf{per}(b) \; \mathsf{and} \; \mathsf{per}(b') \; \mathsf{then} \; \mathrm{p}_ck_c \; \mathsf{else} \; k_c
 \end{equation}
 \normalsize
+
+\section{Perimeter compression model}
+The new algorithm requires each individual agent to modify the vector generated based upon the perimeter status of the agent and each neighbour. The equation has been simplified (Eq.~\ref{eq:newModel2}) and the weighting factors have been transferred into the calculations along with the additional weighting factors that are applied to specific agents within the cohesion and repulsion vector calculations.
+
+% \begin{equation}\label{eq:newModel1}
+% v(b) = v_c(b) + v_r(b) + v_d(b) + v_o(b)
+% \end{equation}
+
+As in the basic model (Section~\ref{basicModel}) the formula is simplified to only account for cohesion and repulsion~(Eq.~\ref{eq:newModel2}).
+
+\begin{equation}\label{eq:newModel2}
+v(b) = v_c(b) + v_r(b)
+\end{equation}
+
+The effect of introducing the additional weighting factors ($p_c$ and $p_r$) can be seen in Figure~\ref{fig:compressioneffect1} which shows the additional internal disturbance of the swarm caused by the compression algorithm but also the increased speed at which a void can be reduced. The metric used to producing the graph is based upon the inter-agent magnitudes~\cite{eliot2018metric}. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{figures/CompressionEffect1}
+	\caption[Compression Effect]{Comparison of magnitude change using gap reduction and perimeter compression}
+	\label{fig:compressioneffect1}
+\end{figure}
+
+The graph shows that the agents inter-magnitudes are effected and the swarm stablises rapidly removing internal voids (Fig.~\ref{fig:voidRemoval}). The graph shows a comparison of the new method to the existing method by Eliot et al.~\cite{eliot2019void}.
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.4\textwidth}
+	\centering	
+	\includegraphics[width=1.0\linewidth]{figures/voidRemoval1}
+	\caption[Void removal start]{Void removal start}
+	\label{fig:voidRemovalStart}
+\end{subfigure}
+\begin{subfigure}{0.4\textwidth}
+	\centering
+	\includegraphics[width=1.0\linewidth]{figures/voidRemoval2}
+	\caption[Void removal finish]{Void removal finish}
+	\label{fig:voidRemovalFinish}
+\end{subfigure}
+\caption{Void removal through perimeter compression}
+\label{fig:voidRemoval}
+\end{figure}
 
 \section{Experimental results}
 For all the experiments the parameters used to create the basic swarming effect are shown in Table~\ref{tab:swarmingEffect}. The parameters create a very basic hexagonal-based distribution of agents that will stabilise as shown in Figure~\ref{fig:baselineSwarm}. The compression effect parameters are shown in Table~\ref{tab:compressionEffect} (NOTE:Probably be more than one set for the comparison - work in progress)
