@@ -281,26 +281,26 @@ p_rR_b \; \mathsf{else} \; R_b
 \normalsize
 
 \section{Experimental results}
-For all the experiments the parameters used to create the basic swarming effect are shown in Table~\ref{tab:swarmingEffect}. The parameters create a very basic hexagonal-based distribution of agents that will stabilise as shown in Figure~\ref{fig:baselineSwarm}. The compression effect parameters are shown in Table~\ref{tab:compressionEffect} (NOTE:Probably be more than one set for the comparison - work in progress)
-\begin{table}[h]
+For all the experiments the parameters used to create the basic swarming effect are shown in Table~\ref{tab:swarmingEffect}. The swarm consists of 201 agents which are distributed with a void at the centre. The initial parameters create a very basic hexagonal-based distribution of agents that will stabilise as shown in Figure~\ref{fig:baselineSwarm}.  
+ \begin{table}[h]
 	\centering
 	\tiny
 	\begin{tabular}{|c|r|}
 		\hline
 		\rowcolor[HTML]{000000} 
 		{\color[HTML]{FFFFFF} Swarming Variable} & {\color[HTML]{FFFFFF} Value} \\ \hline
-		$C_b$ & \texttt{60.00} \\ \hline
+		$C_b$ & \texttt{3.00} \\ \hline
 		$k_c$ & \texttt{0.15}  \\ \hline
-		$R_b$ & \texttt{40.00} \\ \hline
+		$R_b$ & \texttt{2.00} \\ \hline
 		$k_r$ & \texttt{50.00} \\ \hline
 	\end{tabular}
   	\caption{Swarming effect parameters}
   	\label{tab:swarmingEffect}
 \end{table}
-
+Table~\ref{tab:compressionEffect}.
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=5cm]{figures/baselineSwarm}
+		\includegraphics[width=5cm]{figures/exp1Start}
 	\end{center}
 	\caption{Baseline swarm in stabilised configuration. \label{fig:baselineSwarm}}
 \end{figure}
@@ -318,7 +318,7 @@ For all the experiments the parameters used to create the basic swarming effect 
 	\end{center}
 	\caption{Baseline swarm in stabilised configuration. \label{fig:baselineSwarmPerimeter}}
 \end{figure}
-
+The compression effect parameters are shown inm table~\ref{tab:compressionEffect}
 \begin{table}[h]
 	\centering
 	\tiny
