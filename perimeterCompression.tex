@@ -281,7 +281,8 @@ p_rR_b \; \mathsf{else} \; R_b
 \normalsize
 
 \section{Experimental results}
-For all the experiments the parameters used to create the basic swarming effect are shown in Table~\ref{tab:swarmingEffect}. The swarm consists of 200 agents which are distributed with a void at the centre. The initial parameters create a very basic hexagonal-based distribution of agents that will stabilise as shown in Figure~\ref{fig:baselineSwarm}.  
+\subsection{Baseline}
+For all the experiments the parameters used to create the basic swarming effect are shown in Table~\ref{tab:swarmingEffect}. Where $C_b$ is the cohesion field, $k_c$ is the cohesion weighting, $R_b$ is the repulsion field, $k_r$ is the repulsion weighting. The swarm consists of 200 agents which are distributed with a void at the centre. These initial parameters create a very basic hexagonal-based distribution of agents that will stabilise as shown in Figure~\ref{fig:baselineSwarm} and will be the initial state for all the experiments. 
  \begin{table}[h]
 	\centering
 	\tiny
@@ -293,6 +294,7 @@ For all the experiments the parameters used to create the basic swarming effect 
 		$k_c$ & \texttt{0.15}  \\ \hline
 		$R_b$ & \texttt{2.00} \\ \hline
 		$k_r$ & \texttt{50.00} \\ \hline
+		$k_g$ & \texttt{25.00} \\ \hline
 	\end{tabular}
   	\caption{Swarming effect parameters}
   	\label{tab:swarmingEffect}
@@ -305,6 +307,8 @@ For all the experiments the parameters used to create the basic swarming effect 
 	\caption{Baseline swarm in stabilised configuration. \label{fig:baselineSwarm}}
 \end{figure}
 
+When the simulation is ran with no compression the resultant magnitudes generated are shown in Table~\ref{fig:baselineSwarmMagnitude}. These states are used as the baseline for the experiments to measure the effects of the compression algorithm and compare the new algorithm to the existing void reduction algorithm discussed by Eliot et al. in~\cite{eliot2018metric}.
+
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=8cm]{figures/interagentMagnitudeBaseline}
@@ -312,12 +316,47 @@ For all the experiments the parameters used to create the basic swarming effect 
 	\caption{Baseline swarm in stabilised configuration. \label{fig:baselineSwarmMagnitude}}
 \end{figure}
 
+\subsection{Compression Effects}
+
+The compression effect parameters are shown in table~\ref{tab:compressionEffect}
+\begin{table}[h]
+	\centering
+	\tiny
+	\begin{tabular}{|c|r|r|r|r|r|r|}
+		\hline
+		\rowcolor[HTML]{000000} 
+		{\color[HTML]{FFFFFF} Comp.} & {\color[HTML]{FFFFFF} 1} & {\color[HTML]{FFFFFF} 2} & {\color[HTML]{FFFFFF} 3} & {\color[HTML]{FFFFFF} 4} & {\color[HTML]{FFFFFF} 5} & {\color[HTML]{FFFFFF} 6}\\ \hline
+		$p_r$ & \texttt{0.10} & \texttt{0.15} & \texttt{0.20} & \texttt{0.25} & \texttt{0.30} & \texttt{0.35} \\ \hline
+		$p_c$ & \texttt{20.00}  & \texttt{30.00} & \texttt{40.00} & \texttt{50.00} & \texttt{60.00} & \texttt{70.00}\\ \hline
+	\end{tabular}
+	\caption{Compression effect parameters}
+	\label{tab:compressionEffect}
+\end{table}
+
+The first area of comparison is the effect of the algorithms on the number of perimeter agents. The baseline swarm's agents oscillates but remain in a relatively stable state with a constant number of perimeter agents and the internal anomaly persists~(Fig.~\ref{fig:baselineSwarm}). The maximum and minimum number of perimeter agents is shown in table~\ref{tab:perimeterLimits}. 
+
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=8cm]{figures/PerimeterCount}
 	\end{center}
 	\caption{Perimeter Count of baseline, gap reduction and perimeter compression. \label{fig:perimeterCount}}
 \end{figure}
+
+\begin{table}[h]
+	\centering
+	\tiny
+	\begin{tabular}{|c|c|r|r|r|r|r|r|r|}
+		\hline
+		\rowcolor[HTML]{000000} 
+		{\color[HTML]{FFFFFF} Comp.} &{\color[HTML]{FFFFFF} Base} & {\color[HTML]{FFFFFF} Void} & {\color[HTML]{FFFFFF} 1} & {\color[HTML]{FFFFFF} 2} & {\color[HTML]{FFFFFF} 3} & {\color[HTML]{FFFFFF} 4} & {\color[HTML]{FFFFFF} 5} & {\color[HTML]{FFFFFF} 6}\\ \hline
+		Max & \texttt{75} & \texttt{90} &\texttt{90} & \texttt{90} & \texttt{94} & \texttt{92} & \texttt{95} & \texttt{93} \\ \hline
+		Min & \texttt{75} & \texttt{51} &\texttt{51}  & \texttt{51} & \texttt{51} & \texttt{49} & \texttt{49} & \texttt{49}\\ \hline
+		Mean & \texttt{75} & \texttt{62} &\texttt{59}  & \texttt{58} & \texttt{60} & \texttt{59} & \texttt{57} & \texttt{59}\\ \hline
+		Std & \texttt{0} & \texttt{6} &\texttt{9}  & \texttt{10} & \texttt{10} & \texttt{8} & \texttt{10} & \texttt{8}\\ \hline
+	\end{tabular}
+	\caption{Perimeter agents}
+	\label{tab:perimeterLimits}
+\end{table}
 
 \begin{figure}[H]
 	\begin{center}
@@ -368,20 +407,7 @@ For all the experiments the parameters used to create the basic swarming effect 
 	\end{center}
 	\caption{Baseline swarm in stabilised configuration. \label{fig:baselineSwarmPerimeter}}
 \end{figure}
-The compression effect parameters are shown inm table~\ref{tab:compressionEffect}
-\begin{table}[h]
-	\centering
-	\tiny
-	\begin{tabular}{|c|r|r|r|r|r|r|}
-		\hline
-		\rowcolor[HTML]{000000} 
-		{\color[HTML]{FFFFFF} Comp.} & {\color[HTML]{FFFFFF} 1} & {\color[HTML]{FFFFFF} 2} & {\color[HTML]{FFFFFF} 3} & {\color[HTML]{FFFFFF} 4} & {\color[HTML]{FFFFFF} 5} & {\color[HTML]{FFFFFF} 6}\\ \hline
-		$p_r$ & \texttt{0.10} & \texttt{0.15} & \texttt{0.20} & \texttt{0.25} & \texttt{0.30} & \texttt{0.35} \\ \hline
-		$p_c$ & \texttt{20.00}  & \texttt{30.00} & \texttt{40.00} & \texttt{50.00} & \texttt{60.00} & \texttt{70.00}\\ \hline
-	\end{tabular}
-  	\caption{Compression effect parameters}
-	\label{tab:compressionEffect}
-\end{table}
+
 \subsection{Gap compression}
 \subsection{Perimeter compression}
 
