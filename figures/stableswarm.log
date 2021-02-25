@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  25 FEB 2021 11:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  25 FEB 2021 11:28
 entering extended mode
-**./neighbours.tex
-(neighbours.tex
+**./stableswarm.tex
+(stableswarm.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-01-09> xparse <2020-03-03>
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/standalone\standalo
@@ -423,23 +423,13 @@ File: pgflibraryarrows.meta.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfarrowwidth=\dimen193
 \pgfarrowlinewidth=\dimen194
 )
-("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer
-/tikz/libraries\tikzlibrarymath.code.tex"
-("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer
-/tikz/libraries\tikzlibraryfpu.code.tex"
-("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\pgf
-libraryfpu.code.tex"))
-\tikz@math@for@depth=\count275
-\tikz@math@dimen=\dimen195
-\tikz@math@toks=\toks29
-)
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backend
 -pdftex.def"
 File: l3backend-pdftex.def 2020-01-29 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count276
+\l__color_backend_stack_int=\count275
 \l__pdf_internal_box=\box59
-) (neighbours.aux)
-\openout1 = `neighbours.aux'.
+) (stableswarm.aux)
+\openout1 = `stableswarm.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
@@ -459,17 +449,17 @@ LaTeX Font Info:    ... okay on input line 4.
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pd
 f.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count277
-\scratchdimen=\dimen196
+\scratchcounter=\count276
+\scratchdimen=\dimen195
 \scratchbox=\box60
-\nofMPsegments=\count278
-\nofMParguments=\count279
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count280
-\MPscratchDim=\dimen197
-\MPnumerator=\count281
-\makeMPintoPDFobject=\count282
-\everyMPtoPDFconversion=\toks31
+\nofMPsegments=\count277
+\nofMParguments=\count278
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count279
+\MPscratchDim=\dimen196
+\MPnumerator=\count280
+\makeMPintoPDFobject=\count281
+\everyMPtoPDFconversion=\toks30
 )
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstop
 df-base.sty"
@@ -481,26 +471,26 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 6.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 6.
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
  [1
 
-{C:/Users/neil/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (neighbours.
-aux) ) 
+{C:/Users/neil/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (stableswarm
+.aux) ) 
 Here is how much of TeX's memory you used:
- 13149 strings out of 479584
- 278732 string characters out of 2861984
- 532655 words of memory out of 3000000
- 30134 multiletter control sequences out of 15000+200000
+ 12431 strings out of 479584
+ 262257 string characters out of 2861984
+ 509977 words of memory out of 3000000
+ 29426 multiletter control sequences out of 15000+200000
  403430 words of font info for 27 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,7n,130p,431b,792s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmmi10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmr7.pfb>
-Output written on neighbours.pdf (1 page, 20523 bytes).
+ 128i,7n,130p,426b,695s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmmi10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmmi7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/neil/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on stableswarm.pdf (1 page, 37435 bytes).
 PDF statistics:
- 17 PDF objects out of 1000 (max. 8388607)
+ 25 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
