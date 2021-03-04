@@ -6,11 +6,11 @@
 	\node[circle,fill=black!50,draw,label=right:$b$]{};
 	\draw (0,0)--(up:1.5cm);
 	\foreach \n/\d/\l/\a/\r/\p in { 
-			0/1.0cm/b_0/10/3cm/above right, 
-			4/1.1cm/b_4/60/4cm/above, 
-			3/1.2cm/b_3/120/3cm/above right,
-			2/1.3cm/b_2/170/3cm/right,
-			1/1.4cm/b_1/220/3cm/below} 
+			4/1.0cm/b_4/10/3cm/above right, 
+			3/1.1cm/b_3/60/4cm/above, 
+			2/1.2cm/b_2/120/3cm/above right,
+			1/1.3cm/b_1/170/3cm/right,
+			0/1.4cm/b_0/220/3cm/below} 
 		{
 		\draw[->] (0,0)--node[above,sloped, very near end]{} (90-\a:\r) 
 					node[circle,fill=black!50,draw,label=right:$\l$]{};
