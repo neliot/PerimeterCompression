@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  4 MAR 2021 15:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  4 MAR 2021 17:24
 entering extended mode
 **"c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.tex"
 ("c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.tex"
@@ -834,81 +834,85 @@ File: figures/interagentMagnitudeBaseline.pdf Graphic file (type pdf)
 <use figures/interagentMagnitudeBaseline.pdf>
 Package pdftex.def Info: figures/interagentMagnitudeBaseline.pdf  used on input line 263.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
-<figures/PerimeterCount.pdf, id=317, 1927.2pt x 986.68625pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/Experiment1.png, id=315, 1927.2pt x 986.68625pt>
+File: figures/Experiment1.png Graphic file (type png)
+<use figures/Experiment1.png>
+Package pdftex.def Info: figures/Experiment1.png  used on input line 329.
+(pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
+<figures/Experiment2.png, id=317, 1927.2pt x 986.68625pt>
+File: figures/Experiment2.png Graphic file (type png)
+<use figures/Experiment2.png>
+Package pdftex.def Info: figures/Experiment2.png  used on input line 336.
+(pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
+<figures/Experiment3.png, id=318, 1927.2pt x 986.68625pt>
+File: figures/Experiment3.png Graphic file (type png)
+<use figures/Experiment3.png>
+Package pdftex.def Info: figures/Experiment3.png  used on input line 343.
+(pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
+[5 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/exp1Start.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/interagentMagnitudeBaseline.pdf> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/Experiment1.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/Experiment2.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/Experiment3.png>]
+<figures/PerimeterCount.pdf, id=369, 1927.2pt x 986.68625pt>
 File: figures/PerimeterCount.pdf Graphic file (type pdf)
 <use figures/PerimeterCount.pdf>
-Package pdftex.def Info: figures/PerimeterCount.pdf  used on input line 289.
+Package pdftex.def Info: figures/PerimeterCount.pdf  used on input line 352.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
-<figures/PerimeterCount2.pdf, id=318, 1927.2pt x 986.68625pt>
+<figures/PerimeterCount2.pdf, id=370, 1927.2pt x 986.68625pt>
 File: figures/PerimeterCount2.pdf Graphic file (type pdf)
 <use figures/PerimeterCount2.pdf>
-Package pdftex.def Info: figures/PerimeterCount2.pdf  used on input line 312.
+Package pdftex.def Info: figures/PerimeterCount2.pdf  used on input line 375.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
-<figures/DistanceMetric1.pdf, id=319, 1927.2pt x 986.68625pt>
+<figures/DistanceMetric1.pdf, id=371, 1927.2pt x 986.68625pt>
 File: figures/DistanceMetric1.pdf Graphic file (type pdf)
 <use figures/DistanceMetric1.pdf>
-Package pdftex.def Info: figures/DistanceMetric1.pdf  used on input line 319.
+Package pdftex.def Info: figures/DistanceMetric1.pdf  used on input line 382.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
-<figures/InteragentCohesionMean.pdf, id=320, 1927.2pt x 986.68625pt>
+<figures/InteragentCohesionMean.pdf, id=372, 1927.2pt x 986.68625pt>
 File: figures/InteragentCohesionMean.pdf Graphic file (type pdf)
 <use figures/InteragentCohesionMean.pdf>
-Package pdftex.def Info: figures/InteragentCohesionMean.pdf  used on input line 326.
+Package pdftex.def Info: figures/InteragentCohesionMean.pdf  used on input line 389.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
 
-Underfull \vbox (badness 7667) has occurred while \output is active []
+Underfull \vbox (badness 2050) has occurred while \output is active []
 
- [5 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/exp1Start.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/interagentMagnitudeBaseline.pdf> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/PerimeterCount.pdf
+<figures/InteragentCohesionStd.pdf, id=373, 1927.2pt x 986.68625pt>
+File: figures/InteragentCohesionStd.pdf Graphic file (type pdf)
+<use figures/InteragentCohesionStd.pdf>
+Package pdftex.def Info: figures/InteragentCohesionStd.pdf  used on input line 396.
+(pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
+<figures/InteragentRepulsionMean.pdf, id=374, 1927.2pt x 986.68625pt>
+File: figures/InteragentRepulsionMean.pdf Graphic file (type pdf)
+<use figures/InteragentRepulsionMean.pdf>
+Package pdftex.def Info: figures/InteragentRepulsionMean.pdf  used on input line 403.
+(pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
+<figures/InteragentRepulsionStd.pdf, id=375, 1927.2pt x 986.68625pt>
+File: figures/InteragentRepulsionStd.pdf Graphic file (type pdf)
+<use figures/InteragentRepulsionStd.pdf>
+Package pdftex.def Info: figures/InteragentRepulsionStd.pdf  used on input line 410.
+(pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
+<figures/baselineSwarmPerimeter.png, id=376, 1927.2pt x 974.64125pt>
+File: figures/baselineSwarmPerimeter.png Graphic file (type png)
+<use figures/baselineSwarmPerimeter.png>
+Package pdftex.def Info: figures/baselineSwarmPerimeter.png  used on input line 418.
+(pdftex.def)             Requested size: 227.62204pt x 115.10779pt.
 
-pdfTeX warning: pdflatex (file c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/PerimeterCount.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/PerimeterCount2.pdf
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/PerimeterCount.pdf> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/PerimeterCount2.pdf
 
 pdfTeX warning: pdflatex (file c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/PerimeterCount2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/DistanceMetric1.pdf
 
 pdfTeX warning: pdflatex (file c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/DistanceMetric1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-<figures/InteragentCohesionStd.pdf, id=466, 1927.2pt x 986.68625pt>
-File: figures/InteragentCohesionStd.pdf Graphic file (type pdf)
-<use figures/InteragentCohesionStd.pdf>
-Package pdftex.def Info: figures/InteragentCohesionStd.pdf  used on input line 333.
-(pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
-<figures/InteragentRepulsionMean.pdf, id=467, 1927.2pt x 986.68625pt>
-File: figures/InteragentRepulsionMean.pdf Graphic file (type pdf)
-<use figures/InteragentRepulsionMean.pdf>
-Package pdftex.def Info: figures/InteragentRepulsionMean.pdf  used on input line 340.
-(pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
-<figures/InteragentRepulsionStd.pdf, id=468, 1927.2pt x 986.68625pt>
-File: figures/InteragentRepulsionStd.pdf Graphic file (type pdf)
-<use figures/InteragentRepulsionStd.pdf>
-Package pdftex.def Info: figures/InteragentRepulsionStd.pdf  used on input line 347.
-(pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
-<figures/baselineSwarmPerimeter.png, id=469, 1927.2pt x 974.64125pt>
-File: figures/baselineSwarmPerimeter.png Graphic file (type png)
-<use figures/baselineSwarmPerimeter.png>
-Package pdftex.def Info: figures/baselineSwarmPerimeter.png  used on input line 355.
-(pdftex.def)             Requested size: 227.62204pt x 115.10779pt.
+> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/InteragentCohesionMean.pdf
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-<figures/baselineSwarm1.png, id=471, 1056.94875pt x 1036.87375pt>
-File: figures/baselineSwarm1.png Graphic file (type png)
-<use figures/baselineSwarm1.png>
-Package pdftex.def Info: figures/baselineSwarm1.png  used on input line 367.
-(pdftex.def)             Requested size: 142.26378pt x 139.56055pt.
-<figures/baselineSwarmMagnitude1.png, id=472, 1927.2pt x 974.64125pt>
-File: figures/baselineSwarmMagnitude1.png Graphic file (type png)
-<use figures/baselineSwarmMagnitude1.png>
-Package pdftex.def Info: figures/baselineSwarmMagnitude1.png  used on input line 374.
-(pdftex.def)             Requested size: 227.62204pt x 115.10779pt.
-<figures/baselineSwarmPerimeter1.png, id=473, 1927.2pt x 974.64125pt>
-File: figures/baselineSwarmPerimeter1.png Graphic file (type png)
-<use figures/baselineSwarmPerimeter1.png>
-Package pdftex.def Info: figures/baselineSwarmPerimeter1.png  used on input line 381.
-(pdftex.def)             Requested size: 227.62204pt x 115.10779pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/InteragentCohesionMean.pdf> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/InteragentCohesionStd.pdf
+pdfTeX warning: pdflatex (file c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/InteragentCohesionMean.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/InteragentCohesionStd.pdf
 
 pdfTeX warning: pdflatex (file c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/InteragentCohesionStd.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/InteragentRepulsionMean.pdf
@@ -917,30 +921,51 @@ pdfTeX warning: pdflatex (file c:/Users/neil/Google Drive/Research/PerimeterComp
 > <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/InteragentRepulsionStd.pdf
 
 pdfTeX warning: pdflatex (file c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/InteragentRepulsionStd.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baselineSwarmPerimeter.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baselineSwarm1.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baselineSwarmMagnitude1.png>] ("c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.bbl"
+>]
+<figures/baselineSwarm1.png, id=632, 1056.94875pt x 1036.87375pt>
+File: figures/baselineSwarm1.png Graphic file (type png)
+<use figures/baselineSwarm1.png>
+Package pdftex.def Info: figures/baselineSwarm1.png  used on input line 430.
+(pdftex.def)             Requested size: 142.26378pt x 139.56055pt.
+<figures/baselineSwarmMagnitude1.png, id=633, 1927.2pt x 974.64125pt>
+File: figures/baselineSwarmMagnitude1.png Graphic file (type png)
+<use figures/baselineSwarmMagnitude1.png>
+Package pdftex.def Info: figures/baselineSwarmMagnitude1.png  used on input line 437.
+(pdftex.def)             Requested size: 227.62204pt x 115.10779pt.
+<figures/baselineSwarmPerimeter1.png, id=634, 1927.2pt x 974.64125pt>
+File: figures/baselineSwarmPerimeter1.png Graphic file (type png)
+<use figures/baselineSwarmPerimeter1.png>
+Package pdftex.def Info: figures/baselineSwarmPerimeter1.png  used on input line 444.
+(pdftex.def)             Requested size: 227.62204pt x 115.10779pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ ("c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.bbl" [7 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baselineSwarmPerimeter.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baselineSwarm1.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baselineSwarmMagnitude1.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baselineSwarmPerimeter1.png>]
 Underfull \hbox (badness 2529) in paragraph at lines 136--141
 \OT1/ptm/m/n/9 immune-inspired swarm ag-gre-ga-tion al-go-rithm for self-
  []
 
-) [7 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baselineSwarmPerimeter1.png>] ("c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.aux")
+) [8
+
+] ("c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.aux")
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `perimeterCompression.out' has not changed.
-(rerunfilecheck)             Checksum: 76692488AD6A20B27FC9879EA4459365;1046.
+(rerunfilecheck)             Checksum: C95A3082EC6FF5C8E17B3F025C83FCD6;1046.
  ) 
 Here is how much of TeX's memory you used:
- 25858 strings out of 479584
- 534601 string characters out of 2861984
- 862034 words of memory out of 3000000
- 42469 multiletter control sequences out of 15000+200000
+ 25893 strings out of 479584
+ 535382 string characters out of 2861984
+ 870281 words of memory out of 3000000
+ 42495 multiletter control sequences out of 15000+200000
  448156 words of font info for 108 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,11n,108p,1063b,849s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.pdf" (7 pages, 2850391 bytes).
+Output written on "c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.pdf" (8 pages, 3253950 bytes).
 PDF statistics:
- 724 PDF objects out of 1000 (max. 8388607)
- 84 named destinations out of 1000 (max. 500000)
- 396 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 740 PDF objects out of 1000 (max. 8388607)
+ 90 named destinations out of 1000 (max. 500000)
+ 411 words of extra memory for PDF output out of 10000 (max. 10000000)
 
