@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  1 MAR 2021 11:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  10 MAR 2021 18:18
 entering extended mode
 **./neighbours3.tex
 (neighbours3.tex
@@ -488,17 +488,17 @@ Missing character: There is no ; in font nullfont!
 {C:/Users/neil/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (neighbours3
 .aux) ) 
 Here is how much of TeX's memory you used:
- 13135 strings out of 479584
- 278485 string characters out of 2861984
- 529522 words of memory out of 3000000
- 30120 multiletter control sequences out of 15000+200000
+ 13115 strings out of 479584
+ 278081 string characters out of 2861984
+ 527522 words of memory out of 3000000
+ 30100 multiletter control sequences out of 15000+200000
  403430 words of font info for 27 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,7n,130p,432b,793s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmmi10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmr7.pfb>
-Output written on neighbours3.pdf (1 page, 19750 bytes).
+Output written on neighbours3.pdf (1 page, 19616 bytes).
 PDF statistics:
  17 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
