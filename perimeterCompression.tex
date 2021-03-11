@@ -47,7 +47,7 @@ Perimeter Compression is a technique where by a void reducing effect can be adde
 \end{abstract}
 
 \section{Introduction}
-When cohesion and repulsion field effects (sometimes referred to as potential fields~\cite{BAF:06,eliot2018metric,VG:05,SW:03,Son2017}) are used to create a swarming effect, the stable structures that develop are limited to either straight edges or partial lattices \cite{eliot2017methods}. The maintenance of a well-structured swarm is crucial to effective deployment for applications such as reconnaissance or artificial pollination, where `blind spots' are best eliminated \cite{elamvazhuthi2015optimal}, and containment, where the swarm is used to surround an object or region \cite{cao2012distributed}. Over time swarms form regular shapes~\cite{RAZ:13} and perimeters form of partial lattices that may contain so-called \textit{anomalies}, such as concave `dents' or convex `peaks'~\cite{eliot2019void}. These anomalies contribute to the disruption of an otherwise well-structured swarm. The key, therefore, is to ensure that these \textit{anomalies} are dynamically removed from a swarm.\\
+When cohesion and repulsion field effects (sometimes referred to as potential fields~\cite{BAF:06,eliot2018metric,VG:05,SW:03,Son2017,liang2019swarm}) are used to create a swarming effect, the stable structures that develop are limited to either straight edges or partial lattices \cite{eliot2017methods}. The maintenance of a well-structured swarm is crucial to effective deployment for applications such as reconnaissance or artificial pollination, where `blind spots' are best eliminated \cite{elamvazhuthi2015optimal}, and containment, where the swarm is used to surround an object or region \cite{cao2012distributed}. Over time swarms form regular shapes~\cite{RAZ:13} and perimeters form of partial lattices that may contain so-called \textit{anomalies}, such as concave `dents' or convex `peaks'~\cite{eliot2019void}. These anomalies contribute to the disruption of an otherwise well-structured swarm. The key, therefore, is to ensure that these \textit{anomalies} are dynamically removed from a swarm.\\
 Perimeter compression is a technique that creates a `pull' effect between perimeter agents. It is dependant upon perimeter agent identification as discussed by Eliot et. al. in \cite{eliot2017methods, eliot2018metric, eliot2019void} and discussed in Section~\ref{sec:perimeterDetection}.\\
 The aim of this new algorithm is to reduce the spacing between perimeter-based agents by reducing the repulsion field and increasing the cohesion effect on only the perimeter agents. Figure \ref{fig:stableswarm}) shows an agent and it fields. $S_b$ is the sensor field. $O_b$ is the obstacle field. $C_b$ is the cohesion field and $R_b$ is the repulsion field. The implementation involves introducing two controlling weights; $p_c$ (Perimeter Compression Cohesion) which increases the magnitude of the cohesion vector ($k_c\rightarrow p_ck_c$) and $p_r$ (Perimeter Compression Repulsion) which reduces the size of the repulsion field and also the repulsion magnitude ($k_r\rightarrow p_rk_r$) of the perimeter-based agents.
 \begin{assumption}
@@ -65,11 +65,11 @@ The aim of this new algorithm is to reduce the spacing between perimeter-based a
 
 \section{Related work}
 
-As far back as 1987 swarm theory has adopted the use of field effects/potential fields to coordinate agents~\cite{REY:87} and this has continued since then in an attempt to improve the structure of a swarm, coordinate obstacles avoidance, and improve navigation~\cite{BAFVM:06,BAF:06,BFV:07,BM:09,eliot2018metric,VG:05,HC:09,SW:03,Son2017}. A prototype framework for self-healing swarms was developed by Dai et al., which considered how to manage agent failure in hostile environments \cite{DHMRZ:06}. This was similar to work by Vassev and Hinchey, who modelled swarm movement using the ASSL (Autonomic System Specification Language) \cite{VH:09}. This technique was employed by NASA (US National Aeronautics and Space Administration) for use in asteroid belt exploration as part of their ANTS (Autonomous Nano Technology Swarm) project. However, this work is focused towards failure of an agent's internal systems, rather than on the removal of anomalies in a swarm distribution. 
+As far back as 1987 swarm theory has adopted the use of field effects/potential fields to coordinate agents~\cite{REY:87} and this has continued since then in an attempt to improve the structure of a swarm, coordinate obstacles avoidance, and improve navigation~\cite{BAFVM:06,BAF:06,BFV:07,BM:09,eliot2018metric,VG:05,HC:09,SW:03,Son2017}. A prototype framework for self-healing swarms was developed by Dai et al., which considered how to manage agent failure in hostile environments \cite{DHMRZ:06}. This was similar to work by Vassev and Hinchey, who modelled swarm movement using the ASSL (Autonomic System Specification Language) \cite{VH:09}. This technique was employed by NASA (US National Aeronautics and Space Administration) for use in asteroid belt exploration as part of their ANTS (Autonomous Nano Technology Swarm) project. However, this work is focused towards failure of an agent's internal systems, rather than on the removal of anomalies in a swarm distribution. This need for formation control is also discussed by Speck and Bucci with respect to the diverse applications of swarms and the need to control a swarms structure~\cite{8430773}.
 
 In the context of swarm structure maintenance, Roach et al. focussed on the effects of sensor failure, and the impact that has on agent distribution \cite{RMT:15}. Lee and Chong identified the issue of concave edges within swarms in an attempt to create regular lattice formations \cite{GN:08}, and the main focus of their work is the dynamic restructuring of inter-agent formations. Ismail and Timmis demonstrated the use of \textit{bio-inspired} healing using \textit{granuloma formation}, a biological method for encapsulating an antigen \cite{IT:10}. They have also considered the effect failed agents can have on a swarm when traversing a terrain~\cite{TIBW:16}. 
 
-This void reduction effect through perimeter compression is an extension of the work presented by Eliot et al. \cite{eliot2019void}, Ismail and Timmis \cite{IT:10,TIBW:16}, and on the work of McLurkin and Demaine on the detection of perimeter types \cite{mclurkin2009}. However, perimeter type identification requires a communications infrastructure to allow the perimeter angle to be calculated. The technique employed in this paper does not explicitly require the identification of the perimeter type as it would limit the size of the swarm\cite{eliot2019void,GN:08} and is therefore a reduced algorithm to identify any perimeter.
+This void reduction effect through perimeter compression is an extension of the work presented by Eliot et al. \cite{eliot2019void}, Ismail and Timmis \cite{IT:10,TIBW:16}, and on the work of McLurkin and Demaine on the detection of perimeter types \cite{mclurkin2009}. However, perimeter type identification requires a communications infrastructure to allow the perimeter angle to be calculated. Communications within swarm formations limits swarm sizes and introduces performance problems \cite{fu2020formation}. The technique employed in this paper does not explicitly require the identification of the perimeter type as it would limit the size of the swarm\cite{eliot2019void,GN:08} and is therefore a reduced algorithm to identify any perimeter.
 
 \section{Basic swarming model}\label{basicModel}
 In the Original work by Eliot et. al. the resultant vector of an agent was calculated using Equation~\ref{eq:resultantVector1a}. Where $k_c,k_r,k_d,k_o$ are weighting factors for the summed vectors associated with each interaction. i.e. $v_c$, $v_r$, $v_d$, $v_o$ for cohesion, repulsion, direction and object avoidance respectively. 
@@ -78,7 +78,7 @@ In the Original work by Eliot et. al. the resultant vector of an agent was calcu
 	v(b) = k_cv_c(b) + k_rv_r(b) + k_dv_d(b) + k_ov_o(b)
 \end{equation}
 
-In this paper we will only be considering the cohesion and repulsion components of the equation to create the new compression effect.
+In this paper we will only consider the cohesion and repulsion components of the equation in creating the new compression effect.
 
 \subsection{Cohesion}\label{cohesion}
 The cohesion component of an agent is calculated in a similar way to the repulsion in that it is dependent upon the proximity of neighbours. Where $n_c(b)$ is the set of neighbour agents for $b$ (Eq. \ref{eq:cohesion1}). The inclusion of an agent from a swarm ($S$) in by the agent's cohesion field ($C_b$).
@@ -133,7 +133,7 @@ An agent is therefore on the perimeter of the swarm if it is not enclosed by the
 
 The polygon generated by $n_c(b)$ is considered to be `open' if two successive agents on the perimeter are separated by more than the size of the cohesion field ($C_b$).  
 
-One further condition must be checked to detect a perimeter agent. When the polygon defined by $n_c(b)$ is closed it is possible that two or more neighbour agents are compressed to the point that they are with $C_b$ but are `behind' agent $b$. This condition can be detected based on any neighbour pair angle being greater than $\pi$. Figure~\ref{fig:neighbours3} shows this condition, assuming all the neighbour agent pairs are within range $C_b$. 
+One further condition must be checked to detect a perimeter agent. When the polygon defined by $n_c(b)$ is closed it is possible that two or more neighbour agents are compressed to the point that they are within range $C_b$ but are `behind' agent $b$. This condition can be detected based on any neighbour pair angle being greater than $\pi$. Figure~\ref{fig:neighbours3} shows this condition with agent $b_0$ and $b_3$ assuming the neighbour agent pair are within range $C_b$. 
 
 \begin{figure}[H]
 	\centering
@@ -191,7 +191,7 @@ v_c(b) = \frac{1}{\lvert n_c(b)\rvert} \sum_{b' \in n_c(b)}\mathsf{ekc}(b, b')\,
 \normalsize
 
 \subsection{Modified repulsion model}\label{repulsion:compression}
-The repulsion compression component of the perimeter is applied by adjusted the \textbf{e}ffective \textbf{r}ange \textbf{f}ield ($\mathsf{erf}(b,b')$) if the agents are both perimeter-based. Equation~\ref{eq:repulsion2} shows the new formula to calculate the adjusted repulsion. As the agent's repulsion field is always within the cohesion field (Eq.~\ref{eq:cohesion1}), the repulsion neighbours can also be defined as a subset of the cohesion neighbours $n_c(b)$~(Eq.~\ref{eq:repulsion3}).\\
+The repulsion compression component of the perimeter is applied by adjusted the \textbf{e}ffective \textbf{r}ange \textbf{f}ield ($\mathsf{erf}(b,b')$) if the agents are both perimeter-based. Equation~\ref{eq:repulsion4} shows the new formula to calculate the adjusted repulsion. As the agent's repulsion field is always within the cohesion field (Eq.~\ref{eq:cohesion1}), the repulsion neighbours can also be defined as a subset of the cohesion neighbours $n_c(b)$~(Eq.~\ref{eq:repulsion3}).\\
 
 \begin{equation}\label{eq:repulsion1}
 n_r(b) = \{b' \in \mathcal{S} : b \neq b' \land \lVert\vec{bb'}\rVert \leq \mathsf{erf}(b,b')\}
@@ -206,7 +206,7 @@ n_r(b) = \{b' \in \mathcal{S} : b \neq b' \land \lVert\vec{bb'}\rVert \leq \math
 \normalsize
 
 \begin{equation}\label{eq:repulsion3}
-n_r(b) = \{b' \in n_c(b)~:~\magn{\vec{bb'}} <= \mathsf{erf}(b,b')\}
+n_r(b) = \{b' \in n_c(b)~:~\magn{\vec{bb'}} \leq \mathsf{erf}(b,b')\}
 \end{equation}
 
 An agent is identified as a perimeter agent using the technique described in \S~\ref{sec:perimeterDetection} and shown by Eliot et.al. in \cite{eliot2019void} which uses a cyclic-check of neighbour agent angles to identify `gaps' in the neighbours.
@@ -215,7 +215,6 @@ If the condition of both agents being a perimeter is met ($\mathsf{per}(b) \; \m
 
 The effect of Equation \ref{eq:repulsion4} will be to reduce the repulsion of inter-perimeter-based agents allowing them to be closer together before a reduced repulsion-vector is applied. 
 
-\important{The repulsion-vector that is generated is based upon $p_rR_b$, the reduced repulsion field, and not the full $R_b$ field. This is to scale the resultant-repulsion-vector as well as reducing the repulsion field.}
 \small
 \begin{equation}\label{eq:repulsion4}
 v_r(b) = \frac{1}{\lvert n_r(b)\rvert}\sum_{b' \in n_r(b)} k_r\left(\lVert\vec{bb'}\rVert - \mathsf{erf}(b,b') \, \right)\widehat{bb'}
@@ -231,7 +230,7 @@ p_rR_b \; \mathsf{else} \; R_b
 
 \section{Experimental results\label{sec:ExperimentalResults}}
 \subsection{Baseline}
-For all the experiments the parameters used to create the basic swarming effect are shown in Table~\ref{tab:swarmingEffect}. Where $C_b$ is the cohesion field, $k_c$ is the cohesion weighting, $R_b$ is the repulsion field, $k_r$ is the repulsion weighting. The swarm consists of 200 agents which are distributed with a void at the centre. These initial parameters create a hexagonal-based distribution of agents that stabilise as shown in Figure~\ref{fig:baselineSwarm}. This basic swarm is used as the initial state for all the experiments. 
+For all the experiments the parameters used to create the basic swarming effect are shown in Table~\ref{tab:swarmingEffect}. Where $C_b$ is the cohesion field, $k_c$ is the cohesion weighting, $R_b$ is the repulsion field, $k_r$ is the repulsion weighting and $k_g$ is the weighting factor applied in the comparison of the gap reduction algorithm discussed in~\cite{eliot2019void}. The swarm consists of 200 agents which are distributed with a void at the centre. These initial parameters create a hexagonal-based distribution of agents that stabilise as shown in Figure~\ref{fig:baselineSwarm}. This basic swarm is used as the initial state for all the experiments. 
  \begin{table}[h]
 	\centering
 	\tiny

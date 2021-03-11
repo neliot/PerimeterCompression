@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  10 MAR 2021 18:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  11 MAR 2021 12:48
 entering extended mode
 **./perimeterCompression.tex
 (perimeterCompression.tex
@@ -1081,7 +1081,7 @@ Underfull \hbox (badness 2538) in paragraph at lines 50--54
 []\OT1/ptm/m/n/12 When co-he-sion and re-pul-sion field ef-fects
  []
 
-<figures/stableswarm.pdf, id=129, 210.87282pt x 171.11629pt>
+<figures/stableswarm.pdf, id=130, 210.87282pt x 171.11629pt>
 File: figures/stableswarm.pdf Graphic file (type pdf)
 <use figures/stableswarm.pdf>
 Package pdftex.def Info: figures/stableswarm.pdf  used on input line 61.
@@ -1090,17 +1090,16 @@ Package pdftex.def Info: figures/stableswarm.pdf  used on input line 61.
 
 
  <./figures/stableswarm.pdf>]
-<figures/PerimeterBots1.pdf, id=215, 432.61626pt x 430.60875pt>
+<figures/PerimeterBots1.pdf, id=219, 432.61626pt x 430.60875pt>
 File: figures/PerimeterBots1.pdf Graphic file (type pdf)
 <use figures/PerimeterBots1.pdf>
 Package pdftex.def Info: figures/PerimeterBots1.pdf  used on input line 114.
 (pdftex.def)             Requested size: 142.26378pt x 141.60196pt.
-
+ [2]
 Underfull \hbox (badness 1824) in paragraph at lines 119--120
 []\OT1/ptm/m/n/12 The de-tec-tion pro-cess is achieved us-ing a
  []
 
-[2 <./figures/PerimeterBots1.pdf>]
 <figures/neighbours2.pdf, id=245, 183.45639pt x 142.50742pt>
 File: figures/neighbours2.pdf Graphic file (type pdf)
 <use figures/neighbours2.pdf>
@@ -1111,12 +1110,8 @@ File: figures/neighbours3.pdf Graphic file (type pdf)
 <use figures/neighbours3.pdf>
 Package pdftex.def Info: figures/neighbours3.pdf  used on input line 140.
 (pdftex.def)             Requested size: 196.62386pt x 174.44388pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
 58.
-
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ts1ptm.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
@@ -1131,14 +1126,10 @@ File: figures/voidRemoval2.png Graphic file (type png)
 Package pdftex.def Info: figures/voidRemoval2.png  used on input line 172.
 (pdftex.def)             Requested size: 201.42003pt x 200.62119pt.
 
-[3 <./figures/neighbours2.pdf> <./figures/neighbours3.pdf>]
-
-LaTeX Warning: Reference `eq:repulsion2' on page 4 undefined on input line 194.
-
-
-
+[3 <./figures/PerimeterBots1.pdf> <./figures/neighbours2.pdf> <./figures/neighb
+ours3.pdf>]
 Underfull \hbox (badness 2221) in paragraph at lines 194--195
-\OT1/ptm/m/n/12 perimeter-based. Equa-tion [] shows the new
+\OT1/ptm/m/n/12 perimeter-based. Equa-tion []11[] shows the new
  []
 
 
@@ -1147,24 +1138,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 194--195
  []
 
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 2
-42.
+41.
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/exp1Start.png, id=296, 975.645pt x 1032.85875pt>
+<figures/exp1Start.png, id=302, 975.645pt x 1032.85875pt>
 File: figures/exp1Start.png Graphic file (type png)
 <use figures/exp1Start.png>
-Package pdftex.def Info: figures/exp1Start.png  used on input line 254.
+Package pdftex.def Info: figures/exp1Start.png  used on input line 253.
 (pdftex.def)             Requested size: 142.26378pt x 150.60385pt.
 [4 <./figures/voidRemoval1.png> <./figures/voidRemoval2.png>]
-<figures/interagentMagnitudeBaseline.pdf, id=318, 1927.2pt x 986.68625pt>
+<figures/interagentMagnitudeBaseline.pdf, id=326, 1927.2pt x 986.68625pt>
 File: figures/interagentMagnitudeBaseline.pdf Graphic file (type pdf)
 <use figures/interagentMagnitudeBaseline.pdf>
 Package pdftex.def Info: figures/interagentMagnitudeBaseline.pdf  used on input
- line 263.
+ line 262.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
 
 
@@ -1173,70 +1164,70 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/Experiment1.png, id=320, 1927.2pt x 986.68625pt>
+<figures/Experiment1.png, id=328, 1927.2pt x 986.68625pt>
 File: figures/Experiment1.png Graphic file (type png)
 <use figures/Experiment1.png>
-Package pdftex.def Info: figures/Experiment1.png  used on input line 329.
+Package pdftex.def Info: figures/Experiment1.png  used on input line 328.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
-<figures/Experiment2.png, id=322, 1927.2pt x 986.68625pt>
+<figures/Experiment2.png, id=330, 1927.2pt x 986.68625pt>
 File: figures/Experiment2.png Graphic file (type png)
 <use figures/Experiment2.png>
-Package pdftex.def Info: figures/Experiment2.png  used on input line 336.
+Package pdftex.def Info: figures/Experiment2.png  used on input line 335.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
-<figures/Experiment3.png, id=323, 1927.2pt x 986.68625pt>
+<figures/Experiment3.png, id=331, 1927.2pt x 986.68625pt>
 File: figures/Experiment3.png Graphic file (type png)
 <use figures/Experiment3.png>
-Package pdftex.def Info: figures/Experiment3.png  used on input line 343.
+Package pdftex.def Info: figures/Experiment3.png  used on input line 342.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
 [5 <./figures/exp1Start.png> <./figures/interagentMagnitudeBaseline.pdf> <./fig
 ures/Experiment1.png> <./figures/Experiment2.png> <./figures/Experiment3.png>]
-<figures/PerimeterCount.pdf, id=374, 1927.2pt x 986.68625pt>
+<figures/PerimeterCount.pdf, id=382, 1927.2pt x 986.68625pt>
 File: figures/PerimeterCount.pdf Graphic file (type pdf)
 <use figures/PerimeterCount.pdf>
-Package pdftex.def Info: figures/PerimeterCount.pdf  used on input line 352.
+Package pdftex.def Info: figures/PerimeterCount.pdf  used on input line 351.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
-<figures/PerimeterCount2.pdf, id=375, 1927.2pt x 986.68625pt>
+<figures/PerimeterCount2.pdf, id=383, 1927.2pt x 986.68625pt>
 File: figures/PerimeterCount2.pdf Graphic file (type pdf)
 <use figures/PerimeterCount2.pdf>
-Package pdftex.def Info: figures/PerimeterCount2.pdf  used on input line 375.
+Package pdftex.def Info: figures/PerimeterCount2.pdf  used on input line 374.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
-<figures/DistanceMetric1.pdf, id=376, 1927.2pt x 986.68625pt>
+<figures/DistanceMetric1.pdf, id=384, 1927.2pt x 986.68625pt>
 File: figures/DistanceMetric1.pdf Graphic file (type pdf)
 <use figures/DistanceMetric1.pdf>
-Package pdftex.def Info: figures/DistanceMetric1.pdf  used on input line 382.
+Package pdftex.def Info: figures/DistanceMetric1.pdf  used on input line 381.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
-<figures/InteragentCohesionMean.pdf, id=377, 1927.2pt x 986.68625pt>
+<figures/InteragentCohesionMean.pdf, id=385, 1927.2pt x 986.68625pt>
 File: figures/InteragentCohesionMean.pdf Graphic file (type pdf)
 <use figures/InteragentCohesionMean.pdf>
 Package pdftex.def Info: figures/InteragentCohesionMean.pdf  used on input line
- 389.
+ 388.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
 
 Underfull \vbox (badness 2050) has occurred while \output is active []
 
-<figures/InteragentCohesionStd.pdf, id=378, 1927.2pt x 986.68625pt>
+<figures/InteragentCohesionStd.pdf, id=386, 1927.2pt x 986.68625pt>
 File: figures/InteragentCohesionStd.pdf Graphic file (type pdf)
 <use figures/InteragentCohesionStd.pdf>
 Package pdftex.def Info: figures/InteragentCohesionStd.pdf  used on input line 
-396.
+395.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
-<figures/InteragentRepulsionMean.pdf, id=379, 1927.2pt x 986.68625pt>
+<figures/InteragentRepulsionMean.pdf, id=387, 1927.2pt x 986.68625pt>
 File: figures/InteragentRepulsionMean.pdf Graphic file (type pdf)
 <use figures/InteragentRepulsionMean.pdf>
 Package pdftex.def Info: figures/InteragentRepulsionMean.pdf  used on input lin
-e 403.
+e 402.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
-<figures/InteragentRepulsionStd.pdf, id=380, 1927.2pt x 986.68625pt>
+<figures/InteragentRepulsionStd.pdf, id=388, 1927.2pt x 986.68625pt>
 File: figures/InteragentRepulsionStd.pdf Graphic file (type pdf)
 <use figures/InteragentRepulsionStd.pdf>
 Package pdftex.def Info: figures/InteragentRepulsionStd.pdf  used on input line
- 410.
+ 409.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
-<figures/baselineSwarmPerimeter.png, id=381, 1927.2pt x 974.64125pt>
+<figures/baselineSwarmPerimeter.png, id=389, 1927.2pt x 974.64125pt>
 File: figures/baselineSwarmPerimeter.png Graphic file (type png)
 <use figures/baselineSwarmPerimeter.png>
 Package pdftex.def Info: figures/baselineSwarmPerimeter.png  used on input line
- 418.
+ 417.
 (pdftex.def)             Requested size: 227.62204pt x 115.10779pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1266,22 +1257,22 @@ inclusion: multiple pdfs with page group included in a single page
 pdfTeX warning: pdflatex.exe (file ./figures/InteragentRepulsionStd.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
 >]
-<figures/baselineSwarm1.png, id=637, 1056.94875pt x 1036.87375pt>
+<figures/baselineSwarm1.png, id=645, 1056.94875pt x 1036.87375pt>
 File: figures/baselineSwarm1.png Graphic file (type png)
 <use figures/baselineSwarm1.png>
-Package pdftex.def Info: figures/baselineSwarm1.png  used on input line 430.
+Package pdftex.def Info: figures/baselineSwarm1.png  used on input line 429.
 (pdftex.def)             Requested size: 142.26378pt x 139.56055pt.
-<figures/baselineSwarmMagnitude1.png, id=638, 1927.2pt x 974.64125pt>
+<figures/baselineSwarmMagnitude1.png, id=646, 1927.2pt x 974.64125pt>
 File: figures/baselineSwarmMagnitude1.png Graphic file (type png)
 <use figures/baselineSwarmMagnitude1.png>
 Package pdftex.def Info: figures/baselineSwarmMagnitude1.png  used on input lin
-e 437.
+e 436.
 (pdftex.def)             Requested size: 227.62204pt x 115.10779pt.
-<figures/baselineSwarmPerimeter1.png, id=639, 1927.2pt x 974.64125pt>
+<figures/baselineSwarmPerimeter1.png, id=647, 1927.2pt x 974.64125pt>
 File: figures/baselineSwarmPerimeter1.png Graphic file (type png)
 <use figures/baselineSwarmPerimeter1.png>
 Package pdftex.def Info: figures/baselineSwarmPerimeter1.png  used on input lin
-e 444.
+e 443.
 (pdftex.def)             Requested size: 227.62204pt x 115.10779pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1290,27 +1281,24 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 (perimeterCompression.bbl [7 <./figures/baselineSwarmPerimeter.png> <./figures/
 baselineSwarm1.png> <./figures/baselineSwarmMagnitude1.png> <./figures/baseline
 SwarmPerimeter1.png>]
-Underfull \hbox (badness 2529) in paragraph at lines 136--141
+Underfull \hbox (badness 2529) in paragraph at lines 155--160
 \OT1/ptm/m/n/9 immune-inspired swarm ag-gre-ga-tion al-go-rithm for self-
  []
 
 ) [8
 
 ] (perimeterCompression.aux)
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `perimeterCompression.out' has not changed.
 (rerunfilecheck)             Checksum: C95A3082EC6FF5C8E17B3F025C83FCD6;1046.
  ) 
 Here is how much of TeX's memory you used:
- 25892 strings out of 479584
- 534867 string characters out of 2861984
- 870292 words of memory out of 3000000
- 42495 multiletter control sequences out of 15000+200000
+ 25835 strings out of 479584
+ 533633 string characters out of 2861984
+ 870397 words of memory out of 3000000
+ 42435 multiletter control sequences out of 15000+200000
  448156 words of font info for 108 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,11n,108p,1051b,849s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 101i,11n,108p,1208b,463s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}
 <C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmex10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
@@ -1338,9 +1326,9 @@ rograms/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/neil/AppData/Loca
 l/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/neil/AppData/
 Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/neil/AppDa
 ta/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on perimeterCompression.pdf (8 pages, 3254088 bytes).
+Output written on perimeterCompression.pdf (8 pages, 3255254 bytes).
 PDF statistics:
- 745 PDF objects out of 1000 (max. 8388607)
- 90 named destinations out of 1000 (max. 500000)
+ 754 PDF objects out of 1000 (max. 8388607)
+ 93 named destinations out of 1000 (max. 500000)
  411 words of extra memory for PDF output out of 10000 (max. 10000000)
 

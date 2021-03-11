@@ -5,46 +5,44 @@ Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: abbrv.bst
 Reallocating 'name_of_file' (item size: 1) to 10 items.
 Database file #1: perimeter.bib
-Warning--can't use both volume and number fields in REY:87
-You've used 23 entries,
+You've used 26 entries,
             2118 wiz_defined-function locations,
-            660 strings with 8233 characters,
-and the built_in function-call counts, 9950 in all, are:
-= -- 1018
-> -- 380
-< -- 18
-+ -- 154
-- -- 126
-* -- 645
-:= -- 1478
-add.period$ -- 79
-call.type$ -- 23
-change.case$ -- 131
+            678 strings with 8807 characters,
+and the built_in function-call counts, 11193 in all, are:
+= -- 1137
+> -- 444
+< -- 19
++ -- 180
+- -- 148
+* -- 731
+:= -- 1677
+add.period$ -- 88
+call.type$ -- 26
+change.case$ -- 151
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 438
-empty$ -- 824
-format.name$ -- 126
-if$ -- 2250
+cite$ -- 26
+duplicate$ -- 485
+empty$ -- 918
+format.name$ -- 148
+if$ -- 2517
 int.to.chr$ -- 0
-int.to.str$ -- 23
-missing$ -- 24
-newline$ -- 119
-num.names$ -- 46
-pop$ -- 166
+int.to.str$ -- 26
+missing$ -- 27
+newline$ -- 134
+num.names$ -- 52
+pop$ -- 186
 preamble$ -- 1
-purify$ -- 109
+purify$ -- 126
 quote$ -- 0
-skip$ -- 348
+skip$ -- 386
 stack$ -- 0
-substring$ -- 727
-swap$ -- 178
-text.length$ -- 18
+substring$ -- 815
+swap$ -- 192
+text.length$ -- 19
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 90
-warning$ -- 1
-while$ -- 94
-width$ -- 25
-write$ -- 267
-(There was 1 warning)
+type$ -- 102
+warning$ -- 0
+while$ -- 104
+width$ -- 28
+write$ -- 300

@@ -63,6 +63,12 @@ N.~Eliot, D.~Kendall, A.~Moon, M.~Brockway, and M.~Amos.
 \newblock In {\em Artificial Life Conference Proceedings}, pages 87--94. MIT
   Press, 2019.
 
+\bibitem{fu2020formation}
+X.~Fu, J.~Pan, H.~Wang, and X.~Gao.
+\newblock A formation maintenance and reconstruction method of uav swarm based
+  on distributed control.
+\newblock {\em Aerospace Science and Technology}, 104:105981, 2020.
+
 \bibitem{VG:05}
 V.~Gazi.
 \newblock Swarm aggregations using artificial potentials and sliding-mode
@@ -93,6 +99,12 @@ G.~Lee and N.~Y. Chong.
 \newblock Self-configurable mobile robot swarms with hole repair capability.
 \newblock In {\em Intelligent Robots and Systems, 2008. IROS 2008. IEEE/RSJ
   International Conference on}, pages 1403--1408, Sept 2008.
+
+\bibitem{liang2019swarm}
+X.~Liang, X.~Qu, N.~Wang, Y.~Li, and R.~Zhang.
+\newblock Swarm control with collision avoidance for multiple underactuated
+  surface vehicles.
+\newblock {\em Ocean Engineering}, 191:106516, 2019.
 
 \bibitem{mclurkin2009}
 J.~McLurkin and E.~D. Demaine.
@@ -131,6 +143,13 @@ J.~{Son}, H.~{Ahn}, and J.~{Cha}.
   obstacle avoidance.
 \newblock In {\em 2017 17th International Conference on Control, Automation and
   Systems (ICCAS)}, pages 1068--1072, 2017.
+
+\bibitem{8430773}
+C.~{Speck} and D.~J. {Bucci}.
+\newblock Distributed uav swarm formation control via object-focused,
+  multi-objective sarsa.
+\newblock In {\em 2018 Annual American Control Conference (ACC)}, pages
+  6596--6601, 2018.
 
 \bibitem{TIBW:16}
 J.~Timmis, A.~Ismail, J.~Bjerknes, and A.~Winfield.
