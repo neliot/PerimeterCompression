@@ -157,7 +157,7 @@ v(b) = v_c(b) + v_r(b)
 
 The effect of introducing the additional weighting factors ($p_c$ and $p_r$) can be seen in \S~\ref{sec:ExperimentalResults} which demonstrates the additional internal disturbance of the swarm caused by the compression algorithm and the removal of internal swarm voids. 
 
-Figure~\ref{fig:voidRemoval} shows how the compression effect can remove a void from a swarm by surround an obstacle in a similar manner to the method described by Eliot et al. in~\cite{eliot2019void}.
+Figure~\ref{fig:voidRemoval} shows how the compression effect can remove a void from a swarm by surround an obstacle in a similar manner to the method described in~\cite{eliot2019void}.
 
 \begin{figure}
 \centering
@@ -178,7 +178,7 @@ Figure~\ref{fig:voidRemoval} shows how the compression effect can remove a void 
 \end{figure}
 
 \subsection{Modified cohesion model}
-The cohesion component of the compression effect ($p_c$) is applied when an agent ($b$) and its neighbour ($b'$) are both perimeter-based. If the agents are not both perimeter-based then the agents cohesion vector is scaled by $k_c$ (Eq.~\ref{eq:cohesion4}). The effect of the additional cohesion-compression weighting is to increases the size of the effective, generated cohesion-vector (\textbf{ef}fective \emph{c}ohesion) $\mathsf{efc}(b,b')$ (Eq.~\ref{eq:cohesion3}) which causes the agent to have a tendency to move towards that neighbour. 
+The cohesion component of the compression effect ($p_c$) is applied when an agent ($b$) and its neighbour ($b'$) are both perimeter-based. If the agents are not both perimeter-based then the agents cohesion vector is scaled by $k_c$ (Eq.~\ref{eq:cohesion4}). The effect of the additional cohesion-compression weighting is to increases the size of the effective, generated cohesion-vector (\textbf{ef}fective \textbf{c}ohesion) $\mathsf{efc}(b,b')$ (Eq.~\ref{eq:cohesion3}) which causes the agent to have a tendency to move towards that neighbour. 
 
 \begin{equation}\label{eq:cohesion3}
 v_c(b) = \frac{1}{\lvert n_c(b)\rvert} \sum_{b' \in n_c(b)}\mathsf{ekc}(b, b')\, \vec{bb'}
@@ -255,7 +255,7 @@ For all the experiments the parameters used to create the basic swarming effect 
 	\caption{Baseline swarm in stabilised configuration. \label{fig:baselineSwarm}}
 \end{figure}
 
-When the simulation is ran with no compression the resultant magnitudes generated are shown in Table~\ref{fig:baselineSwarmMagnitude}. These states are used as the baseline for the experiments to measure the effects of the compression algorithm and compare the new algorithm to the existing void reduction algorithm discussed by Eliot et al. in~\cite{eliot2018metric}.
+When the simulation is ran with no compression the changes are identified using a magnitude-based metric~\cite{eliot2018metric}. The resultant magnitudes generated are shown in figure~\ref{fig:baselineSwarmMagnitude}. These states are used as the baseline for the experiments to measure the effects of the compression algorithm and compare the new algorithm to the existing void reduction algorithm.
 
 \begin{figure}[H]
 	\begin{center}
@@ -266,20 +266,7 @@ When the simulation is ran with no compression the resultant magnitudes generate
 
 \subsection{Compression Effects\label{sec:CompressionEffect}}
 
-The compression effect parameters are shown in table~\ref{tab:compressionEffect}
-\begin{table}[h]
-	\centering
-	\tiny
-	\begin{tabular}{|c|r|r|r|r|r|r|}
-		\hline
-		\rowcolor[HTML]{000000} 
-		{\color[HTML]{FFFFFF} Comp.} & {\color[HTML]{FFFFFF} 1} & {\color[HTML]{FFFFFF} 2} & {\color[HTML]{FFFFFF} 3} & {\color[HTML]{FFFFFF} 4} & {\color[HTML]{FFFFFF} 5} & {\color[HTML]{FFFFFF} 6}\\ \hline
-		$p_r$ & \texttt{0.10} & \texttt{0.15} & \texttt{0.20} & \texttt{0.25} & \texttt{0.30} & \texttt{0.35} \\ \hline
-		$p_c$ & \texttt{20.00}  & \texttt{30.00} & \texttt{40.00} & \texttt{50.00} & \texttt{60.00} & \texttt{70.00}\\ \hline
-	\end{tabular}
-	\caption{Compression effect parameters}
-	\label{tab:compressionEffect}
-\end{table}
+The compression effect parameters are shown in tables~\ref{tab:compressionExperimentEffect1} and~\ref{tab:compressionExperimentEffect2}
 
 \begin{table}[h]
 	\centering
