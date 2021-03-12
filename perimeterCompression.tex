@@ -178,7 +178,7 @@ Figure~\ref{fig:voidRemoval} shows how the compression effect can remove a void 
 \end{figure}
 
 \subsection{Modified cohesion model}
-The cohesion component of the compression effect ($p_c$) is applied when an agent ($b$) and its neighbour ($b'$) are both perimeter-based. If the agents are not both perimeter-based then the agents cohesion vector is scaled by $k_c$ (Eq.~\ref{eq:cohesion4}). The effect of the additional cohesion-compression weighting is to increases the size of the effective, generated cohesion-vector (\textbf{ef}fective \textbf{c}ohesion) $\mathsf{efc}(b,b')$ (Eq.~\ref{eq:cohesion3}) which causes the agent to have a tendency to move towards that neighbour. 
+The cohesion component of the compression effect ($p_c$) is applied when an agent ($b$) and its neighbour ($b'$) are both perimeter-based. If the agents are not both perimeter-based then the agents cohesion vector is scaled by $k_c$ (Eq.~\ref{eq:cohesion4}). The effect of the additional cohesion-compression weighting is to increase the size of the effective, generated cohesion-vector $\mathsf{ekc}(b,b')$ (Eq.~\ref{eq:cohesion3}) which causes the agent to have a tendency to move towards that neighbour. 
 
 \begin{equation}\label{eq:cohesion3}
 v_c(b) = \frac{1}{\lvert n_c(b)\rvert} \sum_{b' \in n_c(b)}\mathsf{ekc}(b, b')\, \vec{bb'}
@@ -191,7 +191,7 @@ v_c(b) = \frac{1}{\lvert n_c(b)\rvert} \sum_{b' \in n_c(b)}\mathsf{ekc}(b, b')\,
 \normalsize
 
 \subsection{Modified repulsion model}\label{repulsion:compression}
-The repulsion compression component of the perimeter is applied by adjusted the \textbf{e}ffective \textbf{r}ange \textbf{f}ield ($\mathsf{erf}(b,b')$) if the agents are both perimeter-based. Equation~\ref{eq:repulsion4} shows the new formula to calculate the adjusted repulsion. As the agent's repulsion field is always within the cohesion field (Eq.~\ref{eq:cohesion1}), the repulsion neighbours can also be defined as a subset of the cohesion neighbours $n_c(b)$~(Eq.~\ref{eq:repulsion3}).\\
+The repulsion compression component of the perimeter is applied by adjusted the \textbf{e}ffective \textbf{r}epulsion \textbf{f}ield ($\mathsf{erf}(b,b')$) if the agents are both perimeter-based. Equation~\ref{eq:repulsion4} shows the new formula to calculate the adjusted repulsion. As the agent's repulsion field is always within the cohesion field (Eq.~\ref{eq:cohesion1}), the repulsion neighbours can also be defined as a subset of the cohesion neighbours $n_c(b)$~(Eq.~\ref{eq:repulsion3}).\\
 
 \begin{equation}\label{eq:repulsion1}
 n_r(b) = \{b' \in \mathcal{S} : b \neq b' \land \lVert\vec{bb'}\rVert \leq \mathsf{erf}(b,b')\}
