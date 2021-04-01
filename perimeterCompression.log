@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  30 MAR 2021 21:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  1 APR 2021 14:33
 entering extended mode
 **./perimeterCompression.tex
 (perimeterCompression.tex
@@ -1386,53 +1386,128 @@ Overfull \hbox (10.29591pt too wide) in paragraph at lines 491--492
 
 [8 <./figures/Figure_3.png> <./figures/Figure_4.png> <./figures/Figure_5.png> <
 ./figures/Figure_6.png> <./figures/Figure_7.png> <./figures/Figure_8.png> <./fi
-gures/Figure_9.png>] (perimeterCompression.bbl
+gures/Figure_9.png>]
+<figures/mag-pr-0.9-mean.png, id=694, 1387.584pt x 710.4141pt>
+File: figures/mag-pr-0.9-mean.png Graphic file (type png)
+<use figures/mag-pr-0.9-mean.png>
+Package pdftex.def Info: figures/mag-pr-0.9-mean.png  used on input line 498.
+(pdftex.def)             Requested size: 256.0748pt x 131.09935pt.
+
+Overfull \hbox (10.29591pt too wide) in paragraph at lines 498--499
+ [] 
+ []
+
+<figures/mag-pr-0.9-std.png, id=695, 1387.584pt x 710.4141pt>
+File: figures/mag-pr-0.9-std.png Graphic file (type png)
+<use figures/mag-pr-0.9-std.png>
+Package pdftex.def Info: figures/mag-pr-0.9-std.png  used on input line 505.
+(pdftex.def)             Requested size: 256.0748pt x 131.09935pt.
+
+Overfull \hbox (10.29591pt too wide) in paragraph at lines 505--506
+ [] 
+ []
+
+<figures/mag-pr-0.9-pc-100-error.png, id=696, 1387.584pt x 710.4141pt>
+File: figures/mag-pr-0.9-pc-100-error.png Graphic file (type png)
+<use figures/mag-pr-0.9-pc-100-error.png>
+Package pdftex.def Info: figures/mag-pr-0.9-pc-100-error.png  used on input lin
+e 512.
+(pdftex.def)             Requested size: 256.0748pt x 131.09935pt.
+
+Overfull \hbox (10.29591pt too wide) in paragraph at lines 512--513
+ [] 
+ []
+
+<figures/dist-pr-0.9-mean.png, id=697, 1387.584pt x 710.4141pt>
+File: figures/dist-pr-0.9-mean.png Graphic file (type png)
+<use figures/dist-pr-0.9-mean.png>
+Package pdftex.def Info: figures/dist-pr-0.9-mean.png  used on input line 519.
+(pdftex.def)             Requested size: 256.0748pt x 131.09935pt.
+
+Overfull \hbox (10.29591pt too wide) in paragraph at lines 519--520
+ [] 
+ []
+
+<figures/dist-pr-0.9-std.png, id=698, 1387.584pt x 710.4141pt>
+File: figures/dist-pr-0.9-std.png Graphic file (type png)
+<use figures/dist-pr-0.9-std.png>
+Package pdftex.def Info: figures/dist-pr-0.9-std.png  used on input line 526.
+(pdftex.def)             Requested size: 256.0748pt x 131.09935pt.
+
+Overfull \hbox (10.29591pt too wide) in paragraph at lines 526--527
+ [] 
+ []
+
+<figures/dist-pr-0.9-pc-100-error.png, id=699, 1387.584pt x 710.4141pt>
+File: figures/dist-pr-0.9-pc-100-error.png Graphic file (type png)
+<use figures/dist-pr-0.9-pc-100-error.png>
+Package pdftex.def Info: figures/dist-pr-0.9-pc-100-error.png  used on input li
+ne 533.
+(pdftex.def)             Requested size: 256.0748pt x 131.09935pt.
+
+Overfull \hbox (10.29591pt too wide) in paragraph at lines 533--534
+ [] 
+ []
+
+(perimeterCompression.bbl [9 <./figures/Figure_10.png> <./figures/mag-pr-0.9-me
+an.png> <./figures/mag-pr-0.9-std.png> <./figures/mag-pr-0.9-pc-100-error.png> 
+<./figures/dist-pr-0.9-mean.png> <./figures/dist-pr-0.9-std.png> <./figures/dis
+t-pr-0.9-pc-100-error.png>]
 Underfull \hbox (badness 2529) in paragraph at lines 155--160
 \OT1/ptm/m/n/9 immune-inspired swarm ag-gre-ga-tion al-go-rithm for self-
  []
 
-) [9 <./figures/Figure_10.png>] (perimeterCompression.aux)
-Package rerunfilecheck Info: File `perimeterCompression.out' has not changed.
-(rerunfilecheck)             Checksum: 40F470E4072234443DB04310FC167E3B;1046.
+) [10] (perimeterCompression.aux)
+
+Package rerunfilecheck Warning: File `perimeterCompression.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `perimeterCompression.out':
+(rerunfilecheck)             Before: 40F470E4072234443DB04310FC167E3B;1046
+(rerunfilecheck)             After:  0A074300DD8E4E01B57DA78A68885DDD;1046.
  ) 
 Here is how much of TeX's memory you used:
- 25924 strings out of 479584
- 535448 string characters out of 2861984
+ 25985 strings out of 479584
+ 537087 string characters out of 2861984
  864337 words of memory out of 3000000
- 42504 multiletter control sequences out of 15000+200000
+ 42546 multiletter control sequences out of 15000+200000
  448156 words of font info for 108 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,11n,108p,1208b,463s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}
-<C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmex10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmmi10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/neil/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/neil/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/
-neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb
-><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmr12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/neil/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/neil/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/ne
-il/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-<C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmsy5.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmsy6.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmsy7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/neil/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/neil/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/neil/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/neil/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/neil/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on perimeterCompression.pdf (9 pages, 7307377 bytes).
+pdfTeX warning (dest): name{section*.36} has been referenced but does not exi
+st, replaced by a fixed one
+
+{C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C
+:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mex10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmmi12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/neil/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/neil/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/ne
+il/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
+C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/neil/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/neil/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/neil
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
+:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+msy5.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmsy6.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmsy7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/neil/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/neil/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/neil/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/neil/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/neil/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on perimeterCompression.pdf (10 pages, 10090966 bytes).
 PDF statistics:
- 792 PDF objects out of 1000 (max. 8388607)
- 103 named destinations out of 1000 (max. 500000)
- 461 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 817 PDF objects out of 1000 (max. 8388607)
+ 111 named destinations out of 1000 (max. 500000)
+ 491 words of extra memory for PDF output out of 10000 (max. 10000000)
 
