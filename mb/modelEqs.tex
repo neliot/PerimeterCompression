@@ -1,0 +1,165 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{relsize}
+\usepackage{amsmath}
+
+\title{An equational summary of our swarm models}
+\author{Michael}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+
+
+\section{The basic model, so far in the paper}
+The equations numbered (1)--(12) here mtach exactly the equations in the (current version of the) draft.
+
+$S$ is the set of agents making up the swarm; $b, b', b_k$ etc denote agents or (in context) their position vectors relative to some origin/coordinate system. The vector from $b$ to $b'$, $\vec{bb'} = b' - b$. The latter notation is good to remind us which way around we should be subtracting components!
+
+Each agent $b$ has a cohesion field, a disc centred at $b$ of radius $C_b$, and similarly, a repulsion field of radius $R_b$.
+
+A vector defining the movement of agent b during the time `tick' is defined by -
+
+\begin{equation}\label{eq:rsltntVctr}
+	v(b) = k_c v_c(b) + k_r v_r(b) + k_d v_d(b) + k_o v_o(b)
+\end{equation}
+
+This equation shows the movement vector as a linear combination of a cohesion vector $v_c$ tending to move $b$ towards its neighbours, a repulsion vector $v_r$ tending to move $b$ away from its neighbours, a direction vector  $v_d$ tending to move $b$ towards a goal, and a vector $v_o$ tendoing to steer it away from obstacles. $k_c, k_r, ...$ are the scalar coefifficients of the the linear combination.
+
+This paper does not consider goals or obtsacles so we  assume $k_d = k_o = 0$ and omit the third and fourth terms.
+
+To define $v_c$, first the set of \emph{neighbours} of $b$ is defined to be
+
+\begin{equation}\label{eq:coh1}
+n_c(b) = \{b' \in S~:~b' \neq b \wedge \|b' - b\| \leq C_b\}
+\end{equation}
+where $S$ is the set of all agents in the swarm. Then,
+
+\begin{equation}\label{eq:coh2}
+v_c(b) = \frac{1}{|n_c(b)|} \sum_{b' \in n_c(b)}k_c (b' - b)
+\end{equation}
+
+where $|n_c(b)|$ denotes the cardinality of $n_c(b)$. Similarly the set of repellers of $b$ is
+\begin{equation}\label{eq:rep1}
+n_r(b) = \{b' \in \mathcal{S} : b \neq b' \wedge \|b' - b\| \leq R_b)\}
+\end{equation}
+and $v_r(b)$ is defined by
+
+\begin{equation}\label{eq:rep2}
+v_r(b) = \frac{1}{|n_r(b)|}\sum_{b' \in n_r(b)} k_r \left(\|b' - b\| - R_b \, \right) (b'-b)\hat~
+\end{equation}
+Here, $(b'-b)\hat~$ denotes $b'-b$ normalized to unit length.
+
+Note that the multipliers $k_c, k_r$ have been absorbed into equations \ref{eq:coh2}, \ref{eq:rep2} so eq \ref{eq:rsltntVctr} now reads, simply,
+\begin{equation}\label{eq:newModel2}
+v(b) = v_c(b) + v_r(b)
+\end{equation}
+
+\paragraph{Perimeter detection}
+Let $n_r(b) = \{b_0, b_1, ... b_{n-1}\}$ be an enumeration of the neighbours of $b$ in order of increasing azimuth angle. The \emph{azimuth angle} with respect to $b$ of $b_i$ is the angle $\beta_i$ which vector $\vec{bb_i} = b_i - b$ makes with the positive x axis: $\beta_i = \text{atan2}((b_i - b)_y, (b_i - b)_x)$.
+
+$b$ is determined to be on the perimeter if it is surrounded by its neighbours \emph{without a gap}. A gap exists between two consecutive neighbours $b' = b_i, b'' = b_{(i+1)\%n}$ [the \emph{next} neighbour in the azimuth-ordered \emph{circular list}] when \emph{either}
+\begin{itemize}
+\item $b', b''$ are out of cohesion range (they are not neighbours of each other) \emph{or}
+\item $b', b''$ subtend a reflex angle at $b$. That is, $\beta' - \beta$ (or $\beta' - \beta + 2\pi$ if the former is negative) is $> \ pi$.
+\end{itemize}
+
+$b$ is also deemed to be on the perimeter is it has at most 3 neighbours.
+
+
+\section{``First'' perimeter compression model}
+
+
+\paragraph{Modified cohesion model} driven by a new cohesion modifier parameter, $p_c$, of the model: normally $p_c \ge 1$. The ``neutral'' value is $p_c = 1$.
+
+\begin{equation}\label{eq:coh3}
+v_c(b) = \frac{1}{|n_c(b)|} \sum_{b' \in n_c(b)}\mathsf{ekc}(b, b')\, (b' - b)
+\end{equation}
+where
+
+\begin{equation}\label{eq:coh4}
+\mathsf{ekc}(b, b') = \begin{cases}
+   p_c k_c & \text{ if } \mathsf{perim}(b) \wedge \mathsf{perim}(b'),\\
+   k_c  & \text{ otherwise }
+   \end{cases}
+\end{equation}
+
+
+\paragraph{Modified repulsion model} driven by a new repulsion modifier parameter, $p_r$, of the model: normally $0 \le p_r \le 1$. The ``neutral'' value is $p_r = 1$.
+
+\begin{equation}\label{eq:repulsion1}
+n_r(b) = \{b' \in \mathcal{S} : b \neq b' \land \|b' -b\| \leq \mathsf{erf}(b,b')\}
+\end{equation}
+
+(equivalently, assuming $n_r(b) \subseteq n_c(b)$
+\begin{equation}\label{eq:repulsion3}
+n_r(b) = \{b' \in n_c(b)~:~\|b'-b\| \leq \mathsf{erf}(b,b')\}
+\end{equation}
+)
+
+The repulsion vector is
+\begin{equation}\label{eq:rep3}
+v_r(b) = \frac{1}{|n_r(b)|}\sum_{b' \in n_r(b)} k_r \left(\|b' - b\| - \mathsf{erf}(b,b') \, \right) (b'-b)\hat~
+\end{equation}
+
+where
+\begin{equation}\label{eq:rep4}
+\mathsf{erf}(b, b') = \begin{cases}
+   p_r R_b & \text{ if } \mathsf{perim}(b) \wedge \mathsf{perim}(b'),\\
+   R_b  & \text{ otherwise }
+   \end{cases}
+\end{equation}
+
+\section{``Improved'' perimeter compression model}
+We introduce two types of interaction between a perimeter agent and a non-perimeter agent as follows.
+
+They both use an additional modifier parameter $p_{kr}$, again with ``neutral'' value 1. For the first type, ``inner compression'', define
+\begin{equation}\label{eq:ekr}
+\mathsf{ekr}(b, b') = \begin{cases}
+   p_{kr} k_r & \text{ if } \neg \mathsf{perim}(b) \wedge \mathsf{perim}(b')\\
+   k_r  & \text{ otherwise }
+   \end{cases}
+\end{equation}
+
+and replace eq \ref{eq:rep3} with
+\begin{equation}\label{eq:rep5}
+v_r(b) = \frac{1}{|n_r(b)|}\sum_{b' \in n_r(b)} \mathsf{ekr}(b,b') \left(\|b' - b\| - \mathsf{erf}(b,b') \, \right) (b'-b)\hat~
+\end{equation}
+
+The second type of perimeter/non-perimeter interation, ``outer compression'', defines $\mathsf{ekr}(b, b')$ as
+\begin{equation}\label{eq:ekr2}
+\mathsf{ekr}(b, b') = \begin{cases}
+   p_{kr} k_r & \text{ if } \mathsf{perim}(b) \oplus \mathsf{perim}(b')\\
+   k_r  & \text{ otherwise }
+   \end{cases}
+\end{equation}
+where $\oplus$ means logical XOR. The repulsion vector is again defined by eq \ref{eq:rep5}. 
+
+
+One implementation approach which exploits the interchangeability of $b, b'$ is to employ an additional ``compression mode'' parameter c and define 
+\begin{equation}\label{eq:ekr3}
+\mathsf{ekr}(b, b') = \begin{cases}
+   p_{kr} k_r & \text{ if } (\mathsf{perim}(b) \wedge c=1) \vee (\mathsf{perim}(b') \wedge c=2)\\
+   k_r  & \text{ otherwise }
+   \end{cases}
+\end{equation}
+
+
+\section{Gap filling}
+An enhancement to the basic model that has proven useful in combination with these enhancements, especially in reducing internal voids in the swarm, is intronce another term on the right of eq \ref{eq:rsltntVctr} or eq \ref{eq:newModel2}
+
+For instance (omitting obstacles, destinations for now),
+\begin{equation}\label{eq:newModel3}
+v(b) = v_c(b) + v_r(b) + v_g(b)
+\end{equation}
+where $v_g(b)$ is a vector which will, in the case that a gap has been identified in the perimeter test for $b$, will contribute a motion of $b$ toward the midpoint of the gap.
+
+In the notation of the paragraph on perimeter detection suppose that $n_r(b) = \{b_0, b_1, ... b_{n-1}\}$ are the neighbours of $b$ in azimuth angle order, and let the \emph{first} gap found in the perimeter test be $b' = b_i$ to $b'' = b_{(i+1)\%n}$. Then define
+\begin{equation}\label{eq:gap}
+v_g(b) = k_g \left (\frac{b' + b''}{2} - b \right) = k_g \frac{\vec{bb'} + \vec{bb''}}{2} 
+\end{equation}
+$k_g$ is a weighting for the gap-filling vector allowing the combination of it with the other motion vectors (cohesion, repulsion, ...) to be ``tuned''.
+
+\end{document}

@@ -28,8 +28,10 @@
 \newcommand{\important}[1]{\begin{importantBox} \textbf{Important:} #1 \end{importantBox}}
 \newcommand{\magn}[1]{\Vert{#1}\Vert}
 \newcommand{\card}[1]{\vert{#1}\vert}
+%\newcommand{\vbb}[2]{\vec{#1#2}}
+\newcommand{\vbb}[2]{#2-#1}
 
-\title{Perimeter Compression in self-healing swarms.}
+\title{Improved perimeter compression and swarm formation in self-healing swarms.}
 \author[1,*]{Neil Eliot}
 \author[2]{David Kendall}
 \author[2]{Michael Brockway}
@@ -78,33 +80,36 @@ In the Original work by Eliot et. al. the resultant vector of an agent was calcu
 	v(b) = k_cv_c(b) + k_rv_r(b) + k_dv_d(b) + k_ov_o(b)
 \end{equation}
 
-In this paper we will only consider the cohesion and repulsion components of the equation in creating the new compression effect.
+Equation~\ref{eq:resultantVector1a} shows the movement vector as a linear combination of a cohesion vector $v_c$ tending to move $b$ towards its neighbours, a repulsion vector $v_r$ tending to move $b$ away from its neighbours, a direction vector  $v_d$ tending to move $b$ towards a goal, and a vector $v_o$ tending to steer it away from obstacles. $k_c, k_r, ...$ are the scalar coefficients of the the linear combination.
+
+This paper does not consider goals or obstacles so we assume $k_d = k_o = 0$ and omit the third and fourth terms.
 
 \subsection{Cohesion}\label{cohesion}
-The cohesion component of an agent is calculated in a similar way to the repulsion in that it is dependent upon the proximity of neighbours. Where $n_c(b)$ is the set of neighbour agents for $b$ (Eq. \ref{eq:cohesion1}). The inclusion of an agent from a swarm ($S$) in by the agent's cohesion field ($C_b$).
+The cohesion component is calculated based on the proximity of neighbours. Where $n_c(b)$ is the set of neighbour agents for $b$ (Eq. \ref{eq:cohesion1}). The inclusion of an agent from a swarm ($S$) in by the agent's cohesion field ($C_b$).
 
 \begin{equation}\label{eq:cohesion1}
-n_c(b) = \{b' \in S~:~b' \neq b \land\magn{\vec{bb'}} \leq C_b\}
+n_c(b) = \{b' \in S~:~b' \neq b \land\magn{\vbb{b}{b'}} \leq C_b\}
 \end{equation}
 
-The effect of an agent being within this set is that it will generate a vector that should `encourage' agents to maintain their proximity. i.e. generate a cohesive swarm. The general weighted ($k_c$) formula for agents to maintain their proximity is to direct their motion towards the central point of all neighbouring agents as shown in Equation~\ref{eq:cohesion2}. This formula includes the $k_c$ quotient that allows the cohesion effect to be `balanced' with respect to other vector influences as described in ~\cite{eliot2017methods,eliot2018metric,eliot2019void} 
+The effect of an agent being within this set is that it will generate a vector that should `encourage' agents to maintain their proximity. i.e. generate a cohesive swarm. The general weighted ($k_c$) formula for agents to maintain their proximity is to direct their motion towards the central point of all neighbouring agents as shown in Equation~\ref{eq:cohesion2}. Where $\card{n_c(b)}$ denotes the cardinality of $n_c(b)$. This formula includes the $k_c$ quotient that allows the cohesion effect to be `balanced' with respect to other vector influences as described in ~\cite{eliot2017methods,eliot2018metric,eliot2019void}. 
 
 \begin{equation}\label{eq:cohesion2}
-v_c(b) = \frac{1}{\lvert n_c(b)\rvert} \sum_{b' \in n_c(b)}k_c\vec{bb'}
+v_c(b) = \frac{1}{\card{n_c(b)}} \sum_{b' \in n_c(b)}(\vbb{b}{b'})
 \end{equation}
 
 \subsection{Repulsion}\label{repulsion:neighbours}
 The repulsion component of an agent's movement is calculated from interaction with its neighbours $n_r(b)$ (Eq.~\ref{eq:repulsion1a}) in a swarm ($\mathcal{S}$) that are within the agent's ($b$) repulsion field ($R_b$).
 
 \begin{equation}\label{eq:repulsion1a}
-n_r(b) = \{b' \in \mathcal{S} : b \neq b' \land \lVert\vec{bb'}\rVert \leq R_b)\}
+n_r(b) = \{b' \in \mathcal{S} : b \neq b' \land \card{\vbb{b}{b'}} \leq R_b)\}
 \end{equation}
 
-The repulsion is then calculated as the average of all the vectors created by the agent ($b$) to the neighbours ($b'$) (Eg.~\ref{eq:repulsion2a}) and its proximity ($\lVert\vec{bb'}\rVert - R_b$).
+The repulsion is then calculated as the average of all the vectors created by the agent ($b$) to the neighbours ($b'$) (Eg.~\ref{eq:repulsion2a}) and its proximity ($\magn{\vbb{b}{b'}} - R_b$). Where $\card{n_r(b)}$ denotes the cardinality of $n_r(b)$.
 
 \begin{equation}\label{eq:repulsion2a}
-v_r(b) = \frac{1}{\lvert n_r(b)\rvert}\sum_{b' \in n_r(b)} \left(\lVert\vec{bb'}\rVert - R_b \, \right)\widehat{bb'}
+v_r(b) = \frac{1}{\card{n_r(b)}}\sum_{b' \in n_r(b)} \left(\magn{\vbb{b}{b'}} - R_b \, \right)\widehat{\vbb{b}{b'}}
 \end{equation}
+Here, $\widehat{\vbb{b}{b'}}$ denotes $\vbb{b}{b'}$ normalized to unit length.
 
 \section{Perimeter detection}\label{sec:perimeterDetection}
 For perimeter compression to be applied to a swarm the perimeter needs to be detected. A perimeter can be defined as a continuous `surface' of agents that are not enclosed by other agents. These  agents may form an outer ({\color{green}green}) or inner ({\color{red}red}) boundary ~(Fig.~\ref{fig:innerOuterPerimeters}).
@@ -142,42 +147,37 @@ One further condition must be checked to detect a perimeter agent. When the poly
 	\label{fig:neighbours3}
 \end{figure}
 
-\section{Perimeter compression model}
-The new algorithm requires each individual agent to modify the movement vector generated based upon the perimeter status of the agent and each neighbour. The equation has been simplified (Eq.~\ref{eq:newModel2}) and the cohesion and repulsion weighting factors ($k_c,k_r$) have been transferred into the calculations. The additional weighting factors ($p_r,p_c$) are applied to specific agents within the cohesion and repulsion vector calculations.
+\section{Gap reduction model}
+An enhancement to the basic model that has proven useful in combination with the enhancements detailed below, especially in reducing internal voids in the swarm, is to introduce another term on the right of Equation~\ref{eq:newModel2}. This gap reducing model is based upon the model described by Eliot et al. in~\cite{eliot2019void}.
 
-% \begin{equation}\label{eq:newModel1}
-% v(b) = v_c(b) + v_r(b) + v_d(b) + v_o(b)
-% \end{equation}
+For instance (omitting obstacles, destinations for now),
+\begin{equation}\label{eq:newModel3}
+v(b) = v_c(b) + v_r(b) + v_g(b)
+\end{equation}
 
-As in the basic model (Section~\ref{basicModel}) the formula is simplified to only account for cohesion and repulsion~(Eq.~\ref{eq:newModel2}) although obstacle avoidance and direction can be added.
+where $v_g(b)$ is a vector which will, in the case that a gap has been identified in the perimeter test for $b$, will contribute a motion of $b$ toward the midpoint of the gap.
+
+Suppose that $n_r(b) = \{b_0, b_1, ... b_{n-1}\}$ are the neighbours of $b$ in azimuth angle order, and let the \emph{first} gap found in the perimeter test be $b' = b_i$ to $b'' = b_{(i+1)\%n}$. Then $k_g$ can be defines as Equation~\ref{eq:gap}. 
+
+\small\begin{equation}\label{eq:gap}
+v_g(b) = k_g \left(\frac{b' + b''}{2} - b \right) = k_g \frac{\left(\left(\vbb{b}{b'}\right) + \left(\vbb{b}{b''}\right)\right)}{2} 
+\end{equation}\normalsize
+
+$k_g$ is a weighting for the gap-filling vector allowing the combination of it with the other motion vectors (cohesion, repulsion, ...) to be ``tuned''.
+
+\section{Perimeter compression models}
+In this section we will discuss two applications of the $p_r$, $p_c$ and $p_{kr}$ compression parameters. The new algorithms requires each individual agent to modify the generated movement vector based upon the perimeter status of the agent and each neighbour. The final part of the section will introduce the addition of the gap reduction to the perimeter controls which effects a stabilisation property to the swarm perimeter. The basic perimeter control equation is shown in Equation~\ref{eq:newModel2}). The cohesion and repulsion weighting factors ($k_c$,$k_r$,$p_{kr}$) have been transferred into the original Equations \ref{eq:cohesion3}, \ref{eq:cohesion4}, \ref{eq:repulsion1}, \ref{eq:repulsion1-1} and, \ref{eq:repulsion2} so Equation~\ref{eq:resultantVector1a} now reads, simply,
 
 \begin{equation}\label{eq:newModel2}
 v(b) = v_c(b) + v_r(b)
 \end{equation}
 
-The effect of introducing the additional weighting factors ($p_c$ and $p_r$) can be seen in \S~\ref{sec:ExperimentalResults} which demonstrates the additional internal disturbance of the swarm caused by the compression algorithm and the removal of internal swarm voids. 
+\subsection{Inter perimeter agent control $p_r$ and $p_c$}
 
-Figure~\ref{fig:voidRemoval} shows how the compression effect can remove a void from a swarm by surround an obstacle in a similar manner to the method described in~\cite{eliot2019void}.
+The basic method of implementing perimeter compression is to reduce the repulsion filed to allow agents to move more closely to each other before they are repelled and to overcome some of the inner agent repulsion forcing the perimeter agents apart the cohesion weighting is increased.
 
-\begin{figure}
-\centering
-\begin{subfigure}{0.4\textwidth}
-	\centering	
-	\includegraphics[width=1.0\linewidth]{figures/voidRemoval1}
-	\caption[Void removal start]{Void removal start}
-	\label{fig:voidRemovalStart}
-\end{subfigure}
-\begin{subfigure}{0.4\textwidth}
-	\centering
-	\includegraphics[width=1.0\linewidth]{figures/voidRemoval2}
-	\caption[Void removal finish]{Void removal finish}
-	\label{fig:voidRemovalFinish}
-\end{subfigure}
-\caption{Void removal through perimeter compression}
-\label{fig:voidRemoval}
-\end{figure}
+\subsubsection{Modified cohesion model ($p_c$)}
 
-\subsection{Modified cohesion model}
 The cohesion component of the compression effect ($p_c$) is applied when an agent ($b$) and its neighbour ($b'$) are both perimeter-based. If the agents are not both perimeter-based then the agents cohesion vector is scaled by $k_c$ (Eq.~\ref{eq:cohesion4}). The effect of the additional cohesion-compression weighting is to increase the size of the effective, generated cohesion-vector $\mathsf{ekc}(b,b')$ (Eq.~\ref{eq:cohesion3}) which causes the agent to have a tendency to move towards that neighbour. 
 
 \begin{equation}\label{eq:cohesion3}
@@ -190,28 +190,28 @@ v_c(b) = \frac{1}{\lvert n_c(b)\rvert} \sum_{b' \in n_c(b)}\mathsf{ekc}(b, b')\,
 \end{equation}
 \normalsize
 
-\subsection{Modified repulsion model}\label{repulsion:compression}
-The repulsion compression component of the perimeter is applied by adjusted the \textbf{e}ffective \textbf{r}epulsion \textbf{f}ield ($\mathsf{erf}(b,b')$) if the agents are both perimeter-based. Equation~\ref{eq:repulsion4} shows the new formula to calculate the adjusted repulsion. As the agent's repulsion field is always within the cohesion field (Eq.~\ref{eq:cohesion1}), the repulsion neighbours can also be defined as a subset of the cohesion neighbours $n_c(b)$~(Eq.~\ref{eq:repulsion3}).\\
+\subsubsection{Modified repulsion model ($p_r$)}\label{repulsion:compression}
+The repulsion compression component of the perimeter is applied by adjusted the \textbf{e}ffective \textbf{r}epulsion \textbf{f}ield ($\mathsf{erf}(b,b')$) if the agents are both perimeter-based. Equation~\ref{eq:repulsion4} shows the new formula to calculate the adjusted repulsion. As the agent's repulsion field is always within the cohesion field (Eq.~\ref{eq:repulsion1}), the repulsion neighbours can also be defined as a subset of the cohesion neighbours $n_c(b)$~(Eq.~\ref{eq:repulsion1-1}).\\
 
-\begin{equation}\label{eq:repulsion1}
-n_r(b) = \{b' \in \mathcal{S} : b \neq b' \land \lVert\vec{bb'}\rVert \leq \mathsf{erf}(b,b')\}
+\small\begin{equation}\label{eq:repulsion1}
+n_r(b) = \{b' \in \mathcal{S} : b \neq b' \land \magn{\vbb{b}{b'}} \leq \mathsf{erf}(b,b')\}
 \end{equation}
 
-% \small
-% \begin{equation}\label{eq:repulsion2}
-% \mathsf{erf}(b, b') = \mathsf{if} \;
-% \mathsf{per}(b) \; \mathsf{and} \; \mathsf{per}(b') \; \mathsf{then} \;
-% p_rR_b \; \mathsf{else} \; R_b
-% \end{equation}
-\normalsize
+\begin{equation}\label{eq:repulsion1-1}
+n_r(b) = \{b' \in n_c(b)~:~\magn{\vbb{b}{b'}} \leq \mathsf{erf}(b,b')\}
+\end{equation}\normalsize
 
-\begin{equation}\label{eq:repulsion3}
-n_r(b) = \{b' \in n_c(b)~:~\magn{\vec{bb'}} \leq \mathsf{erf}(b,b')\}
-\end{equation}
+Where $\mathsf{erf}$ is defined as:
+
+\small\begin{equation}\label{eq:repulsion2}
+\mathsf{erf}(b, b') = \mathsf{if} \;
+\mathsf{per}(b) \; \mathsf{and} \; \mathsf{per}(b') \; \mathsf{then} \;
+p_rR_b \; \mathsf{else} \; R_b
+\end{equation}\normalsize
 
 An agent is identified as a perimeter agent using the technique described in \S~\ref{sec:perimeterDetection} and shown by Eliot et.al. in \cite{eliot2019void} which uses a cyclic-check of neighbour agent angles to identify `gaps' in the neighbours.
 
-If the condition of both agents being a perimeter is met ($\mathsf{per}(b) \; \mathsf{and} \; \mathsf{per}(b')$) the repulsion field distance is multiplied by the compression factor ($p_r$) and the new field effect is used to generate a resultant-repulsion-vector (Eq.~\ref{eq:repulsion5}). 
+If the condition of both agents being a perimeter is met ($\mathsf{per}(b) \; \mathsf{and} \; \mathsf{per}(b')$) the repulsion field distance is multiplied by the compression factor ($p_r$) and the new field effect is used to generate a resultant-repulsion-vector (Eq.~\ref{eq:repulsion2}). 
 
 The effect of Equation \ref{eq:repulsion4} will be to reduce the repulsion of inter-perimeter-based agents allowing them to be closer together before a reduced repulsion-vector is applied. 
 
@@ -220,13 +220,46 @@ The effect of Equation \ref{eq:repulsion4} will be to reduce the repulsion of in
 v_r(b) = \frac{1}{\lvert n_r(b)\rvert}\sum_{b' \in n_r(b)} k_r\left(\lVert\vec{bb'}\rVert - \mathsf{erf}(b,b') \, \right)\widehat{bb'}
 \end{equation}
 \normalsize
-\small
-\begin{equation}\label{eq:repulsion5}
-\mathsf{erf}(b, b') = \mathsf{if} \;
-\mathsf{per}(b) \; \mathsf{and} \; \mathsf{per}(b') \; \mathsf{then} \;
-p_rR_b \; \mathsf{else} \; R_b
-\end{equation}
-\normalsize
+%\small
+%\begin{equation}\label{eq:repulsion5}
+%\mathsf{erf}(b, b') = \mathsf{if} \;
+%\mathsf{per}(b) \; \mathsf{and} \; \mathsf{per}(b') \; \mathsf{then} \;
+%p_rR_b \; \mathsf{else} \; R_b
+%\end{equation}
+%\normalsize
+
+\subsubsection{Combined effects of $p_c$ and $p_r$}
+
+The effect of introducing the additional weighting factors ($p_c$ and $p_r$) can be seen in \S~\ref{sec:ExperimentalResults} which demonstrates the additional internal disturbance of the swarm caused by the compression algorithm and the removal of internal swarm voids. 
+
+Figure~\ref{fig:voidRemoval} shows how the compression effect can remove a void from a swarm by surround an obstacle in a similar manner to the method described in~\cite{eliot2019void}.
+
+\begin{figure}
+	\centering
+	\begin{subfigure}{0.4\textwidth}
+		\centering	
+		\includegraphics[width=1.0\linewidth]{figures/voidRemoval1}
+		\caption[Void removal start]{Void removal start}
+		\label{fig:voidRemovalStart}
+	\end{subfigure}
+	\begin{subfigure}{0.4\textwidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{figures/voidRemoval2}
+		\caption[Void removal finish]{Void removal finish}
+		\label{fig:voidRemovalFinish}
+	\end{subfigure}
+	\caption{Void removal through perimeter compression}
+	\label{fig:voidRemoval}
+\end{figure}
+
+\subsection{Inner compression model}
+
+\subsubsection{Inner + Gap compression model}
+
+\subsection{Outer compression model}
+
+\subsubsection{Outer compression model}
+
 
 \section{Experimental results\label{sec:ExperimentalResults}}
 \subsection{Baseline}
