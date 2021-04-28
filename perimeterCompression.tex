@@ -168,14 +168,14 @@ v_g(b) = k_g \left(\frac{b' + b''}{2} - b \right) = k_g \frac{\left(\left(\vbb{b
 $k_g$ is a weighting for the gap-filling vector allowing the combination of it with the other motion vectors (cohesion, repulsion, ...) to be ``tuned''.
 
 \section{Inter-agent models}
-In this section we will discuss the application of the new $p_r$, $p_{kc}$ and $p_{kr}$ compression parameters and the application of the gap reduction which can be used to introduce a stabilising property to the swarm perimeter.\\
-The new algorithms require each agent to modify their inter-agent repulsion and cohesion vectors based upon their perimeter status and each neighbour's status. The basic perimeter control technique is shown in Equation~\ref{eq:newModel2}). The cohesion and repulsion weighting factors ($k_c$,$k_r$,$p_{kr}$,$p_{kc}$,$p_r$) are integrated into the original Equations \ref{eq:cohesion3}, \ref{eq:cohesion4}, \ref{eq:repulsion1}, \ref{eq:repulsion1-1} and, \ref{eq:repulsion2} so Equation~\ref{eq:resultantVector1a} now reads, simply,
+In this section we will discuss the application of the new $p_r$, $p_{kc}$ and $p_{kr}$ parameters and the application of the gap reduction which can be used to introduce a stabilising property to the swarm perimeter.\\
+The new model requires each agent to modify their inter-agent repulsion and cohesion vectors based upon their perimeter status and each neighbour's perimter status. The basic perimeter control technique is shown in Equation~\ref{eq:newModel2}). The cohesion and repulsion weighting factors ($k_c$,$k_r$,$p_{kr}$,$p_{kc}$,$p_r$) are integrated into the original Equations \ref{eq:cohesion3}, \ref{eq:cohesion4}, \ref{eq:repulsion1}, \ref{eq:repulsion1-1} and, \ref{eq:repulsion2} so Equation~\ref{eq:resultantVector1a} now reads, simply,
 
 \begin{equation}\label{eq:newModel2}
 v(b) = v_c(b) + v_r(b)
 \end{equation}
 
-\subsection{Inter-agent control $p_r$, $p_{kc}$ and $p_{kc}$}
+\subsection{$p_r$, $p_{kc}$ and $p_{kc}$}
 
 The basic method of controlling the inter-agent relationships can be used to implement perimeter compression by reducing the repulsion field of a perimeter-perimeter agent relationship to allow agents to move more closely to each other before they are repelled. Likewise the cohesion can be manipulated to overcome some of the neighbouring inner-agent repulsion forces that may prevent the agents to move.
 
@@ -215,14 +215,22 @@ These arrays are then referenced to provide a scalar weighting to specific agent
 \end{array}
 \end{equation}
 
-\subsection{Perimeter repulsion ($pr$,$erf$)}
+\subsection{Perimeter repulsion ($p_r$, $\mathsf{erf}$)}
 
-The repulsion component of the compression effect is applied when an agent ($b$) and its neighbour ($b'$) are both perimeter-based. Thus the status of both agents in terms of $\mathsf{prm}(b)$ and $\mathsf{prm}(b')$ (true,true) will result in $\mathsf{erf}(b, b')$ return $d$ from the matrix. If this value is $<0$ then the effective field raddi $Rb$ is reduced.
+The repulsion component of the compression effect is applied when an agent ($b$) and its neighbour ($b'$) are both perimeter-based. Thus the status of both agents in terms of $\mathsf{prm}(b)$ and $\mathsf{prm}(b')$ (true,true) will result in $\mathsf{erf}(b, b')$ return $d$ from the matrix. If this value is $<0$ then the effective field radii $Rb$ is reduced as shown in Equation~\ref{eq:prrep} where the repulsion field will be reduced by a $0.4$ weighting.
+
+\begin{equation}\label{eq:prrep}
+	p_{r} = \left (
+	\begin{array}{cc}
+	1 & 1\\
+	1 & 0.4
+	\end{array} \right )
+\end{equation}
 
 The cohesion component of the compression effect ($p_c$) is applied when an agent ($b$) and its neighbour ($b'$) are both perimeter-based. If the agents are not both perimeter-based then the agents cohesion vector is scaled by $k_c$ (Eq.~\ref{eq:cohesion4}). The effect of the additional cohesion-compression weighting is to increase the size of the effective, generated cohesion-vector $\mathsf{ekc}(b,b')$ (Eq.~\ref{eq:cohesion3}) which causes the agent to have a tendency to move towards that neighbour. 
 
 \begin{equation}\label{eq:cohesion3}
-v_c(b) = \frac{1}{\lvert n_c(b)\rvert} \sum_{b' \in n_c(b)}\mathsf{ekc}(b, b')\, \vec{bb'}
+v_c(b) = \frac{1}{\lvert n_c(b)\rvert} \sum_{b' \in n_c(b)}\mathsf{ekc}(b, b')\, \left(\vbb{b}{b'}\right)
 \end{equation}
 
 \small
