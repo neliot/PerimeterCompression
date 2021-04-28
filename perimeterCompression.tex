@@ -217,7 +217,7 @@ These arrays are then referenced to provide a scalar weighting to specific agent
 
 \subsection{Perimeter repulsion ($p_r$, $\mathsf{erf}$)}
 
-The repulsion component of the compression effect is applied when an agent ($b$) and its neighbour ($b'$) are both perimeter-based. Thus the status of both agents in terms of $\mathsf{prm}(b)$ and $\mathsf{prm}(b')$ (true,true) will result in $\mathsf{erf}(b, b')$ return $d$ from the matrix. If this value is $<0$ then the effective field radii $Rb$ is reduced as shown in Equation~\ref{eq:prrep} where the repulsion field will be reduced by a $0.4$ weighting.
+The repulsion component of the compression effect is applied when an agent ($b$) and its neighbour ($b'$) are both perimeter-based. Thus the status of both agents in terms of $\mathsf{prm}(b)$ and $\mathsf{prm}(b')$ (true,true) will result in $\mathsf{erf}(b, b')$ return $d$ from the matrix. If this value is $<0$ then the effective field radii $R_b$ is reduced as shown in Equation~\ref{eq:prrep} where the repulsion field will be reduced by a $0.4$ weighting.
 
 \begin{equation}\label{eq:prrep}
 	p_{r} = \left (
@@ -226,6 +226,22 @@ The repulsion component of the compression effect is applied when an agent ($b$)
 	1 & 0.4
 	\end{array} \right )
 \end{equation}
+
+\small
+\begin{equation}\label{eq:rep7}
+	v_r(b) = \frac{1}{\card{n_r(b)}}\sum_{b' \in n_r(b)} \mathsf{ekr}(b,b') \left(\magn{\vbb{b}{b'}} - R_b \, \right) \widehat{\left(\vbb{b}{b'}\right)}
+\end{equation}
+
+\begin{equation}\label{eq:repulsion1}
+	n_r(b) = \{b' \in \mathcal{S} : b \neq b' \land \magn{\vbb{b}{b'}} \leq \mathsf{erf}(b,b')\}
+\end{equation}
+	
+\begin{equation}\label{eq:repulsion1-1}
+	n_r(b) = \{b' \in n_c(b)~:~\magn{\vbb{b}{b'}} \leq \mathsf{erf}(b,b')\}
+\end{equation}\normalsize
+
+
+
 
 The cohesion component of the compression effect ($p_c$) is applied when an agent ($b$) and its neighbour ($b'$) are both perimeter-based. If the agents are not both perimeter-based then the agents cohesion vector is scaled by $k_c$ (Eq.~\ref{eq:cohesion4}). The effect of the additional cohesion-compression weighting is to increase the size of the effective, generated cohesion-vector $\mathsf{ekc}(b,b')$ (Eq.~\ref{eq:cohesion3}) which causes the agent to have a tendency to move towards that neighbour. 
 
@@ -242,13 +258,7 @@ v_c(b) = \frac{1}{\lvert n_c(b)\rvert} \sum_{b' \in n_c(b)}\mathsf{ekc}(b, b')\,
 \subsubsection{Modified repulsion model ($p_r$)}\label{repulsion:compression}
 The repulsion compression component of the perimeter is applied by adjusted the \textbf{e}ffective \textbf{r}epulsion \textbf{f}ield ($\mathsf{erf}(b,b')$) if the agents are both perimeter-based. Equation~\ref{eq:repulsion4} shows the new formula to calculate the adjusted repulsion. As the agent's repulsion field is always within the cohesion field (Eq.~\ref{eq:repulsion1}), the repulsion neighbours can also be defined as a subset of the cohesion neighbours $n_c(b)$~(Eq.~\ref{eq:repulsion1-1}).\\
 
-\small\begin{equation}\label{eq:repulsion1}
-n_r(b) = \{b' \in \mathcal{S} : b \neq b' \land \magn{\vbb{b}{b'}} \leq \mathsf{erf}(b,b')\}
-\end{equation}
 
-\begin{equation}\label{eq:repulsion1-1}
-n_r(b) = \{b' \in n_c(b)~:~\magn{\vbb{b}{b'}} \leq \mathsf{erf}(b,b')\}
-\end{equation}\normalsize
 
 Where $\mathsf{erf}$ is defined as:
 
