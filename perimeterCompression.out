@@ -13,7 +13,7 @@
 \BOOKMARK [2][-]{subsection.6.2}{Inner compression model}{section.6}% 13
 \BOOKMARK [3][-]{subsubsection.6.2.1}{Inner + Gap compression model}{subsection.6.2}% 14
 \BOOKMARK [2][-]{subsection.6.3}{Outer compression model}{section.6}% 15
-\BOOKMARK [3][-]{subsubsection.6.3.1}{Outer compression model}{subsection.6.3}% 16
+\BOOKMARK [3][-]{subsubsection.6.3.1}{Outer + Gap compression model}{subsection.6.3}% 16
 \BOOKMARK [1][-]{section.7}{Experimental results}{}% 17
 \BOOKMARK [2][-]{subsection.7.1}{Baseline}{section.7}% 18
 \BOOKMARK [2][-]{subsection.7.2}{Compression Effects}{section.7}% 19
