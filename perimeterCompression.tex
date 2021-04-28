@@ -150,7 +150,7 @@ A gap can therefore be defined as any two consecutive neighbours $b' = b_i, b'' 
 \end{figure}
 
 \section{Gap reduction model}
-An enhancement to the basic model that has proven useful in combination with the enhancements detailed below, especially in reducing internal voids in the swarm, is to introduce another term on the right of Equation~\ref{eq:newModel2}. This gap reducing model is based upon the model described by Eliot et al. in~\cite{eliot2019void}.
+An enhancement to the basic model that has proven useful in combination with the enhancements detailed, especially in reducing internal voids in the swarm, is to introduce another term on the right of Equation~\ref{eq:newModel2}. This gap reducing model is based upon the model described by Eliot et al. in~\cite{eliot2019void}.
 
 For instance (omitting obstacles, destinations for now),
 \begin{equation}\label{eq:newModel3}
@@ -167,18 +167,57 @@ v_g(b) = k_g \left(\frac{b' + b''}{2} - b \right) = k_g \frac{\left(\left(\vbb{b
 
 $k_g$ is a weighting for the gap-filling vector allowing the combination of it with the other motion vectors (cohesion, repulsion, ...) to be ``tuned''.
 
-\section{Perimeter compression models}
-In this section we will discuss two applications of the $p_r$, $p_{kc}$ and $p_{kr}$ compression parameters. The new algorithms requires each individual agent to modify the generated movement vector based upon the perimeter status of the agent and each neighbour. The final part of the section will introduce the addition of the gap reduction to the perimeter controls which effects a stabilisation property to the swarm perimeter. The basic perimeter control equation is shown in Equation~\ref{eq:newModel2}). The cohesion and repulsion weighting factors ($k_c$,$k_r$,$p_{kr}$,$p_{kc}$,$p_r$) have been transferred into the original Equations \ref{eq:cohesion3}, \ref{eq:cohesion4}, \ref{eq:repulsion1}, \ref{eq:repulsion1-1} and, \ref{eq:repulsion2} so Equation~\ref{eq:resultantVector1a} now reads, simply,
+\section{Inter-agent models}
+In this section we will discuss the application of the new $p_r$, $p_{kc}$ and $p_{kr}$ compression parameters and the application of the gap reduction which can be used to introduce a stabilising property to the swarm perimeter.\\
+The new algorithms require each agent to modify their inter-agent repulsion and cohesion vectors based upon their perimeter status and each neighbour's status. The basic perimeter control technique is shown in Equation~\ref{eq:newModel2}). The cohesion and repulsion weighting factors ($k_c$,$k_r$,$p_{kr}$,$p_{kc}$,$p_r$) are integrated into the original Equations \ref{eq:cohesion3}, \ref{eq:cohesion4}, \ref{eq:repulsion1}, \ref{eq:repulsion1-1} and, \ref{eq:repulsion2} so Equation~\ref{eq:resultantVector1a} now reads, simply,
 
 \begin{equation}\label{eq:newModel2}
 v(b) = v_c(b) + v_r(b)
 \end{equation}
 
-\subsection{Inter perimeter agent control $p_r$ and $p_c$}
+\subsection{Inter-agent control $p_r$, $p_{kc}$ and $p_{kc}$}
 
-The basic method of implementing perimeter compression is to reduce the repulsion field to allow agents to move more closely to each other before they are repelled and to overcome some of the inner agent repulsion forcing the perimeter agents apart the cohesion weighting is increased.
+The basic method of controlling the inter-agent relationships can be used to implement perimeter compression by reducing the repulsion field of a perimeter-perimeter agent relationship to allow agents to move more closely to each other before they are repelled. Likewise the cohesion can be manipulated to overcome some of the neighbouring inner-agent repulsion forces that may prevent the agents to move.
 
-\subsubsection{Modified cohesion model ($p_c$)}
+$p_{kr}$~(Eq.~\ref{eq:pkr}), $p_{kc}$~(Eq.~\ref{eq:pkc}), and $p_r$~(Eq.~\ref{eq:pr}) are three, 2x2-arrays.
+
+\begin{equation}\label{eq:pkr}
+	p_{kr} = \left (
+	\begin{array}{cc}
+	a & b\\
+	c & d
+	\end{array} \right )
+\end{equation}
+	
+\begin{equation}\label{eq:pkc}
+	p_{kc} = \left (
+	\begin{array}{cc}
+	a & b\\
+	c & d
+	\end{array} \right )
+\end{equation}
+
+\begin{equation}\label{eq:pr}
+	p_{r} = \left (
+	\begin{array}{cc}
+	a & b\\
+	c & d
+	\end{array} \right )
+\end{equation}
+
+These arrays are then referenced to provide a scalar weighting to specific agents within the swarm based upon their perimeter status as shown is Equation~\ref{eq:ekc4} where $\mathsf{erf}(b, b')$ is the inter-perimeter-agent repulsion weighting for the repulsion radii, $\mathsf{ekc}(b, b')$ is the effective cohesion weighting, and $\mathsf{ekr}(b, b')$ is the effective repulsion weighting and where $\mathsf{prm}(b)$ returns the perimeter status of an agent which is then used as an index into the arrays: 1 or 0 according as $b$ is/is not on the perimeter.
+
+\begin{equation}\label{eq:ekc4}
+\begin{array}{rcl}
+\mathsf{erf}(b, b') &=&  p_r[\mathsf{prm}(b), \mathsf{prm}(b')] R_b\\
+\mathsf{ekc}(b, b') &=&  p_{kc}[\mathsf{prm}(b), \mathsf{prm}(b')] k_c(b) \\
+\mathsf{ekr}(b, b') &=&  p_{kr}[\mathsf{prm}(b), \mathsf{prm}(b')] k_r(b)
+\end{array}
+\end{equation}
+
+\subsection{Perimeter repulsion ($pr$,$erf$)}
+
+The repulsion component of the compression effect is applied when an agent ($b$) and its neighbour ($b'$) are both perimeter-based. Thus the status of both agents in terms of $\mathsf{prm}(b)$ and $\mathsf{prm}(b')$ (true,true) will result in $\mathsf{erf}(b, b')$ return $d$ from the matrix. If this value is $<0$ then the effective field raddi $Rb$ is reduced.
 
 The cohesion component of the compression effect ($p_c$) is applied when an agent ($b$) and its neighbour ($b'$) are both perimeter-based. If the agents are not both perimeter-based then the agents cohesion vector is scaled by $k_c$ (Eq.~\ref{eq:cohesion4}). The effect of the additional cohesion-compression weighting is to increase the size of the effective, generated cohesion-vector $\mathsf{ekc}(b,b')$ (Eq.~\ref{eq:cohesion3}) which causes the agent to have a tendency to move towards that neighbour. 
 
@@ -236,7 +275,7 @@ The effect of introducing the additional weighting factors ($p_{kc}$ and $p_{kr}
 
 Figure~\ref{fig:voidRemoval} shows how the compression effect can remove a void from a swarm by surround an obstacle in a similar manner to the method described in~\cite{eliot2019void}.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\centering
 	\begin{subfigure}{0.4\textwidth}
 		\centering	
@@ -253,14 +292,6 @@ Figure~\ref{fig:voidRemoval} shows how the compression effect can remove a void 
 	\caption{Void removal through perimeter compression}
 	\label{fig:voidRemoval}
 \end{figure}
-
-\begin{equation}  \label{eq:ekc4}
-\begin{array}{rcl}
-\mathsf{erf}(b, b') &=&  p_r[\mathsf{prm}(b), \mathsf{prm}(b')] R_b\\
-\mathsf{ekc}(b, b') &=&  p_{kc}[\mathsf{prm}(b), \mathsf{prm}(b')] k_c(b) \\
-\mathsf{ekr}(b, b') &=&  p_{kr}[\mathsf{prm}(b), \mathsf{prm}(b')] k_r(b)
-\end{array}
-\end{equation}
 
 \subsection{Inner compression model}
 
