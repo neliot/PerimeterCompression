@@ -50,12 +50,15 @@ Perimeter Compression is a technique where by a void reducing effect can be adde
 \section{Introduction}
 When cohesion and repulsion field effects (sometimes referred to as potential fields~\cite{BAF:06,eliot2018metric,VG:05,SW:03,Son2017,liang2019swarm}) are used to create a swarming effect, the stable structures that develop are limited to either straight edges or partial lattices \cite{eliot2017methods}. The maintenance of a well-structured swarm is crucial to effective deployment for applications such as reconnaissance or artificial pollination, where `blind spots' are best eliminated \cite{elamvazhuthi2015optimal}, and containment, where the swarm is used to surround an object or region \cite{cao2012distributed}. Over time swarms form regular shapes~\cite{RAZ:13} and perimeters form of partial lattices that may contain so-called \textit{anomalies}, such as concave `dents' or convex `peaks'~\cite{eliot2019void}. These anomalies contribute to the disruption of an otherwise well-structured swarm. The key, therefore, is to ensure that these \textit{anomalies} are dynamically removed from a swarm.\\
 Perimeter compression is a technique that creates a `pull' effect between perimeter agents. It is dependant upon perimeter agent identification as discussed by Eliot et. al. in \cite{eliot2017methods, eliot2018metric, eliot2019void} and discussed in Section~\ref{sec:perimeterDetection}.\\
-The aim of this new algorithm is to reduce the spacing between perimeter-based agents by reducing the repulsion field and increasing the cohesion effect on only the perimeter agents. Figure \ref{fig:stableswarm}) shows an agent and it fields. $S_b$ is the sensor field. $O_b$ is the obstacle field. $C_b$ is the cohesion field and $R_b$ is the repulsion field. The implementation involves introducing two controlling weights; $p_c$ (Perimeter Compression Cohesion) which increases the magnitude of the cohesion vector ($k_c\rightarrow p_ck_c$) and $p_r$ (Perimeter Compression Repulsion) which reduces the size of the repulsion field and also the repulsion magnitude ($k_r\rightarrow p_rk_r$) of the perimeter-based agents.
+The aim of this new algorithm is to reduce the spacing between perimeter-based agents. Figure \ref{fig:stableswarm}) shows an agent and it fields. $S_b$ is the sensor field. $O_b$ is the obstacle field. $C_b$ is the cohesion field and $R_b$ is the repulsion field. The implementation involves introducing three controlling weights; $p_{kc}$ which can be used to increases the magnitude of the cohesion vector. $p_{kr}$ which can be used to modify the repulsion vector and $p_{c}$ which can be used to alter the repulsion filed of agents. When trying to effect a perimeter compression the following assumptions are required.\\
 \begin{assumption}
-	$p_c >= 1$
+	$p_c \leq 1$
 \end{assumption}
 \begin{assumption}
-	$p_r <= 1$
+	$p_{kr} \leq 1$
+\end{assumption}
+\begin{assumption}
+	$p_{kc} \geq 1$
 \end{assumption}
 \begin{figure}[H]
 	\centering
@@ -217,7 +220,7 @@ These arrays (via the index) provide a scalar weighting to specific agents withi
 
 \subsection{Agent repulsion ($p_r$, $\mathsf{erf}(b,b')$, $\mathsf{ekc}(b,b')$)}
 
-The repulsion component of the swarm model is now applied as shown in Equations~\ref{eq:rep7} and \ref{eq:repulsion1}.
+The repulsion component of the swarm model is now applied as shown in Equations~\ref{eq:scalarsFromMatrix},~\ref{eq:rep7} and \ref{eq:repulsion1}.
 \small
 \begin{equation}\label{eq:rep7}
 	v_r(b) = \frac{1}{\card{n_r(b)}}\sum_{b' \in n_r(b)} \mathsf{ekr}(b,b') \left(\magn{\vbb{b}{b'}} - \mathsf{erf}\left(b,b'\right) \, \right) \widehat{\left(\vbb{b}{b'}\right)}
