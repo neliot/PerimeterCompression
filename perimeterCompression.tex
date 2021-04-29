@@ -217,7 +217,7 @@ These arrays are then referenced to provide a scalar weighting to specific agent
 
 \subsection{Perimeter repulsion ($p_r$, $\mathsf{erf}(b,b')$)}
 
-The repulsion component of the compression effect is applied when an agent ($b$) and its neighbour ($b'$) are both perimeter-based. Thus the status of both agents in terms of $\mathsf{prm}(b)$ and $\mathsf{prm}(b')$ (true,true) will result in $\mathsf{erf}(b, b')$ return $d$ from the matrix. If this value is $<0$ then the effective field radii $R_b$ is reduced as shown in Equation~\ref{eq:prrep} where the repulsion field will be reduced by a $0.4$ weighting.
+The repulsion component of the compression effect is applied when an agent ($b$) and its neighbour ($b'$) are both perimeter-based. Thus the status of both agents in terms of $\mathsf{prm}(b)$ and $\mathsf{prm}(b')$ (true,true) will result in $\mathsf{erf}(b, b')$ return $d$ from the matrix. If this value is $<0$ then the effective field radii $R_b$ is reduced as shown in Equation~\ref{eq:prrep} where the repulsion field will be reduced by a $0.4$ weighting which effect a compression effect when combined with the cohesion modification as shown in figure~\ref{fig:perimeterCompression}.
 
 \begin{equation}\label{eq:prrep}
 	p_{r} = \left (
@@ -235,7 +235,14 @@ The repulsion component of the compression effect is applied when an agent ($b$)
 \begin{equation}\label{eq:repulsion1}
 	n_r(b) = \{b' \in \mathcal{S} : b \neq b' \land \magn{\vbb{b}{b'}} \leq \mathsf{erf}(b,b')\}
 \end{equation}
-	
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=8cm]{figures/perimeterCompress}
+	\end{center}
+	\caption{Perimeter compression. \label{fig:perimeterCompression}}
+\end{figure}
+
 % \begin{equation}\label{eq:repulsion1-1}
 % 	n_r(b) = \{b' \in n_c(b)~:~\magn{\vbb{b}{b'}} \leq \mathsf{erf}(b,b')\}
 % \end{equation}\normalsize
@@ -380,7 +387,7 @@ For all the experiments the parameters used to create the basic swarming effect 
 
 When the simulation is ran with no compression the changes are identified using a magnitude-based metric~\cite{eliot2018metric}. The resultant magnitudes generated are shown in figure~\ref{fig:baselineSwarmMagnitude}. These states are used as the baseline for the experiments to measure the effects of the compression algorithm and compare the new algorithm to the existing void reduction algorithm.
 
-\begin{figure}[H]
+\begin{figure}[ht]
 	\begin{center}
 		\includegraphics[width=8cm]{figures/interagentMagnitudeBaseline}
 	\end{center}
