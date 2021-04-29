@@ -131,7 +131,7 @@ The detection process is achieved using a cyclic analysis of the agents that sur
 
 The initial detection of the agents is based on the distance that each agent in the swarm is away from the current agent as described in Section~\ref{cohesion} and shown in Equation~\ref{eq:cohesion1}. The perimeter detection set is based on the azimuth angle ($\beta$) of each neighbour agent as shown in~Fig.~\ref{fig:neighbours2}.
 
-Let $n_r(b) = \{b_0, b_1, ... b_{n-1}\}$ be an enumeration of the neighbours of $b$ in order of increasing azimuth angle. The \emph{azimuth angle} with respect to $b$ of $b_i$ is the angle $\beta_i$ which vector $\vec{bb_i} = b_i - b$ makes with the positive x axis: $\beta_i = \text{atan2}((b_i - b)_y, (b_i - b)_x)$.
+Let $n_r(b) = \langle b_0, b_1, ... b_{n-1} \rangle$ be an enumeration of the neighbours of $b$ in order of increasing azimuth angle. The \emph{azimuth angle} with respect to $b$ of $b_i$ is the angle $\beta_i$ which vector $\vec{bb_i} = b_i - b$ makes with the positive x axis: $\beta_i = \text{atan2}((b_i - b)_y, (b_i - b)_x)$.
 
 An agent is considered to be on the perimeter of the swarm if it is not enclosed by the polygon defined in the sorted set $n_c(b)$ if it has a `gap' as shown by agents $b_4$ and $b_0$ in Figure~\ref{fig:neighbours2} (assuming $\magn{\vbb{b_0}{b_4}} > C_b$). Also when the polygon defined by $n_c(b)$ is closed but two or more neighbour agents are compressed to the point that they are within range $C_b$ but are `behind' agent $b$. This condition can be detected based on any neighbour pair angle being greater than $\pi$ as shown in Figure~\ref{fig:neighbours3} with agent $b_0$ and $b_3$ assuming the neighbour agent pair are within range assuming $\magn{\vbb{b_0}{b_3}} <= C_b$. 
 
@@ -159,7 +159,7 @@ v(b) = v_c(b) + v_r(b) + v_g(b)
 
 where $v_g(b)$ is a vector which will, in the case that a gap has been identified in the perimeter test for $b$, will contribute a motion of $b$ toward the midpoint of the gap.
 
-Suppose that $n_r(b) = \{b_0, b_1, ... b_{n-1}\}$ are the neighbours of $b$ in azimuth angle order, and let the \emph{first} gap found in the perimeter test be $b' = b_i$ to $b'' = b_{(i+1)\%n}$. Then $k_g$ can be defines as Equation~\ref{eq:gap}. 
+Suppose that $n_r(b) = \langle b_0, b_1, ... b_{n-1}\rangle$ are the neighbours of $b$ in azimuth angle order, and let the \emph{first} gap found in the perimeter test be $b' = b_i$ to $b'' = b_{(i+1)\%n}$. Then $k_g$ can be defines as Equation~\ref{eq:gap}. 
 
 \small\begin{equation}\label{eq:gap}
 v_g(b) = k_g \left(\frac{b' + b''}{2} - b \right) = k_g \frac{\left(\left(\vbb{b}{b'}\right) + \left(\vbb{b}{b''}\right)\right)}{2} 
@@ -169,7 +169,7 @@ $k_g$ is a weighting for the gap-filling vector allowing the combination of it w
 
 \section{Inter-agent models}
 In this section we will discuss the application of the new $p_r$, $p_{kc}$ and $p_{kr}$ parameters and the application of the gap reduction which can be used to introduce a stabilising property to the swarm perimeter.\\
-The new model requires each agent to modify their inter-agent repulsion and cohesion vectors based upon their perimeter status and each neighbour's perimter status. The basic perimeter control technique is shown in Equation~\ref{eq:newModel2}). The cohesion and repulsion weighting factors ($k_c$,$k_r$,$p_{kr}$,$p_{kc}$,$p_r$) are integrated into the original Equations \ref{eq:cohesion3}, \ref{eq:cohesion4}, \ref{eq:repulsion1}, and \ref{eq:repulsion2} so Equation~\ref{eq:resultantVector1a} now reads, simply,
+The new model requires each agent to modify their inter-agent repulsion and cohesion vectors based upon their perimeter status and each neighbour's perimeter status. The basic perimeter control technique is shown in Equation~\ref{eq:newModel2}). The cohesion and repulsion weighting factors ($k_c$, $k_r$, $p_{kr}$, $p_{kc}$, $p_r$) are integrated into the original Equations \ref{eq:cohesion3}, \ref{eq:cohesion4}, \ref{eq:repulsion1}, and \ref{eq:repulsion2} so Equation~\ref{eq:resultantVector1a} now reads, simply,
 
 \begin{equation}\label{eq:newModel2}
 v(b) = v_c(b) + v_r(b)
@@ -205,9 +205,9 @@ $p_{kr}$~(Eq.~\ref{eq:pkr}), $p_{kc}$~(Eq.~\ref{eq:pkc}), and $p_r$~(Eq.~\ref{eq
 	\end{array} \right )
 \end{equation}
 
-These arrays are then referenced to provide a scalar weighting to specific agents within the swarm based upon their perimeter status as shown is Equation~\ref{eq:ekc4} where $\mathsf{erf}(b, b')$ is the inter-perimeter-agent repulsion weighting for the repulsion radii, $\mathsf{ekc}(b, b')$ is the effective cohesion weighting, and $\mathsf{ekr}(b, b')$ is the effective repulsion weighting and where $\mathsf{prm}(b)$ returns the perimeter status of an agent which is then used as an index into the arrays: 1 or 0 according as $b$ is/is not on the perimeter.
+These arrays (via the index) provide a scalar weighting to specific agents within the swarm based upon their perimeter status as shown is Equation~\ref{eq:scalarsFromMatrix} where $\mathsf{erf}(b, b')$ is the inter-perimeter-agent repulsion weighting for the repulsion radii, $\mathsf{ekc}(b, b')$ is the effective cohesion weighting, and $\mathsf{ekr}(b, b')$ is the effective repulsion weighting and where $\mathsf{prm}(b)$ returns the perimeter status of an agent which is then used as an index into the arrays: 1 or 0 according as $b$ is/is not on the perimeter.
 
-\begin{equation}\label{eq:ekc4}
+\begin{equation}\label{eq:scalarsFromMatrix}
 \begin{array}{rcl}
 \mathsf{erf}(b, b') &=&  p_r[\mathsf{prm}(b), \mathsf{prm}(b')] R_b\\
 \mathsf{ekc}(b, b') &=&  p_{kc}[\mathsf{prm}(b), \mathsf{prm}(b')] k_c(b) \\
@@ -215,9 +215,19 @@ These arrays are then referenced to provide a scalar weighting to specific agent
 \end{array}
 \end{equation}
 
-\subsection{Perimeter repulsion ($p_r$, $\mathsf{erf}(b,b')$)}
+\subsection{Agent repulsion ($p_r$, $\mathsf{erf}(b,b')$, $\mathsf{ekc}(b,b')$)}
 
-The repulsion component of the compression effect is applied when an agent ($b$) and its neighbour ($b'$) are both perimeter-based. Thus the status of both agents in terms of $\mathsf{prm}(b)$ and $\mathsf{prm}(b')$ (true,true) will result in $\mathsf{erf}(b, b')$ return $d$ from the matrix. If this value is $<0$ then the effective field radii $R_b$ is reduced as shown in Equation~\ref{eq:prrep} where the repulsion field will be reduced by a $0.4$ weighting which effect a compression effect when combined with the cohesion modification as shown in figure~\ref{fig:perimeterCompression}.
+The repulsion component of the swarm model is now applied as shown in Equations~\ref{eq:rep7} and \ref{eq:repulsion1}.
+\small
+\begin{equation}\label{eq:rep7}
+	v_r(b) = \frac{1}{\card{n_r(b)}}\sum_{b' \in n_r(b)} \mathsf{ekr}(b,b') \left(\magn{\vbb{b}{b'}} - \mathsf{erf}\left(b,b'\right) \, \right) \widehat{\left(\vbb{b}{b'}\right)}
+\end{equation}
+
+\begin{equation}\label{eq:repulsion1}
+n_r(b) = \{b' \in \mathcal{S} : b \neq b' \land \magn{\vbb{b}{b'}} \leq \mathsf{erf}(b,b')\}
+\end{equation}
+\normalsize
+The introduction of the matrices allows for specific relationships to effect the movement of agents. Using a $J$ matrix results in no perimeter repulsion change and all agents use the same repulsion field and the repulsion effect is monolithic within the swarm. However if $P_r[1][1] < 0$ as shown in Equation~\ref{eq:prrep}) and both agents are perimeter-based i.e. $\mathsf{prm}(b)$ and $\mathsf{prm}(b')$ ($true,true$) result in $\mathsf{erf}(b, b')$ returning $0.4$ from the matrix. This effectively reduces the $R_b$ field which effects a compression effect. When combined with a perimeter-based cohesion increase a sustainable compression is possible as shown in figure~\ref{fig:perimeterCompression}.
 
 \begin{equation}\label{eq:prrep}
 	p_{r} = \left (
@@ -225,15 +235,6 @@ The repulsion component of the compression effect is applied when an agent ($b$)
 	1 & 1\\
 	1 & 0.4
 	\end{array} \right )
-\end{equation}
-
-\small
-\begin{equation}\label{eq:rep7}
-	v_r(b) = \frac{1}{\card{n_r(b)}}\sum_{b' \in n_r(b)} \mathsf{ekr}(b,b') \left(\magn{\vbb{b}{b'}} - \mathsf{erf}\left(b,b'\right) \, \right) \widehat{\left(\vbb{b}{b'}\right)}
-\end{equation}
-
-\begin{equation}\label{eq:repulsion1}
-	n_r(b) = \{b' \in \mathcal{S} : b \neq b' \land \magn{\vbb{b}{b'}} \leq \mathsf{erf}(b,b')\}
 \end{equation}
 
 \begin{figure}[H]
@@ -247,10 +248,13 @@ The repulsion component of the compression effect is applied when an agent ($b$)
 % 	n_r(b) = \{b' \in n_c(b)~:~\magn{\vbb{b}{b'}} \leq \mathsf{erf}(b,b')\}
 % \end{equation}\normalsize
 
+==== STILL TO BE WORKED ON =====
 
+\subsection{Inter-agent repulsion ($p_{kr}$, $\mathsf{ekr}(b,b')$)}
 
+\subsection{Inter-agent cohesion ($p_{kc}$, $\mathsf{ekc}(b,b')$)}
 
-The cohesion component of the compression effect ($p_c$) is applied when an agent ($b$) and its neighbour ($b'$) are both perimeter-based. If the agents are not both perimeter-based then the agents cohesion vector is scaled by $k_c$ (Eq.~\ref{eq:cohesion4}). The effect of the additional cohesion-compression weighting is to increase the size of the effective, generated cohesion-vector $\mathsf{ekc}(b,b')$ (Eq.~\ref{eq:cohesion3}) which causes the agent to have a tendency to move towards that neighbour. 
+The cohesion component of the swarming effect ($p_{kc}$) is applied when an agent ($b$) and its neighbour ($b'$) are both perimeter-based. If the agents are not both perimeter-based then the agents cohesion vector is scaled by $k_c$ (Eq.~\ref{eq:cohesion4}). The effect of the additional cohesion-compression weighting is to increase the size of the effective, generated cohesion-vector $\mathsf{ekc}(b,b')$ (Eq.~\ref{eq:cohesion3}) which causes the agent to have a tendency to move towards that neighbour. 
 
 \begin{equation}\label{eq:cohesion3}
 v_c(b) = \frac{1}{\lvert n_c(b)\rvert} \sum_{b' \in n_c(b)}\mathsf{ekc}(b, b')\, \left(\vbb{b}{b'}\right)
