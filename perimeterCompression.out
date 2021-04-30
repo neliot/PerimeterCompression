@@ -5,7 +5,7 @@
 \BOOKMARK [2][-]{subsection.3.2}{Repulsion}{section.3}% 5
 \BOOKMARK [1][-]{section.4}{Perimeter detection}{}% 6
 \BOOKMARK [1][-]{section.5}{Gap reduction model \(to be moved below the next section when complete!\)}{}% 7
-\BOOKMARK [1][-]{section.6}{Inter-agent models}{}% 8
+\BOOKMARK [1][-]{section.6}{New Inter-agent Models}{}% 8
 \BOOKMARK [2][-]{subsection.6.1}{pr, pkr and pkc}{section.6}% 9
 \BOOKMARK [2][-]{subsection.6.2}{Agent repulsion \(pr, erf\(b,b'\), ekc\(b,b'\)\)}{section.6}% 10
 \BOOKMARK [2][-]{subsection.6.3}{Inter-agent repulsion \(pkr, ekr\(b,b'\)\)}{section.6}% 11

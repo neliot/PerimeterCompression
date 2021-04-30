@@ -69,14 +69,14 @@ The aim of this new algorithm is to reduce the spacing between perimeter-based a
 
 \section{Related work}
 
-As far back as 1987 swarm theory has adopted the use of field effects/potential fields to coordinate agents~\cite{REY:87} and this has continued since then in an attempt to improve the structure of a swarm, coordinate obstacles avoidance, and improve navigation~\cite{BAFVM:06,BAF:06,BFV:07,BM:09,eliot2018metric,VG:05,HC:09,SW:03,Son2017}. A prototype framework for self-healing swarms was developed by Dai et al., which considered how to manage agent failure in hostile environments \cite{DHMRZ:06}. This was similar to work by Vassev and Hinchey, who modelled swarm movement using the ASSL (Autonomic System Specification Language) \cite{VH:09}. This technique was employed by NASA (US National Aeronautics and Space Administration) for use in asteroid belt exploration as part of their ANTS (Autonomous Nano Technology Swarm) project. However, this work is focused towards failure of an agent's internal systems, rather than on the removal of anomalies in a swarm distribution. This need for formation control is also discussed by Speck and Bucci with respect to the diverse applications of swarms and the need to control a swarms structure~\cite{8430773}.
+As far back as 1987 swarm theory has adopted the use of field effects/potential fields to coordinate agents~\cite{REY:87} and this has continued since then in an attempt to improve the structure of a swarm, coordinate obstacle avoidance, and improve navigation~\cite{BAFVM:06,BAF:06,BFV:07,BM:09,eliot2018metric,VG:05,HC:09,SW:03,Son2017}. Improvements to the basic structure of swarms has developed through the likes of a prototype framework for self-healing swarms that was developed by Dai et al. They considered how to manage agent failure in hostile environments \cite{DHMRZ:06}. This was similar to work by Vassev and Hinchey, who modelled swarm movement using the ASSL (Autonomic System Specification Language) \cite{VH:09}. This technique was employed by NASA (US National Aeronautics and Space Administration) for use in asteroid belt exploration as part of their ANTS (Autonomous Nano Technology Swarm) project. However, this work is focused towards failure of an agent's internal systems, rather than on the removal of anomalies in a swarm distribution. This need for formation control is also discussed by Speck and Bucci with respect to the diverse applications of swarms and the need to control a swarms structure~\cite{8430773}.
 
 In the context of swarm structure maintenance, Roach et al. focussed on the effects of sensor failure, and the impact that has on agent distribution \cite{RMT:15}. Lee and Chong identified the issue of concave edges within swarms in an attempt to create regular lattice formations \cite{GN:08}, and the main focus of their work is the dynamic restructuring of inter-agent formations. Ismail and Timmis demonstrated the use of \textit{bio-inspired} healing using \textit{granuloma formation}, a biological method for encapsulating an antigen \cite{IT:10}. They have also considered the effect failed agents can have on a swarm when traversing a terrain~\cite{TIBW:16}. 
 
-This void reduction effect through perimeter compression is an extension of the work presented by Eliot et al. \cite{eliot2019void}, Ismail and Timmis \cite{IT:10,TIBW:16}, and on the work of McLurkin and Demaine on the detection of perimeter types \cite{mclurkin2009}. However, perimeter type identification requires a communications infrastructure to allow the perimeter angle to be calculated. Communications within swarm formations limits swarm sizes and introduces performance problems \cite{fu2020formation}. The technique employed in this paper does not explicitly require the identification of the perimeter type as it would limit the size of the swarm\cite{eliot2019void,GN:08} and is therefore a reduced algorithm to identify any perimeter.
+This paper proposes an alternative approach to agent coordination that can be used to induce a void reduction effect through perimeter compression. This is an extension of the work presented by Eliot et al. \cite{eliot2019void}, Ismail and Timmis \cite{IT:10,TIBW:16}, and on the work of McLurkin and Demaine on the detection of perimeter types \cite{mclurkin2009}. However, perimeter type identification requires a communications infrastructure to allow the perimeter angle to be calculated. Communications within swarm formations limits swarm sizes and introduces performance problems \cite{fu2020formation}. The technique employed in this paper does not explicitly require the identification of the perimeter type as it would limit the size of the swarm\cite{eliot2019void,GN:08} and is therefore a reduced perimter detection algorithm to identify \textit{any} perimeter.
 
 \section{Basic swarming model}\label{basicModel}
-In the Original work by Eliot et. al. the resultant vector of an agent was calculated using Equation~\ref{eq:resultantVector1a}. Where $k_c,k_r,k_d,k_o$ are weighting factors for the summed vectors associated with each interaction. i.e. $v_c$, $v_r$, $v_d$, $v_o$ for cohesion, repulsion, direction and object avoidance respectively. 
+In the Original work by Eliot et. al. the resultant vector of an agent was calculated using Equation~\ref{eq:resultantVector1a}. Where $k_c, k_r, k_d, k_o$ are weighting factors for the summed vectors associated with each interaction. i.e. $v_c$, $v_r$, $v_d$, $v_o$ for cohesion, repulsion, direction and object avoidance respectively. 
 
 \begin{equation}\label{eq:resultantVector1a}
 	v(b) = k_cv_c(b) + k_rv_r(b) + k_dv_d(b) + k_ov_o(b)
@@ -170,7 +170,7 @@ v_g(b) = k_g \left(\frac{b' + b''}{2} - b \right) = k_g \frac{\left(\left(\vbb{b
 
 $k_g$ is a weighting for the gap-filling vector allowing the combination of it with the other motion vectors (cohesion, repulsion, ...) to be ``tuned''.
 
-\section{Inter-agent models}
+\section{New Inter-agent Models}
 In this section we will discuss the application of the new $p_r$, $p_{kc}$ and $p_{kr}$ parameters and the application of the gap reduction which can be used to introduce a stabilising property to the swarm perimeter.\\
 The new model requires each agent to modify their inter-agent repulsion and cohesion vectors based upon their perimeter status and each neighbour's perimeter status. The basic perimeter control technique is shown in Equation~\ref{eq:newModel2}). The cohesion and repulsion weighting factors ($k_c$, $k_r$, $p_{kr}$, $p_{kc}$, $p_r$) are integrated into the original Equations \ref{eq:cohesion3}, \ref{eq:cohesion4}, \ref{eq:repulsion1}, and \ref{eq:repulsion2} so Equation~\ref{eq:resultantVector1a} now reads, simply,
 
@@ -368,7 +368,7 @@ y & 1
 \section{Experimental results\label{sec:ExperimentalResults}}
 \subsection{Baseline}
 For all the experiments the parameters used to create the basic swarming effect are shown in Table~\ref{tab:swarmingEffect}. Where $C_b$ is the cohesion field, $k_c$ is the cohesion weighting, $R_b$ is the repulsion field, $k_r$ is the repulsion weighting and $k_g$ is the weighting factor applied in the comparison of the gap reduction algorithm discussed in~\cite{eliot2019void}. The swarm consists of 200 agents which are distributed with a void at the centre. These initial parameters create a hexagonal-based distribution of agents that stabilise as shown in Figure~\ref{fig:baselineSwarm}. This basic swarm is used as the initial state for all the experiments. 
- \begin{table}[h]
+ \begin{table}[ht]
 	\centering
 	\tiny
 	\begin{tabular}{|c|r|}
@@ -405,7 +405,7 @@ When the simulation is ran with no compression the changes are identified using 
 
 The compression effect parameters are shown in tables~\ref{tab:compressionExperimentEffect1} and~\ref{tab:compressionExperimentEffect2}
 
-\begin{table}[h]
+\begin{table}[ht]
 	\centering
 	\tiny
 \begin{tabular}{ | >{\columncolor[HTML]{000000}}l | l | l | l | l | l | }
@@ -426,7 +426,7 @@ The compression effect parameters are shown in tables~\ref{tab:compressionExperi
 	\label{tab:compressionExperimentEffect1}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[ht]
 	\centering
 	\tiny
 \begin{tabular}{ | >{\columncolor[HTML]{000000}}l | l | l | l | l | l | }
@@ -477,7 +477,7 @@ The first area of comparison is the effect of the algorithms on the number of pe
 	\caption{Perimeter Count of baseline, gap reduction and perimeter compression. \label{fig:perimeterCount}}
 \end{figure}
 
-\begin{table}[h]
+\begin{table}[ht]
 	\centering
 	\tiny
 	\begin{tabular}{|c|c|r|r|r|r|r|r|r|}
