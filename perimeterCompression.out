@@ -9,16 +9,16 @@
 \BOOKMARK [2][-]{subsection.5.2}{Agent repulsion \(pr, erf\(b,b'\), ekr\(b,b'\)\)}{section.5}% 9
 \BOOKMARK [2][-]{subsection.5.3}{Inter-agent cohesion \(pkc, ekc\(b,b'\)\)}{section.5}% 10
 \BOOKMARK [1][-]{section.6}{Gap reduction model}{}% 11
-\BOOKMARK [2][-]{subsection.6.1}{Inner compression model}{section.6}% 12
-\BOOKMARK [3][-]{subsubsection.6.1.1}{Inner + Gap compression model}{subsection.6.1}% 13
-\BOOKMARK [2][-]{subsection.6.2}{Outer compression model}{section.6}% 14
-\BOOKMARK [3][-]{subsubsection.6.2.1}{Outer + Gap compression model}{subsection.6.2}% 15
-\BOOKMARK [1][-]{section.7}{Experimental results}{}% 16
-\BOOKMARK [2][-]{subsection.7.1}{Baseline}{section.7}% 17
-\BOOKMARK [2][-]{subsection.7.2}{Compression Effects}{section.7}% 18
-\BOOKMARK [2][-]{subsection.7.3}{Gap compression}{section.7}% 19
-\BOOKMARK [2][-]{subsection.7.4}{Perimeter compression}{section.7}% 20
-\BOOKMARK [2][-]{subsection.7.5}{Comparison}{section.7}% 21
+\BOOKMARK [1][-]{section.7}{Experimental results}{}% 12
+\BOOKMARK [2][-]{subsection.7.1}{Baseline}{section.7}% 13
+\BOOKMARK [2][-]{subsection.7.2}{Inner compression model}{section.7}% 14
+\BOOKMARK [3][-]{subsubsection.7.2.1}{Inner + Gap compression model}{subsection.7.2}% 15
+\BOOKMARK [2][-]{subsection.7.3}{Outer compression model}{section.7}% 16
+\BOOKMARK [3][-]{subsubsection.7.3.1}{Outer + Gap compression model}{subsection.7.3}% 17
+\BOOKMARK [2][-]{subsection.7.4}{Compression Effects}{section.7}% 18
+\BOOKMARK [2][-]{subsection.7.5}{Gap compression}{section.7}% 19
+\BOOKMARK [2][-]{subsection.7.6}{Perimeter compression}{section.7}% 20
+\BOOKMARK [2][-]{subsection.7.7}{Comparison}{section.7}% 21
 \BOOKMARK [1][-]{section.8}{Conclusions}{}% 22
 \BOOKMARK [1][-]{section.9}{Future Work}{}% 23
 \BOOKMARK [1][-]{section*.43}{References}{}% 24

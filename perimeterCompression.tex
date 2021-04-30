@@ -167,27 +167,27 @@ The basic method of controlling the inter-agent relationships is to scale the ba
 $p_{kr}$~(Eq.~\ref{eq:pkr}), $p_{kc}$~(Eq.~\ref{eq:pkc}), and $p_r$~(Eq.~\ref{eq:pr}) are three, 2x2-arrays.
 
 \begin{equation}\label{eq:pkr}
-	p_{kr} = \left (
-	\begin{array}{cc}
+	p_{kr} = 
+	\begin{pmatrix}
 	a & b\\
 	c & d
-	\end{array} \right )
+	\end{pmatrix}
 \end{equation}
 	
 \begin{equation}\label{eq:pkc}
-	p_{kc} = \left (
-	\begin{array}{cc}
+	p_{kc} = 
+	\begin{pmatrix}
 	a & b\\
 	c & d
-	\end{array} \right )
+	\end{pmatrix}
 \end{equation}
 
 \begin{equation}\label{eq:pr}
-	p_{r} = \left (
-	\begin{array}{cc}
+	p_{r} = 
+	\begin{pmatrix}
 	a & b\\
 	c & d
-	\end{array} \right )
+	\end{pmatrix}
 \end{equation}
 
 These arrays (via the index) provide a scalar weighting to specific agents within the swarm based upon their perimeter status as shown is Equation~\ref{eq:scalarsFromMatrix} where $\mathsf{erf}(b, b')$ is the inter-perimeter-agent repulsion weighting for the repulsion radii, $\mathsf{ekc}(b, b')$ is the effective cohesion weighting, and $\mathsf{ekr}(b, b')$ is the effective repulsion weighting and where $\mathsf{prm}(b)$ returns the perimeter status of an agent which is then used as an index into the arrays: 1 or 0 according as $b$ is/is not on the perimeter.
@@ -215,11 +215,11 @@ n_r(b) = \{b' \in \mathcal{S} : b \neq b' \land \magn{\vbb{b}{b'}} \leq \mathsf{
 The introduction of the matrices allows for specific relationships to effect the movement of agents. Using a $J$ matrix results no perimeter repulsion change and all agents use the same repulsion field and the repulsion effect is monolithic within the swarm. However if $P_r[1,1] < 0$ as shown in Equation~\ref{eq:prrep}) and both agents are perimeter-based i.e. $\mathsf{prm}(b)$ and $\mathsf{prm}(b')$ ($true,true$) result in $\mathsf{erf}(b, b')$ returning $0.4$ from the matrix. This effectively reduces the $R_b$ field allowing neighbouring agents to move more closely together which effects a compression effect. This is then combined with a weighting effect from the $p_{kr}$ matrix which is used by $\mathsf{ekr}(b, b')$. This function returns a weighting value for the overall inter-agent repulsion relationship. This can be used to reduce the effect of specific vectors in the reopulsion calculations. When this effect is combined with a perimeter-based cohesion (\S~\ref{sec:matrixCohesion}) increase a sustainable compression is possible as shown in figure~\ref{fig:perimeterCompression}.
 
 \begin{equation}\label{eq:prrep}
-	p_{r} = \left (
-	\begin{array}{cc}
+	p_{r} = 
+	\begin{pmatrix}
 	1 & 1\\
 	1 & 0.4
-	\end{array} \right )
+	\end{pmatrix}
 \end{equation}
 
 \begin{figure}[H]
@@ -243,11 +243,11 @@ v_c(b) = \frac{1}{\lvert n_c(b)\rvert} \sum_{b' \in n_c(b)}\mathsf{ekc}(b, b')\,
 \end{equation}
 
 \begin{equation}\label{eq:pkccoh}
-	p_{kc} = \left (
-	\begin{array}{cc}
+	p_{kc} = 
+	\begin{pmatrix}
 	1 & 1\\
 	1 & 500.0
-	\end{array} \right )
+	\end{pmatrix}
 \end{equation}
 
 \section{Gap reduction model}
@@ -269,6 +269,42 @@ v_g(b) = k_g \left(\frac{b' + b''}{2} - b \right) = k_g \frac{\left(\left(\vbb{b
 \normalsize
 
 $k_g$ is a weighting for the gap-filling vector allowing the combination of it with the other motion vectors (cohesion, repulsion, ...) to be ``tuned''.\\
+
+\section{Experimental results\label{sec:ExperimentalResults}}
+\subsection{Baseline}
+For all the experiments the parameters used to create the basic swarming effect are shown in Table~\ref{tab:swarmingEffect}. Where $C_b$ is the cohesion field, $k_c$ is the cohesion weighting, $R_b$ is the repulsion field, $k_r$ is the repulsion weighting and $k_g$ is the weighting factor applied in the comparison of the gap reduction algorithm discussed in~\cite{eliot2019void}. The swarm consists of 200 agents which are distributed with a void at the centre. These initial parameters create a hexagonal-based distribution of agents that stabilise as shown in Figure~\ref{fig:baselineSwarm}. This basic swarm is used as the initial state for all the experiments. 
+ \begin{table}[ht]
+	\centering
+	\tiny
+	\begin{tabular}{|c|r|}
+		\hline
+		\rowcolor[HTML]{000000} 
+		{\color[HTML]{FFFFFF} Swarming Variable} & {\color[HTML]{FFFFFF} Value} \\ \hline
+		$C_b$ & \texttt{3.00} \\ \hline
+		$k_c$ & \texttt{0.15}  \\ \hline
+		$R_b$ & \texttt{2.00} \\ \hline
+		$k_r$ & \texttt{50.00} \\ \hline
+		$k_g$ & \texttt{25.00} \\ \hline
+	\end{tabular}
+  	\caption{Swarming effect parameters}
+  	\label{tab:swarmingEffect}
+\end{table}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=5cm]{figures/exp1Start}
+	\end{center}
+	\caption{Baseline swarm in stabilised configuration. \label{fig:baselineSwarm}}
+\end{figure}
+
+When the simulation is ran with no compression the changes are identified using a magnitude-based metric~\cite{eliot2018metric}. The resultant magnitudes generated are shown in figure~\ref{fig:baselineSwarmMagnitude}. These states are used as the baseline for the experiments to measure the effects of the compression algorithm and compare the new algorithm to the existing void reduction algorithm.
+
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[width=8cm]{figures/interagentMagnitudeBaseline}
+	\end{center}
+	\caption{Baseline swarm in stabilised configuration. \label{fig:baselineSwarmMagnitude}}
+\end{figure}
 
 ==== STILL TO BE WORKED ON =====\\
 
@@ -332,41 +368,6 @@ y & 1
 
 \subsubsection{Outer + Gap compression model}
 
-\section{Experimental results\label{sec:ExperimentalResults}}
-\subsection{Baseline}
-For all the experiments the parameters used to create the basic swarming effect are shown in Table~\ref{tab:swarmingEffect}. Where $C_b$ is the cohesion field, $k_c$ is the cohesion weighting, $R_b$ is the repulsion field, $k_r$ is the repulsion weighting and $k_g$ is the weighting factor applied in the comparison of the gap reduction algorithm discussed in~\cite{eliot2019void}. The swarm consists of 200 agents which are distributed with a void at the centre. These initial parameters create a hexagonal-based distribution of agents that stabilise as shown in Figure~\ref{fig:baselineSwarm}. This basic swarm is used as the initial state for all the experiments. 
- \begin{table}[ht]
-	\centering
-	\tiny
-	\begin{tabular}{|c|r|}
-		\hline
-		\rowcolor[HTML]{000000} 
-		{\color[HTML]{FFFFFF} Swarming Variable} & {\color[HTML]{FFFFFF} Value} \\ \hline
-		$C_b$ & \texttt{3.00} \\ \hline
-		$k_c$ & \texttt{0.15}  \\ \hline
-		$R_b$ & \texttt{2.00} \\ \hline
-		$k_r$ & \texttt{50.00} \\ \hline
-		$k_g$ & \texttt{25.00} \\ \hline
-	\end{tabular}
-  	\caption{Swarming effect parameters}
-  	\label{tab:swarmingEffect}
-\end{table}
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=5cm]{figures/exp1Start}
-	\end{center}
-	\caption{Baseline swarm in stabilised configuration. \label{fig:baselineSwarm}}
-\end{figure}
-
-When the simulation is ran with no compression the changes are identified using a magnitude-based metric~\cite{eliot2018metric}. The resultant magnitudes generated are shown in figure~\ref{fig:baselineSwarmMagnitude}. These states are used as the baseline for the experiments to measure the effects of the compression algorithm and compare the new algorithm to the existing void reduction algorithm.
-
-\begin{figure}[ht]
-	\begin{center}
-		\includegraphics[width=8cm]{figures/interagentMagnitudeBaseline}
-	\end{center}
-	\caption{Baseline swarm in stabilised configuration. \label{fig:baselineSwarmMagnitude}}
-\end{figure}
 
 \subsection{Compression Effects\label{sec:CompressionEffect}}
 
