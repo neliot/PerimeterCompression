@@ -180,7 +180,7 @@ v(b) = v_c(b) + v_r(b)
 
 \subsection{$p_r$, $p_{kr}$ and $p_{kc}$}
 
-The basic method of controlling the inter-agent relationships can be used to implement perimeter compression by reducing the repulsion field of a perimeter-perimeter agent relationship to allow agents to move more closely to each other before they are repelled. Likewise the cohesion can be manipulated to overcome some of the neighbouring inner-agent repulsion forces that may prevent the agents to move.
+The basic method of controlling the inter-agent relationships is to scale the base cohesion and repulsion weightings. i.e. the matrices do not replace the $k_c$ or $k_r$. These scaling matrices can be used to implement many perimeter based effects including compression by reducing the repulsion field of a perimeter-perimeter agent relationship to allow agents to move more closely to each other before they are repelled. Likewise the cohesion can be manipulated to overcome some of the neighbouring inner-agent repulsion forces that may prevent the agents to move.
 
 $p_{kr}$~(Eq.~\ref{eq:pkr}), $p_{kc}$~(Eq.~\ref{eq:pkc}), and $p_r$~(Eq.~\ref{eq:pr}) are three, 2x2-arrays.
 
@@ -253,7 +253,8 @@ The introduction of the matrices allows for specific relationships to effect the
 
 \subsection{Inter-agent cohesion ($p_{kc}$, $\mathsf{ekc}(b,b')$)}\label{sec:matrixCohesion}
 
-The cohesion component of the swarming effect ($p_{kc}$) is applied when an agent ($b$) and its neighbour ($b'$) are both within range ($C_b$). $\mathsf{ekc}(b,b')$ works in a similar manor to $\mathsf{ekr}(b,b')$. $\mathsf{ekc}(b,b')$ refrences the $p_{kr}$ matrix to obtain a weighting that is based upon the two agents status. If the agents are not both perimeter-based then the agents cohesion vector is scaled by the scalar value that is referenced in the matrix (Eq.~\ref{eq:scalarsFromMatrix}). e.g. If both agents are perimeter-based and the matrix is as shown in equation~\ref{eq:pkccoh} then the effect of the additional cohesion-compression weighting will be increase the generated cohesion-vector for that individual relationship (Eq.~\ref{eq:cohesion3}) which causes the agent to have a tendency to move towards that neighbour. 
+The cohesion component of the swarming effect is applied when an agent ($b$) and its neighbour ($b'$) are both within range ($C_b$). $\mathsf{ekc}(b,b')$ works in a similar manor to $\mathsf{ekr}(b,b')$. $\mathsf{ekc}(b,b')$ refrences the $p_{kc}$ matrix to obtain a weighting that is based upon the two agents status. e.g. If both the agents are perimeter-based then the agents cohesion vector is scaled by the scalar value that is referenced in the matrix (Eq.~\ref{eq:scalarsFromMatrix}) i.e. using equation~\ref{eq:pkccoh} $p_{kc}[1][1]$ would return the value 500.0. 
+In the case described above the effect of the additional cohesion-compression weighting will be increase the generated cohesion-vector for that individual relationship (Eq.~\ref{eq:cohesion3}) which causes the agent to have a tendency to move more strongly towards that neighbour. 
 
 \begin{equation}\label{eq:cohesion3}
 v_c(b) = \frac{1}{\lvert n_c(b)\rvert} \sum_{b' \in n_c(b)}\mathsf{ekc}(b, b')\, \left(\vbb{b}{b'}\right)
