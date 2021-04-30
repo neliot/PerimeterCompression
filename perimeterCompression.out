@@ -4,15 +4,15 @@
 \BOOKMARK [2][-]{subsection.3.1}{Cohesion}{section.3}% 4
 \BOOKMARK [2][-]{subsection.3.2}{Repulsion}{section.3}% 5
 \BOOKMARK [1][-]{section.4}{Perimeter detection}{}% 6
-\BOOKMARK [1][-]{section.5}{Gap reduction model \(to be moved below the next section when complete!\)}{}% 7
-\BOOKMARK [1][-]{section.6}{New Inter-agent Models}{}% 8
-\BOOKMARK [2][-]{subsection.6.1}{pr, pkr and pkc}{section.6}% 9
-\BOOKMARK [2][-]{subsection.6.2}{Agent repulsion \(pr, erf\(b,b'\), ekr\(b,b'\)\)}{section.6}% 10
-\BOOKMARK [2][-]{subsection.6.3}{Inter-agent cohesion \(pkc, ekc\(b,b'\)\)}{section.6}% 11
-\BOOKMARK [2][-]{subsection.6.4}{Inner compression model}{section.6}% 12
-\BOOKMARK [3][-]{subsubsection.6.4.1}{Inner + Gap compression model}{subsection.6.4}% 13
-\BOOKMARK [2][-]{subsection.6.5}{Outer compression model}{section.6}% 14
-\BOOKMARK [3][-]{subsubsection.6.5.1}{Outer + Gap compression model}{subsection.6.5}% 15
+\BOOKMARK [1][-]{section.5}{New Inter-agent Models}{}% 7
+\BOOKMARK [2][-]{subsection.5.1}{pr, pkr and pkc}{section.5}% 8
+\BOOKMARK [2][-]{subsection.5.2}{Agent repulsion \(pr, erf\(b,b'\), ekr\(b,b'\)\)}{section.5}% 9
+\BOOKMARK [2][-]{subsection.5.3}{Inter-agent cohesion \(pkc, ekc\(b,b'\)\)}{section.5}% 10
+\BOOKMARK [1][-]{section.6}{Gap reduction model}{}% 11
+\BOOKMARK [2][-]{subsection.6.1}{Inner compression model}{section.6}% 12
+\BOOKMARK [3][-]{subsubsection.6.1.1}{Inner + Gap compression model}{subsection.6.1}% 13
+\BOOKMARK [2][-]{subsection.6.2}{Outer compression model}{section.6}% 14
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Outer + Gap compression model}{subsection.6.2}% 15
 \BOOKMARK [1][-]{section.7}{Experimental results}{}% 16
 \BOOKMARK [2][-]{subsection.7.1}{Baseline}{section.7}% 17
 \BOOKMARK [2][-]{subsection.7.2}{Compression Effects}{section.7}% 18

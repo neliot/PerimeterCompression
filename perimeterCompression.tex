@@ -152,27 +152,9 @@ A gap can therefore be defined as any two consecutive neighbours $b' = b_i, b'' 
 	\label{fig:neighbours3}
 \end{figure}
 
-\section{Gap reduction model (to be moved below the next section when complete!)}
-An enhancement to the basic model that has proven useful in combination with the enhancements detailed, especially in reducing internal voids in the swarm, is to introduce another term on the right of Equation~\ref{eq:newModel2}. This gap reducing model is based upon the model described by Eliot et al. in~\cite{eliot2019void}.
-
-For instance (omitting obstacles, destinations for now),
-\begin{equation}\label{eq:newModel3}
-v(b) = v_c(b) + v_r(b) + v_g(b)
-\end{equation}
-
-where $v_g(b)$ is a vector which will, in the case that a gap has been identified in the perimeter test for $b$, will contribute a motion of $b$ toward the midpoint of the gap.
-
-Suppose that $n_r(b) = \langle b_0, b_1, ... b_{n-1}\rangle$ are the neighbours of $b$ in azimuth angle order, and let the \emph{first} gap found in the perimeter test be $b' = b_i$ to $b'' = b_{(i+1)\%n}$. Then $k_g$ can be defines as Equation~\ref{eq:gap}. 
-
-\small\begin{equation}\label{eq:gap}
-v_g(b) = k_g \left(\frac{b' + b''}{2} - b \right) = k_g \frac{\left(\left(\vbb{b}{b'}\right) + \left(\vbb{b}{b''}\right)\right)}{2} 
-\end{equation}\normalsize
-
-$k_g$ is a weighting for the gap-filling vector allowing the combination of it with the other motion vectors (cohesion, repulsion, ...) to be ``tuned''.
-
 \section{New Inter-agent Models}
 In this section we will discuss the application of the new $p_r$, $p_{kc}$ and $p_{kr}$ parameters and the application of the gap reduction which can be used to introduce a stabilising property to the swarm perimeter.\\
-The new model requires each agent to modify their inter-agent repulsion and cohesion vectors based upon their perimeter status and each neighbour's perimeter status. The basic perimeter control technique is shown in Equation~\ref{eq:newModel2}). The cohesion and repulsion weighting factors ($k_c$, $k_r$, $p_{kr}$, $p_{kc}$, $p_r$) are integrated into the equations and \ref{eq:repulsion1} and \ref{eq:cohesion3} so equation~\ref{eq:resultantVector1a} now reads, simply,
+The new model requires each agent to modify their inter-agent repulsion and cohesion vectors based upon their perimeter status and each neighbour's perimeter status. The basic perimeter control technique is shown in Equation~\ref{eq:newModel2}. The cohesion and repulsion weighting factors ($k_c$, $k_r$, $p_{kr}$, $p_{kc}$, $p_r$) are integrated into the equations and \ref{eq:repulsion1} and \ref{eq:cohesion3} so equation~\ref{eq:resultantVector1a} now reads, simply,
 
 \begin{equation}\label{eq:newModel2}
 v(b) = v_c(b) + v_r(b)
@@ -230,7 +212,7 @@ The repulsion component of the swarm model is now applied as shown in Equations~
 n_r(b) = \{b' \in \mathcal{S} : b \neq b' \land \magn{\vbb{b}{b'}} \leq \mathsf{erf}(b,b')\}
 \end{equation}
 \normalsize
-The introduction of the matrices allows for specific relationships to effect the movement of agents. Using a $J$ matrix results no perimeter repulsion change and all agents use the same repulsion field and the repulsion effect is monolithic within the swarm. However if $P_r[1][1] < 0$ as shown in Equation~\ref{eq:prrep}) and both agents are perimeter-based i.e. $\mathsf{prm}(b)$ and $\mathsf{prm}(b')$ ($true,true$) result in $\mathsf{erf}(b, b')$ returning $0.4$ from the matrix. This effectively reduces the $R_b$ field allowing neighbouring agents to move more closely together which effects a compression effect. This is then combined with a weighting effect from the $p_{kr}$ matrix which is used by $\mathsf{ekr}(b, b')$. This function returns a weighting value for the overall inter-agent repulsion relationship. This can be used to reduce the effect of specific vectors in the reopulsion calculations. When this effect is combined with a perimeter-based cohesion (\S~\ref{sec:matrixCohesion}) increase a sustainable compression is possible as shown in figure~\ref{fig:perimeterCompression}.
+The introduction of the matrices allows for specific relationships to effect the movement of agents. Using a $J$ matrix results no perimeter repulsion change and all agents use the same repulsion field and the repulsion effect is monolithic within the swarm. However if $P_r[1,1] < 0$ as shown in Equation~\ref{eq:prrep}) and both agents are perimeter-based i.e. $\mathsf{prm}(b)$ and $\mathsf{prm}(b')$ ($true,true$) result in $\mathsf{erf}(b, b')$ returning $0.4$ from the matrix. This effectively reduces the $R_b$ field allowing neighbouring agents to move more closely together which effects a compression effect. This is then combined with a weighting effect from the $p_{kr}$ matrix which is used by $\mathsf{ekr}(b, b')$. This function returns a weighting value for the overall inter-agent repulsion relationship. This can be used to reduce the effect of specific vectors in the reopulsion calculations. When this effect is combined with a perimeter-based cohesion (\S~\ref{sec:matrixCohesion}) increase a sustainable compression is possible as shown in figure~\ref{fig:perimeterCompression}.
 
 \begin{equation}\label{eq:prrep}
 	p_{r} = \left (
@@ -253,7 +235,7 @@ The introduction of the matrices allows for specific relationships to effect the
 
 \subsection{Inter-agent cohesion ($p_{kc}$, $\mathsf{ekc}(b,b')$)}\label{sec:matrixCohesion}
 
-The cohesion component of the swarming effect is applied when an agent ($b$) and its neighbour ($b'$) are both within range ($C_b$). $\mathsf{ekc}(b,b')$ works in a similar manor to $\mathsf{ekr}(b,b')$. $\mathsf{ekc}(b,b')$ refrences the $p_{kc}$ matrix to obtain a weighting that is based upon the two agents status. e.g. If both the agents are perimeter-based then the agents cohesion vector is scaled by the scalar value that is referenced in the matrix (Eq.~\ref{eq:scalarsFromMatrix}) i.e. using equation~\ref{eq:pkccoh} $p_{kc}[1][1]$ would return the value 500.0. 
+The cohesion component of the swarming effect is applied when an agent ($b$) and its neighbour ($b'$) are both within range ($C_b$). $\mathsf{ekc}(b,b')$ works in a similar manor to $\mathsf{ekr}(b,b')$. $\mathsf{ekc}(b,b')$ references the $p_{kc}$ matrix to obtain a weighting that is based upon the two agents statuses. e.g. If both the agents are perimeter-based then the agents cohesion vector is scaled by the scalar value that is referenced in the matrix (Eq.~\ref{eq:scalarsFromMatrix}) i.e. using equation~\ref{eq:pkccoh} $p_{kc}[1,1]$ would return the value 500.0. 
 In the case described above the effect of the additional cohesion-compression weighting will be increase the generated cohesion-vector for that individual relationship (Eq.~\ref{eq:cohesion3}) which causes the agent to have a tendency to move more strongly towards that neighbour. 
 
 \begin{equation}\label{eq:cohesion3}
@@ -267,9 +249,29 @@ v_c(b) = \frac{1}{\lvert n_c(b)\rvert} \sum_{b' \in n_c(b)}\mathsf{ekc}(b, b')\,
 	1 & 500.0
 	\end{array} \right )
 \end{equation}
-\\
-==== STILL TO BE WORKED ON =====
-\\
+
+\section{Gap reduction model}
+
+An enhancement to the basic model that has proven useful in combination with the enhancements detailed, especially in reducing internal voids in the swarm, is to introduce another term on the right of Equation~\ref{eq:newModel2}. This gap reducing model is based upon the model described by Eliot et al. in~\cite{eliot2019void}.
+
+For instance (omitting obstacles, destinations for now),
+\begin{equation}\label{eq:newModel3}
+v(b) = v_c(b) + v_r(b) + v_g(b)
+\end{equation}
+
+where $v_g(b)$ is a vector which will, in the case that a gap has been identified in the perimeter test for $b$, will contribute a motion of $b$ toward the midpoint of the gap.
+
+Suppose that $n_r(b) = \langle b_0, b_1, ... b_{n-1}\rangle$ are the neighbours of $b$ in azimuth angle order, and let the \emph{first} gap found in the perimeter test be $b' = b_i$ to $b'' = b_{(i+1)\%n}$. Then $k_g$ can be defines as Equation~\ref{eq:gap}. 
+
+\small\begin{equation}\label{eq:gap}
+v_g(b) = k_g \left(\frac{b' + b''}{2} - b \right) = k_g \frac{\left(\left(\vbb{b}{b'}\right) + \left(\vbb{b}{b''}\right)\right)}{2} 
+\end{equation}
+\normalsize
+
+$k_g$ is a weighting for the gap-filling vector allowing the combination of it with the other motion vectors (cohesion, repulsion, ...) to be ``tuned''.\\
+
+==== STILL TO BE WORKED ON =====\\
+
 Figure~\ref{fig:voidRemoval} shows how the compression effect can remove a void from a swarm by surround an obstacle in a similar manner to the method described in~\cite{eliot2019void}.
 
 \begin{figure}[ht]
