@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  6 MAY 2021 15:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  6 MAY 2021 17:29
 entering extended mode
 **"c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.tex"
 ("c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.tex"
@@ -877,75 +877,72 @@ Overfull \hbox (2.41086pt too wide) detected at line 233
 <figures/perimeterCompress.png, id=342, 690.1785pt x 529.7391pt>
 File: figures/perimeterCompress.png Graphic file (type png)
 <use figures/perimeterCompress.png>
-Package pdftex.def Info: figures/perimeterCompress.png  used on input line 279.
+Package pdftex.def Info: figures/perimeterCompress.png  used on input line 278.
 (pdftex.def)             Requested size: 227.62204pt x 174.70935pt.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 286.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 285.
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ts1ptm.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [4 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/perimeterCompress.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 320--321
+Underfull \hbox (badness 10000) in paragraph at lines 319--320
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--324
+Underfull \hbox (badness 10000) in paragraph at lines 322--323
 
  []
 
 <figures/exp1Start.png, id=375, 975.645pt x 1032.85875pt>
 File: figures/exp1Start.png Graphic file (type png)
 <use figures/exp1Start.png>
-Package pdftex.def Info: figures/exp1Start.png  used on input line 346.
+Package pdftex.def Info: figures/exp1Start.png  used on input line 345.
 (pdftex.def)             Requested size: 142.26378pt x 150.60385pt.
 <figures/interagentMagnitudeBaseline.pdf, id=378, 1927.2pt x 986.68625pt>
 File: figures/interagentMagnitudeBaseline.pdf Graphic file (type pdf)
 <use figures/interagentMagnitudeBaseline.pdf>
-Package pdftex.def Info: figures/interagentMagnitudeBaseline.pdf  used on input line 355.
+Package pdftex.def Info: figures/interagentMagnitudeBaseline.pdf  used on input line 354.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
-[5 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/exp1Start.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/interagentMagnitudeBaseline.pdf>]
-<figures/voidRemoval1.png, id=425, 662.7159pt x 627.3036pt>
+<figures/voidRemoval1.png, id=381, 662.7159pt x 627.3036pt>
 File: figures/voidRemoval1.png Graphic file (type png)
 <use figures/voidRemoval1.png>
-Package pdftex.def Info: figures/voidRemoval1.png  used on input line 368.
+Package pdftex.def Info: figures/voidRemoval1.png  used on input line 367.
 (pdftex.def)             Requested size: 201.42003pt x 190.6525pt.
-<figures/voidRemoval2.png, id=426, 627.3036pt x 631.6398pt>
+<figures/voidRemoval2.png, id=382, 627.3036pt x 631.6398pt>
 File: figures/voidRemoval2.png Graphic file (type png)
 <use figures/voidRemoval2.png>
-Package pdftex.def Info: figures/voidRemoval2.png  used on input line 374.
+Package pdftex.def Info: figures/voidRemoval2.png  used on input line 373.
 (pdftex.def)             Requested size: 201.42003pt x 202.81316pt.
-<figures/Experiment1.png, id=429, 1927.2pt x 986.68625pt>
+[5 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/exp1Start.png>]
+<figures/Experiment1.png, id=397, 1927.2pt x 986.68625pt>
 File: figures/Experiment1.png Graphic file (type png)
 <use figures/Experiment1.png>
-Package pdftex.def Info: figures/Experiment1.png  used on input line 471.
+Package pdftex.def Info: figures/Experiment1.png  used on input line 470.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
-<figures/Experiment2.png, id=430, 1927.2pt x 986.68625pt>
+<figures/Experiment2.png, id=398, 1927.2pt x 986.68625pt>
 File: figures/Experiment2.png Graphic file (type png)
 <use figures/Experiment2.png>
-Package pdftex.def Info: figures/Experiment2.png  used on input line 478.
+Package pdftex.def Info: figures/Experiment2.png  used on input line 477.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
-<figures/Experiment3.png, id=431, 1927.2pt x 986.68625pt>
+<figures/Experiment3.png, id=399, 1927.2pt x 986.68625pt>
 File: figures/Experiment3.png Graphic file (type png)
 <use figures/Experiment3.png>
-Package pdftex.def Info: figures/Experiment3.png  used on input line 485.
+Package pdftex.def Info: figures/Experiment3.png  used on input line 484.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
-
-Underfull \vbox (badness 3826) has occurred while \output is active []
-
- [6 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/voidRemoval1.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/voidRemoval2.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/Experiment1.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/Experiment2.png>]
+ [6 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/interagentMagnitudeBaseline.pdf> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/voidRemoval1.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/voidRemoval2.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/Experiment1.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/Experiment2.png>]
 <figures/PerimeterCount.pdf, id=450, 1927.2pt x 986.68625pt>
 File: figures/PerimeterCount.pdf Graphic file (type pdf)
 <use figures/PerimeterCount.pdf>
-Package pdftex.def Info: figures/PerimeterCount.pdf  used on input line 494.
+Package pdftex.def Info: figures/PerimeterCount.pdf  used on input line 493.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
 <figures/PerimeterCount2.pdf, id=451, 1927.2pt x 986.68625pt>
 File: figures/PerimeterCount2.pdf Graphic file (type pdf)
 <use figures/PerimeterCount2.pdf>
-Package pdftex.def Info: figures/PerimeterCount2.pdf  used on input line 517.
+Package pdftex.def Info: figures/PerimeterCount2.pdf  used on input line 516.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
 <figures/DistanceMetric1.pdf, id=452, 1927.2pt x 986.68625pt>
 File: figures/DistanceMetric1.pdf Graphic file (type pdf)
 <use figures/DistanceMetric1.pdf>
-Package pdftex.def Info: figures/DistanceMetric1.pdf  used on input line 524.
+Package pdftex.def Info: figures/DistanceMetric1.pdf  used on input line 523.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
 
 Underfull \vbox (badness 2409) has occurred while \output is active []
@@ -953,22 +950,22 @@ Underfull \vbox (badness 2409) has occurred while \output is active []
 <figures/InteragentCohesionMean.pdf, id=453, 1927.2pt x 986.68625pt>
 File: figures/InteragentCohesionMean.pdf Graphic file (type pdf)
 <use figures/InteragentCohesionMean.pdf>
-Package pdftex.def Info: figures/InteragentCohesionMean.pdf  used on input line 531.
+Package pdftex.def Info: figures/InteragentCohesionMean.pdf  used on input line 530.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
 <figures/InteragentCohesionStd.pdf, id=454, 1927.2pt x 986.68625pt>
 File: figures/InteragentCohesionStd.pdf Graphic file (type pdf)
 <use figures/InteragentCohesionStd.pdf>
-Package pdftex.def Info: figures/InteragentCohesionStd.pdf  used on input line 538.
+Package pdftex.def Info: figures/InteragentCohesionStd.pdf  used on input line 537.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
 <figures/InteragentRepulsionMean.pdf, id=455, 1927.2pt x 986.68625pt>
 File: figures/InteragentRepulsionMean.pdf Graphic file (type pdf)
 <use figures/InteragentRepulsionMean.pdf>
-Package pdftex.def Info: figures/InteragentRepulsionMean.pdf  used on input line 545.
+Package pdftex.def Info: figures/InteragentRepulsionMean.pdf  used on input line 544.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
 <figures/InteragentRepulsionStd.pdf, id=456, 1927.2pt x 986.68625pt>
 File: figures/InteragentRepulsionStd.pdf Graphic file (type pdf)
 <use figures/InteragentRepulsionStd.pdf>
-Package pdftex.def Info: figures/InteragentRepulsionStd.pdf  used on input line 552.
+Package pdftex.def Info: figures/InteragentRepulsionStd.pdf  used on input line 551.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
 
 Underfull \vbox (badness 8000) has occurred while \output is active []
@@ -992,17 +989,17 @@ pdfTeX warning: pdflatex (file c:/Users/neil/Google Drive/Research/PerimeterComp
 <figures/baselineSwarmPerimeter.png, id=677, 1927.2pt x 974.64125pt>
 File: figures/baselineSwarmPerimeter.png Graphic file (type png)
 <use figures/baselineSwarmPerimeter.png>
-Package pdftex.def Info: figures/baselineSwarmPerimeter.png  used on input line 560.
+Package pdftex.def Info: figures/baselineSwarmPerimeter.png  used on input line 559.
 (pdftex.def)             Requested size: 227.62204pt x 115.10779pt.
 <figures/baselineSwarm1.png, id=678, 1056.94875pt x 1036.87375pt>
 File: figures/baselineSwarm1.png Graphic file (type png)
 <use figures/baselineSwarm1.png>
-Package pdftex.def Info: figures/baselineSwarm1.png  used on input line 572.
+Package pdftex.def Info: figures/baselineSwarm1.png  used on input line 571.
 (pdftex.def)             Requested size: 142.26378pt x 139.56055pt.
 <figures/baselineSwarmMagnitude1.png, id=679, 1927.2pt x 974.64125pt>
 File: figures/baselineSwarmMagnitude1.png Graphic file (type png)
 <use figures/baselineSwarmMagnitude1.png>
-Package pdftex.def Info: figures/baselineSwarmMagnitude1.png  used on input line 579.
+Package pdftex.def Info: figures/baselineSwarmMagnitude1.png  used on input line 578.
 (pdftex.def)             Requested size: 227.62204pt x 115.10779pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1010,35 +1007,35 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <figures/baselineSwarmPerimeter1.png, id=680, 1927.2pt x 974.64125pt>
 File: figures/baselineSwarmPerimeter1.png Graphic file (type png)
 <use figures/baselineSwarmPerimeter1.png>
-Package pdftex.def Info: figures/baselineSwarmPerimeter1.png  used on input line 586.
+Package pdftex.def Info: figures/baselineSwarmPerimeter1.png  used on input line 585.
 (pdftex.def)             Requested size: 227.62204pt x 115.10779pt.
 <figures/Figure_1.png, id=681, 1387.584pt x 710.4141pt>
 File: figures/Figure_1.png Graphic file (type png)
 <use figures/Figure_1.png>
-Package pdftex.def Info: figures/Figure_1.png  used on input line 593.
+Package pdftex.def Info: figures/Figure_1.png  used on input line 592.
 (pdftex.def)             Requested size: 256.0748pt x 131.09935pt.
 
-Overfull \hbox (10.29591pt too wide) in paragraph at lines 593--594
+Overfull \hbox (10.29591pt too wide) in paragraph at lines 592--593
  [] 
  []
 
 <figures/Figure_2.png, id=682, 558.6471pt x 592.614pt>
 File: figures/Figure_2.png Graphic file (type png)
 <use figures/Figure_2.png>
-Package pdftex.def Info: figures/Figure_2.png  used on input line 599.
+Package pdftex.def Info: figures/Figure_2.png  used on input line 598.
 (pdftex.def)             Requested size: 256.0748pt x 271.64723pt.
 
-Overfull \hbox (10.29591pt too wide) in paragraph at lines 599--600
+Overfull \hbox (10.29591pt too wide) in paragraph at lines 598--599
  [] 
  []
 
 <figures/Figure_3.png, id=683, 565.1514pt x 599.1183pt>
 File: figures/Figure_3.png Graphic file (type png)
 <use figures/Figure_3.png>
-Package pdftex.def Info: figures/Figure_3.png  used on input line 605.
+Package pdftex.def Info: figures/Figure_3.png  used on input line 604.
 (pdftex.def)             Requested size: 256.0748pt x 271.47481pt.
 
-Overfull \hbox (10.29591pt too wide) in paragraph at lines 605--606
+Overfull \hbox (10.29591pt too wide) in paragraph at lines 604--605
  [] 
  []
 
@@ -1049,20 +1046,20 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <figures/Figure_4.png, id=735, 1123.7985pt x 708.9687pt>
 File: figures/Figure_4.png Graphic file (type png)
 <use figures/Figure_4.png>
-Package pdftex.def Info: figures/Figure_4.png  used on input line 611.
+Package pdftex.def Info: figures/Figure_4.png  used on input line 610.
 (pdftex.def)             Requested size: 256.0748pt x 161.54485pt.
 
-Overfull \hbox (10.29591pt too wide) in paragraph at lines 611--612
+Overfull \hbox (10.29591pt too wide) in paragraph at lines 610--611
  [] 
  []
 
 <figures/Figure_5.png, id=736, 1387.584pt x 710.4141pt>
 File: figures/Figure_5.png Graphic file (type png)
 <use figures/Figure_5.png>
-Package pdftex.def Info: figures/Figure_5.png  used on input line 617.
+Package pdftex.def Info: figures/Figure_5.png  used on input line 616.
 (pdftex.def)             Requested size: 256.0748pt x 131.09935pt.
 
-Overfull \hbox (10.29591pt too wide) in paragraph at lines 617--618
+Overfull \hbox (10.29591pt too wide) in paragraph at lines 616--617
  [] 
  []
 
@@ -1072,40 +1069,40 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <figures/Figure_6.png, id=737, 1387.584pt x 710.4141pt>
 File: figures/Figure_6.png Graphic file (type png)
 <use figures/Figure_6.png>
-Package pdftex.def Info: figures/Figure_6.png  used on input line 623.
+Package pdftex.def Info: figures/Figure_6.png  used on input line 622.
 (pdftex.def)             Requested size: 256.0748pt x 131.09935pt.
 
-Overfull \hbox (10.29591pt too wide) in paragraph at lines 623--624
+Overfull \hbox (10.29591pt too wide) in paragraph at lines 622--623
  [] 
  []
 
 <figures/Figure_7.png, id=738, 1387.584pt x 710.4141pt>
 File: figures/Figure_7.png Graphic file (type png)
 <use figures/Figure_7.png>
-Package pdftex.def Info: figures/Figure_7.png  used on input line 629.
+Package pdftex.def Info: figures/Figure_7.png  used on input line 628.
 (pdftex.def)             Requested size: 256.0748pt x 131.09935pt.
 
-Overfull \hbox (10.29591pt too wide) in paragraph at lines 629--630
+Overfull \hbox (10.29591pt too wide) in paragraph at lines 628--629
  [] 
  []
 
 <figures/Figure_8.png, id=739, 1387.584pt x 710.4141pt>
 File: figures/Figure_8.png Graphic file (type png)
 <use figures/Figure_8.png>
-Package pdftex.def Info: figures/Figure_8.png  used on input line 635.
+Package pdftex.def Info: figures/Figure_8.png  used on input line 634.
 (pdftex.def)             Requested size: 256.0748pt x 131.09935pt.
 
-Overfull \hbox (10.29591pt too wide) in paragraph at lines 635--636
+Overfull \hbox (10.29591pt too wide) in paragraph at lines 634--635
  [] 
  []
 
 <figures/Figure_9.png, id=740, 1387.584pt x 710.4141pt>
 File: figures/Figure_9.png Graphic file (type png)
 <use figures/Figure_9.png>
-Package pdftex.def Info: figures/Figure_9.png  used on input line 641.
+Package pdftex.def Info: figures/Figure_9.png  used on input line 640.
 (pdftex.def)             Requested size: 256.0748pt x 131.09935pt.
 
-Overfull \hbox (10.29591pt too wide) in paragraph at lines 641--642
+Overfull \hbox (10.29591pt too wide) in paragraph at lines 640--641
  [] 
  []
 
@@ -1113,70 +1110,70 @@ Overfull \hbox (10.29591pt too wide) in paragraph at lines 641--642
 <figures/Figure_10.png, id=757, 1387.584pt x 710.4141pt>
 File: figures/Figure_10.png Graphic file (type png)
 <use figures/Figure_10.png>
-Package pdftex.def Info: figures/Figure_10.png  used on input line 647.
+Package pdftex.def Info: figures/Figure_10.png  used on input line 646.
 (pdftex.def)             Requested size: 256.0748pt x 131.09935pt.
 
-Overfull \hbox (10.29591pt too wide) in paragraph at lines 647--648
+Overfull \hbox (10.29591pt too wide) in paragraph at lines 646--647
  [] 
  []
 
 <figures/mag-pr-0.9-mean.png, id=758, 1387.584pt x 710.4141pt>
 File: figures/mag-pr-0.9-mean.png Graphic file (type png)
 <use figures/mag-pr-0.9-mean.png>
-Package pdftex.def Info: figures/mag-pr-0.9-mean.png  used on input line 654.
+Package pdftex.def Info: figures/mag-pr-0.9-mean.png  used on input line 653.
 (pdftex.def)             Requested size: 256.0748pt x 131.09935pt.
 
-Overfull \hbox (10.29591pt too wide) in paragraph at lines 654--655
+Overfull \hbox (10.29591pt too wide) in paragraph at lines 653--654
  [] 
  []
 
 <figures/mag-pr-0.9-std.png, id=759, 1387.584pt x 710.4141pt>
 File: figures/mag-pr-0.9-std.png Graphic file (type png)
 <use figures/mag-pr-0.9-std.png>
-Package pdftex.def Info: figures/mag-pr-0.9-std.png  used on input line 661.
+Package pdftex.def Info: figures/mag-pr-0.9-std.png  used on input line 660.
 (pdftex.def)             Requested size: 256.0748pt x 131.09935pt.
 
-Overfull \hbox (10.29591pt too wide) in paragraph at lines 661--662
+Overfull \hbox (10.29591pt too wide) in paragraph at lines 660--661
  [] 
  []
 
 <figures/mag-pr-0.9-pc-100-error.png, id=760, 1387.584pt x 710.4141pt>
 File: figures/mag-pr-0.9-pc-100-error.png Graphic file (type png)
 <use figures/mag-pr-0.9-pc-100-error.png>
-Package pdftex.def Info: figures/mag-pr-0.9-pc-100-error.png  used on input line 668.
+Package pdftex.def Info: figures/mag-pr-0.9-pc-100-error.png  used on input line 667.
 (pdftex.def)             Requested size: 256.0748pt x 131.09935pt.
 
-Overfull \hbox (10.29591pt too wide) in paragraph at lines 668--669
+Overfull \hbox (10.29591pt too wide) in paragraph at lines 667--668
  [] 
  []
 
 <figures/dist-pr-0.9-mean.png, id=761, 1387.584pt x 710.4141pt>
 File: figures/dist-pr-0.9-mean.png Graphic file (type png)
 <use figures/dist-pr-0.9-mean.png>
-Package pdftex.def Info: figures/dist-pr-0.9-mean.png  used on input line 675.
+Package pdftex.def Info: figures/dist-pr-0.9-mean.png  used on input line 674.
 (pdftex.def)             Requested size: 256.0748pt x 131.09935pt.
 
-Overfull \hbox (10.29591pt too wide) in paragraph at lines 675--676
+Overfull \hbox (10.29591pt too wide) in paragraph at lines 674--675
  [] 
  []
 
 <figures/dist-pr-0.9-std.png, id=762, 1387.584pt x 710.4141pt>
 File: figures/dist-pr-0.9-std.png Graphic file (type png)
 <use figures/dist-pr-0.9-std.png>
-Package pdftex.def Info: figures/dist-pr-0.9-std.png  used on input line 682.
+Package pdftex.def Info: figures/dist-pr-0.9-std.png  used on input line 681.
 (pdftex.def)             Requested size: 256.0748pt x 131.09935pt.
 
-Overfull \hbox (10.29591pt too wide) in paragraph at lines 682--683
+Overfull \hbox (10.29591pt too wide) in paragraph at lines 681--682
  [] 
  []
 
 <figures/dist-pr-0.9-pc-100-error.png, id=763, 1387.584pt x 710.4141pt>
 File: figures/dist-pr-0.9-pc-100-error.png Graphic file (type png)
 <use figures/dist-pr-0.9-pc-100-error.png>
-Package pdftex.def Info: figures/dist-pr-0.9-pc-100-error.png  used on input line 689.
+Package pdftex.def Info: figures/dist-pr-0.9-pc-100-error.png  used on input line 688.
 (pdftex.def)             Requested size: 256.0748pt x 131.09935pt.
 
-Overfull \hbox (10.29591pt too wide) in paragraph at lines 689--690
+Overfull \hbox (10.29591pt too wide) in paragraph at lines 688--689
  [] 
  []
 
@@ -1192,13 +1189,13 @@ Package rerunfilecheck Info: File `perimeterCompression.out' has not changed.
 Here is how much of TeX's memory you used:
  26057 strings out of 479584
  538585 string characters out of 2861984
- 866645 words of memory out of 3000000
+ 866644 words of memory out of 3000000
  42587 multiletter control sequences out of 15000+200000
  449656 words of font info for 115 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,11n,108p,1348b,463s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.pdf" (11 pages, 10290996 bytes).
+Output written on "c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.pdf" (11 pages, 10291137 bytes).
 PDF statistics:
  897 PDF objects out of 1000 (max. 8388607)
  136 named destinations out of 1000 (max. 500000)

@@ -41,7 +41,7 @@
 \newcommand{\ko}{\mathit{k_o}}
 \newcommand{\rb}{\mathit{R}}
 
-\title{Improved swarm formation through relationship-based cooordination and gap reduction in self-healing swarms.}
+\title{Improved swarm formation through relationship-based coordination and gap reduction in self-healing swarms.}
 \author[1,*]{Neil Eliot}
 \author{David Kendall}
 \author{Michael Brockway}
@@ -111,7 +111,7 @@ n_r(b) = \{b' \in \mathcal{S} : b \neq b' \land \card{\vbb{b}{b'}} \leq \rb)\}
 The repulsion is then calculated as the average of all the vectors created by the agent ($b$) to the neighbours ($b'$) (Eg.~\ref{eq:repulsion2a}) and its proximity ($\magn{\vbb{b}{b'}} - \rb$). Where $\card{n_r(b)}$ denotes the cardinality of $n_r(b)$.
 
 \begin{equation}\label{eq:repulsion2a}
-v_r(b) = \frac{1}{\card{n_r(b)}}\sum_{b' \in n_r(b)} \left(\magn{\vbb{b}{b'}} - R \, \right)\widehat{\left(\vbb{b}{b'}\right)}
+v_r(b) = \frac{1}{\card{n_r(b)}}\sum_{b' \in n_r(b)} \left(\card{\vbb{b}{b'}} - R \, \right)\widehat{\left(\vbb{b}{b'}\right)}
 \end{equation}
 Here, $\widehat{\vbb{b}{b'}}$ denotes $\vbb{b}{b'}$ normalized to unit length.
 
@@ -185,7 +185,7 @@ one of the following conditions is satisfied:
 
 \subsection{$\rb$, $\kr$ and $\kc$}\label{sec:rbkrkc}
 
-In this section we will discuss the application of the new $\rb$, $\kr$ and $\kc$ matrices which are structured as shown in Equation~\ref{eq:matrices} which are indexed via a \texttt{true} (1) / \texttt{false} (0) reference.
+In this section we will discuss the application of the new $\rb$, $\kr$ and $\kc$ matrices which are structured as shown in Equation~\ref{eq:matrices} which are indexed via a \texttt{true} ($1$) / \texttt{false} ($0$) reference.
 
 \begin{equation}\label{eq:matrices}
 	\begin{pmatrix}
@@ -264,8 +264,7 @@ $\kg$ is a weighting for the gap-filling vector allowing the combination of it
 with the other motion vectors (cohesion, repulsion, ...) to be ``tuned''.
 
 A stricter alternative to this is to choose the first consecutive neighbour
-pair $b',b''$ that satisfy condition (1), ignoring condition (2).  Again,
-$v_g(b)$ is defined by eq (\ref{eq:gap1}) if such a pair exists, or 0 otherwise.
+pair $b',b''$ that satisfy condition (1), ignoring condition (2).  This would then exclude any reflex angles that create a `gap'.Again, $v_g(b)$ is defined by eq (\ref{eq:gap1}) if such a pair exists, or 0 otherwise.
 
 \subsection{Resultant vector}
 The resultant vector is simply the sum of the cohesion, repulsion and
