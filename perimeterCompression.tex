@@ -29,8 +29,16 @@
 \newcommand{\card}[1]{\vert{#1}\vert}
 %\newcommand{\vbb}[2]{\vec{#1#2}}
 \newcommand{\vbb}[2]{#2-#1}
+%\renewcommand{\vec}[1]{\overrightarrow{#1}}
+\newcommand{\pangle}{\mathit{\alpha}}
+\newcommand{\leqaz}[3]{#2 \leq_{\pangle_#1} #3}
+\newcommand{\angleordered}[2]{\langle #2 \rangle_{\leqaz{#1}{}{}}}
+\newcommand{\prm}{\mathsf{prm}}
+\newcommand{\kc}{\mathit{k_c}}
+\newcommand{\kr}{\mathit{k_r}}
+\newcommand{\rb}{\mathit{R}}
 
-\title{Improved swarm formation and perimeter compression in self-healing swarms.}
+\title{Improved swarm formation through relationship-based cooordination and gap reduction in self-healing swarms.}
 \author[1,*]{Neil Eliot}
 \author[2]{David Kendall}
 \author[2]{Michael Brockway}
@@ -50,16 +58,8 @@ Perimeter Compression is a technique where by a void reducing effect can be adde
 \section{Introduction}
 When cohesion and repulsion field effects (sometimes referred to as potential fields~\cite{BAF:06,eliot2018metric,VG:05,SW:03,Son2017,liang2019swarm}) are used to create a swarming effect, the stable structures that develop are limited to either straight edges or partial lattices \cite{eliot2017methods}. The maintenance of a well-structured swarm is crucial to effective deployment for applications such as reconnaissance or artificial pollination, where `blind spots' are best eliminated \cite{elamvazhuthi2015optimal}, and containment, where the swarm is used to surround an object or region \cite{cao2012distributed}. Over time swarms form regular shapes~\cite{RAZ:13} and perimeters form of partial lattices that may contain so-called \textit{anomalies}, such as concave `dents' or convex `peaks'~\cite{eliot2019void}. These anomalies contribute to the disruption of an otherwise well-structured swarm. The key, therefore, is to ensure that these \textit{anomalies} are dynamically removed from a swarm.\\
 Perimeter compression is a technique that creates a `pull' effect between perimeter agents. It is dependant upon perimeter agent identification as discussed by Eliot et. al. in \cite{eliot2017methods, eliot2018metric, eliot2019void} and discussed in Section~\ref{sec:perimeterDetection}.\\
-The aim of this new algorithm is to reduce the spacing between perimeter-based agents. Figure \ref{fig:stableswarm}) shows an agent and it fields. $S_b$ is the sensor field. $O_b$ is the obstacle field. $C_b$ is the cohesion field and $R_b$ is the repulsion field. The implementation involves introducing three controlling weights; $p_{kc}$ which can be used to increases the magnitude of the cohesion vector. $p_{kr}$ which can be used to modify the repulsion vector and $p_{c}$ which can be used to alter the repulsion filed of agents. When trying to effect a perimeter compression the following assumptions are required.\\
-\begin{assumption}
-	$p_c \leq 1$
-\end{assumption}
-\begin{assumption}
-	$p_{kr} \leq 1$
-\end{assumption}
-\begin{assumption}
-	$p_{kc} \geq 1$
-\end{assumption}
+The aim of this new algorithm is to reduce the spacing between perimeter-based agents. Figure \ref{fig:stableswarm}) shows an agent and it fields. $S_b$ is the sensor field. $O_b$ is the obstacle field. $C$ is the cohesion field and $R$ is the repulsion field. The implementation involves introducing three controlling matrices; $k_c$ which can be used to increases the magnitude of the cohesion vector. $k_r$ which can be used to modify the repulsion vector and $r_{b}$ which can be used to alter the repulsion fields of agents.\\
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\linewidth]{figures/stableswarm}
@@ -87,7 +87,7 @@ Equation~\ref{eq:resultantVector1a} shows the movement vector as a linear combin
 This paper does not consider goals or obstacles so we assume $k_d = k_o = 0$ and omit the third and fourth terms.
 
 \subsection{Cohesion}\label{cohesion}
-The cohesion component is calculated based on the proximity of neighbours. Where $n_c(b)$ is the set of neighbour agents for $b$ (Eq. \ref{eq:cohesion1}). The inclusion of an agent from a swarm ($S$) in by the agent's cohesion field ($C_b$).
+The cohesion component is calculated based on the proximity of neighbours. Where $n_c(b)$ is the set of neighbour agents for $b$ (Eq. \ref{eq:cohesion1}). The inclusion of an agent from a swarm ($S$) in by the agent's cohesion field ($C$).
 
 \begin{equation}\label{eq:cohesion1}
 n_c(b) = \{b' \in S~:~b' \neq b \land\magn{\vbb{b}{b'}} \leq C_b\}
@@ -106,15 +106,15 @@ The repulsion component of an agent's movement is calculated from interaction wi
 n_r(b) = \{b' \in \mathcal{S} : b \neq b' \land \card{\vbb{b}{b'}} \leq R_b)\}
 \end{equation}
 
-The repulsion is then calculated as the average of all the vectors created by the agent ($b$) to the neighbours ($b'$) (Eg.~\ref{eq:repulsion2a}) and its proximity ($\magn{\vbb{b}{b'}} - R_b$). Where $\card{n_r(b)}$ denotes the cardinality of $n_r(b)$.
+The repulsion is then calculated as the average of all the vectors created by the agent ($b$) to the neighbours ($b'$) (Eg.~\ref{eq:repulsion2a}) and its proximity ($\magn{\vbb{b}{b'}} - R$). Where $\card{n_r(b)}$ denotes the cardinality of $n_r(b)$.
 
 \begin{equation}\label{eq:repulsion2a}
-v_r(b) = \frac{1}{\card{n_r(b)}}\sum_{b' \in n_r(b)} \left(\magn{\vbb{b}{b'}} - R_b \, \right)\widehat{\left(\vbb{b}{b'}\right)}
+v_r(b) = \frac{1}{\card{n_r(b)}}\sum_{b' \in n_r(b)} \left(\magn{\vbb{b}{b'}} - R \, \right)\widehat{\left(\vbb{b}{b'}\right)}
 \end{equation}
 Here, $\widehat{\vbb{b}{b'}}$ denotes $\vbb{b}{b'}$ normalized to unit length.
 
-\section{Perimeter detection}\label{sec:perimeterDetection}
-For perimeter compression to be applied to a swarm the perimeter needs to be detected. A perimeter can be defined as a continuous `surface' of agents that are not enclosed by other agents. These  agents may form an outer ({\color{green}green}) or inner ({\color{red}red}) boundary ~(Fig.~\ref{fig:innerOuterPerimeters}).
+\section{New Inter-agent Model}
+In this paper, we propose that the behaviour of an agent should be modified depending on whether or not it is on a \emph{perimeter}. These perimeter-based agents may form part of an outer ({\color{green}green}) or inner ({\color{red}red}) boundary~(Fig.~\ref{fig:innerOuterPerimeters}). 
 
 \begin{figure}[H]
 	\begin{center}
@@ -123,7 +123,12 @@ For perimeter compression to be applied to a swarm the perimeter needs to be det
 	\caption{{\color{green}Outer} and {\color{red}inner} swarm perimeters. \label{fig:innerOuterPerimeters}}
 \end{figure}
 
+\subsection{Perimeter detection}\label{sec:perimeterDetection}
+
 The detection process is achieved using a cyclic analysis of the agents that surround an agent~(Fig.~\ref{fig:neighbours2}). Ghrist et al. discusses a similar technique using sweep angles~\cite{ghrist2008surrounding} as does McLurkin et al~\cite{mclurkin2009}. 
+
+When detecting a perimeter it is useful to define an ordering on an agent's cohesion neighbours. We choose to order the cohesion neighbours of an agent $b$ by their \emph{polar
+angle} with respect to $b$ (Fig.~\ref{fig:neighbours2}). 
 
 \begin{figure}[H]
 	\centering
@@ -132,18 +137,25 @@ The detection process is achieved using a cyclic analysis of the agents that sur
 	\label{fig:neighbours2}
 \end{figure}
 
-The initial detection of the agents is based on the distance that each agent in the swarm is away from the current agent as described in Section~\ref{cohesion} and shown in Equation~\ref{eq:cohesion1}. The perimeter detection set is based on the azimuth angle ($\beta$) of each neighbour agent as shown in~Fig.~\ref{fig:neighbours2}.
+The polar angle with respect to $b$ of $b'$,
+$\pangle(b, b')$, is the counterclockwise angle that vector $\vec{bb'} = b' -
+b$ makes with the positive $x$ axis as shown in Figure~\ref{fig:neighbours2} and described by Equation~\ref{eq:pangle}.
 
-Let $n_r(b) = \langle b_0, b_1, ... b_{n-1} \rangle$ be an enumeration of the neighbours of $b$ in order of increasing azimuth angle. The \emph{azimuth angle} with respect to $b$ of $b_i$ is the angle $\beta_i$ which vector $\vec{bb_i} = b_i - b$ makes with the positive x axis: $\beta_i = \text{atan2}((b_i - b)_y, (b_i - b)_x)$.
+\begin{equation}\label{eq:pangle}
+	\pangle(b, b') = \mathsf{atan2}((b'-b)_y, (b'-b)_x)
+\end{equation} 
 
-An agent is considered to be on the perimeter of the swarm if it is not enclosed by the polygon defined in the sorted set $n_c(b)$ if it has a `gap' as shown by agents $b_4$ and $b_0$ in Figure~\ref{fig:neighbours2} (assuming $\magn{\vbb{b_0}{b_4}} > C_b$). Also when the polygon defined by $n_c(b)$ is closed but two or more neighbour agents are compressed to the point that they are within range $C_b$ but are `behind' agent $b$. This condition can be detected based on any neighbour pair angle being greater than $\pi$ as shown in Figure~\ref{fig:neighbours3} with agent $b_0$ and $b_3$ assuming the neighbour agent pair are within range assuming $\magn{\vbb{b_0}{b_3}} <= C_b$. 
+A partial ordering of agents by polar angle with respect to a specific agent,
+$b$, is denoted $\leqaz{b}{}{}$, and is defined by: 
+\begin{equation}\label{angle_ordering}
+	\leqaz{b}{b'}{b''} \iff \pangle(b, b') \leq \pangle(b, b'')
+\end{equation}
 
-
-A gap can therefore be defined as any two consecutive neighbours $b' = b_i, b'' = b_{(i+1)\%n}$ [the \emph{next} neighbour in the azimuth-ordered \emph{circular list}] when \emph{either}
-\begin{itemize}
-	\item $b', b''$ are out of cohesion range (they are not neighbours of each other) \emph{or}
-	\item $b', b''$ subtend a reflex angle at $b$. That is, $\beta' - \beta$ (or $\beta' - \beta + 2\pi$ if the former is negative) is $> \ pi$.
-\end{itemize} 
+We denote by $\angleordered{b}{b_0, b_1, .., b_{n-1}}$ a bijection from $\{0,.., n-1\} \rightarrow n_c(b)$ that is ordered by polar angle as shown in Figure~\ref{fig:neighbours3} and more formally in Equation.~\ref{angle_polar}.
+\begin{equation}\label{angle_polar}
+	\forall i,
+j~:~0 \leq i, j, < n \cdot i \leq j \implies \leqaz{b}{b_i}{b_j}
+\end{equation}
 
 \begin{figure}[H]
 	\centering
@@ -152,55 +164,122 @@ A gap can therefore be defined as any two consecutive neighbours $b' = b_i, b'' 
 	\label{fig:neighbours3}
 \end{figure}
 
-\section{New Inter-agent Models}
-In this section we will discuss the application of the new $p_r$, $p_{kc}$ and $p_{kr}$ parameters and the application of the gap reduction which can be used to introduce a stabilising property to the swarm perimeter.\\
-The new model requires each agent to modify their inter-agent repulsion and cohesion vectors based upon their perimeter status and each neighbour's perimeter status. The basic perimeter control technique is shown in Equation~\ref{eq:newModel2}. The cohesion and repulsion weighting factors ($k_c$, $k_r$, $p_{kr}$, $p_{kc}$, $p_r$) are integrated into the equations and \ref{eq:repulsion1} and \ref{eq:cohesion3} so equation~\ref{eq:resultantVector1a} now reads, simply,
+An agent $b$ is on a perimeter if it satisfies any one of three conditions:
+\begin{enumerate}
+	\item consecutive neighbours are not within each other's cohesion field, or
+	\item consecutive neighbours subtend a reflex angle, or
+	\item the agent has too few neighbours.
+\end{enumerate}
+A function, $\prm(b)$, specifies these conditions formally. Let $b$ be the
+agent of interest and $b'$, $b''$ any pair of consecutive neighbours of $b$ in
+the angle-sorted list $\angleordered{b}{b_0, b_1, .., b_{n-1}}$, i.e. $b' =
+b_i, b'' = b_{(i+1)\%n}$ for some $i \in \{0,..,n-1\}$.  Then $\prm(b)$ iff any
+one of the following conditions is satisfied:
+\begin{enumerate}
+\item $b' \notin n_c(b'')$,
+\item $\delta > \pi$, where $\delta = \pangle(b, b'') - \pangle(b, b')$ (or $\delta = \pangle(b, b'') - \pangle(b, b') + 2\pi$ if the former is negative), or
+\item $\magn{n_c(b)} < 3$.
+\end{enumerate}
+
+\subsection{$r_{b}$, $k_{r}$ and $k_{c}$}\label{sec:rbkrkc}
+
+In this section we will discuss the application of the new $r_b$, $k_r$ and $k_c$ matrices which are structured as shown in Equation~\ref{eq:matrices} which are indexed via a \texttt{true} (1) / \texttt{false} (0) reference.
+
+\begin{equation}\label{eq:matrices}
+	\begin{pmatrix}
+	a & b\\
+	c & d
+	\end{pmatrix}
+\end{equation}
+
+The new model requires each agent to modify their inter-agent repulsion and cohesion vectors based upon their perimeter status and each neighbour's perimeter status. The basic perimeter control technique is shown in Equation~\ref{eq:newModel2} where the cohesion and repulsion matrices ($k_c$, $k_r$, $r_b$) are integrated into $v_c(b)$ and $v_r(b)$.
 
 \begin{equation}\label{eq:newModel2}
 v(b) = v_c(b) + v_r(b)
+\end{equation}\\
+
+\subsubsection{Cohesion vector}
+\begin{equation}\label{eq:coh2}
+	v_c(b) = \frac{1}{|n_c(b)|} \sum_{b' \in n_c(b)} \kc[p_b, p_{b'}] (b' - b)
+\end{equation}
+where $|n_c(b)|$ denotes the cardinality of $n_c(b)$, $p_b = \prm(b)$, $p_{b'} 
+= \prm(b')$, and 
+$\kc$ is a 2x2 boolean-indexed array of constants that determine the weight
+of a component of the cohesion vector according to
+whether the interaction between $b,b'$ is between non-perimeter agents,
+non-perimeter--perimeter, perimeter--non-perimeter, or perimeter--perimeter
+agents.\\
+
+\subsubsection{Repulsion vector}~\\
+~\\
+The set of repellers of $b$ are defined as Equation~\ref{eq:rep1}.
+\small
+\begin{equation}\label{eq:rep1}
+	n_r(b) = \{b' \in \mathcal{S} : b \neq b' \wedge \vbb{b}{b'} \leq \rb[p_b,p_{b'}]\}
+\end{equation}
+\normalsize
+where $p_b = \prm(b)$, $p_{b'} = \prm(b')$, and $\rb$ is a 2x2 boolean-indexed
+array of constants that determine the radius of the \emph{repulsion field} for
+agents in the swarm, according to whether the interaction between $b,b'$ is
+between non-perimeter agents, non-perimeter--perimeter,
+perimeter--non-perimeter, or perimeter--perimeter agents.
+
+Now $v_r(b)$ is defined by Equation~\ref{eq:rep2}
+\small
+\begin{equation}\label{eq:rep2}
+	v_r(b) = \frac{1}{\magn{n_r(b)}}\sum_{b' \in n_r(b)} \kr[p_b,p_{b'}] \left(1 - \frac{\rb[p_b,p_{b'}]}{\vbb{b}{b'}} \, \right) (\vbb{b}{b'})
+\end{equation}
+\normalsize
+where $p_b = \prm(b)$, $p_{b'} = \prm(b')$, and $\kr$ is a 2x2 boolean-indexed
+array of constants that determine the weight of a component of the repulsion
+vector according to whether the interaction between $b,b'$ is between
+non-perimeter agents, non-perimeter--perimeter, perimeter--non-perimeter, or
+perimeter--perimeter agents.
+
+\subsection{Gap-filling}
+
+In addition to cohesion and repulsion vectors, a \emph{gap-filling} vector can
+also be used to contribute to agent behaviour. Gap-filling vectors have proven
+useful in quickly reducing internal voids and in controlling the shape of the
+external perimeter.
+
+A gap-filling vector for $b$ contributes a motion of $b$ towards the midpoint
+of a gap identified in the perimeter test for $b$.
+
+Let $\angleordered{b}{b_0, b_1, .., b_{n-1}}$ be the cohesion neighbours of $b$
+in polar angle order, and let $b' = b_i$  and $b'' = b_{(i+1)\%n}$ be the first
+pair of consecutive neighbours that satisfy either condition (1) or condition
+(2) of the perimeter function $\prm()$, then the gap-filling vector, $v_g(b)$,
+for agent $b$ is defined in Equation~\ref{eq:gap1}.
+\small
+\begin{equation}\label{eq:gap1}
+v_g(b) = k_g \left (\frac{b' + b''}{2} - b \right) = k_g \frac{\vbb{b}{b'} + \vbb{b}{b''}}{2} 
+\end{equation}
+\normalsize
+If there is no such pair of consecutive neighbours then $v_g(b) = 0$.
+
+$k_g$ is a weighting for the gap-filling vector allowing the combination of it
+with the other motion vectors (cohesion, repulsion, ...) to be ``tuned''.
+
+A stricter alternative to this is to choose the first consecutive neighbour
+pair $b',b''$ that satisfy condition (1), ignoring condition (2).  Again,
+$v_g(b)$ is defined by eq (\ref{eq:gap1}) if such a pair exists, or 0 otherwise.
+
+\section{Resultant vector}
+The resultant vector is simply the sum of the cohesion, repulsion and
+gap-filling vectors:
+\begin{equation}\label{eq:res}
+	v(b) = v_c(b) + v_r(b) + v_g(b) 
 \end{equation}
 
-\subsection{$p_r$, $p_{kr}$ and $p_{kc}$}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=8cm]{figures/perimeterCompress}
+	\end{center}
+	\caption{Perimeter compression. \label{fig:perimeterCompression}}
+\end{figure}
 
-The basic method of controlling the inter-agent relationships is to scale the base cohesion and repulsion weightings. i.e. the matrices do not replace the $k_c$ or $k_r$. These scaling matrices can be used to implement many perimeter based effects including compression by reducing the repulsion field of a perimeter-perimeter agent relationship to allow agents to move more closely to each other before they are repelled. Likewise the cohesion can be manipulated to overcome some of the neighbouring inner-agent repulsion forces that may prevent the agents to move.
-
-$p_{kr}$~(Eq.~\ref{eq:pkr}), $p_{kc}$~(Eq.~\ref{eq:pkc}), and $p_r$~(Eq.~\ref{eq:pr}) are three, 2x2-arrays.
-
-\begin{equation}\label{eq:pkr}
-	p_{kr} = 
-	\begin{pmatrix}
-	a & b\\
-	c & d
-	\end{pmatrix}
-\end{equation}
-	
-\begin{equation}\label{eq:pkc}
-	p_{kc} = 
-	\begin{pmatrix}
-	a & b\\
-	c & d
-	\end{pmatrix}
-\end{equation}
-
-\begin{equation}\label{eq:pr}
-	p_{r} = 
-	\begin{pmatrix}
-	a & b\\
-	c & d
-	\end{pmatrix}
-\end{equation}
-
-These arrays (via the index) provide a scalar weighting to specific agents within the swarm based upon their perimeter status as shown is Equation~\ref{eq:scalarsFromMatrix} where $\mathsf{erf}(b, b')$ is the inter-perimeter-agent repulsion weighting for the repulsion radii, $\mathsf{ekc}(b, b')$ is the effective cohesion weighting, and $\mathsf{ekr}(b, b')$ is the effective repulsion weighting and where $\mathsf{prm}(b)$ returns the perimeter status of an agent which is then used as an index into the arrays: 1 or 0 according as $b$ is/is not on the perimeter.
-
-\begin{equation}\label{eq:scalarsFromMatrix}
-\begin{array}{rcl}
-\mathsf{erf}(b, b') &=&  p_r[\mathsf{prm}(b), \mathsf{prm}(b')] R_b\\
-\mathsf{ekc}(b, b') &=&  p_{kc}[\mathsf{prm}(b), \mathsf{prm}(b')] k_c(b) \\
-\mathsf{ekr}(b, b') &=&  p_{kr}[\mathsf{prm}(b), \mathsf{prm}(b')] k_r(b)
-\end{array}
-\end{equation}
-
-\subsection{Agent repulsion ($p_r$, $\mathsf{erf}(b,b')$, $\mathsf{ekr}(b,b')$)}
+==== STILL TO BE WORKED ON =====\\
 
 The repulsion component of the swarm model is now applied as shown in Equations~\ref{eq:scalarsFromMatrix},~\ref{eq:rep7} and \ref{eq:repulsion1}.
 \small
@@ -222,13 +301,6 @@ The introduction of the matrices allows for specific relationships to effect the
 	\end{pmatrix}
 \end{equation}
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=8cm]{figures/perimeterCompress}
-	\end{center}
-	\caption{Perimeter compression. \label{fig:perimeterCompression}}
-\end{figure}
-
 % \begin{equation}\label{eq:repulsion1-1}
 % 	n_r(b) = \{b' \in n_c(b)~:~\magn{\vbb{b}{b'}} \leq \mathsf{erf}(b,b')\}
 % \end{equation}\normalsize
@@ -249,26 +321,6 @@ v_c(b) = \frac{1}{\lvert n_c(b)\rvert} \sum_{b' \in n_c(b)}\mathsf{ekc}(b, b')\,
 	1 & 500.0
 	\end{pmatrix}
 \end{equation}
-
-\section{Gap reduction model}
-
-An enhancement to the basic model that has proven useful in combination with the enhancements detailed, especially in reducing internal voids in the swarm, is to introduce another term on the right of Equation~\ref{eq:newModel2}. This gap reducing model is based upon the model described by Eliot et al. in~\cite{eliot2019void}.
-
-For instance (omitting obstacles, destinations for now),
-\begin{equation}\label{eq:newModel3}
-v(b) = v_c(b) + v_r(b) + v_g(b)
-\end{equation}
-
-where $v_g(b)$ is a vector which will, in the case that a gap has been identified in the perimeter test for $b$, will contribute a motion of $b$ toward the midpoint of the gap.
-
-Suppose that $n_r(b) = \langle b_0, b_1, ... b_{n-1}\rangle$ are the neighbours of $b$ in azimuth angle order, and let the \emph{first} gap found in the perimeter test be $b' = b_i$ to $b'' = b_{(i+1)\%n}$. Then $k_g$ can be defines as Equation~\ref{eq:gap}. 
-
-\small\begin{equation}\label{eq:gap}
-v_g(b) = k_g \left(\frac{b' + b''}{2} - b \right) = k_g \frac{\left(\left(\vbb{b}{b'}\right) + \left(\vbb{b}{b''}\right)\right)}{2} 
-\end{equation}
-\normalsize
-
-$k_g$ is a weighting for the gap-filling vector allowing the combination of it with the other motion vectors (cohesion, repulsion, ...) to be ``tuned''.\\
 
 \section{Experimental results\label{sec:ExperimentalResults}}
 \subsection{Baseline}
@@ -306,7 +358,7 @@ When the simulation is ran with no compression the changes are identified using 
 	\caption{Baseline swarm in stabilised configuration. \label{fig:baselineSwarmMagnitude}}
 \end{figure}
 
-==== STILL TO BE WORKED ON =====\\
+
 
 Figure~\ref{fig:voidRemoval} shows how the compression effect can remove a void from a swarm by surround an obstacle in a similar manner to the method described in~\cite{eliot2019void}.
 
