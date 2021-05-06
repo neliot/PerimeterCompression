@@ -9,18 +9,20 @@
 \BOOKMARK [3][-]{equation.4.11}{Cohesion vector}{subsection.4.2}% 9
 \BOOKMARK [3][-]{subsubsection.4.2.2}{Repulsion vector}{subsection.4.2}% 10
 \BOOKMARK [2][-]{subsection.4.3}{Gap-filling}{section.4}% 11
-\BOOKMARK [1][-]{section.5}{Resultant vector}{}% 12
-\BOOKMARK [2][-]{subsection.5.1}{Inter-agent cohesion \(pkc, ekc\(b,b'\)\)}{section.5}% 13
-\BOOKMARK [1][-]{section.6}{Experimental results}{}% 14
-\BOOKMARK [2][-]{subsection.6.1}{Baseline}{section.6}% 15
-\BOOKMARK [2][-]{subsection.6.2}{Inner compression model}{section.6}% 16
-\BOOKMARK [3][-]{subsubsection.6.2.1}{Inner + Gap compression model}{subsection.6.2}% 17
-\BOOKMARK [2][-]{subsection.6.3}{Outer compression model}{section.6}% 18
-\BOOKMARK [3][-]{subsubsection.6.3.1}{Outer + Gap compression model}{subsection.6.3}% 19
-\BOOKMARK [2][-]{subsection.6.4}{Compression Effects}{section.6}% 20
-\BOOKMARK [2][-]{subsection.6.5}{Gap compression}{section.6}% 21
-\BOOKMARK [2][-]{subsection.6.6}{Perimeter compression}{section.6}% 22
-\BOOKMARK [2][-]{subsection.6.7}{Comparison}{section.6}% 23
-\BOOKMARK [1][-]{section.7}{Conclusions}{}% 24
-\BOOKMARK [1][-]{section.8}{Future Work}{}% 25
-\BOOKMARK [1][-]{section*.43}{References}{}% 26
+\BOOKMARK [2][-]{subsection.4.4}{Resultant vector}{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.5}{Relationship-based swarm effects}{section.4}% 13
+\BOOKMARK [3][-]{subsubsection.4.5.1}{Cohesion model}{subsection.4.5}% 14
+\BOOKMARK [3][-]{subsubsection.4.5.2}{Repulsion model}{subsection.4.5}% 15
+\BOOKMARK [1][-]{section.5}{Experimental results}{}% 16
+\BOOKMARK [2][-]{subsection.5.1}{Baseline}{section.5}% 17
+\BOOKMARK [2][-]{subsection.5.2}{Inner compression model}{section.5}% 18
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Inner + Gap compression model}{subsection.5.2}% 19
+\BOOKMARK [2][-]{subsection.5.3}{Outer compression model}{section.5}% 20
+\BOOKMARK [3][-]{subsubsection.5.3.1}{Outer + Gap compression model}{subsection.5.3}% 21
+\BOOKMARK [2][-]{subsection.5.4}{Compression Effects}{section.5}% 22
+\BOOKMARK [2][-]{subsection.5.5}{Gap compression}{section.5}% 23
+\BOOKMARK [2][-]{subsection.5.6}{Perimeter compression}{section.5}% 24
+\BOOKMARK [2][-]{subsection.5.7}{Comparison}{section.5}% 25
+\BOOKMARK [1][-]{section.6}{Conclusions}{}% 26
+\BOOKMARK [1][-]{section.7}{Future Work}{}% 27
+\BOOKMARK [1][-]{section*.43}{References}{}% 28
