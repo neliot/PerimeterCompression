@@ -6,7 +6,7 @@
 \BOOKMARK [1][-]{section.4}{New Inter-agent Model}{}% 6
 \BOOKMARK [2][-]{subsection.4.1}{Perimeter detection}{section.4}% 7
 \BOOKMARK [2][-]{subsection.4.2}{R, kr and kc}{section.4}% 8
-\BOOKMARK [3][-]{equation.4.11}{Cohesion vector}{subsection.4.2}% 9
+\BOOKMARK [3][-]{equation.4.10}{Cohesion vector}{subsection.4.2}% 9
 \BOOKMARK [3][-]{subsubsection.4.2.2}{Repulsion vector}{subsection.4.2}% 10
 \BOOKMARK [2][-]{subsection.4.3}{Gap-filling}{section.4}% 11
 \BOOKMARK [2][-]{subsection.4.4}{Resultant vector}{section.4}% 12
