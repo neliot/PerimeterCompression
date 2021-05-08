@@ -41,7 +41,7 @@
 \newcommand{\ko}{\mathit{k_o}}
 \newcommand{\rb}{\mathit{R}}
 
-\title{A novel approach to flexible swarm structure control.}
+\title{A Novel Approach to Swarm Control.}
 \author[1,*]{Neil Eliot}
 \author[ ]{David Kendall}
 \author[ ]{Michael Brockway}
@@ -116,7 +116,7 @@ v_r(b) = \frac{1}{\card{n_r(b)}}\sum_{b' \in n_r(b)} \left(\card{\vbb{b}{b'}} - 
 Here, $\widehat{\vbb{b}{b'}}$ denotes $\vbb{b}{b'}$ normalized to unit length.
 
 \section{New Inter-agent Model}
-In this paper, we propose that the behaviour of an agent should be modified depending on whether or not it is on a \emph{perimeter}. Figure~\ref{fig:simplePerim2} shows a simple swarm with perimeters formed by agents in \textcolor{red}{red}. Perimeter-based agents can form part of an inner boundary or an outer boundary. The swarm can also contain non-perimeter agents which are shown in black.
+In this paper, we propose that the behaviour of an agent should be modified depending on whether or not it is on a \emph{perimeter}. Figure~\ref{fig:simplePerim2} shows a simple swarm. Perimeter agents are highlighted in \textcolor{red}{red}. Perimeter-based agents can form part of an inner boundary or an outer boundary. The swarm can also contain non-perimeter agents which are shown in black.
 
 \begin{figure}[H]
 	\begin{center}
@@ -125,8 +125,7 @@ In this paper, we propose that the behaviour of an agent should be modified depe
 	\caption{Outer and inner swarm perimeters. \label{fig:simplePerim2}}
 \end{figure}
 
-\subsection{Perimeter detection}\label{sec:perimeterDetection}
-The detection process is achieved using a cyclic analysis of the agents that surround an agent~(Fig.~\ref{fig:neighbours2}). Ghrist et al. discusses a similar technique using sweep angles~\cite{ghrist2008surrounding} as does McLurkin et al~\cite{mclurkin2009}. 
+\subsection{Perimeter detection}\label{sec:perimeterDetection} is achieved using a cyclic analysis of the agents that surround an agent~(Fig.~\ref{fig:neighbours2}). Ghrist et al. discusses a similar technique using sweep angles~\cite{ghrist2008surrounding} as does McLurkin et al~\cite{mclurkin2009}. 
 
 When detecting a perimeter it is useful to define an ordering on an agent's cohesion neighbours. We choose to order the cohesion neighbours of an agent $b$ by their \emph{polar
 angle} with respect to $b$ (Fig.~\ref{fig:neighbours2}). 
@@ -182,8 +181,7 @@ one of the following conditions is satisfied:
 \item $\card{n_c(b)} < 3$.
 \end{enumerate}
 
-\subsection{$\rb$, $\kr$ and $\kc$}\label{sec:rbkrkc}
-
+\subsection{$\rb$, $\kr$ and $\kc$}\label{sec:rbkrkc} 
 In this section we will discuss the application of the new $\rb$, $\kr$ and $\kc$ arrays which are structured as shown below:
 
 \[
@@ -194,7 +192,7 @@ In this section we will discuss the application of the new $\rb$, $\kr$ and $\kc
   }
 \]
 
-Where \emph{i} represents an internal agent and \emph{p} is a perimeter agent. These are reflected in Figure~\ref{fig:simplePerim2} as:
+Where \emph{i} represents an internal agent and \emph{p} is a perimeter agent. These are reflected in the table below with respect to Figure~\ref{fig:simplePerim2}:
 
 \[
   \kbordermatrix{
@@ -210,7 +208,8 @@ The new model requires each agent to modify their inter-agent repulsion and cohe
 v(b) = v_c(b) + v_r(b)
 \end{equation}\\
 
-\subsubsection{Cohesion vector}
+\subsubsection{Cohesion vector}~\\
+Cohesion neighbours are identified as described in Equation~\ref{eq:cohesion1}. The cohesion influence is then calculated as shown in Equation~\ref{eq:coh2}.
 \begin{equation}\label{eq:coh2}
 	v_c(b) = \frac{1}{|n_c(b)|} \sum_{b' \in n_c(b)} \kc[p_b, p_{b'}] (b' - b)
 \end{equation}
@@ -295,14 +294,14 @@ gap-filling vectors as shown in Equation~\ref{eq:res} and a resulant swarm segme
 The introduction of the arrays allows for specific relationships to effect the movement of agents. Using uniform arrays results a simple cohesion/repulsion based swarm with all agents exhibiting the same properties similar to the original model discussed in \S~\ref{sec:basicModel}. However, modifying the arrays for specific relationships can induce varying effects.
 
 \subsubsection{Cohesion model}~\\
-When using Equation~\ref{eq:coh2} one arrayis used, $k_c$. This arrayis used to scale the cohesion vector generated between an agent pair which is proportional to their distance apart, which will be within $C$ as shown in Equation~\ref{eq:repulsion1a}. Consider the arrayshown in Equation~\ref{eq:kcexample1}.
+When using Equation~\ref{eq:coh2} one arrayis used, $k_c$. This arrayis used to scale the cohesion vector generated between an agent pair which is proportional to their distance apart, which will be within $C$ as shown in Equation~\ref{eq:repulsion1a}. Consider the array shown in Equation~\ref{eq:kcexample1}.
 
 \begin{equation}\label{eq:kcexample1}
 	\kc = 
-	\begin{pmatrix}
+	\begin{bmatrix}
 	1 & 1\\
 	1 & 500
-	\end{pmatrix}
+	\end{bmatrix}
 \end{equation}
 
 For a given agent pair their perimeter status will be calculated and applied to the arrays. If both agents are perimeter based then the value selected would be $k_c[P_b,P_{b'}]\Rightarrow 500$. If the agent pair were perimeter $\rightarrow$ non-perimeter then the value selected would be $k_c[P_b,P_{b'}]\Rightarrow 1$. This configuration would cause inter-perimeter agents to tend to move towards each other more strongly than any other relationship.
@@ -312,27 +311,25 @@ When using Equation~\ref{eq:rep2} two arrays are used $\kr$ and $\rb$. $\kr$ is 
 
 \begin{equation}\label{eq:rexample1}
 	\rb = 
-	\begin{pmatrix}
+	\begin{bmatrix}
 	2 & 2\\
 	2 & 0.8
-	\end{pmatrix}
+	\end{bmatrix}
 \end{equation}
 
 \begin{equation}\label{eq:krexample1}
 	\kr = 
-	\begin{pmatrix}
+	\begin{bmatrix}
 	335 & 335\\
 	67 & 335
-	\end{pmatrix}
+	\end{bmatrix}
 \end{equation}
 
 For a given agent pair their perimeter status will be calculated and applied to the arrays. If both agents are perimeter based then the values selected would be $\rb[P_b,P_{b'}]\Rightarrow 0.8$ and $\kr[P_b,P_{b'}]\Rightarrow 335$. If the agent pair were perimeter $\rightarrow$ non-perimeter then the values selected would be $\rb[P_b,P_{b'}]\Rightarrow 2$ and $\kr[P_b,P_{b'}]\Rightarrow 67$.\\
 
-
-==== STILL TO BE WORKED ON =====\\
 \section{Experimental results\label{sec:ExperimentalResults}}
 \subsection{Baseline}
-For all the experiments the parameters used to create the basic swarming effect are shown in Table~\ref{tab:swarmingEffect}. Where $C$ is the cohesion field, $k_c$ is the cohesion weighting, $R_b$ is the repulsion field, $k_r$ is the repulsion weighting and $k_g$ is the weighting factor applied in the comparison of the gap reduction algorithm discussed in~\cite{eliot2019void}. The swarm consists of 200 agents which are distributed with a void at the centre. These initial parameters create a hexagonal-based distribution of agents that stabilise as shown in Figure~\ref{fig:baselineSwarm}. This basic swarm is used as the initial state for all the experiments. 
+For all the experiments the parameters used to create the basic swarming effect are shown in Table~\ref{tab:swarmingEffect}. Where $C$ is the cohesion field, $\kc$ is the cohesion weighting, $\rb$ is the repulsion field, $\kr$ is the repulsion weighting and $\kg$ is the weighting applied in the gap reduction algorithm discussed in~\cite{eliot2019void}. The swarm consists of 500 agents which are distributed with a void at the centre. These initial parameters create a hexagonal-based distribution of agents that stabilise as shown in Figure~\ref{fig:baselineSwarm}. This basic swarm is used as the initial state for all the experiments. 
  \begin{table}[ht]
 	\centering
 	\tiny
@@ -340,11 +337,11 @@ For all the experiments the parameters used to create the basic swarming effect 
 		\hline
 		\rowcolor[HTML]{000000} 
 		{\color[HTML]{FFFFFF} Swarming Variable} & {\color[HTML]{FFFFFF} Value} \\ \hline
-		$C_b$ & \texttt{3.00} \\ \hline
-		$k_c$ & \texttt{0.15}  \\ \hline
-		$R_b$ & \texttt{2.00} \\ \hline
-		$k_r$ & \texttt{50.00} \\ \hline
-		$k_g$ & \texttt{25.00} \\ \hline
+		$C$ & \texttt{3.0} \\ \hline
+		$k_c$ & \texttt{[[1.0,1.0][1.0,1.0]]}  \\ \hline
+		$R$ & \texttt{[[2.0,2.0][2.0,2.0]]} \\ \hline
+		$k_r$ & \texttt{[[335,335][335,335]]} \\ \hline
+		$k_g$ & \texttt{0.0} \\ \hline
 	\end{tabular}
   	\caption{Swarming effect parameters}
   	\label{tab:swarmingEffect}
@@ -352,22 +349,21 @@ For all the experiments the parameters used to create the basic swarming effect 
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=5cm]{figures/exp1Start}
+		\includegraphics[width=1.0\linewidth]{figures/baseline}
 	\end{center}
-	\caption{Baseline swarm in stabilised configuration. \label{fig:baselineSwarm}}
+	\caption{Baseline swarm magnitude analysis. \label{fig:baselineSwarm}}
 \end{figure}
 
-When the simulation is ran with no compression the changes are identified using a magnitude-based metric~\cite{eliot2018metric}. The resultant magnitudes generated are shown in figure~\ref{fig:baselineSwarmMagnitude}. These states are used as the baseline for the experiments to measure the effects of the compression algorithm and compare the new algorithm to the existing void reduction algorithm.
+When the simulation is ran with no compression the changes are identified using a magnitude-based metric~\cite{eliot2018metric}. The resultant magnitudes generated are shown in figure~\ref{fig:baselineMagnitude}. These states are used as the baseline for the experiments to measure the effects of changing the arrays.
 
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[width=8cm]{figures/interagentMagnitudeBaseline}
+		\includegraphics[width=1.0\linewidth]{figures/baselineMagnitude}
 	\end{center}
-	\caption{Baseline swarm in stabilised configuration. \label{fig:baselineSwarmMagnitude}}
+	\caption{Baseline swarm in stabilised configuration. \label{fig:baselineMagnitude}}
 \end{figure}
 
-
-
+==== STILL TO BE WORKED ON =====\\
 Figure~\ref{fig:voidRemoval} shows how the compression effect can remove a void from a swarm by surround an obstacle in a similar manner to the method described in~\cite{eliot2019void}.
 
 \begin{figure}[ht]
