@@ -330,7 +330,7 @@ For a given agent pair their perimeter status will be calculated and applied to 
 \section{Experimental results\label{sec:ExperimentalResults}}
 \subsection{Baseline}
 For all the experiments the parameters used to create the basic swarming effect are shown in Table~\ref{tab:swarmingEffect}. Where $C$ is the cohesion field, $\kc$ is the cohesion weighting, $\rb$ is the repulsion field, $\kr$ is the repulsion weighting and $\kg$ is the weighting applied in the gap reduction algorithm discussed in~\cite{eliot2019void}. The swarm consists of 500 agents which are distributed with a void at the centre. These initial parameters create a hexagonal-based distribution of agents that stabilise as shown in Figure~\ref{fig:baselineSwarm}. This basic swarm is used as the initial state for all the experiments. 
- \begin{table}[ht]
+ \begin{table}[H]
 	\centering
 	\tiny
 	\begin{tabular}{|c|r|}
@@ -356,33 +356,96 @@ For all the experiments the parameters used to create the basic swarming effect 
 
 When the simulation is ran with no compression the changes are identified using a magnitude-based metric~\cite{eliot2018metric}. The resultant magnitudes generated are shown in figure~\ref{fig:baselineMagnitude}. These states are used as the baseline for the experiments to measure the effects of changing the arrays.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=1.0\linewidth]{figures/baselineMagnitude}
 	\end{center}
 	\caption{Baseline swarm in stabilised configuration. \label{fig:baselineMagnitude}}
 \end{figure}
 
-==== STILL TO BE WORKED ON =====\\
-Figure~\ref{fig:voidRemoval} shows how the compression effect can remove a void from a swarm by surround an obstacle in a similar manner to the method described in~\cite{eliot2019void}.
+\subsection{Perimeter Compression}
 
 \begin{figure}[ht]
-	\centering
-	\begin{subfigure}{0.4\textwidth}
-		\centering	
-		\includegraphics[width=1.0\linewidth]{figures/voidRemoval1}
-		\caption[Void removal start]{Void removal start}
-		\label{fig:voidRemovalStart}
-	\end{subfigure}
-	\begin{subfigure}{0.4\textwidth}
-		\centering
-		\includegraphics[width=1.0\linewidth]{figures/voidRemoval2}
-		\caption[Void removal finish]{Void removal finish}
-		\label{fig:voidRemovalFinish}
-	\end{subfigure}
-	\caption{Void removal through perimeter compression}
-	\label{fig:voidRemoval}
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/tightPerim}
+	\end{center}
+	\caption{Tight Perimeter. \label{fig:tightPerim}}
 \end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/tightPerimMagnitude}
+	\end{center}
+	\caption{Tight Perimeter stabilised configuration. \label{fig:tightPerimMagnitude}}
+\end{figure}
+
+\subsection{Baseline 2}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/baseline2-1}
+	\end{center}
+	\caption{Baseline 2 start. \label{fig:baseline2}}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/baseline2-2}
+	\end{center}
+	\caption{Baseline 2 end configuration. \label{fig:baseline2-2}}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/baseline2Magnitude}
+	\end{center}
+	\caption{Baseline 2 stabilised configuration. \label{fig:baseline2Magnitude}}
+\end{figure}
+
+\subsection{Perimeter Expansion}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/perimExpand1}
+	\end{center}
+	\caption{Perimeter Expanded 1. \label{fig:perimExpand1}}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/perimExpand2}
+	\end{center}
+	\caption{Perimeter Expanded 2. \label{fig:perimExpand2}}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/perimExpandMagnitude}
+	\end{center}
+	\caption{Baseline 2 stabilised configuration. \label{fig:perimExpandMagnitude}}
+\end{figure}
+
+
+==== STILL TO BE WORKED ON FROM HERE =====\\
+Figure~\ref{fig:voidRemoval} shows how the compression effect can remove a void from a swarm by surround an obstacle in a similar manner to the method described in~\cite{eliot2019void}.
+
+% \begin{figure}[ht]
+% 	\centering
+% 	\begin{subfigure}{0.4\textwidth}
+% 		\centering	
+% 		\includegraphics[width=1.0\linewidth]{figures/voidRemoval1}
+% 		\caption[Void removal start]{Void removal start}
+% 		\label{fig:voidRemovalStart}
+% 	\end{subfigure}
+% 	\begin{subfigure}{0.4\textwidth}
+% 		\centering
+% 		\includegraphics[width=1.0\linewidth]{figures/voidRemoval2}
+% 		\caption[Void removal finish]{Void removal finish}
+% 		\label{fig:voidRemovalFinish}
+% 	\end{subfigure}
+% 	\caption{Void removal through perimeter compression}
+% 	\label{fig:voidRemoval}
+% \end{figure}
 
 \subsection{Inner compression model}
 
@@ -517,184 +580,184 @@ The first area of comparison is the effect of the algorithms on the number of pe
 	\label{tab:perimeterLimits}
 \end{table}
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=8cm]{figures/PerimeterCount2}
-	\end{center}
-	\caption{Perimeter Count of baseline, gap reduction and Experiment 6. \label{fig:perimeterCount2}}
-\end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=8cm]{figures/PerimeterCount2}
+% 	\end{center}
+% 	\caption{Perimeter Count of baseline, gap reduction and Experiment 6. \label{fig:perimeterCount2}}
+% \end{figure}
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=8cm]{figures/DistanceMetric1}
-	\end{center}
-	\caption{Distance metric of baseline, gap reduction and perimeter compression. \label{fig:distanceMetric}}
-\end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=8cm]{figures/DistanceMetric1}
+% 	\end{center}
+% 	\caption{Distance metric of baseline, gap reduction and perimeter compression. \label{fig:distanceMetric}}
+% \end{figure}
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=8cm]{figures/InteragentCohesionMean}
-	\end{center}
-	\caption{Inter-agent Cohesion Mean. \label{fig:interagentCohesionMean}}
-\end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=8cm]{figures/InteragentCohesionMean}
+% 	\end{center}
+% 	\caption{Inter-agent Cohesion Mean. \label{fig:interagentCohesionMean}}
+% \end{figure}
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=8cm]{figures/InteragentCohesionStd}
-	\end{center}
-	\caption{Inter-agent Cohesion Std. \label{fig:interagentCohesionStd}}
-\end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=8cm]{figures/InteragentCohesionStd}
+% 	\end{center}
+% 	\caption{Inter-agent Cohesion Std. \label{fig:interagentCohesionStd}}
+% \end{figure}
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=8cm]{figures/InteragentRepulsionMean}
-	\end{center}
-	\caption{Inter-agent Repulsion Mean. \label{fig:interagentRepulsionMean}}
-\end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=8cm]{figures/InteragentRepulsionMean}
+% 	\end{center}
+% 	\caption{Inter-agent Repulsion Mean. \label{fig:interagentRepulsionMean}}
+% \end{figure}
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=8cm]{figures/InteragentRepulsionStd}
-	\end{center}
-	\caption{Inter-agent Repulsion Std. \label{fig:interagentRepulsionStd}}
-\end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=8cm]{figures/InteragentRepulsionStd}
+% 	\end{center}
+% 	\caption{Inter-agent Repulsion Std. \label{fig:interagentRepulsionStd}}
+% \end{figure}
 
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=8cm]{figures/baselineSwarmPerimeter}
-	\end{center}
-	\caption{Baseline swarm in stabilised configuration. \label{fig:baselineSwarmPerimeter}}
-\end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=8cm]{figures/baselineSwarmPerimeter}
+% 	\end{center}
+% 	\caption{Baseline swarm in stabilised configuration. \label{fig:baselineSwarmPerimeter}}
+% \end{figure}
 
-\subsection{Gap compression}
-\subsection{Perimeter compression}
+% \subsection{Gap compression}
+% \subsection{Perimeter compression}
 
-Compression 1
+% Compression 1
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=5cm]{figures/baselineSwarm1}
-	\end{center}
-	\caption{Baseline swarm in with compression set 1 resultant configuration. \label{fig:baselineSwarm1}}
-\end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=5cm]{figures/baselineSwarm1}
+% 	\end{center}
+% 	\caption{Baseline swarm in with compression set 1 resultant configuration. \label{fig:baselineSwarm1}}
+% \end{figure}
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=8cm]{figures/baselineSwarmMagnitude1}
-	\end{center}
-	\caption{Baseline swarm in with compression set 1. \label{fig:baselineSwarmMagnitude1}}
-\end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=8cm]{figures/baselineSwarmMagnitude1}
+% 	\end{center}
+% 	\caption{Baseline swarm in with compression set 1. \label{fig:baselineSwarmMagnitude1}}
+% \end{figure}
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=8cm]{figures/baselineSwarmPerimeter1}
-	\end{center}
-	\caption{Baseline swarm in with compression set 1. \label{fig:baselineSwarmPerimeter1}}
-\end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=8cm]{figures/baselineSwarmPerimeter1}
+% 	\end{center}
+% 	\caption{Baseline swarm in with compression set 1. \label{fig:baselineSwarmPerimeter1}}
+% \end{figure}
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=9cm]{figures/Figure_1}
-	\end{center}
-	\caption{Sample}
-\end{figure}
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=9cm]{figures/Figure_2}
-	\end{center}
-	\caption{Sample}
-\end{figure}
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=9cm]{figures/Figure_3}
-	\end{center}
-	\caption{Sample}
-\end{figure}
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=9cm]{figures/Figure_4}
-	\end{center}
-	\caption{Sample}
-\end{figure}
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=9cm]{figures/Figure_5}
-	\end{center}
-	\caption{Sample}
-\end{figure}
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=9cm]{figures/Figure_6}
-	\end{center}
-	\caption{Sample}
-\end{figure}
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=9cm]{figures/Figure_7}
-	\end{center}
-	\caption{Sample}
-\end{figure}
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=9cm]{figures/Figure_8}
-	\end{center}
-	\caption{Sample}
-\end{figure}
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=9cm]{figures/Figure_9}
-	\end{center}
-	\caption{Sample}
-\end{figure}
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=9cm]{figures/Figure_10}
-	\end{center}
-	\caption{Sample}
-\end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=9cm]{figures/Figure_1}
+% 	\end{center}
+% 	\caption{Sample}
+% \end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=9cm]{figures/Figure_2}
+% 	\end{center}
+% 	\caption{Sample}
+% \end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=9cm]{figures/Figure_3}
+% 	\end{center}
+% 	\caption{Sample}
+% \end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=9cm]{figures/Figure_4}
+% 	\end{center}
+% 	\caption{Sample}
+% \end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=9cm]{figures/Figure_5}
+% 	\end{center}
+% 	\caption{Sample}
+% \end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=9cm]{figures/Figure_6}
+% 	\end{center}
+% 	\caption{Sample}
+% \end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=9cm]{figures/Figure_7}
+% 	\end{center}
+% 	\caption{Sample}
+% \end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=9cm]{figures/Figure_8}
+% 	\end{center}
+% 	\caption{Sample}
+% \end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=9cm]{figures/Figure_9}
+% 	\end{center}
+% 	\caption{Sample}
+% \end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=9cm]{figures/Figure_10}
+% 	\end{center}
+% 	\caption{Sample}
+% \end{figure}
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=9cm]{figures/mag-pr-0.9-mean}
-	\end{center}
-	\caption{MAG pr=0.9 mean}
-\end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=9cm]{figures/mag-pr-0.9-mean}
+% 	\end{center}
+% 	\caption{MAG pr=0.9 mean}
+% \end{figure}
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=9cm]{figures/mag-pr-0.9-std}
-	\end{center}
-	\caption{MAG pr=0.9 std}
-\end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=9cm]{figures/mag-pr-0.9-std}
+% 	\end{center}
+% 	\caption{MAG pr=0.9 std}
+% \end{figure}
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=9cm]{figures/mag-pr-0.9-pc-100-error}
-	\end{center}
-	\caption{MAG pr=0.9 pc=100 error}
-\end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=9cm]{figures/mag-pr-0.9-pc-100-error}
+% 	\end{center}
+% 	\caption{MAG pr=0.9 pc=100 error}
+% \end{figure}
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=9cm]{figures/dist-pr-0.9-mean}
-	\end{center}
-	\caption{DIST pr=0.9 mean}
-\end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=9cm]{figures/dist-pr-0.9-mean}
+% 	\end{center}
+% 	\caption{DIST pr=0.9 mean}
+% \end{figure}
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=9cm]{figures/dist-pr-0.9-std}
-	\end{center}
-	\caption{DIST pr=0.9 std}
-\end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=9cm]{figures/dist-pr-0.9-std}
+% 	\end{center}
+% 	\caption{DIST pr=0.9 std}
+% \end{figure}
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=9cm]{figures/dist-pr-0.9-pc-100-error}
-	\end{center}
-	\caption{DIST pr=0.9 pc=100 error }
-\end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=9cm]{figures/dist-pr-0.9-pc-100-error}
+% 	\end{center}
+% 	\caption{DIST pr=0.9 pc=100 error }
+% \end{figure}
 
 
 \subsection{Comparison}
