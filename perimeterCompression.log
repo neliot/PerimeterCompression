@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  13 MAY 2021 10:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  13 MAY 2021 10:56
 entering extended mode
 **"c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.tex"
 ("c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.tex"
@@ -951,26 +951,27 @@ File: figures/perimExpandMagnitude.png Graphic file (type png)
 Package pdftex.def Info: figures/perimExpandMagnitude.png  used on input line 423.
 (pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 429--431
 
-LaTeX Warning: Reference `fig:voidRemoval' on page 7 undefined on input line 430.
+ []
 
-<figures/Experiment1.png, id=416, 1927.2pt x 986.68625pt>
+<figures/Experiment1.png, id=415, 1927.2pt x 986.68625pt>
 File: figures/Experiment1.png Graphic file (type png)
 <use figures/Experiment1.png>
 Package pdftex.def Info: figures/Experiment1.png  used on input line 539.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
-<figures/Experiment2.png, id=417, 1927.2pt x 986.68625pt>
+<figures/Experiment2.png, id=416, 1927.2pt x 986.68625pt>
 File: figures/Experiment2.png Graphic file (type png)
 <use figures/Experiment2.png>
 Package pdftex.def Info: figures/Experiment2.png  used on input line 546.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
 [7 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/perimExpand1.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/perimExpand2.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/perimExpandMagnitude.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/Experiment1.png>]
-<figures/Experiment3.png, id=437, 1927.2pt x 986.68625pt>
+<figures/Experiment3.png, id=436, 1927.2pt x 986.68625pt>
 File: figures/Experiment3.png Graphic file (type png)
 <use figures/Experiment3.png>
 Package pdftex.def Info: figures/Experiment3.png  used on input line 553.
 (pdftex.def)             Requested size: 227.62204pt x 116.53033pt.
-<figures/PerimeterCount.pdf, id=440, 1927.2pt x 986.68625pt>
+<figures/PerimeterCount.pdf, id=439, 1927.2pt x 986.68625pt>
 File: figures/PerimeterCount.pdf Graphic file (type pdf)
 <use figures/PerimeterCount.pdf>
 Package pdftex.def Info: figures/PerimeterCount.pdf  used on input line 562.
@@ -986,24 +987,21 @@ Underfull \hbox (badness 2529) in paragraph at lines 155--160
 ) [9
 
 ] ("c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.aux")
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `perimeterCompression.out' has not changed.
 (rerunfilecheck)             Checksum: A8FA0C5D55A200EE47C09894BD1879F0;1866.
  ) 
 Here is how much of TeX's memory you used:
- 25889 strings out of 479584
- 533900 string characters out of 2861984
+ 25887 strings out of 479584
+ 533877 string characters out of 2861984
  867313 words of memory out of 3000000
- 42461 multiletter control sequences out of 15000+200000
- 450248 words of font info for 114 fonts, out of 3000000 for 9000
+ 42460 multiletter control sequences out of 15000+200000
+ 449141 words of font info for 113 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,11n,108p,1348b,452s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.pdf" (9 pages, 2399611 bytes).
+Output written on "c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.pdf" (9 pages, 2398816 bytes).
 PDF statistics:
- 594 PDF objects out of 1000 (max. 8388607)
+ 593 PDF objects out of 1000 (max. 8388607)
  115 named destinations out of 1000 (max. 500000)
  484 words of extra memory for PDF output out of 10000 (max. 10000000)
 
