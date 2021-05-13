@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex perimeterCompression"] 1620934926 "perimeterCompression.aux" "perimeterCompression.bbl" "perimeterCompression" 1620940801
+["bibtex perimeterCompression"] 1620934926 "perimeterCompression.aux" "perimeterCompression.bbl" "perimeterCompression" 1620940839
   "C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/bibtex/bst/bibtex/abbrv.bst" 1291868336 20329 b5fed53e10044d0f8112183785c759b1 ""
   "perimeter.bib" 1615469662 25062 e9e3a9f82a2435dee7c2fda80d2a8efc ""
   "perimeterCompression.aux" 1620940800 14281 b4958368ef05c4bdd7242b69a0b9cbcf "pdflatex"
   (generated)
   "perimeterCompression.blg"
   "perimeterCompression.bbl"
-["pdflatex"] 1620940791 "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.tex" "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.pdf" "perimeterCompression" 1620940801
+["pdflatex"] 1620940791 "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.tex" "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.pdf" "perimeterCompression" 1620940839
   "C:/Users/neil/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1612449078 9796363 a2357cdf724b7e81998a91a83127b405 ""
   "C:/Users/neil/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1620393820 83930 a60ec061f757cf348be11677879bca0c ""
   "C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc" 1458477487 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -264,8 +264,8 @@
   "perimeterCompression.tex" 1620940790 36701 777421ccaccd9f3812d3847a00e377c0 ""
   (generated)
   "perimeterCompression.log"
-  "perimeterCompression.out"
-  "perimeterCompression.aux"
   "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.pdf"
+  "perimeterCompression.out"
   "perimeterCompression.pdf"
   "c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.log"
+  "perimeterCompression.aux"
