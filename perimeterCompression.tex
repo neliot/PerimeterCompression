@@ -292,7 +292,7 @@ gap-filling vectors as shown in Equation~\ref{eq:res} and a resulant swarm segme
 
 \subsection{Relationship-based swarm effects}
 
-The introduction of the arrays allows for specific relationships to effect the movement of agents. Using uniform arrays results a simple cohesion/repulsion based swarm with all agents exhibiting the same properties similar to the original model discussed in \S~\ref{sec:basicModel}. However, modifying the arrays for specific relationships can induce varying effects.
+The introduction of the arrays allows for specific relationships to effect the movement of agents. Using uniform arrays results a simple cohesion/repulsion based swarm with all agents exhibiting the same properties similar to the original model discussed in \S~\ref{sec:basicModel}. However, modifying the arrays for specific relationships can induce emergent behaviours such as perimeter packing as discussed in \S~\ref{sec:perimCompress}.
 
 \subsubsection{Cohesion model}~\\
 When using Equation~\ref{eq:coh2} one arrayis used, $k_c$. This arrayis used to scale the cohesion vector generated between an agent pair which is proportional to their distance apart, which will be within $C$ as shown in Equation~\ref{eq:repulsion1a}. Consider the array shown in Equation~\ref{eq:kcexample1}.
@@ -364,7 +364,7 @@ When the simulation is ran with no compression the changes are identified using 
 	\caption{Baseline swarm in stabilised configuration. \label{fig:baselineMagnitude}}
 \end{figure}
 
-\subsection{Perimeter Compression}
+\subsection{Perimeter Compression}\label{sec:perimCompress}
 
 \begin{figure}[ht]
 	\begin{center}
