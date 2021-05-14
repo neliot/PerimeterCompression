@@ -54,13 +54,13 @@
 \maketitle
 
 \begin{abstract}
-Perimeter Compression is a technique where by a void reducing effect can be added to a basic swarming algorithm. The effect is dependant upon perimeter identification and is controlled by applying three weighting factors to the existing swarming formulae. One to the cohesion calculation, one the repulsion calculation, and one to the repulsion field size.
+Relationship-based coordination is a technique where by new emergent behaviours can be created to improve the structure of a swarm for a given application. The algorithm is dependant upon perimeter identification and is controlled by applying three weighting arrays to the existing swarming formulae. One to the cohesion calculation and two to the repulsion calculation. These simple changes allow for the likes of compressed and expanded perimeters to emerge for a random swarm deployment.
 \end{abstract}
 
 \section{Introduction}
 When cohesion and repulsion field effects (sometimes referred to as potential fields~\cite{BAF:06,eliot2018metric,VG:05,SW:03,Son2017,liang2019swarm}) are used to create a swarming effect, the stable structures that develop are limited to either straight edges or partial lattices \cite{eliot2017methods}. The maintenance of a well-structured swarm is crucial to effective deployment for applications such as reconnaissance or artificial pollination, where `blind spots' are best eliminated \cite{elamvazhuthi2015optimal}, and containment, where the swarm is used to surround an object or region \cite{cao2012distributed}. Over time swarms form regular shapes~\cite{RAZ:13} and perimeters form of partial lattices that may contain so-called \textit{anomalies}, such as concave `dents' or convex `peaks'~\cite{eliot2019void}. These anomalies contribute to the disruption of an otherwise well-structured swarm. The key, therefore, is to ensure that these \textit{anomalies} are dynamically removed from a swarm.\\
 Perimeter compression is a technique that creates a `pull' effect between perimeter agents. It is dependant upon perimeter agent identification as discussed by Eliot et. al. in \cite{eliot2017methods, eliot2018metric, eliot2019void} and discussed in Section~\ref{sec:perimeterDetection}.\\
-The aim of this new algorithm is to reduce the spacing between perimeter-based agents. Figure \ref{fig:stableswarm}) shows an agent and it fields. $S$ is the sensor field. $O_b$ is the obstacle field. $C$ is the cohesion field and $\rb$ is the repulsion field. The implementation involves introducing three controlling arrays; $\kc$ which can be used to increases the magnitude of the cohesion vector. $\kr$ which can be used to modify the repulsion vector and $\rb$ which can be used to alter the repulsion fields of agents.\\
+The aim of this new algorithm is to create a flexible relationship-based coordination technique that allows new emergent behaviours realised. Figure \ref{fig:stableswarm}) shows an agent and it fields. $S$ is the sensor field. $O$ is the obstacle field. $C$ is the cohesion field and $\rb$ is the repulsion field. The implementation involves introducing three controlling arrays; $\kc$ which can be used to increases the magnitude of the cohesion vector. $\kr$ which can be used to modify the repulsion vector and $\rb$ which can be used to alter the repulsion fields of agents.\\
 
 \begin{figure}[H]
 	\centering
@@ -75,7 +75,7 @@ As far back as 1987 swarm theory has adopted the use of field effects/potential 
 
 In the context of swarm structure maintenance, Roach et al. focussed on the effects of sensor failure, and the impact that has on agent distribution \cite{RMT:15}. Lee and Chong identified the issue of concave edges within swarms in an attempt to create regular lattice formations \cite{GN:08}, and the main focus of their work is the dynamic restructuring of inter-agent formations. Ismail and Timmis demonstrated the use of \textit{bio-inspired} healing using \textit{granuloma formation}, a biological method for encapsulating an antigen \cite{IT:10}. They have also considered the effect failed agents can have on a swarm when traversing a terrain~\cite{TIBW:16}. 
 
-This paper proposes an alternative approach to agent coordination that can be used to induce a void reduction effect through perimeter compression. This is an extension of the work presented by Eliot et al. \cite{eliot2019void}, Ismail and Timmis \cite{IT:10,TIBW:16}, and on the work of McLurkin and Demaine on the detection of perimeter types \cite{mclurkin2009}. However, perimeter type identification requires a communications infrastructure to allow the perimeter angle to be calculated. Communications within swarm formations limits swarm sizes and introduces performance problems \cite{fu2020formation}. The technique employed in this paper does not explicitly require the identification of the perimeter type as it would limit the size of the swarm\cite{eliot2019void,GN:08} and is therefore a reduced perimter detection algorithm to identify \textit{any} perimeter.
+This paper proposes an alternative approach to agent coordination that can be used to induce, among other behaviours, a void reduction effect through perimeter compression. This is an extension of the work presented by Eliot et al. \cite{eliot2019void}, Ismail and Timmis \cite{IT:10,TIBW:16}, and on the work of McLurkin and Demaine on the detection of perimeter types \cite{mclurkin2009}. However, perimeter type identification requires a communications infrastructure to allow the perimeter angle to be calculated. Communications within swarm formations limits swarm sizes and introduces performance problems \cite{fu2020formation}. The technique employed in this paper does not explicitly require the identification of the perimeter type as it would limit the size of the swarm\cite{eliot2019void,GN:08} and is therefore a reduced perimter detection algorithm to identify \textit{any} perimeter.
 
 \section{Basic swarming model}\label{sec:basicModel}
 In the Original work by Eliot et. al. the resultant vector of an agent was calculated using Equation~\ref{eq:resultantVector1a}. Where $\kc, \kr, k_d, k_o$ are weighting factors for the summed vectors associated with each interaction. i.e. $v_c$, $v_r$, $v_d$, $v_o$ for cohesion, repulsion, direction and object avoidance respectively. 
@@ -95,7 +95,7 @@ The cohesion component is calculated based on the proximity of neighbours. Where
 n_c(b) = \{b' \in S~:~b' \neq b \land\magn{\vbb{b}{b'}} \leq C\}
 \end{equation}
 
-The effect of an agent being within this set is that it will generate a vector that should `encourage' agents to maintain their proximity. i.e. generate a cohesive swarm. The general weighted ($\kc$) formula for agents to maintain their proximity is to direct their motion towards the central point of all neighbouring agents as shown in Equation~\ref{eq:cohesion2}. Where $\card{n_c(b)}$ denotes the cardinality of $n_c(b)$. This formula includes the $\kc$ quotient that allows the cohesion effect to be `balanced' with respect to other vector influences as described in ~\cite{eliot2017methods,eliot2018metric,eliot2019void}. 
+The effect of an agent being within this set is that it will generate a vector that should `encourage' agents to maintain their proximity. i.e. generate a cohesive swarm. The general weighted formula for agents to maintain their proximity is shown in Equation~\ref{eq:resultantVector1a}. Equation~\ref{eq:cohesion2} shows the technique applied to accumulating the vectors that create the cohesive effect. $\card{n_c(b)}$ denotes the cardinality of $n_c(b)$. This is the component of the overall vector calculation that has the $\kc$ quotient applied to it to allow the cohesion effect to be `balanced' with respect to other vector influences as described in ~\cite{eliot2017methods,eliot2018metric,eliot2019void}. 
 
 \begin{equation}\label{eq:cohesion2}
 v_c(b) = \frac{1}{\card{n_c(b)}} \sum_{b' \in n_c(b)}(\vbb{b}{b'})
@@ -108,11 +108,12 @@ The repulsion component of an agent's movement is calculated from interaction wi
 n_r(b) = \{b' \in \mathcal{S} : b \neq b' \land \card{\vbb{b}{b'}} \leq \rb)\}
 \end{equation}
 
-The repulsion is then calculated as the average of all the vectors created by the agent ($b$) to the neighbours ($b'$) (Eg.~\ref{eq:repulsion2a}) and its proximity ($\magn{\vbb{b}{b'}} - \rb$). Where $\card{n_r(b)}$ denotes the cardinality of $n_r(b)$.
+The repulsion is then calculated as the average of all the vectors created by the agent ($b$) to the neighbours ($b'$) (Eg.~\ref{eq:repulsion2a}) and its proximity ($\magn{\vbb{b}{b'}} - \rb$). Where $\card{n_r(b)}$ denotes the cardinality of $n_r(b)$. This vector is then scaled to `balance' the effect with respect to other vector influences as shown is Equation~\ref{eq:resultantVector1a} where $\kc$ is applied.
 
 \begin{equation}\label{eq:repulsion2a}
 v_r(b) = \frac{1}{\card{n_r(b)}}\sum_{b' \in n_r(b)} \left(\card{\vbb{b}{b'}} - R \, \right)\widehat{\left(\vbb{b}{b'}\right)}
 \end{equation}
+
 Here, $\widehat{\vbb{b}{b'}}$ denotes $\vbb{b}{b'}$ normalized to unit length.
 
 \section{New Inter-agent Model}
@@ -128,7 +129,7 @@ In this paper, we propose that the behaviour of an agent should be modified depe
 \subsection{Perimeter detection}\label{sec:perimeterDetection} is achieved using a cyclic analysis of the agents that surround an agent~(Fig.~\ref{fig:neighbours2}). Ghrist et al. discusses a similar technique using sweep angles~\cite{ghrist2008surrounding} as does McLurkin et al~\cite{mclurkin2009}. 
 
 When detecting a perimeter it is useful to define an ordering on an agent's cohesion neighbours. We choose to order the cohesion neighbours of an agent $b$ by their \emph{polar
-angle} with respect to $b$ (Fig.~\ref{fig:neighbours2}). 
+angle} ($\beta$) with respect to $b$ (Fig.~\ref{fig:neighbours2}). 
 
 \begin{figure}[H]
 	\centering
@@ -139,7 +140,7 @@ angle} with respect to $b$ (Fig.~\ref{fig:neighbours2}).
 
 The polar angle with respect to $b$ of $b'$,
 $\pangle(b, b')$, is the counterclockwise angle that vector $\vec{bb'} = b' -
-b$ makes with the positive $x$ axis as shown in Figure~\ref{fig:neighbours2} and described by Equation~\ref{eq:pangle}.
+b$ makes with the positive $x$ axis shown in Figure~\ref{fig:neighbours2} as $\theta$ and described by Equation~\ref{eq:pangle}.
 
 \begin{equation}\label{eq:pangle}
 	\pangle(b, b') = \mathsf{atan2}((\vbb{b}{b'})_y, (\vbb{b}{b'})_x)
