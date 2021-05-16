@@ -45,6 +45,8 @@
 \author[1,*]{Neil Eliot}
 \author[ ]{David Kendall}
 \author[ ]{Michael Brockway}
+\author[1]{Paul Oman}
+\author[1]{Ahmed Bouridane}
 \affil[1] {Northumbria University, Faculty of Engineering and Environment, Department of Computer and Information Sciences}
 \affil[*] {Corresponding author: Dr Neil Eliot, neil.eliot@northumbria.ac.uk}
 \date{\today}
@@ -81,7 +83,7 @@ This paper proposes an alternative approach to agent coordination that can be us
 In the Original work by Eliot et. al. the resultant vector of an agent was calculated using Equation~\ref{eq:resultantVector1a}. Where $\kc, \kr, k_d, k_o$ are weighting factors for the summed vectors associated with each interaction. i.e. $v_c$, $v_r$, $v_d$, $v_o$ for cohesion, repulsion, direction and object avoidance respectively. 
 
 \begin{equation}\label{eq:resultantVector1a}
-	v(b) = \kr v_c(b) + \kr v_r(b) + \kd v_d(b) + \ko v_o(b)
+	v(b) = \kc v_c(b) + \kr v_r(b) + \kd v_d(b) + \ko v_o(b)
 \end{equation}
 
 Equation~\ref{eq:resultantVector1a} shows the movement vector as a linear combination of a cohesion vector $v_c$ tending to move $b$ towards its neighbours, a repulsion vector $v_r$ tending to move $b$ away from its neighbours, a direction vector  $v_d$ tending to move $b$ towards a goal, and a vector $v_o$ tending to steer it away from obstacles. $\kc, \kr, ...$ are the scalar coefficients of the the linear combination.
@@ -129,7 +131,7 @@ In this paper, we propose that the behaviour of an agent should be modified depe
 \subsection{Perimeter detection}\label{sec:perimeterDetection} is achieved using a cyclic analysis of the agents that surround an agent~(Fig.~\ref{fig:neighbours2}). Ghrist et al. discusses a similar technique using sweep angles~\cite{ghrist2008surrounding} as does McLurkin et al~\cite{mclurkin2009}. 
 
 When detecting a perimeter it is useful to define an ordering on an agent's cohesion neighbours. We choose to order the cohesion neighbours of an agent $b$ by their \emph{polar
-angle} ($\beta$) with respect to $b$ (Fig.~\ref{fig:neighbours2}). 
+angle} ($\alpha$) with respect to $b$ (Fig.~\ref{fig:neighbours2}). 
 
 \begin{figure}[H]
 	\centering
@@ -139,15 +141,13 @@ angle} ($\beta$) with respect to $b$ (Fig.~\ref{fig:neighbours2}).
 \end{figure}
 
 The polar angle with respect to $b$ of $b'$,
-$\pangle(b, b')$, is the counterclockwise angle that vector $\vec{bb'} = b' -
-b$ makes with the positive $x$ axis shown in Figure~\ref{fig:neighbours2} as $\theta$ and described by Equation~\ref{eq:pangle}.
+$\pangle(b, b')$, is the counter-clockwise angle that vector $\vec{bb'} = b' - b$ makes with the positive $x$ axis shown in Figure~\ref{fig:neighbours2} as $\alpha$ and described by Equation~\ref{eq:pangle}.
 
 \begin{equation}\label{eq:pangle}
 	\pangle(b, b') = \mathsf{atan2}((\vbb{b}{b'})_y, (\vbb{b}{b'})_x)
 \end{equation} 
 
-A partial ordering of agents by polar angle with respect to a specific agent,
-$b$, is denoted $\leqaz{b}{}{}$, and is defined by: 
+A partial ordering of agents by polar angle with respect to a specific agent, $b$, is denoted $\leqaz{b}{}{}$, as defined in equation~\ref{angle_ordering}. 
 \begin{equation}\label{angle_ordering}
 	\leqaz{b}{b'}{b''} \iff \pangle(b, b') \leq \pangle(b, b'')
 \end{equation}
@@ -168,7 +168,7 @@ j~:~0 \leq i, j, < n \cdot i \leq j \implies \leqaz{b}{b_i}{b_j}
 An agent $b$ is on a perimeter if it satisfies any one of three conditions:
 \begin{enumerate}
 	\item consecutive neighbours are not within each other's cohesion field, or
-	\item consecutive neighbours subtend a reflex angle, or
+	\item consecutive neighbours subtend a reflex angle (as shown in Figure~\ref{fig:neighbours3} as $\delta_3$), or
 	\item the agent has too few neighbours.
 \end{enumerate}
 A function, $\prm(b)$, specifies these conditions formally. Let $b$ be the
@@ -183,7 +183,7 @@ one of the following conditions is satisfied:
 \end{enumerate}
 
 \subsection{$\rb$, $\kr$ and $\kc$}\label{sec:rbkrkc} 
-In this section we will discuss the application of the new $\rb$, $\kr$ and $\kc$ arrays which are structured as shown below:
+In this section we will discuss the application of the new $\rb$, $\kr$ and $\kc$ arrays which are structured as a two dimensional array as shown below:
 
 \[
   \kbordermatrix{
@@ -193,15 +193,7 @@ In this section we will discuss the application of the new $\rb$, $\kr$ and $\kc
   }
 \]
 
-Where \emph{i} represents an internal agent and \emph{p} is a perimeter agent. These are reflected in the table below with respect to Figure~\ref{fig:simplePerim2}:
-
-\[
-  \kbordermatrix{
-                   & \text{False} & \text{True}  \\
-    \text{False}   & 18-21        & 18-39 \\
-    \text{True}    & 39-19        & 41-40
-  }
-\]
+Where \emph{i} represents an internal agent and \emph{p} is a perimeter agent. If we consider Figure~\ref{fig:simplePerim2} then agents $18\rightarrow 21$ would be internal to internal ($i-i$), $18\rightarrow 39$ would be internal to perimeter ($i-p$), $39\rightarrow 19$ would be perimeter to internal ($p-i$) and $41\rightarrow 40$ would be perimeter to perimeter ($p-p$).
 
 The new model requires each agent to modify their inter-agent repulsion and cohesion vectors based upon their perimeter status and each neighbour's perimeter status. The basic perimeter control technique is shown in Equation~\ref{eq:newModel2} where the cohesion and repulsion arrays ($\kc$, $\kr$, $\rb$) are integrated into $v_c(b)$ and $v_r(b)$.
 
@@ -231,9 +223,7 @@ The set of repellers of $b$ are defined as Equation~\ref{eq:rep1}.
 \end{equation}
 \normalsize
 where $p_b = \prm(b)$, $p_{b'} = \prm(b')$, and $\rb$ is a 2x2 boolean-indexed
-array of constants that determine the radius of the \emph{repulsion field} for
-agents in the swarm, according to whether the interaction between $b,b'$ is
-between non-perimeter agents, non-perimeter--perimeter,
+array of constants that determine the radius of the \emph{repulsion field} for agents in the swarm, according to whether the interaction between $b,b'$ is between non-perimeter agents, non-perimeter--perimeter,
 perimeter--non-perimeter, or perimeter--perimeter agents.
 
 Now $v_r(b)$ is defined by Equation~\ref{eq:rep2}
@@ -295,7 +285,7 @@ gap-filling vectors as shown in Equation~\ref{eq:res} and a resulant swarm segme
 The introduction of the arrays allows for specific relationships to effect the movement of agents. Using uniform arrays results a simple cohesion/repulsion based swarm with all agents exhibiting the same properties similar to the original model discussed in \S~\ref{sec:basicModel}. However, modifying the arrays for specific relationships can induce emergent behaviours such as perimeter packing as discussed in \S~\ref{sec:perimCompress}.
 
 \subsubsection{Cohesion model}~\\
-When using Equation~\ref{eq:coh2} one array is used, $k_c$. This arrayis used to scale the cohesion vector generated between an agent pair which is proportional to their distance apart, which will be within $C$ as shown in Equation~\ref{eq:repulsion1a}. Consider the array shown in Equation~\ref{eq:kcexample1}.
+When using Equation~\ref{eq:coh2} one array is used, $k_c$. This array is used to scale the cohesion vector generated between an agent pair which is proportional to their distance apart, which will be within $C$ as shown in Equation~\ref{eq:repulsion1a}. Consider the array shown in Equation~\ref{eq:kcexample1}.
 
 \begin{equation}\label{eq:kcexample1}
 	\kc = 
@@ -329,6 +319,59 @@ When using Equation~\ref{eq:rep2} two arrays are used $\kr$ and $\rb$. $\kr$ is 
 For a given agent pair their perimeter status will be calculated and applied to the arrays. If both agents are perimeter based then the values selected would be $\rb[P_b,P_{b'}]\Rightarrow 0.8$ and $\kr[P_b,P_{b'}]\Rightarrow 335$. If the agent pair were perimeter $\rightarrow$ non-perimeter then the values selected would be $\rb[P_b,P_{b'}]\Rightarrow 2$ and $\kr[P_b,P_{b'}]\Rightarrow 67$.\\
 
 \section{Experimental results\label{sec:ExperimentalResults}}
+The experimental results will show the effects on the swarm in terms of both inter-agent distances and also the magnitude metric~\cite{eliot2018metric} generated between each agent.
+
+========= MORE WORK ON THIS SECTION REQUIRED ==
+
+\subsection{Distance metric}
+Mean:
+\small
+\begin{equation}
+\label{eq:SwarmStabilityDistance2}
+\mu_d(S) = \frac{\mathlarger{\sum_{b \in S}}~\mathlarger{\sum_{b' \in nbr(b)}}\card{\vbb{b}{b'}}}{\mathlarger{\sum_{b \in S}\card{nbr(b)}}}
+\end{equation}
+\normalsize
+Std:
+\small
+\begin{equation}
+\label{eq:SwarmStabilityDistance3}
+\sigma_d(S) = \sqrt{\frac{\mathlarger{\sum_{b \in S}}~\mathlarger{\sum_{b' \in nbr(b)}}\Big(\card{\vbb{b}{b'}} - \mu_d(S)\Big)^2}{\mathlarger{\sum_{b \in S}\card{nbr(b)}}}}
+\end{equation}
+\normalsize
+
+The distance metric for the internal distribution of the agents is the pair consisting of $\mu_d(S)$, $\sigma_d(S)$. This can be written informally as:
+
+\small
+\begin{equation}
+\label{eq:SwarmPotentialMagnitude}
+\psi_d(S) = \mu_d(S)\pm \sigma_d(S)
+\end{equation}
+\normalsize
+\subsection{Magnitude metric}
+The magnitude metric mean:
+
+\small
+\begin{equation}
+\label{eq:SwarmStabilityMetricT3}
+\mu_p(S) = \frac{\mathlarger{\sum_{b \in S} P(b)}}{\mathlarger{\sum_{b \in S}}\card{nbr(b)} + \mathlarger{\sum_{b \in S}}\card{n_r(b)}}
+\end{equation}
+\normalsize
+Std:
+
+\small
+\begin{equation}
+\label{eq:SwarmStabilityQuotientT}
+\sigma_p(S) = \sqrt{\frac{\mathlarger{\sum_{b \in S}}\Big(P(b)-\mu_p(S)\Big)^2}{\mathlarger{\sum_{b \in S}}\card{nbr(b)} + \mathlarger{\sum_{b \in S}}\card{n_r(b)}}}
+\end{equation}
+\normalsize
+The metric for the internal movement is this pair of numbers, the mean and standard deviation of the swarm's internal \emph{cohesion/repulsion}. The pair $\mu_p(S)$, $\sigma_p(S)$ may be written informally as: 
+
+\small
+\begin{equation}
+\label{eq:SwarmMagnitudeMatric}
+\psi_p(S) = \mu_p(S)\pm \sigma_p(S)
+\end{equation}
+\normalsize
 \subsection{Baseline}
 For all the experiments the parameters used to create the basic swarming effect are shown in Table~\ref{tab:swarmingEffect}. Where $C$ is the cohesion field, $\kc$ is the cohesion weighting, $\rb$ is the repulsion field, $\kr$ is the repulsion weighting and $\kg$ is the weighting applied in the gap reduction algorithm discussed in~\cite{eliot2019void}. The swarm consists of 500 agents which are distributed with a void at the centre. These initial parameters create a hexagonal-based distribution of agents that stabilise as shown in Figure~\ref{fig:baselineSwarm}. This basic swarm is used as the initial state for all the experiments. 
  \begin{table}[H]
@@ -507,95 +550,95 @@ y & 1
 
 \subsection{Compression Effects\label{sec:CompressionEffect}}
 
-The compression effect parameters are shown in tables~\ref{tab:compressionExperimentEffect1} and~\ref{tab:compressionExperimentEffect2}
+% The compression effect parameters are shown in tables~\ref{tab:compressionExperimentEffect1} and~\ref{tab:compressionExperimentEffect2}
 
-\begin{table}[ht]
-	\centering
-	\tiny
-\begin{tabular}{ | >{\columncolor[HTML]{000000}}l | l | l | l | l | l | }
-	\hline
-	\rowcolor[HTML]{000000} 
-	{\color[HTML]{FFFFFF} Pr/Pc} & {\color[HTML]{FFFFFF}10} & {\color[HTML]{FFFFFF}20} & {\color[HTML]{FFFFFF}30} & {\color[HTML]{FFFFFF}40} & {\color[HTML]{FFFFFF}50} \\ \hline
-	    {\color[HTML]{FFFFFF}0.1} & 0.1/10 & 0.1/20 & 0.1/30 & 0.1/40 & 0.1/50  \\ \hline
-		{\color[HTML]{FFFFFF}0.2} & 0.2/10 & 0.2/20 & 0.2/30 & 0.2/40 & 0.2/50  \\ \hline
-		{\color[HTML]{FFFFFF}0.3} & 0.3/10 & 0.3/20 & 0.3/30 & 0.3/40 & 0.3/50  \\ \hline
-		{\color[HTML]{FFFFFF}0.4} & 0.4/10 & 0.4/20 & 0.4/30 & 0.4/40 & 0.4/50  \\ \hline
-		{\color[HTML]{FFFFFF}0.5} & 0.5/10 & 0.5/20 & 0.5/30 & 0.5/40 & 0.5/50  \\ \hline
-		{\color[HTML]{FFFFFF}0.6} & 0.6/10 & 0.6/20 & 0.6/30 & 0.6/40 & 0.6/50  \\ \hline
-		{\color[HTML]{FFFFFF}0.7} & 0.7/10 & 0.7/20 & 0.7/30 & 0.7/40 & 0.7/50  \\ \hline
-		{\color[HTML]{FFFFFF}0.8} & 0.8/10 & 0.8/20 & 0.8/30 & 0.8/40 & 0.8/50  \\ \hline
-		{\color[HTML]{FFFFFF}0.9} & 0.9/10 & 0.9/20 & 0.9/30 & 0.9/40 & 0.9/50  \\ \hline
-	\end{tabular}
-	\caption{Experiment parameters 1}
-	\label{tab:compressionExperimentEffect1}
-\end{table}
+% \begin{table}[ht]
+% 	\centering
+% 	\tiny
+% \begin{tabular}{ | >{\columncolor[HTML]{000000}}l | l | l | l | l | l | }
+% 	\hline
+% 	\rowcolor[HTML]{000000} 
+% 	{\color[HTML]{FFFFFF} Pr/Pc} & {\color[HTML]{FFFFFF}10} & {\color[HTML]{FFFFFF}20} & {\color[HTML]{FFFFFF}30} & {\color[HTML]{FFFFFF}40} & {\color[HTML]{FFFFFF}50} \\ \hline
+% 	    {\color[HTML]{FFFFFF}0.1} & 0.1/10 & 0.1/20 & 0.1/30 & 0.1/40 & 0.1/50  \\ \hline
+% 		{\color[HTML]{FFFFFF}0.2} & 0.2/10 & 0.2/20 & 0.2/30 & 0.2/40 & 0.2/50  \\ \hline
+% 		{\color[HTML]{FFFFFF}0.3} & 0.3/10 & 0.3/20 & 0.3/30 & 0.3/40 & 0.3/50  \\ \hline
+% 		{\color[HTML]{FFFFFF}0.4} & 0.4/10 & 0.4/20 & 0.4/30 & 0.4/40 & 0.4/50  \\ \hline
+% 		{\color[HTML]{FFFFFF}0.5} & 0.5/10 & 0.5/20 & 0.5/30 & 0.5/40 & 0.5/50  \\ \hline
+% 		{\color[HTML]{FFFFFF}0.6} & 0.6/10 & 0.6/20 & 0.6/30 & 0.6/40 & 0.6/50  \\ \hline
+% 		{\color[HTML]{FFFFFF}0.7} & 0.7/10 & 0.7/20 & 0.7/30 & 0.7/40 & 0.7/50  \\ \hline
+% 		{\color[HTML]{FFFFFF}0.8} & 0.8/10 & 0.8/20 & 0.8/30 & 0.8/40 & 0.8/50  \\ \hline
+% 		{\color[HTML]{FFFFFF}0.9} & 0.9/10 & 0.9/20 & 0.9/30 & 0.9/40 & 0.9/50  \\ \hline
+% 	\end{tabular}
+% 	\caption{Experiment parameters 1}
+% 	\label{tab:compressionExperimentEffect1}
+% \end{table}
 
-\begin{table}[ht]
-	\centering
-	\tiny
-\begin{tabular}{ | >{\columncolor[HTML]{000000}}l | l | l | l | l | l | }
-	\hline
-	\rowcolor[HTML]{000000} 
-	{\color[HTML]{FFFFFF} Pr/Pc} & {\color[HTML]{FFFFFF}60} & {\color[HTML]{FFFFFF}70} & {\color[HTML]{FFFFFF}80} & {\color[HTML]{FFFFFF}90} & {\color[HTML]{FFFFFF}100}   \\ \hline
-		{\color[HTML]{FFFFFF}0.1} & 0.1/60 & 0.1/70 & 0.1/80 & 0.1/90 & 0.1/100 \\ \hline
-		{\color[HTML]{FFFFFF}0.2} & 0.2/60 & 0.2/70 & 0.2/80 & 0.2/90 & 0.2/100 \\ \hline
-		{\color[HTML]{FFFFFF}0.3} & 0.3/60 & 0.3/70 & 0.3/80 & 0.3/90 & 0.3/100 \\ \hline
-		{\color[HTML]{FFFFFF}0.4} & 0.4/60 & 0.4/70 & 0.4/80 & 0.4/90 & 0.4/100 \\ \hline
-		{\color[HTML]{FFFFFF}0.5} & 0.5/60 & 0.5/70 & 0.5/80 & 0.5/90 & 0.5/100 \\ \hline
-		{\color[HTML]{FFFFFF}0.6} & 0.6/60 & 0.6/70 & 0.6/80 & 0.6/90 & 0.6/100 \\ \hline
-		{\color[HTML]{FFFFFF}0.7} & 0.7/60 & 0.7/70 & 0.7/80 & 0.7/90 & 0.7/100 \\ \hline
-		{\color[HTML]{FFFFFF}0.8} & 0.8/60 & 0.8/70 & 0.8/80 & 0.8/90 & 0.8/100 \\ \hline
-		{\color[HTML]{FFFFFF}0.9} & 0.9/60 & 0.9/70 & 0.9/80 & 0.9/90 & 0.9/100 \\ \hline
-	\end{tabular}
-	\caption{Experiment parameters 2}
-	\label{tab:compressionExperimentEffect2}
-\end{table}
+% \begin{table}[ht]
+% 	\centering
+% 	\tiny
+% \begin{tabular}{ | >{\columncolor[HTML]{000000}}l | l | l | l | l | l | }
+% 	\hline
+% 	\rowcolor[HTML]{000000} 
+% 	{\color[HTML]{FFFFFF} Pr/Pc} & {\color[HTML]{FFFFFF}60} & {\color[HTML]{FFFFFF}70} & {\color[HTML]{FFFFFF}80} & {\color[HTML]{FFFFFF}90} & {\color[HTML]{FFFFFF}100}   \\ \hline
+% 		{\color[HTML]{FFFFFF}0.1} & 0.1/60 & 0.1/70 & 0.1/80 & 0.1/90 & 0.1/100 \\ \hline
+% 		{\color[HTML]{FFFFFF}0.2} & 0.2/60 & 0.2/70 & 0.2/80 & 0.2/90 & 0.2/100 \\ \hline
+% 		{\color[HTML]{FFFFFF}0.3} & 0.3/60 & 0.3/70 & 0.3/80 & 0.3/90 & 0.3/100 \\ \hline
+% 		{\color[HTML]{FFFFFF}0.4} & 0.4/60 & 0.4/70 & 0.4/80 & 0.4/90 & 0.4/100 \\ \hline
+% 		{\color[HTML]{FFFFFF}0.5} & 0.5/60 & 0.5/70 & 0.5/80 & 0.5/90 & 0.5/100 \\ \hline
+% 		{\color[HTML]{FFFFFF}0.6} & 0.6/60 & 0.6/70 & 0.6/80 & 0.6/90 & 0.6/100 \\ \hline
+% 		{\color[HTML]{FFFFFF}0.7} & 0.7/60 & 0.7/70 & 0.7/80 & 0.7/90 & 0.7/100 \\ \hline
+% 		{\color[HTML]{FFFFFF}0.8} & 0.8/60 & 0.8/70 & 0.8/80 & 0.8/90 & 0.8/100 \\ \hline
+% 		{\color[HTML]{FFFFFF}0.9} & 0.9/60 & 0.9/70 & 0.9/80 & 0.9/90 & 0.9/100 \\ \hline
+% 	\end{tabular}
+% 	\caption{Experiment parameters 2}
+% 	\label{tab:compressionExperimentEffect2}
+% \end{table}
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=8cm]{figures/Experiment1}
-	\end{center}
-	\caption{Experiment Start \label{fig:experiment1}}
-\end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=8cm]{figures/Experiment1}
+% 	\end{center}
+% 	\caption{Experiment Start \label{fig:experiment1}}
+% \end{figure}
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=8cm]{figures/Experiment2}
-	\end{center}
-	\caption{Experiment Middle \label{fig:experiment2}}
-\end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=8cm]{figures/Experiment2}
+% 	\end{center}
+% 	\caption{Experiment Middle \label{fig:experiment2}}
+% \end{figure}
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=8cm]{figures/Experiment3}
-	\end{center}
-	\caption{Experiment End \label{fig:experiment3}}
-\end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=8cm]{figures/Experiment3}
+% 	\end{center}
+% 	\caption{Experiment End \label{fig:experiment3}}
+% \end{figure}
 
-The first area of comparison is the effect of the algorithms on the number of perimeter agents. The baseline swarm's agents oscillates but remain in a relatively stable state with a constant number of perimeter agents and the internal anomaly persists~(Fig.~\ref{fig:baselineSwarm}). The maximum and minimum number of perimeter agents is shown in table~\ref{tab:perimeterLimits}. 
+% The first area of comparison is the effect of the algorithms on the number of perimeter agents. The baseline swarm's agents oscillates but remain in a relatively stable state with a constant number of perimeter agents and the internal anomaly persists~(Fig.~\ref{fig:baselineSwarm}). The maximum and minimum number of perimeter agents is shown in table~\ref{tab:perimeterLimits}. 
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=8cm]{figures/PerimeterCount}
-	\end{center}
-	\caption{Perimeter Count of baseline, gap reduction and perimeter compression. \label{fig:perimeterCount}}
-\end{figure}
+% \begin{figure}[H]
+% 	\begin{center}
+% 		\includegraphics[width=8cm]{figures/PerimeterCount}
+% 	\end{center}
+% 	\caption{Perimeter Count of baseline, gap reduction and perimeter compression. \label{fig:perimeterCount}}
+% \end{figure}
 
-\begin{table}[ht]
-	\centering
-	\tiny
-	\begin{tabular}{|c|c|r|r|r|r|r|r|r|}
-		\hline
-		\rowcolor[HTML]{000000} 
-		{\color[HTML]{FFFFFF} Comp.} &{\color[HTML]{FFFFFF} Base} & {\color[HTML]{FFFFFF} Void} & {\color[HTML]{FFFFFF} 1} & {\color[HTML]{FFFFFF} 2} & {\color[HTML]{FFFFFF} 3} & {\color[HTML]{FFFFFF} 4} & {\color[HTML]{FFFFFF} 5} & {\color[HTML]{FFFFFF} 6}\\ \hline
-		Max & \texttt{75} & \texttt{90} &\texttt{90} & \texttt{90} & \texttt{94} & \texttt{92} & \texttt{95} & \texttt{93} \\ \hline
-		Min & \texttt{75} & \texttt{51} &\texttt{51}  & \texttt{51} & \texttt{51} & \texttt{49} & \texttt{49} & \texttt{49}\\ \hline
-		Mean & \texttt{75} & \texttt{62} &\texttt{59}  & \texttt{58} & \texttt{60} & \texttt{59} & \texttt{57} & \texttt{59}\\ \hline
-		Std & \texttt{0} & \texttt{6} &\texttt{9}  & \texttt{10} & \texttt{10} & \texttt{8} & \texttt{10} & \texttt{8}\\ \hline
-	\end{tabular}
-	\caption{Perimeter agents}
-	\label{tab:perimeterLimits}
-\end{table}
+% \begin{table}[ht]
+% 	\centering
+% 	\tiny
+% 	\begin{tabular}{|c|c|r|r|r|r|r|r|r|}
+% 		\hline
+% 		\rowcolor[HTML]{000000} 
+% 		{\color[HTML]{FFFFFF} Comp.} &{\color[HTML]{FFFFFF} Base} & {\color[HTML]{FFFFFF} Void} & {\color[HTML]{FFFFFF} 1} & {\color[HTML]{FFFFFF} 2} & {\color[HTML]{FFFFFF} 3} & {\color[HTML]{FFFFFF} 4} & {\color[HTML]{FFFFFF} 5} & {\color[HTML]{FFFFFF} 6}\\ \hline
+% 		Max & \texttt{75} & \texttt{90} &\texttt{90} & \texttt{90} & \texttt{94} & \texttt{92} & \texttt{95} & \texttt{93} \\ \hline
+% 		Min & \texttt{75} & \texttt{51} &\texttt{51}  & \texttt{51} & \texttt{51} & \texttt{49} & \texttt{49} & \texttt{49}\\ \hline
+% 		Mean & \texttt{75} & \texttt{62} &\texttt{59}  & \texttt{58} & \texttt{60} & \texttt{59} & \texttt{57} & \texttt{59}\\ \hline
+% 		Std & \texttt{0} & \texttt{6} &\texttt{9}  & \texttt{10} & \texttt{10} & \texttt{8} & \texttt{10} & \texttt{8}\\ \hline
+% 	\end{tabular}
+% 	\caption{Perimeter agents}
+% 	\label{tab:perimeterLimits}
+% \end{table}
 
 % \begin{figure}[H]
 % 	\begin{center}

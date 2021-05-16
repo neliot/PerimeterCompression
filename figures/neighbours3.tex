@@ -14,12 +14,12 @@
 		\draw[->] (0,0)--node[above,sloped, very near end]{} (\a:\r) 
 					node[circle,fill=black!50,draw,label=right:$\l$]{};
 		\draw[->,dashed] (\d, 0) arc[start angle=0, delta angle=\a,
-		radius=\d] node[\p]{$\beta_\n$};
+		radius=\d] node[\p]{$\alpha_\n$};
 	};
 
 	\foreach \n/\b/\t in { 0/90/135 , 1/135/190 , 2/190/250 , 3/250/450 } {
 		\draw[dotted,->] (\b:2cm) arc[start angle=\b, delta angle=\t-\b,radius=2cm];
-		\draw (\b/2+\t/2:2.2cm) node {$\theta_\n$};
+		\draw (\b/2+\t/2:2.2cm) node {$\delta_\n$};
 	};
 	\end{tikzpicture}
 \end{document}

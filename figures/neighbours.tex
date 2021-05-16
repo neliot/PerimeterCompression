@@ -15,13 +15,13 @@
 		\draw[->] (0,0)--node[above,sloped, very near end]{$r_{\n}$} (90-\a:\r) 
 					node[circle,fill=black!50,draw,label=right:$\l$]{};
 		\draw[<-,dashed] (up:\d) arc[start angle=90, delta angle=-\a,
-		radius=\d] node[right]{$\beta_\n$};
+		radius=\d] node[right]{$\alpha_\n$};
 
 	};
 	\foreach \n/\b/\t in { 4/10/50 , 3/60/60 , 2/120/50 , 1/170/50 , 0/220/150 } {
 		\draw[dotted,<-] (90-\b:2cm) arc[start angle=90-\b, delta
 		angle=-\t,radius=2cm];
-		\draw (90-\b-\t/2:2.2cm) node {$\theta_\n$};
+		\draw (90-\b-\t/2:2.2cm) node {$\delta_\n$};
 	};
 	\node[circle,fill=black!50,draw,label=right:$b$]{};
 \end{tikzpicture}
