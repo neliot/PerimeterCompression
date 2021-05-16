@@ -56,12 +56,12 @@
 \maketitle
 
 \begin{abstract}
-Relationship-based coordination is a technique where by new emergent behaviours can be created to improve the structure of a swarm for a given application. The algorithm is dependant upon perimeter identification and is controlled by applying three weighting arrays to the existing swarming formulae. One to the cohesion calculation and two to the repulsion calculation. These simple changes allow for the likes of compressed and expanded perimeters to emerge for a random swarm deployment.
+Relationship-based coordination is a technique where by new emergent behaviours can be created to improve the structure of a swarm for a given application. The algorithm is dependant upon perimeter identification and is controlled by applying three weighting arrays to the existing swarming formulae. One to the cohesion calculation and two to the repulsion calculation. These simple changes allow for the likes of packed and expanded perimeters to emerge for a random swarm deployment.
 \end{abstract}
 
 \section{Introduction}
 When cohesion and repulsion field effects (sometimes referred to as potential fields~\cite{BAF:06,eliot2018metric,VG:05,SW:03,Son2017,liang2019swarm}) are used to create a swarming effect, the stable structures that develop are limited to either straight edges or partial lattices \cite{eliot2017methods}. The maintenance of a well-structured swarm is crucial to effective deployment for applications such as reconnaissance or artificial pollination, where `blind spots' are best eliminated \cite{elamvazhuthi2015optimal}, and containment, where the swarm is used to surround an object or region \cite{cao2012distributed}. Over time swarms form regular shapes~\cite{RAZ:13} and perimeters form of partial lattices that may contain so-called \textit{anomalies}, such as concave `dents' or convex `peaks'~\cite{eliot2019void}. These anomalies contribute to the disruption of an otherwise well-structured swarm. The key, therefore, is to ensure that these \textit{anomalies} are dynamically removed from a swarm.\\
-Perimeter compression is a technique that creates a `pull' effect between perimeter agents. It is dependant upon perimeter agent identification as discussed by Eliot et. al. in \cite{eliot2017methods, eliot2018metric, eliot2019void} and discussed in Section~\ref{sec:perimeterDetection}.\\
+Perimeter packing is a technique that creates a `pull' effect between perimeter agents. It is dependant upon perimeter agent identification as discussed by Eliot et. al. in \cite{eliot2017methods, eliot2018metric, eliot2019void} and discussed in Section~\ref{sec:perimeterDetection}.\\
 The aim of this new algorithm is to create a flexible relationship-based coordination technique that allows new emergent behaviours realised. Figure \ref{fig:stableswarm}) shows an agent and it fields. $S$ is the sensor field. $O$ is the obstacle field. $C$ is the cohesion field and $\rb$ is the repulsion field. The implementation involves introducing three controlling arrays; $\kc$ which can be used to increases the magnitude of the cohesion vector. $\kr$ which can be used to modify the repulsion vector and $\rb$ which can be used to alter the repulsion fields of agents.\\
 
 \begin{figure}[H]
@@ -77,7 +77,7 @@ As far back as 1987 swarm theory has adopted the use of field effects/potential 
 
 In the context of swarm structure maintenance, Roach et al. focussed on the effects of sensor failure, and the impact that has on agent distribution \cite{RMT:15}. Lee and Chong identified the issue of concave edges within swarms in an attempt to create regular lattice formations \cite{GN:08}, and the main focus of their work is the dynamic restructuring of inter-agent formations. Ismail and Timmis demonstrated the use of \textit{bio-inspired} healing using \textit{granuloma formation}, a biological method for encapsulating an antigen \cite{IT:10}. They have also considered the effect failed agents can have on a swarm when traversing a terrain~\cite{TIBW:16}. 
 
-This paper proposes an alternative approach to agent coordination that can be used to induce, among other behaviours, a void reduction effect through perimeter compression. This is an extension of the work presented by Eliot et al. \cite{eliot2019void}, Ismail and Timmis \cite{IT:10,TIBW:16}, and on the work of McLurkin and Demaine on the detection of perimeter types \cite{mclurkin2009}. However, perimeter type identification requires a communications infrastructure to allow the perimeter angle to be calculated. Communications within swarm formations limits swarm sizes and introduces performance problems \cite{fu2020formation}. The technique employed in this paper does not explicitly require the identification of the perimeter type as it would limit the size of the swarm\cite{eliot2019void,GN:08} and is therefore a reduced perimter detection algorithm to identify \textit{any} perimeter.
+This paper proposes an alternative approach to agent coordination that can be used to induce, among other behaviours, a void reduction effect through perimeter packing. This is an extension of the work presented by Eliot et al. \cite{eliot2019void}, Ismail and Timmis \cite{IT:10,TIBW:16}, and on the work of McLurkin and Demaine on the detection of perimeter types \cite{mclurkin2009}. However, perimeter type identification requires a communications infrastructure to allow the perimeter angle to be calculated. Communications within swarm formations limits swarm sizes and introduces performance problems \cite{fu2020formation}. The technique employed in this paper does not explicitly require the identification of the perimeter type as it would limit the size of the swarm\cite{eliot2019void,GN:08} and is therefore a reduced perimter detection algorithm to identify \textit{any} perimeter.
 
 \section{Basic swarming model}\label{sec:basicModel}
 In the Original work by Eliot et. al. the resultant vector of an agent was calculated using Equation~\ref{eq:resultantVector1a}. Where $\kc, \kr, k_d, k_o$ are weighting factors for the summed vectors associated with each interaction. i.e. $v_c$, $v_r$, $v_d$, $v_o$ for cohesion, repulsion, direction and object avoidance respectively. 
@@ -398,7 +398,7 @@ For all the experiments the parameters used to create the basic swarming effect 
 	\caption{Baseline swarm magnitude analysis. \label{fig:baselineSwarm}}
 \end{figure}
 
-When the simulation is ran with no compression the changes are identified using a magnitude-based metric~\cite{eliot2018metric}. The resultant magnitudes generated are shown in figure~\ref{fig:baselineMagnitude}. These states are used as the baseline for the experiments to measure the effects of changing the arrays.
+When the simulation is ran with no relationship differences i.e. all array values are equal, the changes are identified using a magnitude-based metric~\cite{eliot2018metric}. The resultant magnitudes generated are shown in figure~\ref{fig:baselineMagnitude}. These states are used as the baseline for the experiments to measure the effects of changing the arrays.
 
 \begin{figure}[H]
 	\begin{center}
@@ -407,27 +407,27 @@ When the simulation is ran with no compression the changes are identified using 
 	\caption{Baseline swarm in stabilised configuration. \label{fig:baselineMagnitude}}
 \end{figure}
 
-\subsection{Perimeter Compression}\label{sec:perimCompress}
+\subsection{Perimeter Packing}\label{sec:perimCompress}
 
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[width=1.0\linewidth]{figures/tightPerim}
 	\end{center}
-	\caption{Tight Perimeter. \label{fig:tightPerim}}
+	\caption{Packed Perimeter. \label{fig:tightPerim}}
 \end{figure}
 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=1.0\linewidth]{figures/tightPerimMagnitude}
 	\end{center}
-	\caption{Tight Perimeter stabilised configuration (Magnitude). \label{fig:tightPerimMagnitude}}
+	\caption{Packed Perimeter stabilised configuration (Magnitude). \label{fig:tightPerimMagnitude}}
 \end{figure}
 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=1.0\linewidth]{figures/tightPerimDistance}
 	\end{center}
-	\caption{Tight Perimeter stabilised configuration (Distance). \label{fig:tightPerimDistance}}
+	\caption{Packed Perimeter stabilised configuration (Distance). \label{fig:tightPerimDistance}}
 \end{figure}
 
 
@@ -507,7 +507,7 @@ The swarming parameters are the same as baseline 1 as shown in table~\ref{tab:sw
 % 	\label{fig:voidRemoval}
 % \end{figure}
 
-\subsection{Inner compression model}
+\subsection{Inner packing model}
 
 \begin{equation}
 p_{kr} = \left (
@@ -525,9 +525,9 @@ p_{kc} = \left (
 \end{array} \right )
 \end{equation}
 
-\subsubsection{Inner + Gap compression model}
+\subsubsection{Inner + Gap reduction model}
 
-\subsection{Outer compression model}
+\subsection{Outer packing model}
 
 \begin{equation}
 p_{kr} = \left (
@@ -545,7 +545,7 @@ y & 1
 \end{array} \right )
 \end{equation}
 
-\subsubsection{Outer + Gap compression model}
+\subsubsection{Outer + Gap reduction model}
 
 
 \subsection{Compression Effects\label{sec:CompressionEffect}}
