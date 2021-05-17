@@ -202,7 +202,7 @@ v(b) = v_c(b) + v_r(b)
 \end{equation}\\
 
 \subsubsection{Cohesion vector}~\\
-Cohesion neighbours are identified as described in Equation~\ref{eq:cohesion1}. The cohesion influence is then calculated as shown in Equation~\ref{eq:coh2}.
+Cohesion neighbours are identified as  described in Equation~\ref{eq:cohesion1}. The cohesion influence is then calculated as shown in Equation~\ref{eq:coh2}.
 \begin{equation}\label{eq:coh2}
 	v_c(b) = \frac{1}{|n_c(b)|} \sum_{b' \in n_c(b)} \kc[p_b, p_{b'}] (b' - b)
 \end{equation}
@@ -430,6 +430,13 @@ When the simulation is ran with no relationship differences i.e. all array value
 
 \begin{figure}[H]
 	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/tightPerim2}
+	\end{center}
+	\caption{Packed Perimeter. \label{fig:tightPerim2}}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
 		\includegraphics[width=1.0\linewidth]{figures/tightPerimMagnitude}
 	\end{center}
 	\caption{Packed Perimeter (Magnitude). \label{fig:tightPerimMagnitude}}
@@ -534,15 +541,27 @@ The swarming parameters are the same as baseline 1 as shown in table~\ref{tab:sw
 From the initial simulations it is possible to show that the technique is able to successfully remove voids and surround an obstacle as shown in the video \href{https://youtu.be/3eY1vvq0JWo}{https://youtu.be/3eY1vvq0JWo}.
 
 \section{Future Work}
-Going forward the new model will be examined based upon the introduction of direction and obstacles. Initial testing shows that the models holds up well including the improvement in self-healing as demostrated in figure~????? which demonstrates an obstacle being introduced and removed in a packed perimeter swarm.
-\begin{multicols}{2}
-	\begin{figure}[H]
-		\begin{center}
-			\includegraphics[width=1.0\linewidth]{figures/FutureTime}
-		\end{center}
-		\caption{Packed self-healing\label{fig:packedSelfHealing}}
-	\end{figure}
-\end{multicols}
+Going forward the new model will be examined based upon the introduction of direction and obstacles. Initial testing shows that the models holds up well including the improvement in self-healing as demonstrated in figure~\ref{fig:packedSelfHealing} which demonstrates an obstacle being introduced and removed in a packed perimeter swarm. Figure~\ref{fig:future7} shows the impact on the Magnitude and figure~\ref{fig:future8} shows the impact on the inter-agent distances.
+\begin{figure*}[ht!]
+  \begin{center}
+    \includegraphics[width=17.6cm]{figures/FutureTime}
+  \end{center}
+  \caption{Simulation of a packed perimeter demonstrating self-healing properties over time\label{fig:packedSelfHealing}}
+\end{figure*}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/future7}
+	\end{center}
+	\caption{Perimeter packed (Magnitude)\label{fig:future7}}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/future8}
+	\end{center}
+	\caption{Perimeter packed (Distance)\label{fig:future8}}
+\end{figure}
 
 \bibliographystyle{abbrv}
 \bibliography{perimeter}
