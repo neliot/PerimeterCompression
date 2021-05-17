@@ -319,19 +319,17 @@ When using Equation~\ref{eq:rep2} two arrays are used $\kr$ and $\rb$. $\kr$ is 
 For a given agent pair their perimeter status will be calculated and applied to the arrays. If both agents are perimeter based then the values selected would be $\rb[P_b,P_{b'}]\Rightarrow 0.8$ and $\kr[P_b,P_{b'}]\Rightarrow 335$. If the agent pair were perimeter $\rightarrow$ non-perimeter then the values selected would be $\rb[P_b,P_{b'}]\Rightarrow 2$ and $\kr[P_b,P_{b'}]\Rightarrow 67$.\\
 
 \section{Experimental results\label{sec:ExperimentalResults}}
-The experimental results will show the effects on the swarm in terms of both inter-agent distances and also the magnitude metric~\cite{eliot2018metric} generated between each agent.
-
-========= MORE WORK ON THIS SECTION REQUIRED ==
+The new modelling method allows for a highly configurable swarm. Each configuration will have an impact on the the swarm's structure changes. This can be analysed in several different ways. This includes identifying the number of perimeter agents and internal agents, the magnitude of the interactions between agents and the distances between the agents. The experimental results show the effects on the swarm in terms of  inter-agent distances, magnitude metric~\cite{eliot2018metric}, and the effect on the perimeter.
 
 \subsection{Distance metric}
-Mean:
+The distance metric is used by many researchers as a method of examining the structure of a swarm~\cite{BAFVM:06,BAF:06,elamvazhuthi2015optimal,VG:05,SW:03}. However, due to the new model allowing the field effects and magnitudes to be varied the distance metric will need to be adapted to analyse the agents involved in specific relationships rather than globally.
+The distance metric is based upon the mean of a set of agents and the standard deviation between those agent sets. The mean is calculated as shown in equation~\ref{eq:SwarmStabilityDistance2} where $\mu_d(S)$ is the mean. The standard deviation is calculated as shown in equation~\ref{eq:SwarmStabilityDistance3} where $\sigma_d(S)$ is the standard deviation. The mean value can be compared to the repulsion filed to see if the swarm is optimally distributed in that the mean value is as close to the repulsion filed as possible and the standard deviation identifies the overall differences in the distances which can cause the swarm agents to oscillate. A standard deviation of $\sigma_d(S) = 0$ would indicate that all the agents are equally spaced.
 \small
 \begin{equation}
 \label{eq:SwarmStabilityDistance2}
 \mu_d(S) = \frac{\mathlarger{\sum_{b \in S}}~\mathlarger{\sum_{b' \in nbr(b)}}\card{\vbb{b}{b'}}}{\mathlarger{\sum_{b \in S}\card{nbr(b)}}}
 \end{equation}
 \normalsize
-Std:
 \small
 \begin{equation}
 \label{eq:SwarmStabilityDistance3}
@@ -339,7 +337,7 @@ Std:
 \end{equation}
 \normalsize
 
-The distance metric for the internal distribution of the agents is the pair consisting of $\mu_d(S)$, $\sigma_d(S)$. This can be written informally as:
+Therefore the distance metric for the distribution of a set of agents is both $\mu_d(S)$ and $\sigma_d(S)$. This can be written informally as:
 
 \small
 \begin{equation}
@@ -347,6 +345,9 @@ The distance metric for the internal distribution of the agents is the pair cons
 \psi_d(S) = \mu_d(S)\pm \sigma_d(S)
 \end{equation}
 \normalsize
+
+An example is shown in Figure~\ref{fig:tightPerimDistance}.
+
 \subsection{Magnitude metric}
 The magnitude metric mean:
 
