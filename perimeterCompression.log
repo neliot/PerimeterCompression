@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  17 MAY 2021 14:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  17 MAY 2021 14:40
 entering extended mode
 **"c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.tex"
 ("c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.tex"
@@ -1005,28 +1005,28 @@ File: figures/baseline2PackedDistance.png Graphic file (type png)
 <use figures/baseline2PackedDistance.png>
 Package pdftex.def Info: figures/baseline2PackedDistance.png  used on input line 535.
 (pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
-<figures/FutureTime.png, id=461, 1355.5443pt x 237.2865pt>
+ [9 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/perimExpand2.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/perimExpandMagnitude.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/perimExpandDistance.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baseline2Packed.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baseline2PackedMagnitude.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baseline2PackedDistance.png>]
+<figures/FutureTime.png, id=475, 1355.5443pt x 237.2865pt>
 File: figures/FutureTime.png Graphic file (type png)
 <use figures/FutureTime.png>
 Package pdftex.def Info: figures/FutureTime.png  used on input line 547.
 (pdftex.def)             Requested size: 500.76868pt x 87.65703pt.
- [9 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/perimExpand2.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/perimExpandMagnitude.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/perimExpandDistance.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baseline2Packed.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baseline2PackedMagnitude.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baseline2PackedDistance.png>]
-<figures/future7.png, id=477, 1387.584pt x 710.4141pt>
+<figures/future7.png, id=476, 1387.584pt x 710.4141pt>
 File: figures/future7.png Graphic file (type png)
 <use figures/future7.png>
 Package pdftex.def Info: figures/future7.png  used on input line 554.
 (pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
-<figures/future8.png, id=478, 1387.584pt x 710.4141pt>
+<figures/future8.png, id=477, 1387.584pt x 710.4141pt>
 File: figures/future8.png Graphic file (type png)
 <use figures/future8.png>
 Package pdftex.def Info: figures/future8.png  used on input line 561.
 (pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
- ("c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.bbl"
+ ("c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.bbl" [10 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/future7.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/future8.png>]
 Underfull \hbox (badness 2529) in paragraph at lines 155--160
 \OT1/ptm/m/n/9 immune-inspired swarm ag-gre-ga-tion al-go-rithm for self-
  []
 
-[10 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/future7.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/future8.png>]) [11
+) [11
 
  <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/FutureTime.png>] ("c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.aux")
 Package rerunfilecheck Info: File `perimeterCompression.out' has not changed.
@@ -1035,15 +1035,15 @@ Package rerunfilecheck Info: File `perimeterCompression.out' has not changed.
 Here is how much of TeX's memory you used:
  25961 strings out of 479584
  535881 string characters out of 2861984
- 864898 words of memory out of 3000000
+ 862898 words of memory out of 3000000
  42521 multiletter control sequences out of 15000+200000
  449141 words of font info for 113 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,11n,108p,1348b,454s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.pdf" (11 pages, 6028059 bytes).
+Output written on "c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.pdf" (11 pages, 6028346 bytes).
 PDF statistics:
- 597 PDF objects out of 1000 (max. 8388607)
+ 596 PDF objects out of 1000 (max. 8388607)
  121 named destinations out of 1000 (max. 500000)
  503 words of extra memory for PDF output out of 10000 (max. 10000000)
 
