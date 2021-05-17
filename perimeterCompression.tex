@@ -467,7 +467,17 @@ The swarming parameters are the same as baseline 1 as shown in table~\ref{tab:sw
 	\caption{Baseline 2 (Magnitude). \label{fig:baseline2Magnitude}}
 \end{figure}
 
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/baseline2Distance}
+	\end{center}
+	\caption{Baseline 2 (Distance). \label{fig:baseline2Distance}}
+\end{figure}
+
+
 \subsection{Perimeter Expansion}
+
+\subsubsection{Baseline 2}
 
 \begin{figure}[H]
 	\begin{center}
@@ -497,342 +507,28 @@ The swarming parameters are the same as baseline 1 as shown in table~\ref{tab:sw
 	\caption{Perimeter Expanded (Distance). \label{fig:perimExpandDistance}}
 \end{figure}
 
+\subsubsection{Baseline 1}
 
-==== STILL TO BE WORKED ON FROM HERE =====\\
-% Figure~\ref{fig:voidRemoval} shows how the compression effect can remove a void from a swarm by surround an obstacle in a similar manner to the method described in~\cite{eliot2019void}.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/baseline2Packed}
+	\end{center}
+	\caption{Perimeter packed\label{fig:perimPackedBaseline2}}
+\end{figure}
 
-% \begin{figure}[ht]
-% 	\centering
-% 	\begin{subfigure}{0.4\textwidth}
-% 		\centering	
-% 		\includegraphics[width=1.0\linewidth]{figures/voidRemoval1}
-% 		\caption[Void removal start]{Void removal start}
-% 		\label{fig:voidRemovalStart}
-% 	\end{subfigure}
-% 	\begin{subfigure}{0.4\textwidth}
-% 		\centering
-% 		\includegraphics[width=1.0\linewidth]{figures/voidRemoval2}
-% 		\caption[Void removal finish]{Void removal finish}
-% 		\label{fig:voidRemovalFinish}
-% 	\end{subfigure}
-% 	\caption{Void removal through perimeter compression}
-% 	\label{fig:voidRemoval}
-% \end{figure}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/baseline2PackedMagnitude}
+	\end{center}
+	\caption{Perimeter packed (Magnitude)\label{fig:baseline2PackedMagnitude}}
+\end{figure}
 
-\subsection{Inner packing model}
-
-\begin{equation}
-p_{kr} = \left (
-\begin{array}{cc}
-1 & x\\
-1 & 1
-\end{array} \right )
-\end{equation}
-
-\begin{equation}
-p_{kc} = \left (
-\begin{array}{cc}
-1 & y\\
-1 & 1
-\end{array} \right )
-\end{equation}
-
-\subsubsection{Inner + Gap reduction model}
-
-\subsection{Outer packing model}
-
-\begin{equation}
-p_{kr} = \left (
-\begin{array}{cc}
-1 & x\\
-x & 1
-\end{array} \right )
-\end{equation}
-
-\begin{equation}
-p_{kc} = \left (
-\begin{array}{cc}
-1 & y\\
-y & 1
-\end{array} \right )
-\end{equation}
-
-\subsubsection{Outer + Gap reduction model}
-
-
-\subsection{Compression Effects\label{sec:CompressionEffect}}
-
-% The compression effect parameters are shown in tables~\ref{tab:compressionExperimentEffect1} and~\ref{tab:compressionExperimentEffect2}
-
-% \begin{table}[ht]
-% 	\centering
-% 	\tiny
-% \begin{tabular}{ | >{\columncolor[HTML]{000000}}l | l | l | l | l | l | }
-% 	\hline
-% 	\rowcolor[HTML]{000000} 
-% 	{\color[HTML]{FFFFFF} Pr/Pc} & {\color[HTML]{FFFFFF}10} & {\color[HTML]{FFFFFF}20} & {\color[HTML]{FFFFFF}30} & {\color[HTML]{FFFFFF}40} & {\color[HTML]{FFFFFF}50} \\ \hline
-% 	    {\color[HTML]{FFFFFF}0.1} & 0.1/10 & 0.1/20 & 0.1/30 & 0.1/40 & 0.1/50  \\ \hline
-% 		{\color[HTML]{FFFFFF}0.2} & 0.2/10 & 0.2/20 & 0.2/30 & 0.2/40 & 0.2/50  \\ \hline
-% 		{\color[HTML]{FFFFFF}0.3} & 0.3/10 & 0.3/20 & 0.3/30 & 0.3/40 & 0.3/50  \\ \hline
-% 		{\color[HTML]{FFFFFF}0.4} & 0.4/10 & 0.4/20 & 0.4/30 & 0.4/40 & 0.4/50  \\ \hline
-% 		{\color[HTML]{FFFFFF}0.5} & 0.5/10 & 0.5/20 & 0.5/30 & 0.5/40 & 0.5/50  \\ \hline
-% 		{\color[HTML]{FFFFFF}0.6} & 0.6/10 & 0.6/20 & 0.6/30 & 0.6/40 & 0.6/50  \\ \hline
-% 		{\color[HTML]{FFFFFF}0.7} & 0.7/10 & 0.7/20 & 0.7/30 & 0.7/40 & 0.7/50  \\ \hline
-% 		{\color[HTML]{FFFFFF}0.8} & 0.8/10 & 0.8/20 & 0.8/30 & 0.8/40 & 0.8/50  \\ \hline
-% 		{\color[HTML]{FFFFFF}0.9} & 0.9/10 & 0.9/20 & 0.9/30 & 0.9/40 & 0.9/50  \\ \hline
-% 	\end{tabular}
-% 	\caption{Experiment parameters 1}
-% 	\label{tab:compressionExperimentEffect1}
-% \end{table}
-
-% \begin{table}[ht]
-% 	\centering
-% 	\tiny
-% \begin{tabular}{ | >{\columncolor[HTML]{000000}}l | l | l | l | l | l | }
-% 	\hline
-% 	\rowcolor[HTML]{000000} 
-% 	{\color[HTML]{FFFFFF} Pr/Pc} & {\color[HTML]{FFFFFF}60} & {\color[HTML]{FFFFFF}70} & {\color[HTML]{FFFFFF}80} & {\color[HTML]{FFFFFF}90} & {\color[HTML]{FFFFFF}100}   \\ \hline
-% 		{\color[HTML]{FFFFFF}0.1} & 0.1/60 & 0.1/70 & 0.1/80 & 0.1/90 & 0.1/100 \\ \hline
-% 		{\color[HTML]{FFFFFF}0.2} & 0.2/60 & 0.2/70 & 0.2/80 & 0.2/90 & 0.2/100 \\ \hline
-% 		{\color[HTML]{FFFFFF}0.3} & 0.3/60 & 0.3/70 & 0.3/80 & 0.3/90 & 0.3/100 \\ \hline
-% 		{\color[HTML]{FFFFFF}0.4} & 0.4/60 & 0.4/70 & 0.4/80 & 0.4/90 & 0.4/100 \\ \hline
-% 		{\color[HTML]{FFFFFF}0.5} & 0.5/60 & 0.5/70 & 0.5/80 & 0.5/90 & 0.5/100 \\ \hline
-% 		{\color[HTML]{FFFFFF}0.6} & 0.6/60 & 0.6/70 & 0.6/80 & 0.6/90 & 0.6/100 \\ \hline
-% 		{\color[HTML]{FFFFFF}0.7} & 0.7/60 & 0.7/70 & 0.7/80 & 0.7/90 & 0.7/100 \\ \hline
-% 		{\color[HTML]{FFFFFF}0.8} & 0.8/60 & 0.8/70 & 0.8/80 & 0.8/90 & 0.8/100 \\ \hline
-% 		{\color[HTML]{FFFFFF}0.9} & 0.9/60 & 0.9/70 & 0.9/80 & 0.9/90 & 0.9/100 \\ \hline
-% 	\end{tabular}
-% 	\caption{Experiment parameters 2}
-% 	\label{tab:compressionExperimentEffect2}
-% \end{table}
-
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=8cm]{figures/Experiment1}
-% 	\end{center}
-% 	\caption{Experiment Start \label{fig:experiment1}}
-% \end{figure}
-
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=8cm]{figures/Experiment2}
-% 	\end{center}
-% 	\caption{Experiment Middle \label{fig:experiment2}}
-% \end{figure}
-
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=8cm]{figures/Experiment3}
-% 	\end{center}
-% 	\caption{Experiment End \label{fig:experiment3}}
-% \end{figure}
-
-% The first area of comparison is the effect of the algorithms on the number of perimeter agents. The baseline swarm's agents oscillates but remain in a relatively stable state with a constant number of perimeter agents and the internal anomaly persists~(Fig.~\ref{fig:baselineSwarm}). The maximum and minimum number of perimeter agents is shown in table~\ref{tab:perimeterLimits}. 
-
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=8cm]{figures/PerimeterCount}
-% 	\end{center}
-% 	\caption{Perimeter Count of baseline, gap reduction and perimeter compression. \label{fig:perimeterCount}}
-% \end{figure}
-
-% \begin{table}[ht]
-% 	\centering
-% 	\tiny
-% 	\begin{tabular}{|c|c|r|r|r|r|r|r|r|}
-% 		\hline
-% 		\rowcolor[HTML]{000000} 
-% 		{\color[HTML]{FFFFFF} Comp.} &{\color[HTML]{FFFFFF} Base} & {\color[HTML]{FFFFFF} Void} & {\color[HTML]{FFFFFF} 1} & {\color[HTML]{FFFFFF} 2} & {\color[HTML]{FFFFFF} 3} & {\color[HTML]{FFFFFF} 4} & {\color[HTML]{FFFFFF} 5} & {\color[HTML]{FFFFFF} 6}\\ \hline
-% 		Max & \texttt{75} & \texttt{90} &\texttt{90} & \texttt{90} & \texttt{94} & \texttt{92} & \texttt{95} & \texttt{93} \\ \hline
-% 		Min & \texttt{75} & \texttt{51} &\texttt{51}  & \texttt{51} & \texttt{51} & \texttt{49} & \texttt{49} & \texttt{49}\\ \hline
-% 		Mean & \texttt{75} & \texttt{62} &\texttt{59}  & \texttt{58} & \texttt{60} & \texttt{59} & \texttt{57} & \texttt{59}\\ \hline
-% 		Std & \texttt{0} & \texttt{6} &\texttt{9}  & \texttt{10} & \texttt{10} & \texttt{8} & \texttt{10} & \texttt{8}\\ \hline
-% 	\end{tabular}
-% 	\caption{Perimeter agents}
-% 	\label{tab:perimeterLimits}
-% \end{table}
-
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=8cm]{figures/PerimeterCount2}
-% 	\end{center}
-% 	\caption{Perimeter Count of baseline, gap reduction and Experiment 6. \label{fig:perimeterCount2}}
-% \end{figure}
-
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=8cm]{figures/DistanceMetric1}
-% 	\end{center}
-% 	\caption{Distance metric of baseline, gap reduction and perimeter compression. \label{fig:distanceMetric}}
-% \end{figure}
-
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=8cm]{figures/InteragentCohesionMean}
-% 	\end{center}
-% 	\caption{Inter-agent Cohesion Mean. \label{fig:interagentCohesionMean}}
-% \end{figure}
-
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=8cm]{figures/InteragentCohesionStd}
-% 	\end{center}
-% 	\caption{Inter-agent Cohesion Std. \label{fig:interagentCohesionStd}}
-% \end{figure}
-
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=8cm]{figures/InteragentRepulsionMean}
-% 	\end{center}
-% 	\caption{Inter-agent Repulsion Mean. \label{fig:interagentRepulsionMean}}
-% \end{figure}
-
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=8cm]{figures/InteragentRepulsionStd}
-% 	\end{center}
-% 	\caption{Inter-agent Repulsion Std. \label{fig:interagentRepulsionStd}}
-% \end{figure}
-
-
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=8cm]{figures/baselineSwarmPerimeter}
-% 	\end{center}
-% 	\caption{Baseline swarm in stabilised configuration. \label{fig:baselineSwarmPerimeter}}
-% \end{figure}
-
-% \subsection{Gap compression}
-% \subsection{Perimeter compression}
-
-% Compression 1
-
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=5cm]{figures/baselineSwarm1}
-% 	\end{center}
-% 	\caption{Baseline swarm in with compression set 1 resultant configuration. \label{fig:baselineSwarm1}}
-% \end{figure}
-
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=8cm]{figures/baselineSwarmMagnitude1}
-% 	\end{center}
-% 	\caption{Baseline swarm in with compression set 1. \label{fig:baselineSwarmMagnitude1}}
-% \end{figure}
-
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=8cm]{figures/baselineSwarmPerimeter1}
-% 	\end{center}
-% 	\caption{Baseline swarm in with compression set 1. \label{fig:baselineSwarmPerimeter1}}
-% \end{figure}
-
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=9cm]{figures/Figure_1}
-% 	\end{center}
-% 	\caption{Sample}
-% \end{figure}
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=9cm]{figures/Figure_2}
-% 	\end{center}
-% 	\caption{Sample}
-% \end{figure}
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=9cm]{figures/Figure_3}
-% 	\end{center}
-% 	\caption{Sample}
-% \end{figure}
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=9cm]{figures/Figure_4}
-% 	\end{center}
-% 	\caption{Sample}
-% \end{figure}
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=9cm]{figures/Figure_5}
-% 	\end{center}
-% 	\caption{Sample}
-% \end{figure}
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=9cm]{figures/Figure_6}
-% 	\end{center}
-% 	\caption{Sample}
-% \end{figure}
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=9cm]{figures/Figure_7}
-% 	\end{center}
-% 	\caption{Sample}
-% \end{figure}
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=9cm]{figures/Figure_8}
-% 	\end{center}
-% 	\caption{Sample}
-% \end{figure}
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=9cm]{figures/Figure_9}
-% 	\end{center}
-% 	\caption{Sample}
-% \end{figure}
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=9cm]{figures/Figure_10}
-% 	\end{center}
-% 	\caption{Sample}
-% \end{figure}
-
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=9cm]{figures/mag-pr-0.9-mean}
-% 	\end{center}
-% 	\caption{MAG pr=0.9 mean}
-% \end{figure}
-
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=9cm]{figures/mag-pr-0.9-std}
-% 	\end{center}
-% 	\caption{MAG pr=0.9 std}
-% \end{figure}
-
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=9cm]{figures/mag-pr-0.9-pc-100-error}
-% 	\end{center}
-% 	\caption{MAG pr=0.9 pc=100 error}
-% \end{figure}
-
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=9cm]{figures/dist-pr-0.9-mean}
-% 	\end{center}
-% 	\caption{DIST pr=0.9 mean}
-% \end{figure}
-
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=9cm]{figures/dist-pr-0.9-std}
-% 	\end{center}
-% 	\caption{DIST pr=0.9 std}
-% \end{figure}
-
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=9cm]{figures/dist-pr-0.9-pc-100-error}
-% 	\end{center}
-% 	\caption{DIST pr=0.9 pc=100 error }
-% \end{figure}
-
-
-\subsection{Comparison}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/baseline2PackedDistance}
+	\end{center}
+	\caption{Perimeter packed (Distance)\label{fig:baseline2PackedDistance}}
+\end{figure}
 
 \section{Conclusions}\label{conclusions}
 From the initial simulations it is possible to show that the technique is able to successfully remove voids and surround an obstacle as shown in the video \href{https://youtu.be/3eY1vvq0JWo}{https://youtu.be/3eY1vvq0JWo}.
