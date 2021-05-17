@@ -41,7 +41,7 @@
 \newcommand{\ko}{\mathit{k_o}}
 \newcommand{\rb}{\mathit{R}}
 
-\title{A Novel Approach to Swarm Control.}
+\title{A Novel Relationship-based Approach to Swarm Control.}
 \author[1,*]{Neil Eliot}
 \author[ ]{David Kendall}
 \author[ ]{Michael Brockway}
@@ -399,7 +399,7 @@ For all the experiments the parameters used to create the basic swarming effect 
 	\begin{center}
 		\includegraphics[width=1.0\linewidth]{figures/baseline}
 	\end{center}
-	\caption{Baseline swarm magnitude analysis. \label{fig:baselineSwarm}}
+	\caption{Baseline swarm. \label{fig:baselineSwarm}}
 \end{figure}
 
 When the simulation is ran with no relationship differences i.e. all array values are equal, the changes are identified using a magnitude-based metric~\cite{eliot2018metric}. The resultant magnitudes generated are shown in figure~\ref{fig:baselineMagnitude}. These states are used as the baseline for the experiments to measure the effects of changing the arrays.
@@ -408,12 +408,20 @@ When the simulation is ran with no relationship differences i.e. all array value
 	\begin{center}
 		\includegraphics[width=1.0\linewidth]{figures/baselineMagnitude}
 	\end{center}
-	\caption{Baseline swarm in stabilised configuration. \label{fig:baselineMagnitude}}
+	\caption{Baseline swarm (Magnitude)). \label{fig:baselineMagnitude}}
 \end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/baselineDistance}
+	\end{center}
+	\caption{Baseline swarm (Distance). \label{fig:baselineDistance}}
+\end{figure}
+
 
 \subsection{Perimeter Packing}\label{sec:perimCompress}
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=1.0\linewidth]{figures/tightPerim}
 	\end{center}
@@ -424,14 +432,14 @@ When the simulation is ran with no relationship differences i.e. all array value
 	\begin{center}
 		\includegraphics[width=1.0\linewidth]{figures/tightPerimMagnitude}
 	\end{center}
-	\caption{Packed Perimeter stabilised configuration (Magnitude). \label{fig:tightPerimMagnitude}}
+	\caption{Packed Perimeter (Magnitude). \label{fig:tightPerimMagnitude}}
 \end{figure}
 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=1.0\linewidth]{figures/tightPerimDistance}
 	\end{center}
-	\caption{Packed Perimeter stabilised configuration (Distance). \label{fig:tightPerimDistance}}
+	\caption{Packed Perimeter (Distance). \label{fig:tightPerimDistance}}
 \end{figure}
 
 
@@ -449,14 +457,14 @@ The swarming parameters are the same as baseline 1 as shown in table~\ref{tab:sw
 	\begin{center}
 		\includegraphics[width=1.0\linewidth]{figures/baseline2-2}
 	\end{center}
-	\caption{Baseline 2 end configuration. \label{fig:baseline2-2}}
+	\caption{Baseline 2 end. \label{fig:baseline2-2}}
 \end{figure}
 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=1.0\linewidth]{figures/baseline2Magnitude}
 	\end{center}
-	\caption{Baseline 2 stabilised configuration. \label{fig:baseline2Magnitude}}
+	\caption{Baseline 2 (Magnitude). \label{fig:baseline2Magnitude}}
 \end{figure}
 
 \subsection{Perimeter Expansion}
@@ -479,14 +487,14 @@ The swarming parameters are the same as baseline 1 as shown in table~\ref{tab:sw
 	\begin{center}
 		\includegraphics[width=1.0\linewidth]{figures/perimExpandMagnitude}
 	\end{center}
-	\caption{Perimeter Expanded stabilised configuration (Magnitude). \label{fig:perimExpandMagnitude}}
+	\caption{Perimeter Expanded (Magnitude). \label{fig:perimExpandMagnitude}}
 \end{figure}
 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=1.0\linewidth]{figures/perimExpandDistance}
 	\end{center}
-	\caption{Perimeter Expanded stabilised configuration (Distance). \label{fig:perimExpandDistance}}
+	\caption{Perimeter Expanded (Distance). \label{fig:perimExpandDistance}}
 \end{figure}
 
 
