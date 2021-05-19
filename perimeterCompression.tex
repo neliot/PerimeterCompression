@@ -128,7 +128,8 @@ In this paper, we propose that the behaviour of an agent should be modified depe
 	\caption{Outer and inner swarm perimeters. \label{fig:simplePerim2}}
 \end{figure}
 
-\subsection{Perimeter detection}\label{sec:perimeterDetection} is achieved using a cyclic analysis of the agents that surround an agent~(Fig.~\ref{fig:neighbours2}). Ghrist et al. discusses a similar technique using sweep angles~\cite{ghrist2008surrounding} as does McLurkin et al~\cite{mclurkin2009}. 
+\subsection{Perimeter detection}\label{sec:perimeterDetection} 
+Each agent's perimeter status is identified using a cyclic analysis of the agents (neighbours) that surround an agent~(Fig.~\ref{fig:neighbours2}). Ghrist et al. discusses a similar technique using sweep angles~\cite{ghrist2008surrounding} as does McLurkin et al~\cite{mclurkin2009}. 
 
 When detecting a perimeter it is useful to define an ordering on an agent's cohesion neighbours. We choose to order the cohesion neighbours of an agent $b$ by their \emph{polar
 angle} ($\alpha$) with respect to $b$ (Fig.~\ref{fig:neighbours2}). 
@@ -183,13 +184,13 @@ one of the following conditions is satisfied:
 \end{enumerate}
 
 \subsection{$\rb$, $\kr$ and $\kc$}\label{sec:rbkrkc} 
-In this section we will discuss the application of the new $\rb$, $\kr$ and $\kc$ arrays which are structured as a two dimensional array as shown below:
+This section discusses the application of the new $\rb$, $\kr$ and $\kc$ two dimensional ($2\times2$) arrays structured as shown below:
 
 \[
   \kbordermatrix{
                    & \text{False} & \text{True} \\
-    \text{False}   & i-i   & i-p  \\
-    \text{True}    & p-i   & p-p
+    \text{False}   & i\rightarrow i   & i\rightarrow p  \\
+    \text{True}    & p\rightarrow i   & p\rightarrow p
   }
 \]
 
@@ -212,7 +213,7 @@ $\kc$ is a 2x2 boolean-indexed array of constants that determine the weight
 of a component of the cohesion vector according to
 whether the interaction between $b,b'$ is between non-perimeter agents,
 non-perimeter--perimeter, perimeter--non-perimeter, or perimeter--perimeter
-agents.\\
+agents.
 
 \subsubsection{Repulsion vector}~\\
 ~\\
@@ -224,7 +225,7 @@ The set of repellers of $b$ are defined as Equation~\ref{eq:rep1}.
 \normalsize
 where $p_b = \prm(b)$, $p_{b'} = \prm(b')$, and $\rb$ is a 2x2 boolean-indexed
 array of constants that determine the radius of the \emph{repulsion field} for agents in the swarm, according to whether the interaction between $b,b'$ is between non-perimeter agents, non-perimeter--perimeter,
-perimeter--non-perimeter, or perimeter--perimeter agents.
+perimeter--non-perimeter, or perimeter--perimeter agents.\\
 
 Now $v_r(b)$ is defined by Equation~\ref{eq:rep2}
 \small

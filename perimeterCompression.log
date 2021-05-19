@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  19 MAY 2021 10:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  19 MAY 2021 10:17
 entering extended mode
 **./perimeterCompression.tex
 (perimeterCompression.tex
@@ -1131,75 +1131,64 @@ Package pdftex.def Info: figures/relationships2.png  used on input line 126.
 <figures/neighbours2.pdf, id=275, 183.45639pt x 142.50742pt>
 File: figures/neighbours2.pdf Graphic file (type pdf)
 <use figures/neighbours2.pdf>
-Package pdftex.def Info: figures/neighbours2.pdf  used on input line 138.
+Package pdftex.def Info: figures/neighbours2.pdf  used on input line 139.
 (pdftex.def)             Requested size: 196.62386pt x 152.73799pt.
 <figures/neighbours3.pdf, id=281, 172.43019pt x 153.08493pt>
 File: figures/neighbours3.pdf Graphic file (type pdf)
 <use figures/neighbours3.pdf>
-Package pdftex.def Info: figures/neighbours3.pdf  used on input line 163.
+Package pdftex.def Info: figures/neighbours3.pdf  used on input line 164.
 (pdftex.def)             Requested size: 196.62386pt x 174.57pt.
  [3 <./figures/relationships2.png> <./figures/neighbours2.pdf> <./figures/neigh
 bours3.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 185.
+(hyperref)                removing `math shift' on input line 186.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 185.
+(hyperref)                removing `math shift' on input line 186.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 185.
+(hyperref)                removing `math shift' on input line 186.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 185.
+(hyperref)                removing `subscript' on input line 186.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 185.
+(hyperref)                removing `math shift' on input line 186.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 185.
+(hyperref)                removing `math shift' on input line 186.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 185.
+(hyperref)                removing `subscript' on input line 186.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 185.
+(hyperref)                removing `math shift' on input line 186.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
 
  []
 
 
-Underfull \hbox (badness 1776) in paragraph at lines 208--216
-\OT1/ptm/m/n/12 ac-cord-ing to whether the in-ter-ac-tion be-tween
- []
-
-
-Underfull \hbox (badness 5924) in paragraph at lines 208--216
-\OML/cmm/m/it/12 b; b[]$ \OT1/ptm/m/n/12 is be-tween non-perimeter agents, non-
+Underfull \hbox (badness 10000) in paragraph at lines 218--222
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--216
+Underfull \hbox (badness 10000) in paragraph at lines 224--229
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--221
-
- []
-
-
-Overfull \hbox (2.41086pt too wide) detected at line 233
+Overfull \hbox (2.41086pt too wide) detected at line 234
 \OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 b\OT1/cmr/m/n/10 ) = [] [
 ] [][\OML/cmm/m/it/10 p[]; p[]\OT1/cmr/m/n/10 ] [] (\OML/cmm/m/it/10 b[] \OMS/c
 msy/m/n/10   \OML/cmm/m/it/10 b\OT1/cmr/m/n/10 )
@@ -1209,21 +1198,21 @@ msy/m/n/10   \OML/cmm/m/it/10 b\OT1/cmr/m/n/10 )
 <figures/perimeterCompress.png, id=347, 690.1785pt x 529.7391pt>
 File: figures/perimeterCompress.png Graphic file (type png)
 <use figures/perimeterCompress.png>
-Package pdftex.def Info: figures/perimeterCompress.png  used on input line 278.
+Package pdftex.def Info: figures/perimeterCompress.png  used on input line 279.
 
 (pdftex.def)             Requested size: 227.62204pt x 174.70935pt.
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
-85.
+86.
  ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ts1ptm.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 319--320
+Underfull \hbox (badness 10000) in paragraph at lines 320--321
 
  []
 
 [5 <./figures/perimeterCompress.png>]
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 3
-88.
+89.
 
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
@@ -1231,12 +1220,12 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 <figures/baseline.png, id=383, 708.9687pt x 688.0104pt>
 File: figures/baseline.png Graphic file (type png)
 <use figures/baseline.png>
-Package pdftex.def Info: figures/baseline.png  used on input line 400.
+Package pdftex.def Info: figures/baseline.png  used on input line 401.
 (pdftex.def)             Requested size: 245.77888pt x 238.50815pt.
 <figures/baselineMagnitude.png, id=386, 1387.584pt x 710.4141pt>
 File: figures/baselineMagnitude.png Graphic file (type png)
 <use figures/baselineMagnitude.png>
-Package pdftex.def Info: figures/baselineMagnitude.png  used on input line 409.
+Package pdftex.def Info: figures/baselineMagnitude.png  used on input line 410.
 
 (pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
 
@@ -1246,17 +1235,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <figures/baselineDistance.png, id=401, 1387.584pt x 710.4141pt>
 File: figures/baselineDistance.png Graphic file (type png)
 <use figures/baselineDistance.png>
-Package pdftex.def Info: figures/baselineDistance.png  used on input line 416.
+Package pdftex.def Info: figures/baselineDistance.png  used on input line 417.
 (pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
 <figures/tightPerim.png, id=402, 691.6239pt x 682.2288pt>
 File: figures/tightPerim.png Graphic file (type png)
 <use figures/tightPerim.png>
-Package pdftex.def Info: figures/tightPerim.png  used on input line 426.
+Package pdftex.def Info: figures/tightPerim.png  used on input line 427.
 (pdftex.def)             Requested size: 245.77888pt x 242.43755pt.
 <figures/tightPerim2.png, id=403, 694.5147pt x 682.9515pt>
 File: figures/tightPerim2.png Graphic file (type png)
 <use figures/tightPerim2.png>
-Package pdftex.def Info: figures/tightPerim2.png  used on input line 433.
+Package pdftex.def Info: figures/tightPerim2.png  used on input line 434.
 (pdftex.def)             Requested size: 245.77888pt x 241.68353pt.
 
 Underfull \vbox (badness 7759) has occurred while \output is active []
@@ -1265,18 +1254,18 @@ Underfull \vbox (badness 7759) has occurred while \output is active []
 File: figures/tightPerimMagnitude.png Graphic file (type png)
 <use figures/tightPerimMagnitude.png>
 Package pdftex.def Info: figures/tightPerimMagnitude.png  used on input line 44
-0.
+1.
 (pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
 <figures/tightPerimDistance.png, id=405, 1387.584pt x 710.4141pt>
 File: figures/tightPerimDistance.png Graphic file (type png)
 <use figures/tightPerimDistance.png>
-Package pdftex.def Info: figures/tightPerimDistance.png  used on input line 447
+Package pdftex.def Info: figures/tightPerimDistance.png  used on input line 448
 .
 (pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
 <figures/baseline2-1.png, id=407, 706.0779pt x 687.2877pt>
 File: figures/baseline2-1.png Graphic file (type png)
 <use figures/baseline2-1.png>
-Package pdftex.def Info: figures/baseline2-1.png  used on input line 458.
+Package pdftex.def Info: figures/baseline2-1.png  used on input line 459.
 (pdftex.def)             Requested size: 245.77888pt x 239.23291pt.
 
 Underfull \vbox (badness 2790) has occurred while \output is active []
@@ -1287,29 +1276,29 @@ ng> <./figures/tightPerimDistance.png>]
 <figures/baseline2-2.png, id=423, 701.019pt x 685.1196pt>
 File: figures/baseline2-2.png Graphic file (type png)
 <use figures/baseline2-2.png>
-Package pdftex.def Info: figures/baseline2-2.png  used on input line 465.
+Package pdftex.def Info: figures/baseline2-2.png  used on input line 466.
 (pdftex.def)             Requested size: 245.77888pt x 240.20316pt.
 <figures/baseline2Magnitude.png, id=424, 1387.584pt x 710.4141pt>
 File: figures/baseline2Magnitude.png Graphic file (type png)
 <use figures/baseline2Magnitude.png>
-Package pdftex.def Info: figures/baseline2Magnitude.png  used on input line 472
+Package pdftex.def Info: figures/baseline2Magnitude.png  used on input line 473
 .
 (pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
 <figures/baseline2Distance.png, id=425, 1387.584pt x 710.4141pt>
 File: figures/baseline2Distance.png Graphic file (type png)
 <use figures/baseline2Distance.png>
-Package pdftex.def Info: figures/baseline2Distance.png  used on input line 479.
+Package pdftex.def Info: figures/baseline2Distance.png  used on input line 480.
 
 (pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
 <figures/perimExpand1.png, id=426, 682.9515pt x 680.7834pt>
 File: figures/perimExpand1.png Graphic file (type png)
 <use figures/perimExpand1.png>
-Package pdftex.def Info: figures/perimExpand1.png  used on input line 491.
+Package pdftex.def Info: figures/perimExpand1.png  used on input line 492.
 (pdftex.def)             Requested size: 245.77888pt x 244.99873pt.
 <figures/perimExpand2.png, id=427, 733.5405pt x 685.8423pt>
 File: figures/perimExpand2.png Graphic file (type png)
 <use figures/perimExpand2.png>
-Package pdftex.def Info: figures/perimExpand2.png  used on input line 498.
+Package pdftex.def Info: figures/perimExpand2.png  used on input line 499.
 (pdftex.def)             Requested size: 245.77888pt x 229.7926pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1320,18 +1309,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: figures/perimExpandMagnitude.png Graphic file (type png)
 <use figures/perimExpandMagnitude.png>
 Package pdftex.def Info: figures/perimExpandMagnitude.png  used on input line 5
-05.
+06.
 (pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
 <figures/perimExpandDistance.png, id=444, 1387.584pt x 710.4141pt>
 File: figures/perimExpandDistance.png Graphic file (type png)
 <use figures/perimExpandDistance.png>
 Package pdftex.def Info: figures/perimExpandDistance.png  used on input line 51
-2.
+3.
 (pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
 <figures/baseline2Packed.png, id=445, 674.2791pt x 695.9601pt>
 File: figures/baseline2Packed.png Graphic file (type png)
 <use figures/baseline2Packed.png>
-Package pdftex.def Info: figures/baseline2Packed.png  used on input line 521.
+Package pdftex.def Info: figures/baseline2Packed.png  used on input line 522.
 (pdftex.def)             Requested size: 245.77888pt x 253.67819pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1340,13 +1329,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: figures/baseline2PackedMagnitude.png Graphic file (type png)
 <use figures/baseline2PackedMagnitude.png>
 Package pdftex.def Info: figures/baseline2PackedMagnitude.png  used on input li
-ne 528.
+ne 529.
 (pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
 <figures/baseline2PackedDistance.png, id=447, 1387.584pt x 710.4141pt>
 File: figures/baseline2PackedDistance.png Graphic file (type png)
 <use figures/baseline2PackedDistance.png>
 Package pdftex.def Info: figures/baseline2PackedDistance.png  used on input lin
-e 535.
+e 536.
 (pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
  [9 <./figures/perimExpand2.png> <./figures/perimExpandMagnitude.png> <./figure
 s/perimExpandDistance.png> <./figures/baseline2Packed.png> <./figures/baseline2
@@ -1354,17 +1343,17 @@ PackedMagnitude.png> <./figures/baseline2PackedDistance.png>]
 <figures/FutureTime.png, id=466, 1355.5443pt x 237.2865pt>
 File: figures/FutureTime.png Graphic file (type png)
 <use figures/FutureTime.png>
-Package pdftex.def Info: figures/FutureTime.png  used on input line 546.
+Package pdftex.def Info: figures/FutureTime.png  used on input line 547.
 (pdftex.def)             Requested size: 500.76868pt x 87.65703pt.
 <figures/future7.png, id=467, 1387.584pt x 710.4141pt>
 File: figures/future7.png Graphic file (type png)
 <use figures/future7.png>
-Package pdftex.def Info: figures/future7.png  used on input line 553.
+Package pdftex.def Info: figures/future7.png  used on input line 554.
 (pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
 <figures/future8.png, id=468, 1387.584pt x 710.4141pt>
 File: figures/future8.png Graphic file (type png)
 <use figures/future8.png>
-Package pdftex.def Info: figures/future8.png  used on input line 560.
+Package pdftex.def Info: figures/future8.png  used on input line 561.
 (pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
  (perimeterCompression.bbl
 [10 <./figures/future7.png> <./figures/future8.png>]
@@ -1417,7 +1406,7 @@ pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb
 tmbi8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/tim
 es/utmr8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/
 times/utmri8a.pfb>
-Output written on perimeterCompression.pdf (11 pages, 6028432 bytes).
+Output written on perimeterCompression.pdf (11 pages, 6028650 bytes).
 PDF statistics:
  587 PDF objects out of 1000 (max. 8388607)
  120 named destinations out of 1000 (max. 500000)
