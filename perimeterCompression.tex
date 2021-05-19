@@ -359,8 +359,6 @@ The metric is based upon the mean of a set of agents relationships and the stand
 \mu_p(S) = \frac{\mathlarger{\sum_{b \in S} P(b)}}{\mathlarger{\sum_{b \in S}}\card{nbr(b)} + \mathlarger{\sum_{b \in S}}\card{n_r(b)}}
 \end{equation}
 \normalsize
-Std:
-
 \small
 \begin{equation}
 \label{eq:SwarmStabilityQuotientT}
@@ -377,9 +375,10 @@ The metric for the internal movement is the mean and standard deviation of the s
 \end{equation}
 \normalsize
 
-\subsection{Baseline}
-For all the experiments the parameters used to create the basic swarming effect are shown in Table~\ref{tab:swarmingEffect}. Where $C$ is the cohesion field, $\kc$ is the cohesion weighting, $\rb$ is the repulsion field, $\kr$ is the repulsion weighting and $\kg$ is the weighting applied in the gap reduction algorithm discussed in~\cite{eliot2019void}. The swarm consists of 500 agents which are distributed with a void at the centre. These initial parameters create a hexagonal-based distribution of agents that stabilise as shown in Figure~\ref{fig:baselineSwarm}. This basic swarm is used as the initial state for all the experiments. 
- \begin{table}[H]
+\subsection{Baseline Settings}
+For all the experiments the parameters used to create the basic swarming effect are shown in Table~\ref{tab:swarmingEffect}. Where $C$ is the cohesion field, $\kc$ is the cohesion weighting, $\rb$ is the repulsion field, $\kr$ is the repulsion weighting and $\kg$ is the weighting applied in the gap reduction algorithm discussed in~\cite{eliot2019void}. 
+
+\begin{table}[H]
 	\centering
 	\tiny
 	\begin{tabular}{|c|r|}
@@ -392,9 +391,12 @@ For all the experiments the parameters used to create the basic swarming effect 
 		$k_r$ & \texttt{[[335,335][335,335]]} \\ \hline
 		$k_g$ & \texttt{0.0} \\ \hline
 	\end{tabular}
-  	\caption{Swarming effect parameters}
-  	\label{tab:swarmingEffect}
+	\caption{Swarming effect parameters}
+	\label{tab:swarmingEffect}
 \end{table}
+
+\subsection{Baseline 1}
+The swarm consists of 500 agents which are distributed with a void at the centre. These initial parameters create a hexagonal-based distribution of agents that stabilise as shown in Figure~\ref{fig:baselineSwarm}. 
 
 \begin{figure}[H]
 	\begin{center}
@@ -403,7 +405,7 @@ For all the experiments the parameters used to create the basic swarming effect 
 	\caption{Baseline swarm. \label{fig:baselineSwarm}}
 \end{figure}
 
-When the simulation is ran with no relationship differences i.e. all array values are equal, the changes are identified using a magnitude-based metric~\cite{eliot2018metric}. The resultant magnitudes generated are shown in figure~\ref{fig:baselineMagnitude}. These states are used as the baseline for the experiments to measure the effects of changing the arrays.
+When the simulation is ran with no relationship differences i.e. all array values are equal, the changes are identified using a magnitude-based metric~\cite{eliot2018metric}. The resultant magnitudes generated are shown in figure~\ref{fig:baselineMagnitude}. These states are used as the baseline for the experiments to measure the effects of changing the arrays. This configuration is equivalent to the conventional swarming algorithms using single value potential fields.
 
 \begin{figure}[H]
 	\begin{center}
@@ -419,8 +421,7 @@ When the simulation is ran with no relationship differences i.e. all array value
 	\caption{Baseline swarm (Distance). \label{fig:baselineDistance}}
 \end{figure}
 
-
-\subsection{Perimeter Packing}\label{sec:perimCompress}
+\subsubsection{Perimeter Packing and Void Removal}\label{sec:perimCompress}
 
 \begin{figure}[H]
 	\begin{center}
@@ -452,8 +453,8 @@ When the simulation is ran with no relationship differences i.e. all array value
 
 
 \subsection{Baseline 2}
+The swarm consists of 500 agents which are distributed within a small area to create a compressed swarm as shown in Figure~\ref{fig:baseline2}. These initial parameters create a hexagonal-based distribution of agents that stabilise as shown in Figure~\ref{fig:baseline2-2}. This configuration is equivalent to the conventional swarming algorithms using single value potential fields. 
 
-The swarming parameters are the same as baseline 1 as shown in table~\ref{tab:swarmingEffect}.
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=1.0\linewidth]{figures/baseline2-1}
@@ -482,10 +483,7 @@ The swarming parameters are the same as baseline 1 as shown in table~\ref{tab:sw
 	\caption{Baseline 2 (Distance). \label{fig:baseline2Distance}}
 \end{figure}
 
-
-\subsection{Perimeter Expansion}
-
-\subsubsection{Baseline 2}
+\subsubsection{Perimeter Expansion}
 
 \begin{figure}[H]
 	\begin{center}
