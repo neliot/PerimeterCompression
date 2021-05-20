@@ -1,9 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  19 MAY 2021 15:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  20 MAY 2021 10:26
 entering extended mode
-**"c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.tex"
-("c:/Users/neil/Google Drive/Research/PerimeterCompression/perimeterCompression.tex"
+**./perimeterCompression.tex
+(perimeterCompression.tex
 LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-01-09> xparse <2020-03-03> ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ieeetran\IEEEtran.cls"
+L3 programming layer <2021-01-09> xparse <2020-03-03>
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ieeetran\IEEEtran.c
+ls"
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -14,7 +16,8 @@ Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 \@IEEEtrantmpcountB=\count178
 \@IEEEtrantmpcountC=\count179
 \@IEEEtrantmptoksA=\toks15
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 503.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 5
+03.
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -29,38 +32,47 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <14> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <22> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <22> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
 \IEEEquantizedlength=\dimen145
 \IEEEquantizedlengthdiff=\dimen146
 \IEEEquantizedtextheightdiff=\dimen147
@@ -95,14 +107,19 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \IEEEPARstartletwidth=\dimen161
 \c@IEEEbiography=\count191
 \@IEEEtranrubishbin=\box48
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.sty"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.s
+ty"
 Package: geometry 2020/01/02 v5.9 Page Geometry
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.sty
+"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifvtex.sty"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifvtex.sty"
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\iftex.sty"
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\iftex.sty"
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
 \Gm@cnth=\count192
@@ -117,37 +134,57 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 \Gm@layouthoffset=\dimen168
 \Gm@layoutvoffset=\dimen169
 \Gm@dimlist=\toks17
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.cfg")) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/preprint\authblk.sty"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.c
+fg"))
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/preprint\authblk.st
+y"
 Package: authblk 2001/02/27 1.3 (PWD)
 \affilsep=\skip50
 \@affilsep=\skip51
 \c@Maxaffil=\count195
 \c@authors=\count196
 \c@affil=\count197
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.sty"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.s
+ty"
 Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.sty"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.s
+ty"
 Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graphi
+cs.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdftex
+.def"
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen170
 \Gin@req@width=\dimen171
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\color.
+cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/colortbl\colortbl.sty"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/colortbl\colortbl.s
+ty"
 Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/latex-tools\array.sty"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/latex-tools\array.s
+ty"
 Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
 \col@sep=\dimen172
 \ar@mcellbox=\box49
@@ -170,9 +207,13 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.sty"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.sty
+"
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3.sty"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3.st
+y"
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \captionmargin=\dimen174
 \captionmargin@=\dimen175
@@ -183,7 +224,17 @@ Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \caption@hangindent=\dimen180
 Package caption Info: Unknown document class (or package),
 (caption)             standard defaults will be used.
-Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEtablestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\normalfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptionsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspace \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\normalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \ifCLASSOPTIONconference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi \fi  on input line 1139.
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEta
+blestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\norma
+lfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace
+ {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptio
+nsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspac
+e \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\nor
+malfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\n
+ormalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \ifCLASSOPTIONcon
+ference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }
+\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi 
+\fi  on input line 1139.
 )
 
 Package caption Warning: Unknown document class (or package),
@@ -192,54 +243,86 @@ See the caption package documentation for explanation.
 
 \c@caption@flags=\count199
 \c@continuedfloat=\count266
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\subcaption.sty"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\subcaption.
+sty"
 Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
 \c@subfigure=\count267
 \c@subtable=\count268
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count269
 \float@exts=\toks20
 \float@box=\box51
 \@float@everytoks=\toks21
 \@floatcapt=\box52
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperref.sty"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperref.s
+ty"
 Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ltxcmds\ltxcmds.sty"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ltxcmds\ltxcmds.s
+ty"
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pdftexcmds\pdftexcmds.sty"
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/infwarerr\infwarerr.sty"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pdftexcmds\pdftex
+cmds.sty"
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/infwarerr\infware
+rr.sty"
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/kvsetkeys\kvsetkeys.sty"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/kvsetkeys\kvsetke
+ys.sty"
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/kvdefinekeys\kvdefinekeys.sty"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/kvdefinekeys\kvde
+finekeys.sty"
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pdfescape\pdfescape.sty"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pdfescape\pdfesca
+pe.sty"
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hycolor\hycolor.sty"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hycolor\hycolor.sty
+"
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/letltxmacro\letltxmacro.sty"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/letltxmacro\letltxm
+acro.sty"
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/auxhook\auxhook.sty"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/auxhook\auxhook.sty
+"
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/kvoptions\kvoptions.sty"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/kvoptions\kvoptions
+.sty"
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
 \@linkdim=\dimen181
 \Hy@linkcounter=\count270
 \Hy@pagecounter=\count271
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def
+"
 File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/intcalc\intcalc.sty"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/intcalc\intcalc.s
+ty"
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/etexcmds\etexcmds.sty"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/etexcmds\etexcmds
+.sty"
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count272
@@ -257,10 +340,15 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5076.
 \XeTeXLinkMargin=\dimen182
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/bitset\bitset.sty"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/bitset\bitset.sty
+"
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/bigintcalc\bigintcalc.sty"
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/bigintcalc\bigint
+calc.sty"
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
 ))
 \Fld@menulength=\count274
 \Field@Width=\dimen183
@@ -274,8 +362,11 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6372.
 Package hyperref Info: PDF/A mode OFF on input line 6377.
 LaTeX Info: Redefining \ref on input line 6417.
 LaTeX Info: Redefining \pageref on input line 6421.
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\atbegshi-ltx.sty"
-Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi package
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\atbegshi-ltx.s
+ty"
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
+ge
 with kernel methods
 )
 \Hy@abspage=\count275
@@ -283,45 +374,68 @@ with kernel methods
 \c@Hfootnote=\count277
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hpdftex.def"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hpdftex.de
+f"
 File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\atveryend-ltx.sty"
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery package
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\atveryend-ltx.
+sty"
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
 with kernel methods
 )
 \Fld@listcount=\count278
 \c@bookmark@seq@number=\count279
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/rerunfilecheck\rerunfilecheck.sty"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/rerunfilecheck\reru
+nfilecheck.sty"
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/uniquecounter\uniquecounter.sty"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/uniquecounter\uni
+quecounter.sty"
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
 )
 \Hy@SectionHShift=\skip55
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/relsize\relsize.sty"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/relsize\relsize.sty
+"
 Package: relsize 2013/03/29 ver 4.1
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/genmisc\kbordermatrix.sty"
+) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\textcomp.sty
+"
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/genmisc\kborderma
+trix.sty"
 Package: kbordermatrix 2011/09/21 Bordered matrix with brackets
 \kbcolsep=\skip56
 \kbrowsep=\skip57
 \br@kwd=\skip58
 \k@bordht=\skip59
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty
+"
 Package: amsmath 2020/09/23 v2.17i AMS math features
 \@mathmargin=\skip60
 
 For additional information on amsmath, use the `?' option.
-("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.sty"
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.sty
+"
 Package: amstext 2000/06/29 v2.01 AMS text
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty"
+ ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty
+"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks22
 \ex@=\dimen185
-)) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
+))
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen186
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty"
+) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.st
+y"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count280
@@ -363,24 +477,50 @@ LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
 )
 \c@assumption=\count292
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcolorbox.sty"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcolorbox
+.sty"
 Package: tcolorbox 2020/10/09 version 4.42 text color boxes
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgf.sty" ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgfrcs.sty" ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-common.tex"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgf.
+sty"
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgfrc
+s.sty"
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgf
+util-common.tex"
 \pgfutil@everybye=\toks27
 \pgfutil@tempdima=\dimen194
 \pgfutil@tempdimb=\dimen195
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-common-lists.tex")) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-latex.def"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgf
+util-common-lists.tex"))
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgf
+util-latex.def"
 \pgfutil@abb=\box55
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfrcs.code.tex" ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf\pgf.revision.tex")
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgf
+rcs.code.tex"
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf\pgf.revision.
+tex")
 Package: pgfrcs 2020/12/27 v3.1.8b (3.1.8b)
 ))
 Package: pgf 2020/12/27 v3.1.8b (3.1.8b)
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgfcore.sty" ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/systemlayer\pgfsys.sty" ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsys.code.tex"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgfc
+ore.sty"
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/systemlayer\pgf
+sys.sty"
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\p
+gfsys.code.tex"
 Package: pgfsys 2020/12/27 v3.1.8b (3.1.8b)
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeys.code.tex"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgf
+keys.code.tex"
 \pgfkeys@pathtoks=\toks28
 \pgfkeys@temptoks=\toks29
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeysfiltered.code.tex"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgf
+keysfiltered.code.tex"
 \pgfkeys@tmptoks=\toks30
 ))
 \pgf@x=\dimen196
@@ -403,32 +543,76 @@ Package: pgfsys 2020/12/27 v3.1.8b (3.1.8b)
 \t@pgf@tokb=\toks32
 \t@pgf@tokc=\toks33
 \pgf@sys@id@count=\count297
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgf.cfg"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\p
+gf.cfg"
 File: pgf.cfg 2020/12/27 v3.1.8b (3.1.8b)
 )
 Driver file for pgf: pgfsys-pdftex.def
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsys-pdftex.def"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\p
+gfsys-pdftex.def"
 File: pgfsys-pdftex.def 2020/12/27 v3.1.8b (3.1.8b)
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\p
+gfsys-common-pdf.def"
 File: pgfsys-common-pdf.def 2020/12/27 v3.1.8b (3.1.8b)
-))) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex"
+)))
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\p
+gfsyssoftpath.code.tex"
 File: pgfsyssoftpath.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfsyssoftpath@smallbuffer@items=\count298
 \pgfsyssoftpath@bigbuffer@items=\count299
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\p
+gfsysprotocol.code.tex"
 File: pgfsysprotocol.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcore.code.tex"
+))
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
+fcore.code.tex"
 Package: pgfcore 2020/12/27 v3.1.8b (3.1.8b)
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex" ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathcalc.code.tex" ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathutil.code.tex") ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathparser.code.tex"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.
+code.tex"
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathc
+alc.code.tex"
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathu
+til.code.tex")
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathp
+arser.code.tex"
 \pgfmath@dimen=\dimen262
 \pgfmath@count=\count300
 \pgfmath@box=\box56
 \pgfmath@toks=\toks34
 \pgfmath@stack@operand=\toks35
 \pgfmath@stack@operation=\toks36
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.code.tex" ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex") ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex") ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.random.code.tex") ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex") ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.base.code.tex") ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.round.code.tex") ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex") ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex"))) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfloat.code.tex"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathf
+unctions.code.tex"
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathf
+unctions.basic.code.tex")
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathf
+unctions.trigonometric.code.tex")
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathf
+unctions.random.code.tex")
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathf
+unctions.comparison.code.tex")
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathf
+unctions.base.code.tex")
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathf
+unctions.round.code.tex")
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathf
+unctions.misc.code.tex")
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathf
+unctions.integerarithmetics.code.tex")))
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathf
+loat.code.tex"
 \c@pgfmathroundto@lastzeros=\count301
-)) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfint.code.tex") ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex"
+))
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfint.c
+ode.tex")
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
+fcorepoints.code.tex"
 File: pgfcorepoints.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@picminx=\dimen263
 \pgf@picmaxx=\dimen264
@@ -444,76 +628,124 @@ File: pgfcorepoints.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@yy=\dimen274
 \pgf@zx=\dimen275
 \pgf@zy=\dimen276
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
+fcorepathconstruct.code.tex"
 File: pgfcorepathconstruct.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@path@lastx=\dimen277
 \pgf@path@lasty=\dimen278
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
+fcorepathusage.code.tex"
 File: pgfcorepathusage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@shorten@end@additional=\dimen279
 \pgf@shorten@start@additional=\dimen280
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
+fcorescopes.code.tex"
 File: pgfcorescopes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfpic=\box57
 \pgf@hbox=\box58
 \pgf@layerbox@main=\box59
 \pgf@picture@serial@count=\count302
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
+fcoregraphicstate.code.tex"
 File: pgfcoregraphicstate.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgflinewidth=\dimen281
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
+fcoretransformations.code.tex"
 File: pgfcoretransformations.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@pt@x=\dimen282
 \pgf@pt@y=\dimen283
 \pgf@pt@temp=\dimen284
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorequick.code.tex"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
+fcorequick.code.tex"
 File: pgfcorequick.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
+fcoreobjects.code.tex"
 File: pgfcoreobjects.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code.tex"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
+fcorepathprocessing.code.tex"
 File: pgfcorepathprocessing.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
+fcorearrows.code.tex"
 File: pgfcorearrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfarrowsep=\dimen285
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
+fcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@max=\dimen286
 \pgf@sys@shading@range@num=\count303
 \pgf@shadingcount=\count304
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
+fcoreimage.code.tex"
 File: pgfcoreimage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
+fcoreexternal.code.tex"
 File: pgfcoreexternal.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfexternal@startupbox=\box60
-)) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex"
+))
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
+fcorelayers.code.tex"
 File: pgfcorelayers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
+fcoretransparency.code.tex"
 File: pgfcoretransparency.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
+fcorepatterns.code.tex"
 File: pgfcorepatterns.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
+fcorerdf.code.tex"
 File: pgfcorerdf.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-))) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfmoduleshapes.code.tex"
+)))
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfmo
+duleshapes.code.tex"
 File: pgfmoduleshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfnodeparttextbox=\box61
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfmoduleplot.code.tex"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfmo
+duleplot.code.tex"
 File: pgfmoduleplot.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compatibility\p
+gfcomp-version-0-65.sty"
 Package: pgfcomp-version-0-65 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@nodesepstart=\dimen287
 \pgf@nodesepend=\dimen288
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compatibility\p
+gfcomp-version-1-18.sty"
 Package: pgfcomp-version-1-18 2020/12/27 v3.1.8b (3.1.8b)
-)) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/latex-tools\verbatim.sty"
+))
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/latex-tools\verbati
+m.sty"
 Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks37
 \verbatim@line=\toks38
 \verbatim@in@stream=\read3
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/environ\environ.sty"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/environ\environ.sty
+"
 Package: environ 2014/05/04 v0.3 A new way to define environments
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/trimspaces\trimspaces.sty"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/trimspaces\trimspac
+es.sty"
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
-)) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.sty"
+))
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.s
+ty"
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count305
 )
@@ -530,23 +762,47 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \tcb@temp=\box69
 \tcb@out=\write4
 \tcb@record@out=\write5
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbraster.code.tex"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbraster
+.code.tex"
 Library (tcolorbox): 'tcbraster.code.tex' version '4.42'
 \c@tcbrastercolumn=\count309
 \c@tcbrasterrow=\count310
 \c@tcbraster=\count311
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbskins.code.tex"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbskins.
+code.tex"
 Library (tcolorbox): 'tcbskins.code.tex' version '4.42'
-("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/frontendlayer\tikz.sty" ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgffor.sty" ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgfkeys.sty" ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeys.code.tex")) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/math\pgfmath.sty" ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex")) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgffor.code.tex"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/frontendlayer\t
+ikz.sty"
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgffo
+r.sty"
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgfke
+ys.sty"
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgf
+keys.code.tex"))
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/math\pgfmath.st
+y"
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.
+code.tex"))
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgf
+for.code.tex"
 Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex")
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.
+code.tex")
 \pgffor@iter=\dimen289
 \pgffor@skip=\dimen290
 \pgffor@stack=\toks39
 \pgffor@toks=\toks40
-)) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex"
+))
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer
+/tikz\tikz.code.tex"
 Package: tikz 2020/12/27 v3.1.8b (3.1.8b)
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\pgf
+libraryplothandlers.code.tex"
 File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@plot@mark@count=\count312
 \pgfplotmarksize=\dimen291
@@ -567,53 +823,84 @@ File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \tikznumberofchildren=\count314
 \tikznumberofcurrentchild=\count315
 \tikz@fig@count=\count316
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfmodulematrix.code.tex"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfmo
+dulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfmatrixcurrentrow=\count317
 \pgfmatrixcurrentcolumn=\count318
 \pgf@matrix@numberofcolumns=\count319
 )
 \tikz@expandcount=\count320
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer
+/tikz/libraries\tikzlibrarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )))
 \tcb@waterbox=\box74
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbskinsjigsaw.code.tex"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbskinsj
+igsaw.code.tex"
 Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '4.42'
-)) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbbreakable.code.tex"
+))
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbbreaka
+ble.code.tex"
 Library (tcolorbox): 'tcbbreakable.code.tex' version '4.42'
-("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\pdfcol.sty"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\pdfcol.s
+ty"
 Package: pdfcol 2019/12/29 v1.6 Handle new color stacks for pdfTeX (HO)
 )
 Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
 \tcb@testbox=\box75
 \tcb@totalupperbox=\box76
 \tcb@totallowerbox=\box77
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbhooks.code.tex"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbhooks.
+code.tex"
 Library (tcolorbox): 'tcbhooks.code.tex' version '4.42'
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbtheorems.code.tex"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbtheore
+ms.code.tex"
 Library (tcolorbox): 'tcbtheorems.code.tex' version '4.42'
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbfitting.code.tex"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbfittin
+g.code.tex"
 Library (tcolorbox): 'tcbfitting.code.tex' version '4.42'
 \tcbfitdim=\dimen300
 \tcb@lowerfitdim=\dimen301
 \tcb@upperfitdim=\dimen302
 \tcb@cur@hbadness=\count321
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbxparse.code.tex"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbxparse
+.code.tex"
 Library (tcolorbox): 'tcbxparse.code.tex' version '4.42'
-("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/xparse\xparse.sty" ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3kernel\expl3.sty"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/xparse\x
+parse.sty"
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3kernel\expl3.sty"
 Package: expl3 2021-01-09 L3 programming layer (loader) 
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backend-pdftex.def"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backend
+-pdftex.def"
 File: l3backend-pdftex.def 2020-01-29 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count322
 \l__pdf_internal_box=\box78
 ))
 Package: xparse 2020-10-27 L3 Experimental document command parser
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/xparse\xparse-generic.tex"))) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcblistingsutf8.code.tex"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/xparse\x
+parse-generic.tex")))
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcblistin
+gsutf8.code.tex"
 Library (tcolorbox): 'tcblistingsutf8.code.tex' version '4.42'
-("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcblistings.code.tex"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcblistin
+gs.code.tex"
 Library (tcolorbox): 'tcblistings.code.tex' version '4.42'
-("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.sty"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.s
+ty"
 \lst@mode=\count323
 \lst@gtempboxa=\box79
 \lst@token=\toks41
@@ -626,59 +913,86 @@ Library (tcolorbox): 'tcblistings.code.tex' version '4.42'
 \lst@newlines=\count327
 \lst@lineno=\count328
 \lst@maxwidth=\dimen306
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.sty"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.st
+y"
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 \c@lstnumber=\count329
 \lst@skipnumbers=\count330
 \lst@framebox=\box80
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.cfg"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.c
+fg"
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcblistingscore.code.tex"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcblistin
+gscore.code.tex"
 Library (tcolorbox): 'tcblistingscore.code.tex' version '4.42'
-("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbprocessing.code.tex"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbproces
+sing.code.tex"
 Library (tcolorbox): 'tcbprocessing.code.tex' version '4.42'
-("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/latex-tools\shellesc.sty"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/latex-tools\shelles
+c.sty"
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
 Package shellesc Info: Restricted shell escape enabled on input line 77.
 ))
 \c@tcblisting=\count331
-)) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listingsutf8\listingsutf8.sty"
+))
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listingsutf8\listin
+gsutf8.sty"
 Package: listingsutf8 2019-12-10 v1.5 Allow UTF-8 in listings input (HO)
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/stringenc\stringenc.sty"
-Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
-))) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbexternal.code.tex"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/stringenc\stringe
+nc.sty"
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)))
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbextern
+al.code.tex"
 Library (tcolorbox): 'tcbexternal.code.tex' version '4.42'
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbmagazine.code.tex"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbmagazi
+ne.code.tex"
 Library (tcolorbox): 'tcbmagazine.code.tex' version '4.42'
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbvignette.code.tex"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbvignet
+te.code.tex"
 Library (tcolorbox): 'tcbvignette.code.tex' version '4.42'
-("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryfadings.code.tex"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer
+/tikz/libraries\tikzlibraryfadings.code.tex"
 File: tikzlibraryfadings.code.tex 2020/12/27 v3.1.8b (3.1.8b)
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\pgflibraryfadings.code.tex"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\pgf
+libraryfadings.code.tex"
 File: pgflibraryfadings.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-))) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbposter.code.tex"
+)))
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbposter
+.code.tex"
 Library (tcolorbox): 'tcbposter.code.tex' version '4.42'
-)) ("c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.aux")
+)) (perimeterCompression.aux)
 \openout1 = `perimeterCompression.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
 
 -- Lines per column: 53 (approximate, difference = 13.33684pt).
 *geometry* driver: auto-detecting
@@ -715,7 +1029,9 @@ LaTeX Font Info:    ... okay on input line 55.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pd
+f.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count332
 \scratchdimen=\dimen307
@@ -728,309 +1044,418 @@ LaTeX Font Info:    ... okay on input line 55.
 \MPnumerator=\count336
 \makeMPintoPDFobject=\count337
 \everyMPtoPDFconversion=\toks43
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstop
+df-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 55.
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
+Package hyperref Info: Link coloring OFF on input line 56.
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.st
+y"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/refcount\refcount.sty"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/refcount\refcount.s
+ty"
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-) ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/gettitlestring\gettitlestring.sty"
+)
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/generic/gettitlestring\ge
+ttitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count338
 )
-LaTeX Info: Redefining \ref on input line 55.
-LaTeX Info: Redefining \pageref on input line 55.
-LaTeX Info: Redefining \nameref on input line 55.
- ("c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.out") ("c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.out")
+LaTeX Info: Redefining \ref on input line 56.
+LaTeX Info: Redefining \pageref on input line 56.
+LaTeX Info: Redefining \nameref on input line 56.
+ (perimeterCompression.out) (perimeterCompression.out)
 \@outlinefile=\write6
 \openout6 = `perimeterCompression.out'.
 
 \c@lstlisting=\count339
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.sty"
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.sty"
 Package: inputenc 2020/08/01 v1.3d Input encoding file
 \inpenc@prehook=\toks44
 \inpenc@posthook=\toks45
 )
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 57.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 58.
 
-Underfull \hbox (badness 2538) in paragraph at lines 63--66
+Underfull \hbox (badness 2538) in paragraph at lines 64--67
 []\OT1/ptm/m/n/12 When co-he-sion and re-pul-sion field ef-fects
  []
 
 
-Underfull \hbox (badness 1558) in paragraph at lines 63--66
+Underfull \hbox (badness 1558) in paragraph at lines 64--67
 \OT1/ptm/m/n/12 swarm is cru-cial to ef-fec-tive de-ploy-ment for
  []
 
 
-Underfull \hbox (badness 4242) in paragraph at lines 63--66
+Underfull \hbox (badness 4242) in paragraph at lines 64--67
 \OT1/ptm/m/n/12 `peaks' [[]]. These anoma-lies con-tribute to
  []
 
 
-Underfull \hbox (badness 3209) in paragraph at lines 63--66
+Underfull \hbox (badness 3209) in paragraph at lines 64--67
 \OT1/ptm/m/n/12 that al-lows new emer-gent be-haviours to be
  []
 
 
-Underfull \hbox (badness 5817) in paragraph at lines 63--66
+Underfull \hbox (badness 5817) in paragraph at lines 64--67
 \OT1/ptm/m/n/12 in-volves in-tro-duc-ing three con-trol-ling ar-rays
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--66
+Underfull \hbox (badness 10000) in paragraph at lines 64--67
 
  []
 
 <figures/stableswarm.pdf, id=162, 210.87282pt x 171.11629pt>
 File: figures/stableswarm.pdf Graphic file (type pdf)
 <use figures/stableswarm.pdf>
-Package pdftex.def Info: figures/stableswarm.pdf  used on input line 69.
+Package pdftex.def Info: figures/stableswarm.pdf  used on input line 70.
 (pdftex.def)             Requested size: 196.62386pt x 159.56209pt.
 [1{C:/Users/neil/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
- <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/stableswarm.pdf>] [2]
+ <./figures/stableswarm.pdf>] [2]
 <figures/relationships2.png, id=269, 500.8311pt x 516.0078pt>
 File: figures/relationships2.png Graphic file (type png)
 <use figures/relationships2.png>
-Package pdftex.def Info: figures/relationships2.png  used on input line 126.
+Package pdftex.def Info: figures/relationships2.png  used on input line 127.
 (pdftex.def)             Requested size: 196.62386pt x 202.58075pt.
 <figures/neighbours2.pdf, id=275, 183.45639pt x 142.50742pt>
 File: figures/neighbours2.pdf Graphic file (type pdf)
 <use figures/neighbours2.pdf>
-Package pdftex.def Info: figures/neighbours2.pdf  used on input line 139.
+Package pdftex.def Info: figures/neighbours2.pdf  used on input line 140.
 (pdftex.def)             Requested size: 196.62386pt x 152.73799pt.
 <figures/neighbours3.pdf, id=281, 172.43019pt x 153.08493pt>
 File: figures/neighbours3.pdf Graphic file (type pdf)
 <use figures/neighbours3.pdf>
-Package pdftex.def Info: figures/neighbours3.pdf  used on input line 164.
+Package pdftex.def Info: figures/neighbours3.pdf  used on input line 165.
 (pdftex.def)             Requested size: 196.62386pt x 174.57pt.
- [3 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/relationships2.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/neighbours2.pdf> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/neighbours3.pdf>]
+ [3 <./figures/relationships2.png> <./figures/neighbours2.pdf> <./figures/neigh
+bours3.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 186.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 186.
+(hyperref)                removing `math shift' on input line 187.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 186.
+(hyperref)                removing `math shift' on input line 187.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 186.
+(hyperref)                removing `math shift' on input line 187.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 186.
+(hyperref)                removing `subscript' on input line 187.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 186.
+(hyperref)                removing `math shift' on input line 187.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 186.
+(hyperref)                removing `math shift' on input line 187.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 186.
+(hyperref)                removing `subscript' on input line 187.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--204
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 187.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--222
+Underfull \hbox (badness 10000) in paragraph at lines 219--223
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 224--229
+Underfull \hbox (badness 10000) in paragraph at lines 225--230
 
  []
 
 
-Overfull \hbox (2.41086pt too wide) detected at line 234
-\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 b\OT1/cmr/m/n/10 ) = [] [] [][\OML/cmm/m/it/10 p[]; p[]\OT1/cmr/m/n/10 ] [] (\OML/cmm/m/it/10 b[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 b\OT1/cmr/m/n/10 )
+Overfull \hbox (2.41086pt too wide) detected at line 235
+\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 b\OT1/cmr/m/n/10 ) = [] [
+] [][\OML/cmm/m/it/10 p[]; p[]\OT1/cmr/m/n/10 ] [] (\OML/cmm/m/it/10 b[] \OMS/c
+msy/m/n/10   \OML/cmm/m/it/10 b\OT1/cmr/m/n/10 )
  []
 
 [4]
 <figures/perimeterCompress.png, id=347, 690.1785pt x 529.7391pt>
 File: figures/perimeterCompress.png Graphic file (type png)
 <use figures/perimeterCompress.png>
-Package pdftex.def Info: figures/perimeterCompress.png  used on input line 279.
+Package pdftex.def Info: figures/perimeterCompress.png  used on input line 280.
+
 (pdftex.def)             Requested size: 227.62204pt x 174.70935pt.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 286.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
+87.
  ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ts1ptm.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 320--321
+Underfull \hbox (badness 10000) in paragraph at lines 321--322
 
  []
 
-[5 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/perimeterCompress.png>]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 388.
- ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1pcr.fd"
+[5 <./figures/perimeterCompress.png>]
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 3
+89.
+
+("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-<figures/baseline.png, id=384, 708.9687pt x 688.0104pt>
+<figures/baseline.png, id=383, 708.9687pt x 688.0104pt>
 File: figures/baseline.png Graphic file (type png)
 <use figures/baseline.png>
-Package pdftex.def Info: figures/baseline.png  used on input line 403.
+Package pdftex.def Info: figures/baseline.png  used on input line 404.
 (pdftex.def)             Requested size: 245.77888pt x 238.50815pt.
-<figures/baselineMagnitude.png, id=387, 1387.584pt x 710.4141pt>
+
+[6 <./figures/baseline.png>]
+<figures/baselineMagnitude.png, id=403, 1387.584pt x 710.4141pt>
 File: figures/baselineMagnitude.png Graphic file (type png)
 <use figures/baselineMagnitude.png>
-Package pdftex.def Info: figures/baselineMagnitude.png  used on input line 412.
+Package pdftex.def Info: figures/baselineMagnitude.png  used on input line 415.
+
 (pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
- [6 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baseline.png>]
-<figures/baselineDistance.png, id=401, 1387.584pt x 710.4141pt>
+
+Underfull \hbox (badness 3713) in paragraph at lines 420--421
+[]\OT1/ptm/m/n/12 The dis-tance graph shows that perimeter-
+ []
+
+<figures/baselineDistance.png, id=404, 1387.584pt x 710.4141pt>
 File: figures/baselineDistance.png Graphic file (type png)
 <use figures/baselineDistance.png>
-Package pdftex.def Info: figures/baselineDistance.png  used on input line 419.
+Package pdftex.def Info: figures/baselineDistance.png  used on input line 424.
 (pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
-<figures/tightPerim.png, id=402, 691.6239pt x 682.2288pt>
+Package textcomp Info: Symbol \textrightarrow not provided by
+(textcomp)             font family ptm in TS1 encoding.
+(textcomp)             Default family used instead on input line 431.
+Package textcomp Info: Symbol \textrightarrow not provided by
+(textcomp)             font family ptm in TS1 encoding.
+(textcomp)             Default family used instead on input line 431.
+Package textcomp Info: Symbol \textrightarrow not provided by
+(textcomp)             font family ptm in TS1 encoding.
+(textcomp)             Default family used instead on input line 431.
+Package textcomp Info: Symbol \textrightarrow not provided by
+(textcomp)             font family ptm in TS1 encoding.
+(textcomp)             Default family used instead on input line 431.
+Package textcomp Info: Symbol \textrightarrow not provided by
+(textcomp)             font family ptm in TS1 encoding.
+(textcomp)             Default family used instead on input line 431.
+Package textcomp Info: Symbol \textrightarrow not provided by
+(textcomp)             font family ptm in TS1 encoding.
+(textcomp)             Default family used instead on input line 431.
+
+Underfull \hbox (badness 7168) in paragraph at lines 431--432
+\OT1/ptm/m/n/12 agents re-la-tion-ship and the perimeter\TS1/cmr/m/n/12 \OT1/p
+tm/m/n/12 non-
+ []
+
+
+Underfull \hbox (badness 5592) in paragraph at lines 431--432
+\OT1/ptm/m/n/12 perimeter/non-perimeter\TS1/cmr/m/n/12 \OT1/ptm/m/n/12 perimet
+er re-la-tion-ship.
+ []
+
+<figures/tightPerim.png, id=410, 698.1282pt x 696.6828pt>
 File: figures/tightPerim.png Graphic file (type png)
 <use figures/tightPerim.png>
-Package pdftex.def Info: figures/tightPerim.png  used on input line 428.
-(pdftex.def)             Requested size: 245.77888pt x 242.43755pt.
-<figures/tightPerim2.png, id=403, 694.5147pt x 682.9515pt>
+Package pdftex.def Info: figures/tightPerim.png  used on input line 459.
+(pdftex.def)             Requested size: 245.77888pt x 245.26712pt.
+<figures/tightPerim2.png, id=411, 707.5233pt x 698.8509pt>
 File: figures/tightPerim2.png Graphic file (type png)
 <use figures/tightPerim2.png>
-Package pdftex.def Info: figures/tightPerim2.png  used on input line 435.
-(pdftex.def)             Requested size: 245.77888pt x 241.68353pt.
+Package pdftex.def Info: figures/tightPerim2.png  used on input line 466.
+(pdftex.def)             Requested size: 245.77888pt x 242.76733pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1769) has occurred while \output is active []
 
-<figures/tightPerimMagnitude.png, id=404, 1387.584pt x 710.4141pt>
-File: figures/tightPerimMagnitude.png Graphic file (type png)
-<use figures/tightPerimMagnitude.png>
-Package pdftex.def Info: figures/tightPerimMagnitude.png  used on input line 442.
-(pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
-<figures/tightPerimDistance.png, id=405, 1387.584pt x 710.4141pt>
+ [7 <./figures/baselineMagnitude.png> <./figures/baselineDistance.png> <./figur
+es/tightPerim.png>]
+Package textcomp Info: Symbol \textrightarrow not provided by
+(textcomp)             font family ptm in TS1 encoding.
+(textcomp)             Default family used instead on input line 471.
+Package textcomp Info: Symbol \textrightarrow not provided by
+(textcomp)             font family ptm in TS1 encoding.
+(textcomp)             Default family used instead on input line 471.
+<figures/tightPerimDistance.png, id=427, 1387.584pt x 710.4141pt>
 File: figures/tightPerimDistance.png Graphic file (type png)
 <use figures/tightPerimDistance.png>
-Package pdftex.def Info: figures/tightPerimDistance.png  used on input line 449.
+Package pdftex.def Info: figures/tightPerimDistance.png  used on input line 475
+.
 (pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
- [7 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baselineMagnitude.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baselineDistance.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/tightPerim.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/tightPerim2.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/tightPerimMagnitude.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/tightPerimDistance.png>]
-<figures/baseline2-1.png, id=424, 706.0779pt x 687.2877pt>
+<figures/tightPerimMagnitude.png, id=429, 1387.584pt x 710.4141pt>
+File: figures/tightPerimMagnitude.png Graphic file (type png)
+<use figures/tightPerimMagnitude.png>
+Package pdftex.def Info: figures/tightPerimMagnitude.png  used on input line 48
+4.
+(pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+<figures/baseline2-1.png, id=432, 706.0779pt x 687.2877pt>
 File: figures/baseline2-1.png Graphic file (type png)
 <use figures/baseline2-1.png>
-Package pdftex.def Info: figures/baseline2-1.png  used on input line 460.
+Package pdftex.def Info: figures/baseline2-1.png  used on input line 494.
 (pdftex.def)             Requested size: 245.77888pt x 239.23291pt.
-<figures/baseline2-2.png, id=425, 701.019pt x 685.1196pt>
+<figures/baseline2-2.png, id=433, 701.019pt x 685.1196pt>
 File: figures/baseline2-2.png Graphic file (type png)
 <use figures/baseline2-2.png>
-Package pdftex.def Info: figures/baseline2-2.png  used on input line 467.
+Package pdftex.def Info: figures/baseline2-2.png  used on input line 501.
 (pdftex.def)             Requested size: 245.77888pt x 240.20316pt.
-<figures/baseline2Magnitude.png, id=426, 1387.584pt x 710.4141pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8 <./figures/tightPerim2.png> <./figures/tightPerimDistance.png> <./figures/t
+ightPerimMagnitude.png> <./figures/baseline2-1.png>]
+<figures/baseline2Magnitude.png, id=445, 1387.584pt x 710.4141pt>
 File: figures/baseline2Magnitude.png Graphic file (type png)
 <use figures/baseline2Magnitude.png>
-Package pdftex.def Info: figures/baseline2Magnitude.png  used on input line 474.
+Package pdftex.def Info: figures/baseline2Magnitude.png  used on input line 508
+.
 (pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-<figures/baseline2Distance.png, id=427, 1387.584pt x 710.4141pt>
+<figures/baseline2Distance.png, id=446, 1387.584pt x 710.4141pt>
 File: figures/baseline2Distance.png Graphic file (type png)
 <use figures/baseline2Distance.png>
-Package pdftex.def Info: figures/baseline2Distance.png  used on input line 481.
+Package pdftex.def Info: figures/baseline2Distance.png  used on input line 515.
+
 (pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
-<figures/perimExpand1.png, id=428, 682.9515pt x 680.7834pt>
+<figures/perimExpand1.png, id=447, 682.9515pt x 680.7834pt>
 File: figures/perimExpand1.png Graphic file (type png)
 <use figures/perimExpand1.png>
-Package pdftex.def Info: figures/perimExpand1.png  used on input line 490.
+Package pdftex.def Info: figures/perimExpand1.png  used on input line 524.
 (pdftex.def)             Requested size: 245.77888pt x 244.99873pt.
-<figures/perimExpand2.png, id=429, 733.5405pt x 685.8423pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+<figures/perimExpand2.png, id=448, 733.5405pt x 685.8423pt>
 File: figures/perimExpand2.png Graphic file (type png)
 <use figures/perimExpand2.png>
-Package pdftex.def Info: figures/perimExpand2.png  used on input line 497.
+Package pdftex.def Info: figures/perimExpand2.png  used on input line 531.
 (pdftex.def)             Requested size: 245.77888pt x 229.7926pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [8 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baseline2-1.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baseline2-2.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baseline2Magnitude.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baseline2Distance.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/perimExpand1.png>]
-<figures/perimExpandMagnitude.png, id=444, 1387.584pt x 710.4141pt>
+<figures/perimExpandMagnitude.png, id=449, 1387.584pt x 710.4141pt>
 File: figures/perimExpandMagnitude.png Graphic file (type png)
 <use figures/perimExpandMagnitude.png>
-Package pdftex.def Info: figures/perimExpandMagnitude.png  used on input line 504.
+Package pdftex.def Info: figures/perimExpandMagnitude.png  used on input line 5
+38.
 (pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
-<figures/perimExpandDistance.png, id=445, 1387.584pt x 710.4141pt>
+<figures/perimExpandDistance.png, id=450, 1387.584pt x 710.4141pt>
 File: figures/perimExpandDistance.png Graphic file (type png)
 <use figures/perimExpandDistance.png>
-Package pdftex.def Info: figures/perimExpandDistance.png  used on input line 511.
+Package pdftex.def Info: figures/perimExpandDistance.png  used on input line 54
+5.
 (pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
-<figures/baseline2Packed.png, id=446, 674.2791pt x 695.9601pt>
+ [9 <./figures/baseline2-2.png> <./figures/baseline2Magnitude.png> <./figures/b
+aseline2Distance.png> <./figures/perimExpand1.png> <./figures/perimExpand2.png>
+ <./figures/perimExpandMagnitude.png>]
+<figures/baseline2Packed.png, id=467, 674.2791pt x 695.9601pt>
 File: figures/baseline2Packed.png Graphic file (type png)
 <use figures/baseline2Packed.png>
-Package pdftex.def Info: figures/baseline2Packed.png  used on input line 520.
+Package pdftex.def Info: figures/baseline2Packed.png  used on input line 554.
 (pdftex.def)             Requested size: 245.77888pt x 253.67819pt.
+<figures/baseline2PackedMagnitude.png, id=468, 1387.584pt x 710.4141pt>
+File: figures/baseline2PackedMagnitude.png Graphic file (type png)
+<use figures/baseline2PackedMagnitude.png>
+Package pdftex.def Info: figures/baseline2PackedMagnitude.png  used on input li
+ne 561.
+(pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
+<figures/baseline2PackedDistance.png, id=469, 1387.584pt x 710.4141pt>
+File: figures/baseline2PackedDistance.png Graphic file (type png)
+<use figures/baseline2PackedDistance.png>
+Package pdftex.def Info: figures/baseline2PackedDistance.png  used on input lin
+e 568.
+(pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<figures/baseline2PackedMagnitude.png, id=447, 1387.584pt x 710.4141pt>
-File: figures/baseline2PackedMagnitude.png Graphic file (type png)
-<use figures/baseline2PackedMagnitude.png>
-Package pdftex.def Info: figures/baseline2PackedMagnitude.png  used on input line 527.
-(pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
-<figures/baseline2PackedDistance.png, id=448, 1387.584pt x 710.4141pt>
-File: figures/baseline2PackedDistance.png Graphic file (type png)
-<use figures/baseline2PackedDistance.png>
-Package pdftex.def Info: figures/baseline2PackedDistance.png  used on input line 534.
-(pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
- [9 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/perimExpand2.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/perimExpandMagnitude.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/perimExpandDistance.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baseline2Packed.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baseline2PackedMagnitude.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/baseline2PackedDistance.png>]
-<figures/FutureTime.png, id=467, 1355.5443pt x 237.2865pt>
+<figures/FutureTime.png, id=474, 1355.5443pt x 237.2865pt>
 File: figures/FutureTime.png Graphic file (type png)
 <use figures/FutureTime.png>
-Package pdftex.def Info: figures/FutureTime.png  used on input line 545.
+Package pdftex.def Info: figures/FutureTime.png  used on input line 579.
 (pdftex.def)             Requested size: 500.76868pt x 87.65703pt.
-<figures/future7.png, id=468, 1387.584pt x 710.4141pt>
+<figures/future7.png, id=475, 1387.584pt x 710.4141pt>
 File: figures/future7.png Graphic file (type png)
 <use figures/future7.png>
-Package pdftex.def Info: figures/future7.png  used on input line 552.
+Package pdftex.def Info: figures/future7.png  used on input line 586.
 (pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
-<figures/future8.png, id=469, 1387.584pt x 710.4141pt>
+<figures/future8.png, id=476, 1387.584pt x 710.4141pt>
 File: figures/future8.png Graphic file (type png)
 <use figures/future8.png>
-Package pdftex.def Info: figures/future8.png  used on input line 559.
+Package pdftex.def Info: figures/future8.png  used on input line 593.
 (pdftex.def)             Requested size: 245.77888pt x 125.83109pt.
- ("c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.bbl" [10 <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/future7.png> <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/future8.png>]
+ [10 <./figures/perimExpandDistance.png> <./figures/baseline2Packed.png> <./fig
+ures/baseline2PackedMagnitude.png> <./figures/baseline2PackedDistance.png> <./f
+igures/future7.png>] (perimeterCompression.bbl
 Underfull \hbox (badness 2529) in paragraph at lines 155--160
 \OT1/ptm/m/n/9 immune-inspired swarm ag-gre-ga-tion al-go-rithm for self-
  []
 
-) [11
+[11 <./figures/FutureTime.png> <./figures/future8.png>]) [12
 
- <c:/Users/neil/Google Drive/Research/PerimeterCompression/figures/FutureTime.png>] ("c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.aux")
+]
+(perimeterCompression.aux)
 Package rerunfilecheck Info: File `perimeterCompression.out' has not changed.
-(rerunfilecheck)             Checksum: B310DD6A53B2B3B30A3151906504A7BF;1679.
+(rerunfilecheck)             Checksum: C08AA9909690F1EEBEAD20B2D600C36F;1681.
  ) 
 Here is how much of TeX's memory you used:
- 25959 strings out of 479584
- 535869 string characters out of 2861984
- 863828 words of memory out of 3000000
- 42520 multiletter control sequences out of 15000+200000
- 449141 words of font info for 113 fonts, out of 3000000 for 9000
+ 25988 strings out of 479584
+ 535827 string characters out of 2861984
+ 864093 words of memory out of 3000000
+ 42542 multiletter control sequences out of 15000+200000
+ 449478 words of font info for 114 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,10n,108p,1348b,454s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "c:/Users\neil\Google Drive\Research\PerimeterCompression\perimeterCompression.pdf" (11 pages, 6029381 bytes).
+ 101i,10n,108p,1334b,458s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\neil\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\t
+crm1200.pk>{C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/bas
+e/8r.enc}<C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmex10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/neil/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/neil/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/ne
+il/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><
+C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmmi8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr10.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr12.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/neil/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/neil/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/neil/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
+/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+sy5.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmsy6.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmsy7.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/neil/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/neil/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/neil
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:
+/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+ti8.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courie
+r/ucrr8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/t
+imes/utmb8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/ur
+w/times/utmbi8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/urw/times/utmr8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/urw/times/utmri8a.pfb>
+Output written on perimeterCompression.pdf (12 pages, 6044649 bytes).
 PDF statistics:
- 588 PDF objects out of 1000 (max. 8388607)
- 120 named destinations out of 1000 (max. 500000)
+ 611 PDF objects out of 1000 (max. 8388607)
+ 124 named destinations out of 1000 (max. 500000)
  495 words of extra memory for PDF output out of 10000 (max. 10000000)
 
