@@ -397,7 +397,7 @@ For all the experiments the parameters used to create the basic swarming effect 
 \end{table}
 
 \subsection{Baseline 1}
-The swarm consists of 500 agents which are distributed with a void at the centre. These initial parameters create a hexagonal-based distribution of agents that stabilise as shown in Figure~\ref{fig:baselineSwarm}. 
+The first swarm consists of 500 agents which are distributed with a void at the centre. These initial parameters create a hexagonal-based distribution of agents that stabilise as shown in Figure~\ref{fig:baselineSwarm}. 
 
 \begin{figure}[H]
 	\begin{center}
@@ -414,7 +414,7 @@ The magnitude graph (Fig.~\ref{fig:baselineMagnitude}) shows that the swarms is 
 	\begin{center}
 		\includegraphics[width=1.0\linewidth]{figures/baselineMagnitude}
 	\end{center}
-	\caption{Baseline swarm (Magnitude)). \label{fig:baselineMagnitude}}
+	\caption{Baseline swarm (Magnitude). \label{fig:baselineMagnitude}}
 \end{figure}
 
 The distance graph shows that perimeter-perimeter agents and the settle to a similar average distance of around 2.07 units and the internal agents settle to around 2.04 units. Given that the repulsion field is set to 2 units the swarm looks very stable and is able to form a lattice based structure that changes very little and has a small amount of jitter. Jitter is the slight variation in position that agents exhibit as they move to more optimum positions.
@@ -441,8 +441,8 @@ The first experiment with the new model is to create a swarm that has a densely 
 \begin{equation}\label{eq:krexp1}
 \kr = 
 \begin{bmatrix}
-300 & 5.0\\
-5.0 & 300
+335 & 5.0\\
+5.0 & 335
 \end{bmatrix}
 \end{equation}
 
@@ -487,7 +487,7 @@ In terms of the magnitude relationships, shown in graph~\ref{fig:tightPerimMagni
 \end{figure}
 
 \subsection{Baseline 2}
-The swarm consists of 500 agents which are distributed within a small area to create a compressed swarm as shown in Figure~\ref{fig:baseline2}. These initial parameters create a hexagonal-based distribution of agents that stabilise as shown in Figure~\ref{fig:baseline2-2}. This configuration is equivalent to the conventional swarming algorithms using single value potential fields. 
+The second swarm consists of 500 agents which are distributed within a small area to create a compressed swarm as shown in Figure~\ref{fig:baseline2}. These initial parameters create a hexagonal-based distribution of agents that stabilise as shown in Figure~\ref{fig:baseline2-2}. This configuration is equivalent to the conventional swarming algorithms using single value potential fields. 
 
 \begin{figure}[H]
 	\begin{center}
@@ -503,12 +503,7 @@ The swarm consists of 500 agents which are distributed within a small area to cr
 	\caption{Baseline 2 end. \label{fig:baseline2-2}}
 \end{figure}
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=1.0\linewidth]{figures/baseline2Magnitude}
-	\end{center}
-	\caption{Baseline 2 (Magnitude). \label{fig:baseline2Magnitude}}
-\end{figure}
+The Magnitude metric shows that the baseline 2 swarm starts with a high magnitude due to the compression and the swarm. There is also a high degree of `jitter' (Fig.~\ref{fig:baseline2Distance}). However the swarm expands rapidly as can bee seen in the distance metric (Fig.~\ref{fig:baseline2Magnitude}). Over time the magnitude reduces as the swarm expands and the distribution of the agents evening out reducing the internal disruption. Once the swarm has fully expanded at about 400 time steps the swarm settles to is nominal state.
 
 \begin{figure}[H]
 	\begin{center}
@@ -517,7 +512,42 @@ The swarm consists of 500 agents which are distributed within a small area to cr
 	\caption{Baseline 2 (Distance). \label{fig:baseline2Distance}}
 \end{figure}
 
+The distance metric (Fig.~\ref{fig:baseline2Distance}) also shows that the swarm settles to a point where the perimeter agents are slightly more dispersed than the internal agents, this is expected due to their constituent vectors being only on the inner side of the swarm. The perimeter\textrightarrow internal agents are slightly closer and the internal\textrightarrow internal agents are distributed more regularly but are slightly closer together due to there being cohesion and repulsion vectors from all sides.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/baseline2Magnitude}
+	\end{center}
+	\caption{Baseline 2 (Magnitude). \label{fig:baseline2Magnitude}}
+\end{figure}
+
+
 \subsubsection{Perimeter Expansion}
+The basis of this experiment is to use the new model to generate a swarm that expands the distance between perimeter-based agents. This would be useful when a swarm is moving into an area that could disable or harm agents to reduce the number of agents and would limit the number of agents that would be lost from the swarm. At the same time the swarm will still need to exhibit a self-healing property.
+
+\begin{equation}\label{eq:rbexp2}
+\rb = 
+\begin{bmatrix}
+2.0 & 2.0\\
+2.0 & 2.0
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}\label{eq:krexp2}
+\kr = 
+\begin{bmatrix}
+50.0 & 335.0\\
+50.0 & 50.0
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}\label{eq:kcexp2}
+\kc = 
+\begin{bmatrix}
+1.0 & 1.0\\
+1.0 & 1.0
+\end{bmatrix}
+\end{equation}
 
 \begin{figure}[H]
 	\begin{center}
@@ -547,7 +577,29 @@ The swarm consists of 500 agents which are distributed within a small area to cr
 	\caption{Perimeter Expanded (Distance). \label{fig:perimExpandDistance}}
 \end{figure}
 
-\subsubsection{Baseline 1}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/perimExpandDistancePP}
+	\end{center}
+	\caption{Perimeter Expanded PP (Distance). \label{fig:perimExpandDistancePP}}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/perimExpandDistanceIPPI}
+	\end{center}
+	\caption{Perimeter Expanded IPPI (Distance). \label{fig:perimExpandDistanceIPPI}}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/perimExpandDistanceII}
+	\end{center}
+	\caption{Perimeter Expanded II (Distance). \label{fig:perimExpandDistanceII}}
+\end{figure}
+
+
+\subsubsection{Packed}
 
 \begin{figure}[H]
 	\begin{center}
