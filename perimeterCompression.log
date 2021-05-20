@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  20 MAY 2021 10:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.4)  20 MAY 2021 11:08
 entering extended mode
 **./perimeterCompression.tex
 (perimeterCompression.tex
@@ -1220,14 +1220,14 @@ LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 3
 ("C:\Users\neil\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-<figures/baseline.png, id=383, 708.9687pt x 688.0104pt>
+<figures/baseline.png, id=382, 708.9687pt x 688.0104pt>
 File: figures/baseline.png Graphic file (type png)
 <use figures/baseline.png>
 Package pdftex.def Info: figures/baseline.png  used on input line 404.
 (pdftex.def)             Requested size: 245.77888pt x 238.50815pt.
 
 [6 <./figures/baseline.png>]
-<figures/baselineMagnitude.png, id=403, 1387.584pt x 710.4141pt>
+<figures/baselineMagnitude.png, id=402, 1387.584pt x 710.4141pt>
 File: figures/baselineMagnitude.png Graphic file (type png)
 <use figures/baselineMagnitude.png>
 Package pdftex.def Info: figures/baselineMagnitude.png  used on input line 415.
@@ -1238,7 +1238,7 @@ Underfull \hbox (badness 3713) in paragraph at lines 420--421
 []\OT1/ptm/m/n/12 The dis-tance graph shows that perimeter-
  []
 
-<figures/baselineDistance.png, id=404, 1387.584pt x 710.4141pt>
+<figures/baselineDistance.png, id=403, 1387.584pt x 710.4141pt>
 File: figures/baselineDistance.png Graphic file (type png)
 <use figures/baselineDistance.png>
 Package pdftex.def Info: figures/baselineDistance.png  used on input line 424.
@@ -1273,21 +1273,18 @@ Underfull \hbox (badness 5592) in paragraph at lines 431--432
 er re-la-tion-ship.
  []
 
-<figures/tightPerim.png, id=410, 698.1282pt x 696.6828pt>
+<figures/tightPerim.png, id=409, 698.1282pt x 696.6828pt>
 File: figures/tightPerim.png Graphic file (type png)
 <use figures/tightPerim.png>
 Package pdftex.def Info: figures/tightPerim.png  used on input line 459.
 (pdftex.def)             Requested size: 245.77888pt x 245.26712pt.
-<figures/tightPerim2.png, id=411, 707.5233pt x 698.8509pt>
+<figures/tightPerim2.png, id=410, 707.5233pt x 698.8509pt>
 File: figures/tightPerim2.png Graphic file (type png)
 <use figures/tightPerim2.png>
 Package pdftex.def Info: figures/tightPerim2.png  used on input line 466.
 (pdftex.def)             Requested size: 245.77888pt x 242.76733pt.
-
-Underfull \vbox (badness 1769) has occurred while \output is active []
-
- [7 <./figures/baselineMagnitude.png> <./figures/baselineDistance.png> <./figur
-es/tightPerim.png>]
+[7 <./figures/baselineMagnitude.png> <./figures/baselineDistance.png> <./figure
+s/tightPerim.png>]
 Package textcomp Info: Symbol \textrightarrow not provided by
 (textcomp)             font family ptm in TS1 encoding.
 (textcomp)             Default family used instead on input line 471.
@@ -1453,7 +1450,7 @@ imes/utmb8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/ur
 w/times/utmbi8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/type
 1/urw/times/utmr8a.pfb><C:/Users/neil/AppData/Local/Programs/MiKTeX 2.9/fonts/t
 ype1/urw/times/utmri8a.pfb>
-Output written on perimeterCompression.pdf (12 pages, 6044649 bytes).
+Output written on perimeterCompression.pdf (12 pages, 6044802 bytes).
 PDF statistics:
  611 PDF objects out of 1000 (max. 8388607)
  124 named destinations out of 1000 (max. 500000)
