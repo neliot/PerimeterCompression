@@ -130,47 +130,52 @@ In this paper, we propose that the behaviour of an agent should be modified depe
 \end{figure}
 
 \subsection{Perimeter detection}\label{sec:perimeterDetection} 
-Each agent's perimeter status is identified using a cyclic analysis of the agents (neighbours) that surround an agent~(Fig.~\ref{fig:neighbours2}). Ghrist et al. discusses a similar technique using sweep angles~\cite{ghrist2008surrounding} as does McLurkin et al~\cite{mclurkin2009}. 
 
-When detecting a perimeter it is useful to define an ordering on an agent's cohesion neighbours. We choose to order the cohesion neighbours of an agent $b$ by their \emph{polar
-angle} ($\alpha$) with respect to $b$ (Fig.~\ref{fig:neighbours2}). 
+Each agent's perimeter status is identified using a cyclic analysis of its
+cohesion neighbours~(Fig.~\ref{fig:neighbours3}). Ghrist
+et al. discuss a similar technique using sweep
+angles~\cite{ghrist2008surrounding} as do McLurkin et al~\cite{mclurkin2009}. 
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\linewidth]{figures/neighbours2}
-	\caption[Agent neighbours]{Agent neighbours}
-	\label{fig:neighbours2}
-\end{figure}
+We order the cohesion neighbours of an agent $b$ by their \emph{polar
+angle} ($\alpha$) with respect to $b$ (Fig.~\ref{fig:neighbours3}). 
 
-The polar angle with respect to $b$ of $b'$,
-$\pangle(b, b')$, is the counter-clockwise angle that vector $\vec{bb'} = b' - b$ makes with the positive $x$ axis shown in Figure~\ref{fig:neighbours2} as $\alpha$ and described by Equation~\ref{eq:pangle}.
-
-\begin{equation}\label{eq:pangle}
-	\pangle(b, b') = \mathsf{atan2}((\vbb{b}{b'})_y, (\vbb{b}{b'})_x)
-\end{equation} 
-
-A partial ordering of agents by polar angle with respect to a specific agent, $b$, is denoted $\leqaz{b}{}{}$, as defined in equation~\ref{angle_ordering}. 
-\begin{equation}\label{angle_ordering}
-	\leqaz{b}{b'}{b''} \iff \pangle(b, b') \leq \pangle(b, b'')
-\end{equation}
-
-We denote by $\angleordered{b}{b_0, b_1, .., b_{n-1}}$ a bijection from $\{0,.., n-1\} \rightarrow n_c(b)$ that is ordered by polar angle as shown in Figure~\ref{fig:neighbours3} and more formally in Equation.~\ref{angle_polar}.
-\begin{equation}\label{angle_polar}
-	\forall i,
-j~:~0 \leq i, j, < n \cdot i \leq j \implies \leqaz{b}{b_i}{b_j}
-\end{equation}
-
+The polar angle with respect to $b$ of a neighbour, $b'$, $\pangle(b, b')$, is
+the counter-clockwise angle that vector $\vec{bb'} = b' - b$ makes with the
+positive $x$ axis, shown in Figure~\ref{fig:neighbours3} as $\alpha_i$ and
+defined by Equation~\ref{eq:pangle}.
+%\begin{equation}\label{eq:pangle}
+	%\pangle(b, b') = 
+	%\begin{cases}
+		%\theta, & \theta \geq 0 \\
+		%\theta + 2\pi, & \theta < 0
+	%\end{cases}
+%\end{equation} 
+%where $\theta = \mathsf{atan2}((\vbb{b}{b'})_y, (\vbb{b}{b'})_x)$ and 
+%$\text{atan2}(y,x)$ is the angle-part of the conversion of rectangular
+%coordinates $(x,y)$ to polar coordinates: in particular, if $(x,y)$ is in the first quadrant,
+%then $\text{atan2}(y,x) = \arctan(y/x)$. 
+\begin{align}\label{eq:pangle}
+	& \pangle(b, b') = \theta~\mathrm{where}   \nonumber \\
+	&		\quad~\land~0 \leq \theta < 2\pi \nonumber \\
+	&   \quad~\land~\|b'-b\|(\cos\theta,\sin\theta) = b'- b 
+\end{align} 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\linewidth]{figures/neighbours3}
-	\caption[Agent neighbours]{Agent neighbour angles}
+	\caption[Agent neighbours]{Agent neighbour angles: {\small
+	 $\alpha_0 = \pangle(b, b_0)$, $\alpha_1 = \pangle(b, b1)$, \ldots and
+	 $\delta_0 = \pangle(b, b_1) - \pangle(b, b_0)$, $\delta_1 = \pangle(b, b_2) - \pangle(b, b_1)$, \ldots}}
 	\label{fig:neighbours3}
 \end{figure}
+
+We denote by $\angleordered{b}{b_0, b_1, .., b_{n-1}}$ a permutation of the set of
+neighbours, $n_c(b)$, that is sorted in non-decreasing order of polar angle, i.e.
+$\pangle(b, b_0) \leq \pangle(b, b_1) \leq \cdots \leq \pangle(b, b_{n-2}) \leq \pangle(b, b_{n-1})$.
 
 An agent $b$ is on a perimeter if it satisfies any one of three conditions:
 \begin{enumerate}
 	\item consecutive neighbours are not within each other's cohesion field, or
-	\item consecutive neighbours subtend a reflex angle (as shown in Figure~\ref{fig:neighbours3} as $\delta_3$), or
+	\item consecutive neighbours subtend a reflex angle (shown in Figure~\ref{fig:neighbours3} as $\delta_3$), or
 	\item the agent has too few neighbours.
 \end{enumerate}
 A function, $\prm(b)$, specifies these conditions formally. Let $b$ be the
