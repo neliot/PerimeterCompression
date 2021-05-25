@@ -9,6 +9,7 @@
 \usepackage{hyperref}
 \usepackage{relsize}
 \usepackage{textcomp}
+\usepackage{placeins}
 \usepackage{kbordermatrix,amsmath}
 {
 	%	\theoremstyle{plain}
@@ -57,11 +58,12 @@
 \maketitle
 
 \begin{abstract}
-Most of the current models for swarm coordination are based upon fixed (single value) potential fields. This paper presents a new novel approach to swarm coordination which is relationship-based. The new technique allows useful emergent behaviours to be created that improve the structure of a swarm and make it applicable to specific applications such as reconnaissance where a high density swarm frontier may be required or a reduced perimeter density may be required at the frontier. The model is dependant upon perimeter identification. Using an agent's perimeter status alternative controlling dynamics can be induced. The movement is modified using three arrays that are indexed by the agent's status. The agent's vector calculations are modified by these array entries to produce the final movement vector. The results section of this paper demonstrates how the new model can implement behaviours such as packed and expanded perimeters to emerge for a random swarm deployment and how the new model can still operate as the traditional single value potential field model.
+Currently, most of the models for swarm coordination are based upon fixed (single value) potential fields. Although, this approach enables predictable behaviours to be created and simplifies the underpinning model, it limits the control of an agent’s movement by treating all agents equally. To allow a more configurable model the agent’s perimeter status and the status of each neighbour can be considered when applying coordination parameters.  This paper proposes a novel model to swarm coordination using a relationship-based approach to enable emergent behaviours to be created resulting in a much-improved structure of a swarm thus making it applicable to specific applications such as reconnaissance problems where a high-density swarm frontier and/or a reduced perimeter density may be required at the frontier. The model is based upon perimeter identification of the structure the use of an agent’s perimeter status as an alternative controlling dynamic can be induced.
+The movement can be modified using three arrays indexed by the agent’s status while the agent’s vector calculations are modified by these array entries to produce the final movement vector. Extensive experiments were carried out to demonstrate how the new model can implement various behaviours such as packed and expanded perimeters to emerge for a random swarm deployment and how the new model can still operate as the traditional single value potential field model. The results show that by modifying the generated vectors of agents based upon their relationships several novel swarming behaviours can easily be produced, such as void removal, perimeter packing and expansion and can be tailored to relevant swarming applications.
 \end{abstract}
 
 \section{Introduction}
-When cohesion and repulsion field effects (sometimes referred to as potential fields~\cite{BAF:06,eliot2018metric,VG:05,SW:03,Son2017,liang2019swarm}) are used to create a swarming effect, the stable structures that develop are limited to either straight edges or partial lattices \cite{eliot2017methods}. The maintenance of a well-structured swarm is crucial to effective deployment for applications such as reconnaissance or artificial pollination, where `blind spots' are best eliminated \cite{elamvazhuthi2015optimal}, and containment, where the swarm is used to surround an object or region \cite{cao2012distributed}. Over time swarms form regular shapes~\cite{RAZ:13} and perimeters form of partial lattices that may contain so-called \textit{anomalies}, such as concave `dents' or convex `peaks'~\cite{eliot2019void}. These anomalies contribute to the disruption of an otherwise well-structured swarm. The key, therefore, is to ensure that these \textit{anyuuuomalies} are dynamically removed from a swarm whilst maintaining a regular formation.\\
+When cohesion and repulsion field effects (sometimes referred to as potential fields~\cite{BAF:06,eliot2018metric,VG:05,SW:03,Son2017,liang2019swarm}) are used to create a swarming effect, the stable structures that develop are limited to either straight edges or partial lattices \cite{eliot2017methods}. The maintenance of a well-structured swarm is crucial to effective deployment for applications such as reconnaissance or artificial pollination, where `blind spots' are best eliminated \cite{elamvazhuthi2015optimal}, and containment, where the swarm is used to surround an object or region \cite{cao2012distributed}. Over time swarms form regular shapes~\cite{RAZ:13} and perimeters form of partial lattices that may contain so-called \textit{anomalies}, such as concave `dents' or convex `peaks'~\cite{eliot2019void}. These anomalies contribute to the disruption of an otherwise well-structured swarm. The key, therefore, is to ensure that these \textit{anomalies} are dynamically removed from a swarm whilst maintaining a regular formation.\\
 Perimeter packing is a technique that creates a `pull' effect between perimeter agents. It is dependant upon perimeter agent identification as discussed by Eliot et. al. in \cite{eliot2017methods, eliot2018metric, eliot2019void} and discussed in Section~\ref{sec:perimeterDetection} in more detail.\\
 The aim of this new algorithm is to create a flexible relationship-based coordination technique that allows new emergent behaviours to be realised. Figure \ref{fig:stableswarm}) shows an agent and it fields. $P$ is the perception field (The range of the sensor array). $O$ is the obstacle field. $C$ is the cohesion field and $\rb$ is the repulsion field. The new model involves introducing three controlling arrays to the existing potential field model; $\kc$ which modifies the magnitude of the cohesion vector. $\kr$ which modifies the repulsion vector and $\rb$ which modifies the repulsion field of an agent.\\
 
@@ -71,6 +73,8 @@ The aim of this new algorithm is to create a flexible relationship-based coordin
 	\caption[Agent Fields]{Agent Fields}
 	\label{fig:stableswarm}
 \end{figure}
+%\FloatBarrier
+
 
 \section{Related work}
 
@@ -128,6 +132,8 @@ In this paper, we propose that the behaviour of an agent should be modified depe
 	\end{center}
 	\caption{Outer and inner swarm perimeters. \label{fig:simplePerim2}}
 \end{figure}
+%\FloatBarrier
+
 
 \subsection{Perimeter detection}\label{sec:perimeterDetection} 
 
@@ -167,6 +173,7 @@ defined by Equation~\ref{eq:pangle}.
 	 $\delta_0 = \pangle(b, b_1) - \pangle(b, b_0)$, $\delta_1 = \pangle(b, b_2) - \pangle(b, b_1)$, \ldots}}
 	\label{fig:neighbours3}
 \end{figure}
+%\FloatBarrier
 
 We denote by $\angleordered{b}{b_0, b_1, .., b_{n-1}}$ a permutation of the set of
 neighbours, $n_c(b)$, that is sorted in non-decreasing order of polar angle, i.e.
@@ -286,6 +293,7 @@ gap-filling vectors as shown in Equation~\ref{eq:res} and a resulant swarm segme
 	\end{center}
 	\caption{Swarm Example.\label{fig:swarmExample}}
 \end{figure}
+%\FloatBarrier
 
 \subsection{Relationship-based swarm effects}
 
@@ -409,6 +417,7 @@ The baseline swarm consists of 400 agents which are distributed over and area of
 	\end{center}
 	\caption{Baseline swarm. \label{fig:baselineSwarm1}}
 \end{figure}
+%\FloatBarrier
 
 \begin{figure}[H]
 	\begin{center}
@@ -416,6 +425,7 @@ The baseline swarm consists of 400 agents which are distributed over and area of
 	\end{center}
 	\caption{Baseline swarm. \label{fig:baselineSwarm2}}
 \end{figure}
+%\FloatBarrier
 
 When the simulation is ran with no relationship differences i.e. all array values are equal, the changes are identified using a magnitude-based metric~\cite{eliot2018metric}. The resultant magnitudes generated are shown in figure~\ref{fig:baselineMagnitude}. The swarm is also analysed based on the inter-agent distances as shown in figure~\ref{fig:baselineDistance}. The distance graph shows the different agent relationships types split into $S_{i}$, $S_{p}$ and $S_{o}$ to allow a comparison with the new model. This state is used as the baseline for the experiments to measure the effects of changing the new arrays. The baseline configuration is equivalent to the conventional swarming algorithms using single value potential fields.
 
@@ -427,6 +437,7 @@ The magnitude graph (Fig.~\ref{fig:baselineMagnitude}) shows that the swarms is 
 	\end{center}
 	\caption{Baseline swarm (Magnitude). \label{fig:baselineMagnitude}}
 \end{figure}
+%\FloatBarrier
 
 The distance graph shows that perimeter\textrightarrow perimeter agents and internal\textrightarrow perimeter and perimeter \textrightarrow internal agents settle to a similar average distance of around 2.07 units and the internal agents settle to around 2.04 units. Given that the repulsion field is set to 2 units the swarm looks very stable and is able to form a lattice based structure that changes very little and has a small amount of jitter. Jitter is the slight variation in position that agents exhibit as they move to more optimum positions.
 
@@ -436,10 +447,11 @@ The distance graph shows that perimeter\textrightarrow perimeter agents and inte
 	\end{center}
 	\caption{Baseline swarm (Distance). \label{fig:baselineDistance}}
 \end{figure}
+%\FloatBarrier
 
-\subsubsection{Perimeter Packing and Void Removal}\label{sec:perimCompress}
+\subsubsection{Perimeter Packing}\label{sec:perimCompress}
 
-The first experiment with the new model is to create a swarm that has a densely packed perimeter and exhibits a self-healing behaviour. This is achieved by modify the perimeter\textrightarrow perimeter agents relationship and the perimeter\textrightarrow non-perimeter/non-perimeter\textrightarrow perimeter relationship. The perimeter\textrightarrow perimeter agent repulsion field is reduced (Eq.~\ref{eq:rbexp1}) and the cohesion weighting is increased (Eq.~\ref{eq:kcexp1}), next the repulsion weighting of the  perimeter\textrightarrow non-perimeter/non-perimeter\textrightarrow perimeter agents is reduced to allow the perimeter agents to pull closer together without the next layer of agents reducing the effect (Eq.~\ref{eq:krexp1}). The effect here is that the perimeter agents are able to have more internal neighbours before the aggregate repulsion prevents them moving into closer proximity of each other as shown in figure~\ref{fig:tightPerim2}. As well as those changes a gap reduction effect is added ($\kg=100$). This effect includes closing the reflex angle ($\rgf=\mathsf{True}$) to smooth the perimeter and cause a  compression on a perimeter. Using a high $\kg$ value creates a circular shaped swarm and stabilises the structure (Fig.~\ref{fig:tightPerim}).
+The first experiment with the new model is to create a swarm that has a densely packed perimeter and by default exhibits a self-healing behaviour. This is achieved by modify the perimeter\textrightarrow perimeter agents relationship and the perimeter\textrightarrow non-perimeter/non-perimeter\textrightarrow perimeter relationship. The perimeter\textrightarrow perimeter agent repulsion field is reduced (Eq.~\ref{eq:rbexp1}) and the cohesion weighting is increased (Eq.~\ref{eq:kcexp1}), next the repulsion weighting of the perimeter\textrightarrow non-perimeter/non-perimeter\textrightarrow perimeter agents is reduced to allow the perimeter agents to pull closer together without the next layer of agents reducing the effect (Eq.~\ref{eq:krexp1}). 
 
 \begin{equation}\label{eq:rbexp1}
 \rb = 
@@ -465,12 +477,15 @@ The first experiment with the new model is to create a swarm that has a densely 
 \end{bmatrix}
 \end{equation}
 
+The resultant effect is that the perimeter agents are able to have more internal neighbours before the aggregate repulsion prevents them moving closer as shown in figure~\ref{fig:tightPerim2}. As well as those changes a gap reduction effect is added ($\kg=100$). This effect includes closing the reflex angle ($\rgf=\mathsf{True}$) to smooth the perimeter and cause a  compression on a perimeter. Using a high $\kg$ value creates a circular shaped swarm and stabilises the structure (Fig.~\ref{fig:tightPerim}).
+
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=1.0\linewidth]{figures/outer1}
 	\end{center}
 	\caption{Packed Perimeter 1. \label{fig:tightPerim}}
 \end{figure}
+%\FloatBarrier
 
 \begin{figure}[H]
 	\begin{center}
@@ -478,6 +493,7 @@ The first experiment with the new model is to create a swarm that has a densely 
 	\end{center}
 	\caption{Packed Perimeter 2. \label{fig:tightPerim2}}
 \end{figure}
+%\FloatBarrier
 
 The effect of the parameters effects the swarm by causing a change in the distribution of the agents compared to the baseline. Figure~\ref{fig:tightPerimDistance} shows that the perimeter agents ($S_{p}$) are now closer together but also shows that the distribution of the p\textrightarrow i and i\textrightarrow p agents ($S_{i}$, $S_{o}$) are now of a similar distance apart which allows the internal agents to form a regular hexagonal lattice.
 
@@ -487,6 +503,7 @@ The effect of the parameters effects the swarm by causing a change in the distri
 	\end{center}
 	\caption{Packed Perimeter (Distance). \label{fig:tightPerimDistance}}
 \end{figure}
+%\FloatBarrier
 
 In terms of the magnitude relationships, shown in graph~\ref{fig:tightPerimMagnitude}. The agents are effected by the compression of the perimeter. This is shown by the increased average magnitude within the swarm. The metric also shows that the packing and compression on the perimeter cause more of a disturbance within the sarm which is shown by the increased standard deviation from the mean magnitude.
 
@@ -496,44 +513,12 @@ In terms of the magnitude relationships, shown in graph~\ref{fig:tightPerimMagni
 	\end{center}
 	\caption{Packed Perimeter (Magnitude). \label{fig:tightPerimMagnitude}}
 \end{figure}
+%\FloatBarrier
 
-% \subsection{Baseline 2}
-% The second swarm consists of 500 agents which are distributed within a small area to create a compressed swarm as shown in Figure~\ref{fig:baseline2}. These initial parameters create a hexagonal-based distribution of agents that stabilise as shown in Figure~\ref{fig:baseline2-2}. This configuration is equivalent to the conventional swarming algorithms using single value potential fields. 
+\subsubsection{Perimeter Expansion}
+The basis of this experiment is to use the new model to generate a swarm that allows a swarm to expand from a condensed deployment state and increase the distance between perimeter-based agents while maintaining a dense core. This would be useful when a swarm is moving into an area that could disable or harm agents to reduce the number of agents and would limit the number of agents that would be lost from the swarm. This effect has the added benefit in that the swarm will also exhibit a self-healing property due to the internal compression.
 
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=1.0\linewidth]{figures/baseline2-1}
-% 	\end{center}
-% 	\caption{Baseline 2 start. \label{fig:baseline2}}
-% \end{figure}
-
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=1.0\linewidth]{figures/baseline2-2}
-% 	\end{center}
-% 	\caption{Baseline 2 end. \label{fig:baseline2-2}}
-% \end{figure}
-
-% The Magnitude metric shows that the baseline 2 swarm starts with a high magnitude due to the compression and the swarm. There is also a high degree of `jitter' (Fig.~\ref{fig:baseline2Distance}). However the swarm expands rapidly as can bee seen in the distance metric (Fig.~\ref{fig:baseline2Magnitude}). Over time the magnitude reduces as the swarm expands and the distribution of the agents evening out reducing the internal disruption. Once the swarm has fully expanded at about 400 time steps the swarm settles to is nominal state.
-
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=1.0\linewidth]{figures/baseline2Distance}
-% 	\end{center}
-% 	\caption{Baseline 2 (Distance). \label{fig:baseline2Distance}}
-% \end{figure}
-
-% The distance metric (Fig.~\ref{fig:baseline2Distance}) also shows that the swarm settles to a point where the perimeter agents are slightly more dispersed than the internal agents, this is expected due to their constituent vectors being only on the inner side of the swarm. The perimeter\textrightarrow internal agents are slightly closer and the internal\textrightarrow internal agents are distributed more regularly but are slightly closer together due to there being cohesion and repulsion vectors from all sides.
-
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=1.0\linewidth]{figures/baseline2Magnitude}
-% 	\end{center}
-% 	\caption{Baseline 2 (Magnitude). \label{fig:baseline2Magnitude}}
-% \end{figure}
-
-\subsubsection{Perimeter Expansion and Void Removal}
-The basis of this experiment is to use the new model to generate a swarm that expands the distance between perimeter-based agents. This would be useful when a swarm is moving into an area that could disable or harm agents to reduce the number of agents and would limit the number of agents that would be lost from the swarm. At the same time the swarm will still need to exhibit a self-healing property.
+The parameters shown in equation~\ref{eq:rbexp2},~\ref{eq:krexp2}~and~\ref{eq:kcexp2} are designed to create a distancing between perimeter\textrightarrow perimeter agents by holding them steady with an increased cohesion weighting (150.0) and at the same time creating a high degree of repulsion between non-perimeter\textrightarrow perimeter agents (1000.0) i.e. the non-perimeter agents repel the perimeter agents as shown in figure~\ref{fig:perimExpand2}.
 
 \begin{equation}\label{eq:rbexp2}
 \rb = 
@@ -559,12 +544,15 @@ The basis of this experiment is to use the new model to generate a swarm that ex
 \end{bmatrix}
 \end{equation}
 
+As well as those changes a gap reduction effect is added ($\kg=50$). This effects, which includes closing the reflex angle ($\rgf=\mathsf{True}$), has the effect of `smoothing' the perimeter to create the circular shape as shown in figure~\ref{fig:perimExpand1}.
+
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=1.0\linewidth]{figures/inner1}
 	\end{center}
 	\caption{Perimeter Expanded 1. \label{fig:perimExpand1}}
 \end{figure}
+%\FloatBarrier
 
 \begin{figure}[H]
 	\begin{center}
@@ -572,6 +560,9 @@ The basis of this experiment is to use the new model to generate a swarm that ex
 	\end{center}
 	\caption{Perimeter Expanded 2. \label{fig:perimExpand2}}
 \end{figure}
+%\FloatBarrier
+
+The effect on the inter-agent magnitude is shown in figure~\ref{fig:perimExpandMagnitude}. The initial deployment is in a highly compressed state and the deviation of the magnitude is very high. The swarm quickly expands to produce a swarm that is quite stable with $\mu_p(S)$ being steady but due to the multi-model effect the magnitude spread is wide.
 
 \begin{figure}[H]
 	\begin{center}
@@ -579,6 +570,9 @@ The basis of this experiment is to use the new model to generate a swarm that ex
 	\end{center}
 	\caption{Perimeter Expanded (Magnitude). \label{fig:perimExpandMagnitude}}
 \end{figure}
+%\FloatBarrier
+
+The effect on the inter-agent distances is shown in figure~\ref{fig:perimExpandDistance}. It shows that the perimeter agents ($S_p$) are well distributed and almost on the limits of the repulsion field ($\rb$). However, $s_i$ has a high degree of modality indicated by the large $\psi_p$ of the agents and $S_o$ shows that the internal\textrightarrow internal agents are, on average, holding steady well beyond the repulsion field, again due to the modality.
 
 \begin{figure}[H]
 	\begin{center}
@@ -586,6 +580,9 @@ The basis of this experiment is to use the new model to generate a swarm that ex
 	\end{center}
 	\caption{Perimeter Expanded (Distance). \label{fig:perimExpandDistance}}
 \end{figure}
+%\FloatBarrier
+
+Examining the distances more closely it can be seen that the standard deviation is high which indicates that the swarm is multi-model. A multi-model swarm is created when agents are able to see multiple agents within the cohesion field beyong the regular hexagonal distribution. The perimeter\textrightarrow perimeter distibution (Fig.~\ref{fig:perimExpandDistancePP}) is less model than the perimeter\textrightarrow non-perimeter non-perimeter\textrightarrow perimeter group (Fig.~\ref{fig:perimExpandDistanceIPPI}) and the internal agents are highly model (Fig.~ref{fig:perimExpandDistanceII}).
 
 \begin{figure}[H]
 	\begin{center}
@@ -593,6 +590,7 @@ The basis of this experiment is to use the new model to generate a swarm that ex
 	\end{center}
 	\caption{Perimeter Expanded PP (Distance). \label{fig:perimExpandDistancePP}}
 \end{figure}
+%\FloatBarrier
 
 \begin{figure}[H]
 	\begin{center}
@@ -600,6 +598,7 @@ The basis of this experiment is to use the new model to generate a swarm that ex
 	\end{center}
 	\caption{Perimeter Expanded IPPI (Distance). \label{fig:perimExpandDistanceIPPI}}
 \end{figure}
+%\FloatBarrier
 
 \begin{figure}[H]
 	\begin{center}
@@ -607,32 +606,13 @@ The basis of this experiment is to use the new model to generate a swarm that ex
 	\end{center}
 	\caption{Perimeter Expanded II (Distance). \label{fig:perimExpandDistanceII}}
 \end{figure}
+%\FloatBarrier
 
 \subsubsection{$\kg$ gap reduction}
 
-\begin{equation}\label{eq:gapReduction1}
-	\rb = 
-	\begin{bmatrix}
-	2.0 & 2.0\\
-	2.0 & 2.0
-	\end{bmatrix}
-	\end{equation}
-	
-	\begin{equation}\label{eq:gapReduction2}
-	\kr = 
-	\begin{bmatrix}
-	50.0 & 50.0\\
-	50.0 & 50.0
-	\end{bmatrix}
-	\end{equation}
-	
-	\begin{equation}\label{eq:gapReduction3}
-	\kc = 
-	\begin{bmatrix}
-	0.15 & 0.15\\
-	0.15 & 0.15 
-	\end{bmatrix}
-	\end{equation}
+The aim of this experiment is to show the effect of using the gap reduction mechanism on it own to see the part it play in the new model. The reduction method is an extension of the method used by Eliot et al.~\cite{eliot2018metric}. The mechanics are the same but the reflex angle is identified as a gap to add additional control to a perimeters structure. The $\rb$, $\kr$ and $\kc$ values are all set to the baseline and $kg=100$.
+
+Figure~\ref{fig:gap1} shows the final (step 3000) of the simulation. It shows that the swarm has expanded from its initial state and due to the effects of $\kg$ the swarms has formed a compressed circular swarm.
 
 \begin{figure}[H]
 	\begin{center}
@@ -640,6 +620,9 @@ The basis of this experiment is to use the new model to generate a swarm that ex
 	\end{center}
 	\caption{Gap reduction 1. \label{fig:gap1}}
 \end{figure}
+%\FloatBarrier
+
+Figure~\ref{fig:gap2} shows that although the swarm structure has been brought together as a circular swarm the perimeter is only slightly compressed. This is due to the reflex angle `pulling' the agents in but the repulsion between the perimeter agents prevents them from moving more closely together. 
 
 \begin{figure}[H]
 	\begin{center}
@@ -647,6 +630,9 @@ The basis of this experiment is to use the new model to generate a swarm that ex
 	\end{center}
 	\caption{Gap reduction 2. \label{fig:gap2}}
 \end{figure}
+%\FloatBarrier
+
+Figure~\ref{fig:gapMagnitude} shows that the swarm is compressed due to the large standard deviation in the agents.
 
 \begin{figure}[H]
 	\begin{center}
@@ -654,6 +640,9 @@ The basis of this experiment is to use the new model to generate a swarm that ex
 	\end{center}
 	\caption{Gap Magnitude\label{fig:gapMagnitude}}
 \end{figure}
+%\FloatBarrier
+
+Figure~\ref{fig:gapDistance} shows that the swarm perimeter is slightly compressed as the distance is just below the repulsion field, where as the internal and perimeter\textrightarrow non-perimeter/non-perimeter\textrightarrow perimeter agents have an average distance that is beyond the repulsion field which indicated a multi-model/compressed arrangement with the internal\textrightarrow internal agents being slightly less compressed.
 
 \begin{figure}[H]
 	\begin{center}
@@ -661,34 +650,73 @@ The basis of this experiment is to use the new model to generate a swarm that ex
 	\end{center}
 	\caption{Gap Distance\label{fig:gapDistance}}
 \end{figure}
-% \subsubsection{Packed}
+%\FloatBarrier
 
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=1.0\linewidth]{figures/baseline2Packed}
-% 	\end{center}
-% 	\caption{Perimeter packed\label{fig:perimPackedBaseline2}}
-% \end{figure}
+\subsubsection{Void Removal and Perimeter Packing}
 
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=1.0\linewidth]{figures/baseline2PackedMagnitude}
-% 	\end{center}
-% 	\caption{Perimeter packed (Magnitude)\label{fig:baseline2PackedMagnitude}}
-% \end{figure}
+In this experiment the swarm consists of 400 agents which are distributed over and area of roughly $25\time25$ units as shown in Figure~\ref{fig:voidPerim1} and consists of agents that are relatively evenly spaced with large void in the centre of the swarm. The basis for this experiment is to show that the new algorithm can be tuned to heal the swarm by removing the void and also create a packed perimeter formation. The parameters used to create the effect are based upon the baseline swarm parameters with the changes to $\rb$, $\kr$ and $\kc$ shown in equations~\ref{eq:voidPerim1},~\ref{eq:voidPerim2}~and~\ref{eq:voidPerim3}.
 
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=1.0\linewidth]{figures/baseline2PackedDistance}
-% 	\end{center}
-% 	\caption{Perimeter packed (Distance)\label{fig:baseline2PackedDistance}}
-% \end{figure}
+\begin{equation}\label{eq:voidPerim1}
+	\rb = 
+	\begin{bmatrix}
+	2.0 & 2.0\\
+	2.0 & 2.0
+	\end{bmatrix}
+\end{equation}
+	
+\begin{equation}\label{eq:voidPerim2}
+	\kr = 
+	\begin{bmatrix}
+	25.0 & 10.0\\
+	50.0 & 50.0
+	\end{bmatrix}
+\end{equation}
+
+\begin{equation}\label{eq:voidPerim3}
+	\kc = 
+	\begin{bmatrix}
+	0.15 & 0.15\\
+	0.15 & 150.0 
+	\end{bmatrix}
+\end{equation}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/voidPerim1}
+	\end{center}
+	\caption{Void removal and Perimeter Packing 1\label{fig:voidPerim1}}
+\end{figure}
+%\FloatBarrier
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/voidPerim2}
+	\end{center}
+	\caption{Void removal and Perimeter Packing 2\label{fig:voidPerim2}}
+\end{figure}
+%\FloatBarrier
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/voidPerimMagnitude}
+	\end{center}
+	\caption{Void and Perimeter Packing (Magnitude)\label{fig:voidPerimMagnitude}}
+\end{figure}
+%\FloatBarrier
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/voidPerimDistance}
+	\end{center}
+	\caption{Void and Perimeter Packing (Distance)\label{fig:voidPerimDistance}}
+\end{figure}
+%\FloatBarrier
 
 \section{Conclusions and future work}\label{conclusions}
 From the initial simulations it is possible to show that the technique is able to successfully restructure swarms into usable configurations based upon the requirements of 4 distinct relationships with a swarm. Also, by adjusting the gap reducing vector to not use the reflex angles it is possible to allow the perimeter agents to circulate around areas that form naturally on the perimeter. This requires more analysis to fully realise its potential and application. The effect can be seem in the video at \url{https://youtu.be/E4Q4hk4KrWA} . Additionally it is possible to remove voids and therefore surround obstacles. The metrics show that the algorithm does have an impact on swarm stability to exhibit these new features but the impact is consistent throughout the swarms lifetime as it migrates into different structures.
 
 Going forward the new model will be examined based upon the introduction of direction and obstacles. Initial testing shows that the model holds up well including the improvement in self-healing as demonstrated in figure~\ref{fig:packedSelfHealing} which shows an obstacle being introduced and removed in a packed perimeter swarm. Figure~\ref{fig:future7} shows the impact on the Magnitude and figure~\ref{fig:future8} shows the impact on the inter-agent distances.
-\begin{figure*}[ht!]
+\begin{figure*}[h]
   \begin{center}
     \includegraphics[width=17.6cm]{figures/FutureTime}
   \end{center}
@@ -708,6 +736,7 @@ Going forward the new model will be examined based upon the introduction of dire
 	\end{center}
 	\caption{Perimeter packed - self Healing (Distance)\label{fig:future8}}
 \end{figure}
+%\FloatBarrier
 
 \bibliographystyle{abbrv}
 \bibliography{perimeter}
