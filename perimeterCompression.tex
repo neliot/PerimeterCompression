@@ -36,11 +36,11 @@
 \newcommand{\leqaz}[3]{#2 \leq_{\pangle_#1} #3}
 \newcommand{\angleordered}[2]{\langle #2 \rangle_{\leqaz{#1}{}{}}}
 \newcommand{\prm}{\mathsf{prm}}
-\newcommand{\kc}{\mathit{k_c}}
-\newcommand{\kr}{\mathit{k_r}}
-\newcommand{\kd}{\mathit{k_d}}
-\newcommand{\kg}{\mathit{k_g}}
-\newcommand{\ko}{\mathit{k_o}}
+\newcommand{\kc}{\mathit{k_{c}}}
+\newcommand{\kr}{\mathit{k_{r}}}
+\newcommand{\kd}{\mathit{k_{d}}}
+\newcommand{\kg}{\mathit{k_{g}}}
+\newcommand{\ko}{\mathit{k_{o}}}
 \newcommand{\rb}{\mathit{R}}
 \newcommand{\rgf}{\mathit{rgf}}
 \title{A Novel Relationship-based Approach to Swarm Coordination.}
@@ -654,7 +654,17 @@ Figure~\ref{fig:gapDistance} shows that the swarm perimeter is slightly compress
 
 \subsubsection{Void Removal and Perimeter Packing}
 
-In this experiment the swarm consists of 400 agents which are distributed over and area of roughly $25\time25$ units as shown in Figure~\ref{fig:voidPerim1} and consists of agents that are relatively evenly spaced with large void in the centre of the swarm. The basis for this experiment is to show that the new algorithm can be tuned to heal the swarm by removing the void and also create a packed perimeter formation. The parameters used to create the effect are based upon the baseline swarm parameters with the changes to $\rb$, $\kr$ and $\kc$ shown in equations~\ref{eq:voidPerim1},~\ref{eq:voidPerim2}~and~\ref{eq:voidPerim3}.
+In this experiment the swarm consists of 400 agents which are distributed over and area of roughly $25\times 25$ units as shown in Figure~\ref{fig:voidPerim1} and consists of agents that are relatively evenly spaced with a large void in the centre of the swarm. 
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/voidPerim1}
+	\end{center}
+	\caption{Void removal and Perimeter Packing 1\label{fig:voidPerim1}}
+\end{figure}
+%\FloatBarrier
+
+The basis for this experiment is to show that the new algorithm can be tuned to heal the swarm by removing the void and also create a packed perimeter formation. The parameters used to create the effect are based upon the baseline swarm parameters with the changes to $\rb$, $\kr$ and $\kc$ shown in equations~\ref{eq:voidPerim1},~\ref{eq:voidPerim2}~and~\ref{eq:voidPerim3}.
 
 \begin{equation}\label{eq:voidPerim1}
 	\rb = 
@@ -680,13 +690,7 @@ In this experiment the swarm consists of 400 agents which are distributed over a
 	\end{bmatrix}
 \end{equation}
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=1.0\linewidth]{figures/voidPerim1}
-	\end{center}
-	\caption{Void removal and Perimeter Packing 1\label{fig:voidPerim1}}
-\end{figure}
-%\FloatBarrier
+Figure~\ref{fig:voidPerim2} shows the resultant swarm formation after 3000 epochs. It shows the void has been removed and the perimeter of the swarm is tightly packed. This has been achived by reducing the $\kr$ value of the non-perimeter\textrightarrow non-perimeter agents ($\kr=25$) allowing the internal structure of the swarm to be compressed by the perimeter. At the same time the non-perimeter\textrightarrow perimeter repulsion has be reduced further $\kr=10$ to allow the perimeter agents to move more closely before the aggrgate effect of the next layer of agents impacts upon the reduced perimeter distances. The $\kc$ settings for perimeter\textrightarrow perimeter agents is increased ($kg=150.0$) to pull the perimeter agents together.
 
 \begin{figure}[H]
 	\begin{center}
@@ -696,6 +700,8 @@ In this experiment the swarm consists of 400 agents which are distributed over a
 \end{figure}
 %\FloatBarrier
 
+The effect of the changes in the cohesion and repulson vectors is visible in the magnitude metric as shown in figure~\ref{fig:voidPerimMagnitude}. The swarms magnitude stability settles such that the mean is not erratic but there is a high deviation due to the modality of the agent\textrightarrow agent relationships.
+
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=1.0\linewidth]{figures/voidPerimMagnitude}
@@ -703,6 +709,8 @@ In this experiment the swarm consists of 400 agents which are distributed over a
 	\caption{Void and Perimeter Packing (Magnitude)\label{fig:voidPerimMagnitude}}
 \end{figure}
 %\FloatBarrier
+
+FInally figure~\ref{fig:voidPerimDistance} shows that the permeter agenst are closer together, the base repulsion field is set to 2 nits and the agents are ~1.7 units apart. The internals of the swarm are highly model and therefore the distance is averaging beyond the repulsion field and the layer below the perimeter has more a lower average use to the increased repulsion holding the agents.
 
 \begin{figure}[H]
 	\begin{center}
@@ -716,7 +724,8 @@ In this experiment the swarm consists of 400 agents which are distributed over a
 From the initial simulations it is possible to show that the technique is able to successfully restructure swarms into usable configurations based upon the requirements of 4 distinct relationships with a swarm. Also, by adjusting the gap reducing vector to not use the reflex angles it is possible to allow the perimeter agents to circulate around areas that form naturally on the perimeter. This requires more analysis to fully realise its potential and application. The effect can be seem in the video at \url{https://youtu.be/E4Q4hk4KrWA} . Additionally it is possible to remove voids and therefore surround obstacles. The metrics show that the algorithm does have an impact on swarm stability to exhibit these new features but the impact is consistent throughout the swarms lifetime as it migrates into different structures.
 
 Going forward the new model will be examined based upon the introduction of direction and obstacles. Initial testing shows that the model holds up well including the improvement in self-healing as demonstrated in figure~\ref{fig:packedSelfHealing} which shows an obstacle being introduced and removed in a packed perimeter swarm. Figure~\ref{fig:future7} shows the impact on the Magnitude and figure~\ref{fig:future8} shows the impact on the inter-agent distances.
-\begin{figure*}[h]
+
+\begin{figure*}[H]
   \begin{center}
     \includegraphics[width=17.6cm]{figures/FutureTime}
   \end{center}
