@@ -291,10 +291,10 @@ When using Equation~\ref{eq:rep2} two arrays are used $\kr$ and $\rb$. $\kr$ is 
 For a given agent pair their perimeter status will be calculated and applied to the arrays. If both agents are perimeter based then the values selected would be $\rb[P_b,P_{b'}]\Rightarrow 0.8$ and $\kr[P_b,P_{b'}]\Rightarrow 335$. If the agent pair were perimeter $\rightarrow$ non-perimeter then the values selected would be $\rb[P_b,P_{b'}]\Rightarrow 2$ and $\kr[P_b,P_{b'}]\Rightarrow 67$.\\
 
 \section{Experimental results\label{sec:ExperimentalResults}}
-The new modelling method allows for a highly configurable swarm. Each configuration will have an impact on the a swarm's structural changes. This is analysed using the inter-agent distances. The experimental results show the effects on the swarm in terms of inter-agent distances which are separated based on the relationship status. The section will cover four experiments and will include a baseline swarm for comparison.
+The new modelling method allows for a highly configurable swarm. Each configuration has an impact on the swarm's structure. This is analysed using the inter-agent distances. The experimental results show the effects on the swarm in terms of inter-agent distances which are categorised based on the relationship status. The section will cover four experiments and will include a baseline swarm for comparison.
 
 \subsection{Distance metric}
-The distance metric is used by many researchers as a method of examining the structure of a swarm~\cite{BAFVM:06,BAF:06,elamvazhuthi2015optimal,VG:05,SW:03}. However, due to the new model allowing the field effects and magnitudes to be varied the distance metric will need to be adapted to analyse the agents involved in specific relationships rather than globally, therefore $S$ will be sub-divided into the three relationship categories of $S_i$, $S_p$, $S_{o}$. Where $S_i$ are the internal-internal relationships, $S_p$ are the perimeter-perimeter relationships and $S_{o}$ are all the internal-perimeter or perimeter-internal relationships. 
+The distance metric is used by many researchers as a method of examining the structure of a swarm~\cite{BAFVM:06,BAF:06,elamvazhuthi2015optimal,VG:05,SW:03}. However, due to the new model allowing the field effects and magnitudes to be varied the distance metric will need to be adapted to analyse the agents involved in specific relationships rather than globally, therefore $S$ will be sub-divided into the three relationship categories of $S_i$, $S_p$, $S_{o}$. Where $S_i$ are the internal\textrightarrow internal relationships, $S_p$ are the perimeter\textrightarrow perimeter relationships and $S_{o}$ are all the internal\textrightarrow perimeter or perimeter\textrightarrow internal relationships. 
 The distance metric is based upon the mean of a set of agents distances from its neighbours and the standard deviation between those agent sets. The mean is calculated as shown in equation~\ref{eq:SwarmStabilityDistance2} where $\mu_d(S)$ is the mean. The standard deviation is calculated as shown in equation~\ref{eq:SwarmStabilityDistance3} where $\sigma_d(S)$ is the standard deviation. The mean distance value can be compared to the repulsion field to identify if a swarm is optimally distributed in that the mean value should be as close to the repulsion filed as possible. The standard deviation identifies the overall differences in the distances which can be caused by the swarm agents oscillating. A standard deviation of $\sigma_d(S) = 0$ would indicate that all the agents are equally spaced.
 \small
 \begin{equation}
@@ -321,7 +321,7 @@ Therefore the distance metric for the distribution of a set of agents is both $\
 An example is shown in Figure~\ref{fig:tightPerimDistance}.
 
 \subsection{Baseline Settings}
-For all the experiments the parameters used to create the basic swarming effect are shown in Table~\ref{tab:swarmingEffect}. Where $C$ is the cohesion field, $\kc$ is the cohesion weighting, $\rb$ is the repulsion field, $\kr$ is the repulsion weighting and $\kg$ is the weighting applied in the gap reduction algorithm discussed in~\cite{eliot2019void}. 
+For all the experiments the parameters used to create the basic swarming effect are shown in table~\ref{tab:swarmingEffect}. Where $C$ is the cohesion field, $\kc$ is the cohesion weighting, $\rb$ is the repulsion field, $\kr$ is the repulsion weighting and $\kg$ is the weighting applied in the gap reduction algorithm discussed in~\cite{eliot2019void}. 
 
 \begin{table}[H]
 	\centering
@@ -341,7 +341,7 @@ For all the experiments the parameters used to create the basic swarming effect 
 \end{table}
 
 \subsection{Baseline}
-The baseline swarm consists of 400 agents which are distributed over and area of $20\times 20$ units ($-10\rightarrow+10$) as shown in Figure~\ref{fig:baselineSwarm1}. This is to simulate a randomised drop of agents into an area of interest for the deployment. e.g. A field. Once deployed the agents will be allowed to stabilise. The resultant position for the baseline swarm is shown in Figure~\ref{fig:baselineSwarm2}. 
+The baseline swarm consists of 400 agents which are distributed over and area of $20\times 20$ units ($-10\rightarrow+10$) as shown in Figure~\ref{fig:baselineSwarm1}. This is to simulate a randomised drop of agents into an area of interest. e.g. A field. The simulation is then allowed to stabilise. The resultant positions for the baseline swarm agents are shown in Figure~\ref{fig:baselineSwarm2}. 
 
 \begin{figure}[H]
 	\begin{center}
