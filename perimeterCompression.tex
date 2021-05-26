@@ -63,24 +63,22 @@ The movement can be modified using three arrays indexed by the agent’s status 
 \end{abstract}
 
 \section{Introduction}
-When cohesion and repulsion field effects (sometimes referred to as potential fields~\cite{BAF:06,eliot2018metric,VG:05,liang2019swarm,SW:03,Son2017}) are used to create a swarming effect, the stable structures that develop are limited to either straight edges or partial lattices \cite{eliot2017methods}. The maintenance of a well-structured swarm is crucial to effective deployment for applications such as reconnaissance or artificial pollination, where `blind spots' are best eliminated \cite{elamvazhuthi2015optimal}, and containment, where the swarm is used to surround an object or region \cite{cao2012distributed}. Over time swarms form regular shapes~\cite{RAZ:13} and perimeters form of partial lattices that may contain so-called \textit{anomalies}, such as concave `dents' or convex `peaks'~\cite{eliot2019void}. These anomalies contribute to the disruption of an otherwise well-structured swarm. The key, therefore, is to ensure that these \textit{anomalies} are dynamically removed from a swarm whilst maintaining a regular formation.\\
-Perimeter packing is a technique that creates a `pull' effect between perimeter agents. It is dependant upon perimeter agent identification as discussed by Eliot et. al. in \cite{eliot2017methods, eliot2018metric, eliot2019void} and discussed in Section~\ref{sec:perimeterDetection} in more detail.\\
-The aim of this new algorithm is to create a flexible relationship-based coordination technique that allows new emergent behaviours to be realised. Figure \ref{fig:stableswarm}) shows an agent and it fields. $P$ is the perception field (The range of the sensor array). $O$ is the obstacle field. $C$ is the cohesion field and $\rb$ is the repulsion field. The new model involves introducing three controlling arrays to the existing potential field model; $\kc$ which modifies the magnitude of the cohesion vector. $\kr$ which modifies the repulsion vector and $\rb$ which modifies the repulsion field of an agent.\\
+When cohesion and repulsion field effects (sometimes referred to as potential fields~\cite{BAF:06,eliot2018metric,VG:05,liang2019swarm,SW:03,Son2017}) are used to create a swarming effect, the stable structures that develop are limited to either straight edges or partial lattices \cite{eliot2017methods}. The maintenance of a well-structured swarm is crucial to effective deployment for applications such as reconnaissance and artificial pollination, where `blind spots' are best eliminated \cite{elamvazhuthi2015optimal}, and containment, where the swarm is used to surround an object or region \cite{cao2012distributed}. Over time swarms form regular shapes~\cite{RAZ:13} and perimeters form of partial lattices that may contain so-called \textit{anomalies}, such as concave `dents' or convex `peaks'~\cite{eliot2019void}. These anomalies contribute to the disruption of an otherwise well-structured swarm. The key, therefore, is to ensure that these \textit{anomalies} are dynamically removed from a swarm whilst maintaining a regular formation.\\
+To allow the new behaviours to be realised, such as creating a `pull' effect between perimeter agents to allows a swarm to remove anomilies, perimeter agent identification is required. This is discussed by Eliot et. al. in \cite{eliot2017methods, eliot2018metric, eliot2019void} and in Section~\ref{sec:perimeterDetection}.\\
+The aim of the new model presented in this paper is to create a flexible relationship-based coordination technique that allows new emergent behaviours to be created by modifying the inter-agent weightings and field sizes. Figure \ref{fig:stableswarm}) shows an agent and it fields. $P$ is the perception field (The range of the sensor array). $O$ is the obstacle field. $C$ is the cohesion field and $\rb$ is the repulsion field. The new model involves introducing three controlling arrays to the existing potential field model; $\kc$ which modifies the magnitude of the cohesion vector. $\kr$ which modifies the repulsion vector and $\rb$ which alters the repulsion field.\\
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\linewidth]{figures/stableswarm}
+	\includegraphics[width=0.7\linewidth]{figures/stableswarm}
 	\caption[Agent Fields]{Agent Fields}
 	\label{fig:stableswarm}
 \end{figure}
 %\FloatBarrier
 
-
 \section{Related work}
+As far back as 1987 swarm theory has adopted the use of potential fields to coordinate agents~\cite{REY:87} and this has continued since then in an attempt to improve the structure of a swarm, coordinate obstacle avoidance, and improve navigation~\cite{BAFVM:06,BAF:06,BFV:07,BM:09,eliot2018metric,VG:05,HC:09,SW:03,Son2017}. Improvements to the basic structure of swarms has developed through the likes of a prototype framework for self-healing swarms that was developed by Dai et al. where they consider how to manage agent failure in hostile environments \cite{DHMRZ:06}. This was similar to work by Vassev and Hinchey, who modelled swarm movement using the ASSL (Autonomic System Specification Language) \cite{VH:09}. This technique was employed by NASA (US National Aeronautics and Space Administration) for use in asteroid belt exploration as part of their ANTS (Autonomous Nano Technology Swarm) project. However, this work is focused towards failure of an agent's internal systems, rather than on the removal of anomalies in agent distribution. 
 
-As far back as 1987 swarm theory has adopted the use of field effects/potential fields to coordinate agents~\cite{REY:87} and this has continued since then in an attempt to improve the structure of a swarm, coordinate obstacle avoidance, and improve navigation~\cite{BAFVM:06,BAF:06,BFV:07,BM:09,eliot2018metric,VG:05,HC:09,SW:03,Son2017}. Improvements to the basic structure of swarms has developed through the likes of a prototype framework for self-healing swarms that was developed by Dai et al. They considered how to manage agent failure in hostile environments \cite{DHMRZ:06}. This was similar to work by Vassev and Hinchey, who modelled swarm movement using the ASSL (Autonomic System Specification Language) \cite{VH:09}. This technique was employed by NASA (US National Aeronautics and Space Administration) for use in asteroid belt exploration as part of their ANTS (Autonomous Nano Technology Swarm) project. However, this work is focused towards failure of an agent's internal systems, rather than on the removal of anomalies in a swarm distribution. This need for formation control is also discussed by Speck and Bucci with respect to the diverse applications of swarms and the need to control a swarms structure~\cite{8430773}.
-
-In the context of swarm structure maintenance, Roach et al. focussed on the effects of sensor failure, and the impact that has on agent distribution \cite{RMT:15}. Lee and Chong identified the issue of concave edges within swarms in an attempt to create regular lattice formations \cite{GN:08}, and the main focus of their work is the dynamic restructuring of inter-agent formations. Ismail and Timmis demonstrated the use of \textit{bio-inspired} healing using \textit{granuloma formation}, a biological method for encapsulating an antigen \cite{IT:10}. They have also considered the effect failed agents can have on a swarm when traversing a terrain~\cite{TIBW:16}. 
+In the context of swarm structure maintenance, The need for formation control is discussed by Speck and Bucci with respect to the diverse applications of swarms and the need to control a swarms structure~\cite{8430773}. Roach et al. focusses on the effects of sensor failure, and the impact that has on agent distribution \cite{RMT:15}. Lee and Chong identified the issue of concave edges within swarms in an attempt to create regular lattice formations \cite{GN:08}, the main focus of their work is the dynamic restructuring of inter-agent formations. Ismail and Timmis demonstrated the use of \textit{bio-inspired} healing using \textit{granuloma formation}, a biological method for encapsulating an antigen \cite{IT:10}. They also considered the effect failed agents can have on a swarm when traversing a terrain~\cite{TIBW:16}. 
 
 This paper proposes an alternative approach to agent coordination that can be used to induce, among other behaviours, a void reduction effect through perimeter packing. This is an extension of the work presented by Eliot et al. \cite{eliot2019void}, Ismail and Timmis \cite{IT:10,TIBW:16}, and on the work of McLurkin and Demaine on the detection of perimeter types \cite{mclurkin2009}. However, perimeter type identification requires a communications infrastructure to allow the perimeter angle to be calculated. Communications within swarm formations limits swarm sizes and introduces performance problems \cite{fu2020formation}. The technique employed in this paper does not explicitly require the identification of the perimeter type as it would limit the size of the swarm\cite{eliot2019void,GN:08} and is therefore a reduced perimeter detection algorithm to identify \textit{any} perimeter.
 
@@ -96,20 +94,20 @@ Equation~\ref{eq:resultantVector1a} shows the movement vector as a linear combin
 This paper does not consider goals or obstacles so we assume $\kd = \ko = 0$ and omit the third and fourth terms.
 
 \subsection{Cohesion}\label{cohesion}
-The cohesion component is calculated based on the proximity of neighbours. Where $n_c(b)$ is the set of neighbour agents for $b$ (Eq. \ref{eq:cohesion1}). The inclusion of an agent from a swarm ($S$) in by the agent's cohesion field ($C$).
+The cohesion component is calculated based on the proximity of neighbours. Where $n_c(b)$ is the set of neighbour agents for $b$ (Eq. \ref{eq:cohesion1}). The inclusion of an agent from a swarm ($S$) in the neighbour set is achieved using the agent's cohesion field ($C$).
 
 \begin{equation}\label{eq:cohesion1}
 n_c(b) = \{b' \in S~:~b' \neq b \land\magn{\vbb{b}{b'}} \leq C\}
 \end{equation}
 
-The effect of an agent being within this set is that it will generate a vector that should `encourage' agents to maintain their proximity. i.e. generate a cohesive swarm. The general weighted formula for agents to maintain their proximity is shown in Equation~\ref{eq:resultantVector1a}. Equation~\ref{eq:cohesion2} shows the technique applied to accumulating the vectors that create the cohesive effect. $\card{n_c(b)}$ denotes the cardinality of $n_c(b)$. This is the component of the overall vector calculation that has the $\kc$ quotient applied to it to allow the cohesion effect to be `balanced' with respect to other vector influences as described in ~\cite{eliot2017methods,eliot2018metric,eliot2019void}. 
+The effect of an agent being within this set is that it will generate a vector that should `encourage' an agent to maintain their proximity. When there are multiple neighbours the cohesion effects are cummulative as shown by equation~\ref{eq:cohesion2} which will create a vector towards the centre of its neighbours, creating a cohesive swarm. $\card{n_c(b)}$ denotes the cardinality of $n_c(b)$. This is the component of the overall vector calculation that has the $\kc$ quotient applied to it to allow the cohesion effect to be `balanced' with respect to other vector influences as described in ~\cite{eliot2017methods,eliot2018metric,eliot2019void}. 
 
 \begin{equation}\label{eq:cohesion2}
 v_c(b) = \frac{1}{\card{n_c(b)}} \sum_{b' \in n_c(b)}(\vbb{b}{b'})
 \end{equation}
 
 \subsection{Repulsion}\label{repulsion:neighbours}
-The repulsion component of an agent's movement is calculated from interaction with its neighbours $n_r(b)$ (Eq.~\ref{eq:repulsion1a}) in a swarm ($\mathcal{S}$) that are within the agent's ($b$) repulsion field ($\rb$).
+The repulsion component of an agent's movement is calculated from interaction with its repulsion neighbours $n_r(b)$ (Eq.~\ref{eq:repulsion1a}) in a swarm ($\mathcal{S}$). Repulsion agents are identified as agents that are within the agent's ($b$) repulsion field ($\rb$).
 
 \begin{equation}\label{eq:repulsion1a}
 n_r(b) = \{b' \in \mathcal{S} : b \neq b' \land \card{\vbb{b}{b'}} \leq \rb)\}
@@ -124,7 +122,7 @@ v_r(b) = \frac{1}{\card{n_r(b)}}\sum_{b' \in n_r(b)} \left(\card{\vbb{b}{b'}} - 
 Here, $\widehat{\vbb{b}{b'}}$ denotes $\vbb{b}{b'}$ normalized to unit length.
 
 \section{New Inter-agent Model}
-In this paper, we propose that the behaviour of an agent should be modified depending on whether or not it is on a \emph{perimeter}. Figure~\ref{fig:simplePerim2} shows a simple swarm. Perimeter agents are highlighted in \textcolor{red}{red}. Perimeter-based agents can form part of an inner boundary or an outer boundary. The swarm can also contain non-perimeter agents which are shown in black.
+In this paper, we propose that the behaviour of an agent should be modified depending on whether or not it is on a \emph{perimeter}. Figure~\ref{fig:simplePerim2} shows a simple swarm. Perimeter agents are highlighted in \textcolor{red}{red} and can form part of an inner or outer boundary. The swarm can also contain non-perimeter agents which are shown in black.
 
 \begin{figure}[H]
 	\begin{center}
@@ -134,37 +132,20 @@ In this paper, we propose that the behaviour of an agent should be modified depe
 \end{figure}
 %\FloatBarrier
 
-
 \subsection{Perimeter detection}\label{sec:perimeterDetection} 
 
-Each agent's perimeter status is identified using a cyclic analysis of its
-cohesion neighbours~(Fig.~\ref{fig:neighbours3}). Ghrist
-et al. discuss a similar technique using sweep
-angles~\cite{ghrist2008surrounding} as do McLurkin et al~\cite{mclurkin2009}. 
+Each agent's perimeter status is identified using a cyclic analysis of its cohesion neighbours~(Fig.~\ref{fig:neighbours3}). Ghrist et al. discuss a similar technique using sweep angles~\cite{ghrist2008surrounding} as do McLurkin et al~\cite{mclurkin2009}. 
 
-We order the cohesion neighbours of an agent $b$ by their \emph{polar
-angle} ($\alpha$) with respect to $b$ (Fig.~\ref{fig:neighbours3}). 
+We order the cohesion neighbours of an agent $b$ by their \emph{polar angle} ($\alpha$) with respect to $b$ (Fig.~\ref{fig:neighbours3}). 
 
-The polar angle with respect to $b$ of a neighbour, $b'$, $\pangle(b, b')$, is
-the counter-clockwise angle that vector $\vec{bb'} = b' - b$ makes with the
-positive $x$ axis, shown in Figure~\ref{fig:neighbours3} as $\alpha_i$ and
-defined by Equation~\ref{eq:pangle}.
-%\begin{equation}\label{eq:pangle}
-	%\pangle(b, b') = 
-	%\begin{cases}
-		%\theta, & \theta \geq 0 \\
-		%\theta + 2\pi, & \theta < 0
-	%\end{cases}
-%\end{equation} 
-%where $\theta = \mathsf{atan2}((\vbb{b}{b'})_y, (\vbb{b}{b'})_x)$ and 
-%$\text{atan2}(y,x)$ is the angle-part of the conversion of rectangular
-%coordinates $(x,y)$ to polar coordinates: in particular, if $(x,y)$ is in the first quadrant,
-%then $\text{atan2}(y,x) = \arctan(y/x)$. 
+The polar angle with respect to $b$ of a neighbour, $b'$, $\pangle(b, b')$, is the counter-clockwise angle that vector $\vec{bb'} = b' - b$ makes with the positive $x$ axis, shown in Figure~\ref{fig:neighbours3} as $\alpha_i$ and defined by Equation~\ref{eq:pangle}.
+
 \begin{align}\label{eq:pangle}
 	& \pangle(b, b') = \theta~\mathrm{where}   \nonumber \\
 	&		\quad~\land~0 \leq \theta < 2\pi \nonumber \\
 	&   \quad~\land~\|b'-b\|(\cos\theta,\sin\theta) = b'- b 
 \end{align} 
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\linewidth]{figures/neighbours3}
@@ -176,7 +157,7 @@ defined by Equation~\ref{eq:pangle}.
 %\FloatBarrier
 
 We denote by $\angleordered{b}{b_0, b_1, .., b_{n-1}}$ a permutation of the set of
-neighbours, $n_c(b)$, that is sorted in non-decreasing order of polar angle, i.e.
+neighbours, $n_c(b)$, that is sorted in non-decreasing order of \emph{polar angle}, i.e.
 $\pangle(b, b_0) \leq \pangle(b, b_1) \leq \cdots \leq \pangle(b, b_{n-2}) \leq \pangle(b, b_{n-1})$.
 
 An agent $b$ is on a perimeter if it satisfies any one of three conditions:
@@ -185,11 +166,9 @@ An agent $b$ is on a perimeter if it satisfies any one of three conditions:
 	\item consecutive neighbours subtend a reflex angle (shown in Figure~\ref{fig:neighbours3} as $\delta_3$), or
 	\item the agent has too few neighbours.
 \end{enumerate}
-A function, $\prm(b)$, specifies these conditions formally. Let $b$ be the
-agent of interest and $b'$, $b''$ any pair of consecutive neighbours of $b$ in
-the angle-sorted list $\angleordered{b}{b_0, b_1, .., b_{n-1}}$, i.e. $b' =
-b_i, b'' = b_{(i+1)\%n}$ for some $i \in \{0,..,n-1\}$.  Then $\prm(b)$ if any
-one of the following conditions is satisfied:
+
+A function, $\prm(b)$, specifies these conditions formally. Let $b$ be the agent of interest and $b'$, $b''$ any pair of consecutive neighbours of $b$ in the angle-sorted list $\angleordered{b}{b_0, b_1, .., b_{n-1}}$, i.e. $b' =
+b_i, b'' = b_{(i+1)\%n}$ for some $i \in \{0,..,n-1\}$. Where $\%$ indicates the modulus. Then $\prm(b)$ is true if any one of the following conditions is satisfied:
 \begin{enumerate}
 \item $b' \notin n_c(b'')$,
 \item $\delta > \pi$, where $\delta = \pangle(b, b'') - \pangle(b, b')$ (or $\delta = \pangle(b, b'') - \pangle(b, b') + 2\pi$ if the former is negative), or
@@ -201,9 +180,9 @@ This section discusses the application of the new $\rb$, $\kr$ and $\kc$ two dim
 
 \[
   \kbordermatrix{
-                   & \text{False (0)} & \text{True (1)} \\
-    \text{False (0)}   & i\rightarrow i   & i\rightarrow p  \\
-    \text{True (1)}    & p\rightarrow i   & p\rightarrow p
+                		& \text{False (0)}	& \text{True (1)} \\
+    \text{False (0)}	& i\rightarrow i	& i\rightarrow p  \\
+    \text{True (1)}		& p\rightarrow i	& p\rightarrow p
   }
 \]
 
