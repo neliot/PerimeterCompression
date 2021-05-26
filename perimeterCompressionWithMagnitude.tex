@@ -291,7 +291,7 @@ When using Equation~\ref{eq:rep2} two arrays are used $\kr$ and $\rb$. $\kr$ is 
 For a given agent pair their perimeter status will be calculated and applied to the arrays. If both agents are perimeter based then the values selected would be $\rb[P_b,P_{b'}]\Rightarrow 0.8$ and $\kr[P_b,P_{b'}]\Rightarrow 335$. If the agent pair were perimeter $\rightarrow$ non-perimeter then the values selected would be $\rb[P_b,P_{b'}]\Rightarrow 2$ and $\kr[P_b,P_{b'}]\Rightarrow 67$.\\
 
 \section{Experimental results\label{sec:ExperimentalResults}}
-The new modelling method allows for a highly configurable swarm. Each configuration will have an impact on the a swarm's structural changes. This is analysed using the inter-agent distances. The experimental results show the effects on the swarm in terms of inter-agent distances which are separated based on the relationship status. The section will cover four experiments and will include a baseline swarm for comparison.
+The new modelling method allows for a highly configurable swarm. Each configuration will have an impact on the a swarm's structural changes. This can be analysed in several different ways. This includes the magnitude of the interactions between agents and the distances between the agents. The experimental results show the effects on the swarm in terms of inter-agent distances, magnitude metric~\cite{eliot2018metric}, and the effect on the perimeter. The section will cover four experiments and will include a baseline swarm for comparison.
 
 \subsection{Distance metric}
 The distance metric is used by many researchers as a method of examining the structure of a swarm~\cite{BAFVM:06,BAF:06,elamvazhuthi2015optimal,VG:05,SW:03}. However, due to the new model allowing the field effects and magnitudes to be varied the distance metric will need to be adapted to analyse the agents involved in specific relationships rather than globally, therefore $S$ will be sub-divided into the three relationship categories of $S_i$, $S_p$, $S_{o}$. Where $S_i$ are the internal-internal relationships, $S_p$ are the perimeter-perimeter relationships and $S_{o}$ are all the internal-perimeter or perimeter-internal relationships. 
@@ -319,6 +319,37 @@ Therefore the distance metric for the distribution of a set of agents is both $\
 \normalsize
 
 An example is shown in Figure~\ref{fig:tightPerimDistance}.
+
+\subsection{Magnitude metric}
+The magnitude metric as defined by Eliot et al.~\cite{eliot2018metric} is based upon the relationship between agents and as such is independent of the resultant structure in terms of distances. i.e. agents can be different distances from each other but have the same relationship magnitude.
+The metric is based upon the mean of a set of agent relationships and the standard deviation between those relationships. The metric is based on inter-agent relationships therefore only the cohesion and repulsion vectors involved in inter-agent magnitudes are used as defined in equation~\ref{eq:SwarmStabilityMetricP}. The mean is calculated as shown in equation~\ref{eq:SwarmStabilityMetricT3} where $\mu_p(S)$ is the mean. The standard deviation is calculated as shown in equation~\ref{eq:SwarmStabilityQuotientT} where $\sigma_p(S)$ is the standard deviation. Due to the metric being based on inter-agent relationships the swarm can be analysed as a whole.
+
+\small
+\begin{equation}\label{eq:SwarmStabilityMetricP1}
+	v_{cr}(b) = v_{c}(b) + v_{r}(b)
+\end{equation}
+
+\begin{equation}\label{eq:SwarmStabilityMetricP}
+	P(b) = if (\magn{v_{c}(b)} > \magn{v_{r}(b)}) : \magn{v_{cr}(b)}: else -\magn{v_{cr}(b)}
+\end{equation}
+
+\begin{equation}\label{eq:SwarmStabilityMetricT3}
+	\mu_p(S) = \frac{\mathlarger{\sum_{b \in S} P(b)}}{\mathlarger{\sum_{b \in S}}\card{n_c(b)} + \mathlarger{\sum_{b \in S}}\card{n_r(b)}}
+\end{equation}
+
+\begin{equation}\label{eq:SwarmStabilityQuotientT}
+	\sigma_p(S) = \sqrt{\frac{\mathlarger{\sum_{b \in S}}\Big(P(b)-\mu_p(S)\Big)^2}{\mathlarger{\sum_{b \in S}}\card{n_c(b)} + \mathlarger{\sum_{b \in S}}\card{n_r(b)}}}
+\end{equation}
+\normalsize
+
+The metric for the internal movement is the mean and standard deviation of the swarm's internal \emph{cohesion/repulsion}. The pair $\mu_p(S)$, $\sigma_p(S)$ may therefore be written informally as: 
+
+\small
+\begin{equation}
+\label{eq:SwarmMagnitudeMatric}
+\psi_p(S) = \mu_p(S)\pm \sigma_p(S)
+\end{equation}
+\normalsize
 
 \subsection{Baseline Settings}
 For all the experiments the parameters used to create the basic swarming effect are shown in Table~\ref{tab:swarmingEffect}. Where $C$ is the cohesion field, $\kc$ is the cohesion weighting, $\rb$ is the repulsion field, $\kr$ is the repulsion weighting and $\kg$ is the weighting applied in the gap reduction algorithm discussed in~\cite{eliot2019void}. 
@@ -359,7 +390,17 @@ The baseline swarm consists of 400 agents which are distributed over and area of
 \end{figure}
 %\FloatBarrier
 
-When the simulation is ran with no relationship differences i.e. all array values are equal. The distance graph shows the different agent relationships types split into $S_{i}$, $S_{p}$ and $S_{o}$ to allow a comparison with the new model. This state is used as the baseline for the experiments to measure the effects of changing the new arrays. The baseline configuration is equivalent to the conventional swarming algorithms using single value potential fields.
+When the simulation is ran with no relationship differences i.e. all array values are equal, the changes are identified using a magnitude-based metric~\cite{eliot2018metric}. The resultant magnitudes generated are shown in figure~\ref{fig:baselineMagnitude}. The swarm is also analysed based on the inter-agent distances as shown in figure~\ref{fig:baselineDistance}. The distance graph shows the different agent relationships types split into $S_{i}$, $S_{p}$ and $S_{o}$ to allow a comparison with the new model. This state is used as the baseline for the experiments to measure the effects of changing the new arrays. The baseline configuration is equivalent to the conventional swarming algorithms using single value potential fields.
+
+The magnitude graph (Fig.~\ref{fig:baselineMagnitude}) shows that the swarms is relatively stable in that the overall magnitude is around $-1$, which indicates it is highly expanded to the repulsion range and there is a standard deviation of around $2$ which means the swarms internal magnitude ranges between $-3$ and $1$ so the agents are all oscillating at the repulsion limit.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/baselineMagnitude}
+	\end{center}
+	\caption{Baseline swarm (Magnitude). \label{fig:baselineMagnitude}}
+\end{figure}
+%\FloatBarrier
 
 The distance graph shows that perimeter\textrightarrow perimeter agents and internal\textrightarrow perimeter and perimeter \textrightarrow internal agents settle to a similar average distance of around 2.07 units and the internal agents settle to around 2.04 units. Given that the repulsion field is set to 2 units the swarm looks very stable and is able to form a lattice based structure that changes very little and has a small amount of jitter. Jitter is the slight variation in position that agents exhibit as they move to more optimum positions.
 
@@ -427,6 +468,16 @@ The effect of the parameters effects the swarm by causing a change in the distri
 \end{figure}
 %\FloatBarrier
 
+In terms of the magnitude relationships, shown in graph~\ref{fig:tightPerimMagnitude}. The agents are effected by the compression of the perimeter. This is shown by the increased average magnitude within the swarm. The metric also shows that the packing and compression on the perimeter cause more of a disturbance within the swarm which is shown by the increased standard deviation from the mean magnitude.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/tightPerimMagnitude}
+	\end{center}
+	\caption{Packed Perimeter (Magnitude). \label{fig:tightPerimMagnitude}}
+\end{figure}
+%\FloatBarrier
+
 \subsubsection{Perimeter Expansion}
 The basis of this experiment is to use the new model to generate a swarm that allows a swarm to expand from a condensed deployment state and increase the distance between perimeter-based agents while maintaining a dense core. This would be useful when a swarm is moving into an area that could disable or harm agents to reduce the number of agents and would limit the number of agents that would be lost from the swarm. This effect has the added benefit in that the swarm will also exhibit a self-healing property due to the internal compression.
 
@@ -471,6 +522,16 @@ As well as those changes a gap reduction effect is added ($\kg=50$). This effect
 		\includegraphics[width=1.0\linewidth]{figures/inner2}
 	\end{center}
 	\caption{Perimeter Expanded 2. \label{fig:perimExpand2}}
+\end{figure}
+%\FloatBarrier
+
+The effect on the inter-agent magnitude is shown in figure~\ref{fig:perimExpandMagnitude}. The initial deployment is in a highly compressed state and the deviation of the magnitude is very high. The swarm quickly expands to produce a swarm that is quite stable with $\mu_p(S)$ being steady but due to the multi-model effect the magnitude spread is wide.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/innerMagnitude}
+	\end{center}
+	\caption{Perimeter Expanded (Magnitude). \label{fig:perimExpandMagnitude}}
 \end{figure}
 %\FloatBarrier
 
@@ -534,6 +595,16 @@ Figure~\ref{fig:gap2} shows that although the swarm structure has been brought t
 \end{figure}
 %\FloatBarrier
 
+Figure~\ref{fig:gapMagnitude} shows that the swarm is compressed due to the large standard deviation in the agents.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/gapMagnitude}
+	\end{center}
+	\caption{Gap Magnitude\label{fig:gapMagnitude}}
+\end{figure}
+%\FloatBarrier
+
 Figure~\ref{fig:gapDistance} shows that the swarm perimeter is slightly compressed as the distance is just below the repulsion field, where as the internal and perimeter\textrightarrow non-perimeter/non-perimeter\textrightarrow perimeter agents have an average distance that is beyond the repulsion field which indicated a multi-model/compressed arrangement with the internal\textrightarrow internal agents being slightly less compressed.
 
 \begin{figure}[H]
@@ -592,7 +663,17 @@ Figure~\ref{fig:voidPerim2} shows the resultant swarm formation after 3000 epoch
 \end{figure}
 %\FloatBarrier
 
-Figure~\ref{fig:voidPerimDistance} shows that the perimeter agents are closer together, the base repulsion field is set to 2 nits and the agents are ~1.7 units apart. The internals of the swarm are highly model and therefore the distance is averaging beyond the repulsion field and the layer below the perimeter has more a lower average use to the increased repulsion holding the agents.
+The effect of the changes in the cohesion and repulsion vectors is visible in the magnitude metric as shown in figure~\ref{fig:voidPerimMagnitude}. The swarms magnitude stability settles such that the mean is not erratic but there is a high deviation due to the modality of the agent\textrightarrow agent relationships.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/voidPerimMagnitude}
+	\end{center}
+	\caption{Void and Perimeter Packing (Magnitude)\label{fig:voidPerimMagnitude}}
+\end{figure}
+%\FloatBarrier
+
+Finally figure~\ref{fig:voidPerimDistance} shows that the perimeter agents are closer together, the base repulsion field is set to 2 nits and the agents are ~1.7 units apart. The internals of the swarm are highly model and therefore the distance is averaging beyond the repulsion field and the layer below the perimeter has more a lower average use to the increased repulsion holding the agents.
 
 \begin{figure}[H]
 	\begin{center}
@@ -603,9 +684,9 @@ Figure~\ref{fig:voidPerimDistance} shows that the perimeter agents are closer to
 %\FloatBarrier
 
 \section{Conclusions and future work}\label{conclusions}
-From the initial simulations it is possible to show that the technique is able to successfully restructure swarms into usable configurations based upon the requirements of 4 distinct relationships with a swarm. Also, by adjusting the gap reducing vector to not use the reflex angles it is possible to allow the perimeter agents to circulate around areas that form naturally on the perimeter. This requires more analysis to fully realise its potential and application. The effect can be seem in the video at \url{https://youtu.be/E4Q4hk4KrWA}. Additionally it is possible to remove voids and therefore surround obstacles. The metrics show that the algorithm does have an impact on swarm stability to exhibit these new features but the impact is consistent throughout the swarms lifetime as it migrates into different structures.
+From the initial simulations it is possible to show that the technique is able to successfully restructure swarms into usable configurations based upon the requirements of 4 distinct relationships with a swarm. Also, by adjusting the gap reducing vector to not use the reflex angles it is possible to allow the perimeter agents to circulate around areas that form naturally on the perimeter. This requires more analysis to fully realise its potential and application. The effect can be seem in the video at \url{https://youtu.be/E4Q4hk4KrWA} . Additionally it is possible to remove voids and therefore surround obstacles. The metrics show that the algorithm does have an impact on swarm stability to exhibit these new features but the impact is consistent throughout the swarms lifetime as it migrates into different structures.
 
-Going forward the new model will be examined based upon the introduction of direction and obstacles. Initial testing shows that the model holds up well including the improvement in self-healing as demonstrated in figure~\ref{fig:packedSelfHealing} which shows an obstacle being introduced and removed in a packed perimeter swarm. Figure~\ref{fig:future8} shows the impact on the inter-agent distances.
+Going forward the new model will be examined based upon the introduction of direction and obstacles. Initial testing shows that the model holds up well including the improvement in self-healing as demonstrated in figure~\ref{fig:packedSelfHealing} which shows an obstacle being introduced and removed in a packed perimeter swarm. Figure~\ref{fig:future7} shows the impact on the Magnitude and figure~\ref{fig:future8} shows the impact on the inter-agent distances.
 
 \begin{figure*}[!ht]
   \begin{center}
@@ -616,9 +697,16 @@ Going forward the new model will be examined based upon the introduction of dire
 
 \begin{figure}[H]
 	\begin{center}
+		\includegraphics[width=1.0\linewidth]{figures/Future7}
+	\end{center}
+	\caption{Perimeter packed - self Healing (Magnitude)\label{fig:future7}}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
 		\includegraphics[width=1.0\linewidth]{figures/Future8}
 	\end{center}
-	\caption{Perimeter packed - Self Healing (Distance)\label{fig:future8}}
+	\caption{Perimeter packed - self Healing (Distance)\label{fig:future8}}
 \end{figure}
 %\FloatBarrier
 
