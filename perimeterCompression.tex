@@ -188,36 +188,30 @@ This section discusses the application of the new $\rb$, $\kr$ and $\kc$ two dim
 
 Where \emph{i} represents an internal agent and \emph{p} is a perimeter agent. If we consider Figure~\ref{fig:simplePerim2} then agents $18\rightarrow 21$ would be internal to internal ($i-i$), $18\rightarrow 39$ would be internal to perimeter ($i-p$), $39\rightarrow 19$ would be perimeter to internal ($p-i$) and $41\rightarrow 40$ would be perimeter to perimeter ($p-p$).
 
-The new model requires each agent to modify their inter-agent repulsion and cohesion vectors based upon their perimeter status and each neighbour's perimeter status. The basic perimeter control technique is shown in Equation~\ref{eq:newModel2} where the cohesion and repulsion arrays ($\kc$, $\kr$, $\rb$) are integrated into $v_c(b)$ and $v_r(b)$.
+The new model requires each agent to modify their inter-agent repulsion and cohesion vectors based upon their perimeter status and each neighbour's perimeter status. The basic perimeter control technique is shown in Equation~\ref{eq:newModel2} where $\kc$ is integrated into $v_c(b)$ and, $\kr$ and $\rb$ are integrated into $v_r(b)$.
 
 \begin{equation}\label{eq:newModel2}
 v(b) = v_c(b) + v_r(b)
 \end{equation}\\
 
 \subsubsection{Cohesion vector}~\\
-Cohesion neighbours are identified as  described in Equation~\ref{eq:cohesion1}. The cohesion influence is then calculated as shown in Equation~\ref{eq:coh2}.
+Cohesion neighbours are identified as described in Equation~\ref{eq:cohesion1}. The cohesion influence is then calculated as shown in Equation~\ref{eq:coh2}.
 \begin{equation}\label{eq:coh2}
 	v_c(b) = \frac{1}{|n_c(b)|} \sum_{b' \in n_c(b)} \kc[p_b, p_{b'}] (b' - b)
 \end{equation}
 where $|n_c(b)|$ denotes the cardinality of $n_c(b)$, $p_b = \prm(b)$, $p_{b'} 
 = \prm(b')$, and 
-$\kc$ is a 2x2 boolean-indexed array of constants that determine the weight
-of a component of the cohesion vector according to
-whether the interaction between $b,b'$ is between non-perimeter agents,
-non-perimeter--perimeter, perimeter--non-perimeter, or perimeter--perimeter
-agents.
+$\kc$ is a $2\times 2$ boolean-indexed array of constants that determine the weight of the cohesion vector according to whether the interaction between $b,b'$ is between non-perimeter agents, non-perimeter\textrightarrow perimeter, perimeter\textrightarrow non-perimeter, or perimeter\textrightarrow perimeter agents.\\
 
 \subsubsection{Repulsion vector}~\\
-~\\
 The set of repellers of $b$ are defined as Equation~\ref{eq:rep1}.
 \small
 \begin{equation}\label{eq:rep1}
 	n_r(b) = \{b' \in \mathcal{S} : b \neq b' \wedge \vbb{b}{b'} \leq \rb[p_b,p_{b'}]\}
 \end{equation}
 \normalsize
-where $p_b = \prm(b)$, $p_{b'} = \prm(b')$, and $\rb$ is a 2x2 boolean-indexed
-array of constants that determine the radius of the \emph{repulsion field} for agents in the swarm, according to whether the interaction between $b,b'$ is between non-perimeter agents, non-perimeter--perimeter,
-perimeter--non-perimeter, or perimeter--perimeter agents.\\
+where $p_b = \prm(b)$, $p_{b'} = \prm(b')$, and $\rb$ is a 2x2 boolean-indexed array of constants that determine the radius of the \emph{repulsion field} for agents in the swarm, according to whether the interaction between $b,b'$ is between non-perimeter agents, non-perimeter\textrightarrow perimeter,
+perimeter\textrightarrow non-perimeter, or perimeter\textrightarrow perimeter agents.\\
 
 Now $v_r(b)$ is defined by Equation~\ref{eq:rep2}
 \small
@@ -225,27 +219,14 @@ Now $v_r(b)$ is defined by Equation~\ref{eq:rep2}
 	v_r(b) = \frac{1}{\magn{n_r(b)}}\sum_{b' \in n_r(b)} \kr[p_b,p_{b'}] \left(1 - \frac{\rb[p_b,p_{b'}]}{\vbb{b}{b'}} \, \right) (\vbb{b}{b'})
 \end{equation}
 \normalsize
-where $p_b = \prm(b)$, $p_{b'} = \prm(b')$, and $\kr$ is a 2x2 boolean-indexed
-array of constants that determine the weight of a component of the repulsion
-vector according to whether the interaction between $b,b'$ is between
-non-perimeter agents, non-perimeter--perimeter, perimeter--non-perimeter, or
-perimeter--perimeter agents.
+where $p_b = \prm(b)$, $p_{b'} = \prm(b')$, and $\kr$ is a 2x2 boolean-indexed array of constants that determine the weight of a component of the repulsion vector according to whether the interaction between $b,b'$ is between non-perimeter agents, non-perimeter\textrightarrow perimeter, perimeter\textrightarrow non-perimeter, or perimeter\textrightarrow perimeter agents.
 
 \subsection{Gap-filling}
+In addition to the cohesion and repulsion vectors, a \emph{gap-filling} vector can also be used to contribute to agent behaviour. Gap-filling vectors have proven useful in quickly reducing internal voids and in controlling the shape of the external perimeter.
 
-In addition to cohesion and repulsion vectors, a \emph{gap-filling} vector can
-also be used to contribute to agent behaviour. Gap-filling vectors have proven
-useful in quickly reducing internal voids and in controlling the shape of the
-external perimeter.
+A gap-filling vector for $b$ contributes a motion of $b$ towards the midpoint of a gap identified in the perimeter test for $b$.
 
-A gap-filling vector for $b$ contributes a motion of $b$ towards the midpoint
-of a gap identified in the perimeter test for $b$.
-
-Let $\angleordered{b}{b_0, b_1, .., b_{n-1}}$ be the cohesion neighbours of $b$
-in polar angle order, and let $b' = b_i$  and $b'' = b_{(i+1)\%n}$ be the first
-pair of consecutive neighbours that satisfy either condition (1) or condition
-(2) of the perimeter function $\prm()$, then the gap-filling vector, $v_g(b)$,
-for agent $b$ is defined in Equation~\ref{eq:gap1}.
+Let $\angleordered{b}{b_0, b_1, .., b_{n-1}}$ be the cohesion neighbours of $b$ in polar angle order, and let $b' = b_i$  and $b'' = b_{(i+1)\%n}$ be the first pair of consecutive neighbours that satisfy either condition (1) or condition (2) of the perimeter function $\prm()$, then the gap-filling vector, $v_g(b)$, for agent $b$ is defined in Equation~\ref{eq:gap1}.
 \small
 \begin{equation}\label{eq:gap1}
 v_g(b) = \kg \left (\frac{b' + b''}{2} - b \right) = \kg \frac{\vbb{b}{b'} + \vbb{b}{b''}}{2} 
@@ -253,15 +234,12 @@ v_g(b) = \kg \left (\frac{b' + b''}{2} - b \right) = \kg \frac{\vbb{b}{b'} + \vb
 \normalsize
 If there is no such pair of consecutive neighbours then $v_g(b) = 0$.
 
-$\kg$ is a weighting for the gap-filling vector allowing the combination of it
-with the other motion vectors (cohesion, repulsion, ...) to be ``tuned''.
+$\kg$ is a weighting for the gap-filling vector allowing the combination of it with the other motion vectors (cohesion, repulsion, ...) to be ``tuned''.
 
-A stricter alternative to this is to choose the first consecutive neighbour
-pair $b',b''$ that satisfy condition (1), ignoring condition (2).  This would then exclude any reflex angles that create a `gap'.Again, $v_g(b)$ is defined by eq (\ref{eq:gap1}) if such a pair exists, or 0 otherwise.
+A stricter alternative to this is to choose the first consecutive neighbour pair $b',b''$ that satisfy condition (1), ignoring condition (2).  This would then exclude any reflex angles that create a `gap'.Again, $v_g(b)$ is defined by eq (\ref{eq:gap1}) if such a pair exists, or 0 otherwise.
 
 \subsection{Resultant vector}
-The resultant vector is simply the sum of the cohesion, repulsion and
-gap-filling vectors as shown in Equation~\ref{eq:res} and a resulant swarm segment is shown in Figure~\ref{fig:swarmExample}
+The resultant vector is simply the sum of the cohesion, repulsion and gap-filling vectors as shown in Equation~\ref{eq:res} and a resulant swarm segment is shown in Figure~\ref{fig:swarmExample}
 \begin{equation}\label{eq:res}
 	v(b) = v_c(b) + v_r(b) + v_g(b) 
 \end{equation}
