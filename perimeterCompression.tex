@@ -82,7 +82,7 @@ As far back as 1987 swarm theory has adopted the use of field effects/potential 
 
 In the context of swarm structure maintenance, Roach et al. focussed on the effects of sensor failure, and the impact that has on agent distribution \cite{RMT:15}. Lee and Chong identified the issue of concave edges within swarms in an attempt to create regular lattice formations \cite{GN:08}, and the main focus of their work is the dynamic restructuring of inter-agent formations. Ismail and Timmis demonstrated the use of \textit{bio-inspired} healing using \textit{granuloma formation}, a biological method for encapsulating an antigen \cite{IT:10}. They have also considered the effect failed agents can have on a swarm when traversing a terrain~\cite{TIBW:16}. 
 
-This paper proposes an alternative approach to agent coordination that can be used to induce, among other behaviours, a void reduction effect through perimeter packing. This is an extension of the work presented by Eliot et al. \cite{eliot2019void}, Ismail and Timmis \cite{IT:10,TIBW:16}, and on the work of McLurkin and Demaine on the detection of perimeter types \cite{mclurkin2009}. However, perimeter type identification requires a communications infrastructure to allow the perimeter angle to be calculated. Communications within swarm formations limits swarm sizes and introduces performance problems \cite{fu2020formation}. The technique employed in this paper does not explicitly require the identification of the perimeter type as it would limit the size of the swarm\cite{eliot2019void,GN:08} and is therefore a reduced perimter detection algorithm to identify \textit{any} perimeter.
+This paper proposes an alternative approach to agent coordination that can be used to induce, among other behaviours, a void reduction effect through perimeter packing. This is an extension of the work presented by Eliot et al. \cite{eliot2019void}, Ismail and Timmis \cite{IT:10,TIBW:16}, and on the work of McLurkin and Demaine on the detection of perimeter types \cite{mclurkin2009}. However, perimeter type identification requires a communications infrastructure to allow the perimeter angle to be calculated. Communications within swarm formations limits swarm sizes and introduces performance problems \cite{fu2020formation}. The technique employed in this paper does not explicitly require the identification of the perimeter type as it would limit the size of the swarm\cite{eliot2019void,GN:08} and is therefore a reduced perimeter detection algorithm to identify \textit{any} perimeter.
 
 \section{Basic swarming model}\label{sec:basicModel}
 In the Original work by Eliot et. al. the resultant vector of an agent was calculated using Equation~\ref{eq:resultantVector1a}. Where $\kc, \kr, k_d, k_o$ are weighting factors for the summed vectors associated with each interaction. i.e. $v_c$, $v_r$, $v_d$, $v_o$ for cohesion, repulsion, direction and object avoidance respectively. 
@@ -365,15 +365,21 @@ An example is shown in Figure~\ref{fig:tightPerimDistance}.
 
 \subsection{Magnitude metric}
 The magnitude metric as defined by Eliot et al.~\cite{eliot2018metric} is based upon the relationship between agents and as such is independent of the resultant structure in terms of distances. i.e. agents can be different distances from each other but have the same relationship magnitude.
-The metric is based upon the mean of a set of agent relationships and the standard deviation between those relationships. The metric is based on inter-agent reationships therefore only the cohesion and repulsion vectors involved in inter-agent magnitudes are used as defined in equation~\ref{eq:SwarmStabilityMetricP}. The mean is calculated as shown in equation~\ref{eq:SwarmStabilityMetricT3} where $\mu_p(S)$ is the mean. The standard deviation is calculated as shown in equation~\ref{eq:SwarmStabilityQuotientT} where $\sigma_p(S)$ is the standard deviation. Due to the metric being based on inter-agent relationships the swarm can be analysed as a whole.
+The metric is based upon the mean of a set of agent relationships and the standard deviation between those relationships. The metric is based on inter-agent relationships therefore only the cohesion and repulsion vectors involved in inter-agent magnitudes are used as defined in equation~\ref{eq:SwarmStabilityMetricP}. The mean is calculated as shown in equation~\ref{eq:SwarmStabilityMetricT3} where $\mu_p(S)$ is the mean. The standard deviation is calculated as shown in equation~\ref{eq:SwarmStabilityQuotientT} where $\sigma_p(S)$ is the standard deviation. Due to the metric being based on inter-agent relationships the swarm can be analysed as a whole.
 
 \small
-\begin{equation}\label{eq:SwarmStabilityMetricP}
-	P(b) = \magn{v_c(b)} + \magn{v_r(b)}
+\begin{equation}\label{eq:SwarmStabilityMetricP1}
+	v_{cr}(b) = v_{c}(b) + v_{r}(b)
 \end{equation}
+
+\begin{equation}\label{eq:SwarmStabilityMetricP}
+	P(b) = if (\magn{v_{c}(b)} > \magn{v_{r}(b)}) : \magn{v_{cr}(b)}: else -\magn{v_{cr}(b)}
+\end{equation}
+
 \begin{equation}\label{eq:SwarmStabilityMetricT3}
 	\mu_p(S) = \frac{\mathlarger{\sum_{b \in S} P(b)}}{\mathlarger{\sum_{b \in S}}\card{nbr(b)} + \mathlarger{\sum_{b \in S}}\card{n_r(b)}}
 \end{equation}
+
 \begin{equation}\label{eq:SwarmStabilityQuotientT}
 	\sigma_p(S) = \sqrt{\frac{\mathlarger{\sum_{b \in S}}\Big(P(b)-\mu_p(S)\Big)^2}{\mathlarger{\sum_{b \in S}}\card{nbr(b)} + \mathlarger{\sum_{b \in S}}\card{n_r(b)}}}
 \end{equation}
@@ -505,7 +511,7 @@ The effect of the parameters effects the swarm by causing a change in the distri
 \end{figure}
 %\FloatBarrier
 
-In terms of the magnitude relationships, shown in graph~\ref{fig:tightPerimMagnitude}. The agents are effected by the compression of the perimeter. This is shown by the increased average magnitude within the swarm. The metric also shows that the packing and compression on the perimeter cause more of a disturbance within the sarm which is shown by the increased standard deviation from the mean magnitude.
+In terms of the magnitude relationships, shown in graph~\ref{fig:tightPerimMagnitude}. The agents are effected by the compression of the perimeter. This is shown by the increased average magnitude within the swarm. The metric also shows that the packing and compression on the perimeter cause more of a disturbance within the swarm which is shown by the increased standard deviation from the mean magnitude.
 
 \begin{figure}[H]
 	\begin{center}
@@ -582,7 +588,7 @@ The effect on the inter-agent distances is shown in figure~\ref{fig:perimExpandD
 \end{figure}
 %\FloatBarrier
 
-Examining the distances more closely it can be seen that the standard deviation is high which indicates that the swarm is multi-model. A multi-model swarm is created when agents are able to see multiple agents within the cohesion field beyong the regular hexagonal distribution. The perimeter\textrightarrow perimeter distibution (Fig.~\ref{fig:perimExpandDistancePP}) is less model than the perimeter\textrightarrow non-perimeter non-perimeter\textrightarrow perimeter group (Fig.~\ref{fig:perimExpandDistanceIPPI}) and the internal agents are highly model (Fig.~ref{fig:perimExpandDistanceII}).
+Examining the distances more closely it can be seen that the standard deviation is high which indicates that the swarm is multi-model. A multi-model swarm is created when agents are able to see multiple agents within the cohesion field beyond the regular hexagonal distribution. The perimeter\textrightarrow perimeter distribution (Fig.~\ref{fig:perimExpandDistancePP}) is less model than the perimeter\textrightarrow non-perimeter non-perimeter\textrightarrow perimeter group (Fig.~\ref{fig:perimExpandDistanceIPPI}) and the internal agents are highly model (Fig.~ref{fig:perimExpandDistanceII}).
 
 \begin{figure}[H]
 	\begin{center}
@@ -690,7 +696,7 @@ The basis for this experiment is to show that the new algorithm can be tuned to 
 	\end{bmatrix}
 \end{equation}
 
-Figure~\ref{fig:voidPerim2} shows the resultant swarm formation after 3000 epochs. It shows the void has been removed and the perimeter of the swarm is tightly packed. This has been achived by reducing the $\kr$ value of the non-perimeter\textrightarrow non-perimeter agents ($\kr=25$) allowing the internal structure of the swarm to be compressed by the perimeter. At the same time the non-perimeter\textrightarrow perimeter repulsion has be reduced further $\kr=10$ to allow the perimeter agents to move more closely before the aggrgate effect of the next layer of agents impacts upon the reduced perimeter distances. The $\kc$ settings for perimeter\textrightarrow perimeter agents is increased ($kg=150.0$) to pull the perimeter agents together.
+Figure~\ref{fig:voidPerim2} shows the resultant swarm formation after 3000 epochs. It shows the void has been removed and the perimeter of the swarm is tightly packed. This has been achieved by reducing the $\kr$ value of the non-perimeter\textrightarrow non-perimeter agents ($\kr=25$) allowing the internal structure of the swarm to be compressed by the perimeter. At the same time the non-perimeter\textrightarrow perimeter repulsion has be reduced further $\kr=10$ to allow the perimeter agents to move more closely before the aggregate effect of the next layer of agents impacts upon the reduced perimeter distances. The $\kc$ settings for perimeter\textrightarrow perimeter agents is increased ($kg=150.0$) to pull the perimeter agents together.
 
 \begin{figure}[H]
 	\begin{center}
@@ -700,7 +706,7 @@ Figure~\ref{fig:voidPerim2} shows the resultant swarm formation after 3000 epoch
 \end{figure}
 %\FloatBarrier
 
-The effect of the changes in the cohesion and repulson vectors is visible in the magnitude metric as shown in figure~\ref{fig:voidPerimMagnitude}. The swarms magnitude stability settles such that the mean is not erratic but there is a high deviation due to the modality of the agent\textrightarrow agent relationships.
+The effect of the changes in the cohesion and repulsion vectors is visible in the magnitude metric as shown in figure~\ref{fig:voidPerimMagnitude}. The swarms magnitude stability settles such that the mean is not erratic but there is a high deviation due to the modality of the agent\textrightarrow agent relationships.
 
 \begin{figure}[H]
 	\begin{center}
@@ -710,7 +716,7 @@ The effect of the changes in the cohesion and repulson vectors is visible in the
 \end{figure}
 %\FloatBarrier
 
-FInally figure~\ref{fig:voidPerimDistance} shows that the permeter agenst are closer together, the base repulsion field is set to 2 nits and the agents are ~1.7 units apart. The internals of the swarm are highly model and therefore the distance is averaging beyond the repulsion field and the layer below the perimeter has more a lower average use to the increased repulsion holding the agents.
+Finally figure~\ref{fig:voidPerimDistance} shows that the perimeter agents are closer together, the base repulsion field is set to 2 nits and the agents are ~1.7 units apart. The internals of the swarm are highly model and therefore the distance is averaging beyond the repulsion field and the layer below the perimeter has more a lower average use to the increased repulsion holding the agents.
 
 \begin{figure}[H]
 	\begin{center}
@@ -725,7 +731,7 @@ From the initial simulations it is possible to show that the technique is able t
 
 Going forward the new model will be examined based upon the introduction of direction and obstacles. Initial testing shows that the model holds up well including the improvement in self-healing as demonstrated in figure~\ref{fig:packedSelfHealing} which shows an obstacle being introduced and removed in a packed perimeter swarm. Figure~\ref{fig:future7} shows the impact on the Magnitude and figure~\ref{fig:future8} shows the impact on the inter-agent distances.
 
-\begin{figure*}[H]
+\begin{figure*}[!ht]
   \begin{center}
     \includegraphics[width=17.6cm]{figures/FutureTime}
   \end{center}
