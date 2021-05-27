@@ -78,12 +78,12 @@ The aim of the new model presented in this paper is to create a flexible relatio
 \section{Related work}
 As far back as 1987 swarm theory has adopted the use of potential fields to coordinate agents~\cite{REY:87} and this has continued since then in an attempt to improve the structure of a swarm, coordinate obstacle avoidance, and improve navigation~\cite{BAFVM:06,BAF:06,BFV:07,BM:09,eliot2018metric,VG:05,HC:09,SW:03,Son2017}. Improvements to the basic structure of swarms has developed through the likes of a prototype framework for self-healing swarms that was developed by Dai et al. where they consider how to manage agent failure in hostile environments \cite{DHMRZ:06}. This was similar to work by Vassev and Hinchey, who modelled swarm movement using the ASSL (Autonomic System Specification Language) \cite{VH:09}. This technique was employed by NASA (US National Aeronautics and Space Administration) for use in asteroid belt exploration as part of their ANTS (Autonomous Nano Technology Swarm) project. However, this work is focused towards failure of an agent's internal systems, rather than on the removal of anomalies in agent distribution. 
 
-In the context of swarm structure maintenance, The need for formation control is discussed by Speck and Bucci with respect to the diverse applications of swarms and the need to control a swarms structure~\cite{8430773}. Roach et al. focusses on the effects of sensor failure, and the impact that has on agent distribution \cite{RMT:15}. Lee and Chong identified the issue of concave edges within swarms in an attempt to create regular lattice formations \cite{GN:08}, the main focus of their work is the dynamic restructuring of inter-agent formations. Ismail and Timmis demonstrated the use of \textit{bio-inspired} healing using \textit{granuloma formation}, a biological method for encapsulating an antigen \cite{IT:10}. They also considered the effect failed agents can have on a swarm when traversing a terrain~\cite{TIBW:16}. Jung et al. proposed a mediator-based approach using monolithic agents~\cite{6766522}. However, the formations are `controlled' by a human and not truly emergent behaviours. Karthikeyan and Ali proposed a communications-based technique to create specific shape in a defined euclidean space such as lines, circles and triangles\cite{karthikeyan2006general}. Bruemmer et al. also proposed shape forming swarms but again using a communications-based methodology~\cite{bruemmer2002robotic}. Meng et al. use a bio-inspired technique to create swarm formation~\cite{meng2013morphogenetic}. However, the shapes are predetermined for the agents to migrate towards. He et al. also proposed a formation control mechanism which is communications-based~\cite{he2018feedback}. Fedele and D'Alfonso also propose a model for swarm structure control but it assumes `with out delay' communications-based architecture~\cite{8263694}. Fedele and D'Alfonso also propose a matrix-based coordination algorithm to modify the movement of a swarms agents allowing shape formation in a fixed 3D environment~\cite{fedele2021coordinates}.
+In the context of swarm structure maintenance, the need for formation control is discussed by Speck and Bucci with respect to the diverse applications of swarms and the need to control a swarms structure~\cite{8430773}. Roach et al. focusses on the effects of sensor failure, and the impact that has on agent distribution \cite{RMT:15}. Lee and Chong identified the issue of concave edges within swarms in an attempt to create regular lattice formations \cite{GN:08}, the main focus of their work is the dynamic restructuring of inter-agent formations. Ismail and Timmis demonstrated the use of \textit{bio-inspired} healing using \textit{granuloma formation}, a biological method for encapsulating an antigen \cite{IT:10}. They also considered the effect failed agents can have on a swarm when traversing a terrain~\cite{TIBW:16}. Jung et al. proposed a mediator-based approach using monolithic agents~\cite{6766522}. However, the formations are `controlled' by a human and not truly emergent behaviours. Karthikeyan and Ali proposed a communications-based technique to create specific shapes in a defined euclidean space such as lines, circles and triangles\cite{karthikeyan2006general}. Bruemmer et al. also proposed shape forming swarms but again using a communications-based methodology~\cite{bruemmer2002robotic}. Meng et al. use a bio-inspired technique to create swarm formation~\cite{meng2013morphogenetic}. However, the shapes are predetermined for the agents to migrate towards. He et al. also proposed a formation control mechanism which is communications-based~\cite{he2018feedback}. Fedele and D'Alfonso proposed a model for swarm structure control but it assumes `with out delay' communications-based architecture~\cite{8263694}. Fedele and D'Alfonso also proposed a matrix-based coordination algorithm to modify the movement of a swarms agents allowing shape formation in a fixed 3D environment~\cite{fedele2021coordinates}.
 
-This paper proposes an alternative approach to agent coordination that can be used to induce, among other behaviours, perimeter expansion and a void reduction effect through perimeter packing in a unbounded Euclidean plane. This is an extension of the work presented by Eliot et al. \cite{eliot2019void}, Ismail and Timmis~\cite{IT:10,TIBW:16}, and on the work of McLurkin and Demaine on the detection of perimeter types~\cite{mclurkin2009}. However, perimeter type identification requires a communications infrastructure to allow the perimeter angle to be calculated. Communications within swarm formations limits swarm sizes and introduces performance problems~\cite{fu2020formation}. The technique employed in this paper does not explicitly require the identification of the perimeter type as it would limit the size of the swarm~\cite{eliot2019void,GN:08} and is therefore a reduced perimeter detection algorithm to identify \textit{any} perimeter.
+This paper proposes an alternative approach to agent coordination that can be used to induce, among other behaviours, perimeter expansion, packing and a void reduction effect in a unbounded Euclidean plane. This is an extension of the work presented by Eliot et al. \cite{eliot2019void}, Ismail and Timmis~\cite{IT:10,TIBW:16}, and on the work of McLurkin and Demaine on the detection of perimeter types~\cite{mclurkin2009}. However, perimeter type identification requires a communications infrastructure to allow the perimeter angle to be calculated. Communications within swarm formations limits swarm sizes and introduces performance problems~\cite{fu2020formation}. The technique employed in this paper does not explicitly require the identification of the perimeter type as it would limit the size of the swarm~\cite{eliot2019void,GN:08} and is therefore a reduced perimeter detection algorithm to identify \textit{any} perimeter.
 
 \section{Basic swarming model}\label{sec:basicModel}
-In the Original work by Eliot et. al. the resultant vector of an agent was calculated using Equation~\ref{eq:resultantVector1a}. Where $\kc, \kr, k_d, k_o$ are weighting factors for the summed vectors associated with each interaction. i.e. $v_c$, $v_r$, $v_d$, $v_o$ for cohesion, repulsion, direction and object avoidance respectively. 
+In the work by Eliot et. al. the resultant vector of an agent was calculated using Equation~\ref{eq:resultantVector1a}. Where $\kc, \kr, k_d, k_o$ are weighting factors for the summed vectors associated with each interaction. i.e. $v_c$, $v_r$, $v_d$, $v_o$ for cohesion, repulsion, direction and object avoidance respectively. 
 
 \begin{equation}\label{eq:resultantVector1a}
 	v(b) = \kc v_c(b) + \kr v_r(b) + \kd v_d(b) + \ko v_o(b)
@@ -100,20 +100,20 @@ The cohesion component is calculated based on the proximity of neighbours. Where
 n_c(b) = \{b' \in S~:~b' \neq b \land\magn{\vbb{b}{b'}} \leq C\}
 \end{equation}
 
-The effect of an agent being within this set is that it will generate a vector that should `encourage' an agent to maintain their proximity. When there are multiple neighbours the cohesion effects are cummulative as shown by equation~\ref{eq:cohesion2} which will create a vector towards the centre of its neighbours, creating a cohesive swarm. $\card{n_c(b)}$ denotes the cardinality of $n_c(b)$. This is the component of the overall vector calculation that has the $\kc$ quotient applied to it to allow the cohesion effect to be `balanced' with respect to other vector influences as described in ~\cite{eliot2017methods,eliot2018metric,eliot2019void}. 
+The effect of an agent being within this set is that it will generate a vector that should `encourage' an agent to maintain their proximity. When there are multiple neighbours the cohesion effect is cumulative as shown by equation~\ref{eq:cohesion2} which creates a vector towards the centre of an agent's neighbours, creating a cohesive swarm. $\card{n_c(b)}$ denotes the cardinality of $n_c(b)$. This is the component of the overall vector calculation that has the $\kc$ quotient applied to it to allow the cohesion effect to be `balanced' with respect to other vector influences as described in ~\cite{eliot2017methods,eliot2018metric,eliot2019void}. 
 
 \begin{equation}\label{eq:cohesion2}
 v_c(b) = \frac{1}{\card{n_c(b)}} \sum_{b' \in n_c(b)}(\vbb{b}{b'})
 \end{equation}
 
 \subsection{Repulsion}\label{repulsion:neighbours}
-The repulsion component of an agent's movement is calculated from interaction with its repulsion neighbours $n_r(b)$ (Eq.~\ref{eq:repulsion1a}) in a swarm ($\mathcal{S}$). Repulsion agents are identified as agents that are within the agent's ($b$) repulsion field ($\rb$).
+The repulsion component of an agent's movement is derived from its interaction with its repulsion neighbours $n_r(b)$ (Eq.~\ref{eq:repulsion1a}) in a swarm ($\mathcal{S}$). Repulsion neighbours are identified as agents that are within the agent's ($b$) repulsion field ($\rb$).
 
 \begin{equation}\label{eq:repulsion1a}
 n_r(b) = \{b' \in \mathcal{S} : b \neq b' \land \card{\vbb{b}{b'}} \leq \rb)\}
 \end{equation}
 
-The repulsion is then calculated as the average of all the vectors created by the agent ($b$) to the neighbours ($b'$) (Eg.~\ref{eq:repulsion2a}) and its proximity ($\magn{\vbb{b}{b'}} - \rb$). Where $\card{n_r(b)}$ denotes the cardinality of $n_r(b)$. This vector is then scaled to `balance' the effect with respect to other vector influences as shown is Equation~\ref{eq:resultantVector1a} where $\kc$ is applied.
+The repulsion is then calculated as the average of all the vectors created by the agent ($b$) to the neighbours ($b'$) (Eg.~\ref{eq:repulsion2a}) and its proximity ($\magn{\vbb{b}{b'}} - \rb$). Where $\card{n_r(b)}$ denotes the cardinality of $n_r(b)$. This vector is then scaled to `balance' the effect as shown is Equation~\ref{eq:resultantVector1a} where $\kc$ is applied.
 
 \begin{equation}\label{eq:repulsion2a}
 v_r(b) = \frac{1}{\card{n_r(b)}}\sum_{b' \in n_r(b)} \left(\card{\vbb{b}{b'}} - R \, \right)\widehat{\left(\vbb{b}{b'}\right)}
@@ -122,7 +122,7 @@ v_r(b) = \frac{1}{\card{n_r(b)}}\sum_{b' \in n_r(b)} \left(\card{\vbb{b}{b'}} - 
 Here, $\widehat{\vbb{b}{b'}}$ denotes $\vbb{b}{b'}$ normalized to unit length.
 
 \section{New Inter-agent Model}
-In this paper, we propose that the behaviour of an agent should be modified depending on whether or not it is on a \emph{perimeter}. Figure~\ref{fig:simplePerim2} shows a simple swarm. Perimeter agents are highlighted in \textcolor{red}{red} and can form part of an inner or outer boundary. The swarm can also contain non-perimeter agents which are shown in black.
+In this paper, we propose that the behaviour of an agent should be modified depending on its relationship with a neighbour using the status of whether or not it is on a \emph{perimeter} agent. Figure~\ref{fig:simplePerim2} shows a simple swarm. Perimeter agents are highlighted in \textcolor{red}{red} and can form part of an inner or outer boundary. A swarm can also contain non-perimeter agents which are shown in black.
 
 \begin{figure}[H]
 	\begin{center}
@@ -138,7 +138,7 @@ Each agent's perimeter status is identified using a cyclic analysis of its cohes
 
 We order the cohesion neighbours of an agent $b$ by their \emph{polar angle} ($\alpha$) with respect to $b$ (Fig.~\ref{fig:neighbours3}). 
 
-The polar angle with respect to $b$ of a neighbour, $b'$, $\pangle(b, b')$, is the counter-clockwise angle that vector $\vec{bb'} = b' - b$ makes with the positive $x$ axis, shown in Figure~\ref{fig:neighbours3} as $\alpha_i$ and defined by Equation~\ref{eq:pangle}.
+The polar angle with respect to $b$ of a neighbour, $b'$, $\pangle(b, b')$, is the counter-clockwise angle that vector $\vec{bb'}$ makes with the positive $x$ axis, shown in Figure~\ref{fig:neighbours3} as $\alpha_i$ and defined by Equation~\ref{eq:pangle}.
 
 \begin{align}\label{eq:pangle}
 	& \pangle(b, b') = \theta~\mathrm{where}   \nonumber \\
@@ -201,7 +201,7 @@ Cohesion neighbours are identified as described in Equation~\ref{eq:cohesion1}. 
 \end{equation}
 where $|n_c(b)|$ denotes the cardinality of $n_c(b)$, $p_b = \prm(b)$, $p_{b'} 
 = \prm(b')$, and 
-$\kc$ is a $2\times 2$ boolean-indexed array of constants that determine the weight of the cohesion vector according to whether the interaction between $b,b'$ is between non-perimeter agents, non-perimeter\textrightarrow perimeter, perimeter\textrightarrow non-perimeter, or perimeter\textrightarrow perimeter agents.\\
+$\kc$ is a $2\times 2$ boolean-indexed array of constants that determine the weight of the cohesion vector according to whether the interaction between $b,b'$ is non-perimeter\textrightarrow non-perimeter, non-perimeter\textrightarrow perimeter, perimeter\textrightarrow non-perimeter, or perimeter\textrightarrow perimeter.\\
 
 \subsubsection{Repulsion vector}~\\
 The set of repellers of $b$ are defined as Equation~\ref{eq:rep1}.
@@ -210,8 +210,8 @@ The set of repellers of $b$ are defined as Equation~\ref{eq:rep1}.
 	n_r(b) = \{b' \in \mathcal{S} : b \neq b' \wedge \vbb{b}{b'} \leq \rb[p_b,p_{b'}]\}
 \end{equation}
 \normalsize
-where $p_b = \prm(b)$, $p_{b'} = \prm(b')$, and $\rb$ is a 2x2 boolean-indexed array of constants that determine the radius of the \emph{repulsion field} for agents in the swarm, according to whether the interaction between $b,b'$ is between non-perimeter agents, non-perimeter\textrightarrow perimeter,
-perimeter\textrightarrow non-perimeter, or perimeter\textrightarrow perimeter agents.\\
+where $p_b = \prm(b)$, $p_{b'} = \prm(b')$, and $\rb$ is a $2\times 2$ boolean-indexed array of constants that determine the radius of the \emph{repulsion field}, according to whether the interaction between $b,b'$ is between non-perimeter\textrightarrow non-perimeter, non-perimeter\textrightarrow perimeter,
+perimeter\textrightarrow non-perimeter, or perimeter\textrightarrow perimeter.\\
 
 Now $v_r(b)$ is defined by Equation~\ref{eq:rep2}
 \small
@@ -219,7 +219,7 @@ Now $v_r(b)$ is defined by Equation~\ref{eq:rep2}
 	v_r(b) = \frac{1}{\magn{n_r(b)}}\sum_{b' \in n_r(b)} \kr[p_b,p_{b'}] \left(1 - \frac{\rb[p_b,p_{b'}]}{\vbb{b}{b'}} \, \right) (\vbb{b}{b'})
 \end{equation}
 \normalsize
-where $p_b = \prm(b)$, $p_{b'} = \prm(b')$, and $\kr$ is a 2x2 boolean-indexed array of constants that determine the weight of a component of the repulsion vector according to whether the interaction between $b,b'$ is between non-perimeter agents, non-perimeter\textrightarrow perimeter, perimeter\textrightarrow non-perimeter, or perimeter\textrightarrow perimeter agents.
+where $p_b = \prm(b)$, $p_{b'} = \prm(b')$, and $\kr$ is a $2\times 2$ boolean-indexed array of constants that determine the weight of a component of the repulsion vector according to whether the interaction between $b,b'$ is between non-perimeter\textrightarrow non-perimeter, non-perimeter\textrightarrow perimeter, perimeter\textrightarrow non-perimeter, or perimeter\textrightarrow perimeter.
 
 \subsection{Gap-filling}
 In addition to the cohesion and repulsion vectors, a \emph{gap-filling} vector can also be used to contribute to agent behaviour. Gap-filling vectors have proven useful in quickly reducing internal voids and in controlling the shape of the external perimeter.
@@ -254,7 +254,7 @@ The resultant vector is simply the sum of the cohesion, repulsion and gap-fillin
 
 \subsection{Relationship-based swarm effects}
 
-The introduction of the arrays allows for specific relationships to effect the movement of agents. Using uniform arrays results a simple cohesion/repulsion based swarm with all agents exhibiting the same properties similar to the original model discussed in \S~\ref{sec:basicModel}. However, modifying the arrays for specific relationships can induce emergent behaviours such as perimeter packing as discussed in \S~\ref{sec:perimCompress}.
+The introduction of the arrays allows for specific relationships to effect the movement of agents. Using uniform arrays results in a simple cohesion/repulsion based swarm with all agents exhibiting the same properties similar to the original model discussed in \S~\ref{sec:basicModel}. However, modifying the arrays for specific relationships can induce emergent behaviours such as perimeter packing as discussed in \S~\ref{sec:perimCompress}.
 
 \subsubsection{Cohesion model}~\\
 When using Equation~\ref{eq:coh2} one array is used, $k_c$. This array is used to scale the cohesion vector generated between an agent pair which is proportional to their distance apart, which will be within $C$ as shown in Equation~\ref{eq:repulsion1a}. Consider the array shown in Equation~\ref{eq:kcexample1}.
@@ -267,10 +267,10 @@ When using Equation~\ref{eq:coh2} one array is used, $k_c$. This array is used t
 	\end{bmatrix}
 \end{equation}
 
-For a given agent pair their perimeter status will be calculated and applied to the arrays. If both agents are perimeter based then the value selected would be $k_c[P_b,P_{b'}]\Rightarrow 500$. If the agent pair were perimeter $\rightarrow$ non-perimeter then the value selected would be $k_c[P_b,P_{b'}]\Rightarrow 1$. This configuration would cause inter-perimeter agents to tend to move towards each other more strongly than any other relationship.
+For a given agent pair their perimeter status will be calculated and applied to the array. If both agents are perimeter based then the value selected would be $k_c[P_b,P_{b'}]\Rightarrow 500$. If the agent pair were perimeter $\rightarrow$ non-perimeter then the value selected would be $k_c[P_b,P_{b'}]\Rightarrow 1$. This configuration would cause inter-perimeter agents to tend to move towards each other more strongly than any other relationship.
 
 \subsubsection{Repulsion model}~\\
-When using Equation~\ref{eq:rep2} two arrays are used $\kr$ and $\rb$. $\kr$ is used to scale the resultant repulsion vector that is generated. $\rb$ is the radius of the repulsion field and is used to generate the proportion of the repulsion vector that is applied. Therefore consider the following two arrays (Eqs~\ref{eq:rexample1}~and~\ref{eq:krexample1}):
+When using Equation~\ref{eq:rep2} two arrays are used $\kr$ and $\rb$. $\kr$ is used to scale the resultant repulsion vector that is generated. $\rb$ is the radius of the repulsion field and is used to generate the proportion of the repulsion vector that is applied. Therefore consider the following two arrays (Eq's~\ref{eq:rexample1}~and~\ref{eq:krexample1}):
 
 \begin{equation}\label{eq:rexample1}
 	\rb = 
@@ -291,11 +291,11 @@ When using Equation~\ref{eq:rep2} two arrays are used $\kr$ and $\rb$. $\kr$ is 
 For a given agent pair their perimeter status will be calculated and applied to the arrays. If both agents are perimeter based then the values selected would be $\rb[P_b,P_{b'}]\Rightarrow 0.8$ and $\kr[P_b,P_{b'}]\Rightarrow 335$. If the agent pair were perimeter $\rightarrow$ non-perimeter then the values selected would be $\rb[P_b,P_{b'}]\Rightarrow 2$ and $\kr[P_b,P_{b'}]\Rightarrow 67$.\\
 
 \section{Experimental results\label{sec:ExperimentalResults}}
-The new modelling method allows for a highly configurable swarm. Each configuration has an impact on the swarm's structure. This is analysed using the inter-agent distances. The experimental results show the effects on the swarm in terms of inter-agent distances which are categorised based on the relationship status. The section will cover four experiments and will include a baseline swarm for comparison.
+The new modelling method allows for a highly configurable swarm. Each configuration has an impact on the swarm's structure. These changes are analysed using the inter-agent distances. The experimental results show the effects on the swarm in terms of inter-agent distances categorised by relationship. This section will cover four experiments and includes a baseline swarm for comparison.
 
 \subsection{Distance metric}
-The distance metric is used by many researchers as a method of examining the structure of a swarm~\cite{BAFVM:06,BAF:06,elamvazhuthi2015optimal,VG:05,SW:03}. However, due to the new model allowing the field effects and magnitudes to be varied the distance metric will need to be adapted to analyse the agents involved in specific relationships rather than globally, therefore $S$ will be sub-divided into the three relationship categories of $S_i$, $S_p$, $S_{o}$. Where $S_i$ are the internal\textrightarrow internal relationships, $S_p$ are the perimeter\textrightarrow perimeter relationships and $S_{o}$ are all the internal\textrightarrow perimeter or perimeter\textrightarrow internal relationships. 
-The distance metric is based upon the mean of a set of agents distances from its neighbours and the standard deviation between those agent sets. The mean is calculated as shown in equation~\ref{eq:SwarmStabilityDistance2} where $\mu_d(S)$ is the mean. The standard deviation is calculated as shown in equation~\ref{eq:SwarmStabilityDistance3} where $\sigma_d(S)$ is the standard deviation. The mean distance value can be compared to the repulsion field to identify if a swarm is optimally distributed in that the mean value should be as close to the repulsion filed as possible. The standard deviation identifies the overall differences in the distances which can be caused by the swarm agents oscillating. A standard deviation of $\sigma_d(S) = 0$ would indicate that all the agents are equally spaced.
+Distance metrics are used by many researchers as a method of examining the structure of a swarm~\cite{BAFVM:06,BAF:06,elamvazhuthi2015optimal,VG:05,SW:03}. However, due to the new model allowing the field effects and magnitudes to be varied the distance metric will need to be adapted to analyse the agents involved in specific relationships rather than globally, therefore $S$ will be sub-divided into the three relationship categories of $S_i$, $S_p$, $S_{o}$. Where $S_i$ is the set of all internal\textrightarrow internal relationships, $S_p$ is the set of all perimeter\textrightarrow perimeter relationships and $S_{o}$ is the set of all internal\textrightarrow perimeter or perimeter\textrightarrow internal relationships. 
+The metric is derived from the mean of a set of agent distances from its neighbours and the standard deviation of those agent sets. The mean is calculated as shown in equation~\ref{eq:SwarmStabilityDistance2} where $\mu_d(S)$ is the mean. The standard deviation is calculated as shown in equation~\ref{eq:SwarmStabilityDistance3} where $\sigma_d(S)$ is the standard deviation. The mean distance value can be compared to the repulsion field to identify if a swarm is optimally distributed in that the mean value should be as close to the repulsion field value as possible. The standard deviation identifies the overall differences in the distances which can be caused by the swarm agents oscillating. A standard deviation of $\sigma_d(S) = 0$ would indicate that all the agents are equally spaced.
 \small
 \begin{equation}
 \label{eq:SwarmStabilityDistance2}
@@ -309,7 +309,7 @@ The distance metric is based upon the mean of a set of agents distances from its
 \end{equation}
 \normalsize
 
-Therefore the distance metric for the distribution of a set of agents is both $\mu_d(S)$ and $\sigma_d(S)$. This can be written informally as:
+The distance metric is therefore the distribution of a set of agents using both $\mu_d(S)$ and $\sigma_d(S)$. This can be written informally as:
 
 \small
 \begin{equation}
@@ -341,7 +341,7 @@ For all the experiments the parameters used to create the basic swarming effect 
 \end{table}
 
 \subsection{Baseline}
-The baseline swarm consists of 400 agents which are distributed over and area of $20\times 20$ units ($-10\rightarrow+10$) as shown in Figure~\ref{fig:baselineSwarm1}. This is to simulate a randomised drop of agents into an area of interest. e.g. A field. The simulation is then allowed to stabilise. The resultant positions for the baseline swarm agents are shown in Figure~\ref{fig:baselineSwarm2}. 
+The baseline swarm consists of 400 agents which are distributed over and area of $20\times 20$ units ($-10\rightarrow+10$) as shown in Figure~\ref{fig:baselineSwarm1}. This is to simulate a randomised drop of agents into an area of interest. e.g. A field or airspace. The simulation is then allowed to stabilise. The resultant positions for the baseline swarm agents is shown in Figure~\ref{fig:baselineSwarm2}. 
 
 \begin{figure}[H]
 	\begin{center}
@@ -359,7 +359,7 @@ The baseline swarm consists of 400 agents which are distributed over and area of
 \end{figure}
 %\FloatBarrier
 
-When the simulation is ran with no relationship differences i.e. all array values are equal. The distance graph shows the different agent relationships types split into $S_{i}$, $S_{p}$ and $S_{o}$ to allow a comparison with the new model. This state is used as the baseline for the experiments to measure the effects of changing the new arrays. The baseline configuration is equivalent to the conventional swarming algorithms using single value potential fields.
+When the simulation is ran with no relationship differences i.e. all array values are equal. The distance graph shows the different agent relationships types split into $S_{i}$, $S_{p}$ and $S_{o}$ to allow a comparison with the new model. This state is used as the baseline for the experiments to measure the effects of changing the new arrays. The baseline configuration is equivalent to conventional swarming algorithms using single value potential fields.
 
 The distance graph shows that perimeter\textrightarrow perimeter agents and internal\textrightarrow perimeter and perimeter \textrightarrow internal agents settle to a similar average distance of around 2.07 units and the internal agents settle to around 2.04 units. Given that the repulsion field is set to 2 units the swarm looks very stable and is able to form a lattice based structure that changes very little and has a small amount of jitter. Jitter is the slight variation in position that agents exhibit as they move to more optimum positions.
 
@@ -373,7 +373,7 @@ The distance graph shows that perimeter\textrightarrow perimeter agents and inte
 
 \subsubsection{Perimeter Packing}\label{sec:perimCompress}
 
-The first experiment with the new model is to create a swarm that has a densely packed perimeter and by default exhibits a self-healing behaviour. This is achieved by modify the perimeter\textrightarrow perimeter agents relationship and the perimeter\textrightarrow non-perimeter/non-perimeter\textrightarrow perimeter relationship. The perimeter\textrightarrow perimeter agent repulsion field is reduced (Eq.~\ref{eq:rbexp1}) and the cohesion weighting is increased (Eq.~\ref{eq:kcexp1}), next the repulsion weighting of the perimeter\textrightarrow non-perimeter/non-perimeter\textrightarrow perimeter agents is reduced to allow the perimeter agents to pull closer together without the next layer of agents reducing the effect (Eq.~\ref{eq:krexp1}). 
+The first experiment with the new model is to create a swarm that has a densely packed perimeter and by default exhibits a self-healing behaviour. This is achieved by modify the perimeter\textrightarrow perimeter agent relationship and the perimeter\textrightarrow non-perimeter/non-perimeter\textrightarrow perimeter relationship. The perimeter\textrightarrow perimeter agent repulsion field is reduced (Eq.~\ref{eq:rbexp1}) and the cohesion weighting is increased (Eq.~\ref{eq:kcexp1}), next the repulsion weighting of the perimeter\textrightarrow non-perimeter/non-perimeter\textrightarrow perimeter agents is reduced to allow the perimeter agents to pull closer together without the next layer of agents reducing the effect (Eq.~\ref{eq:krexp1}). 
 
 \begin{equation}\label{eq:rbexp1}
 \rb = 
@@ -399,7 +399,7 @@ The first experiment with the new model is to create a swarm that has a densely 
 \end{bmatrix}
 \end{equation}
 
-The resultant effect is that the perimeter agents are able to have more internal neighbours before the aggregate repulsion prevents them moving closer as shown in figure~\ref{fig:tightPerim2}. As well as those changes a gap reduction effect is added ($\kg=100$). This effect includes closing the reflex angle ($\rgf=\mathsf{True}$) to smooth the perimeter and cause a  compression on a perimeter. Using a high $\kg$ value creates a circular shaped swarm and stabilises the structure (Fig.~\ref{fig:tightPerim}).
+The resultant effect is that the perimeter agents are able to repel more internal neighbours before the aggregate repulsion prevents them moving closer as shown in figure~\ref{fig:tightPerim2}. As well as those changes a gap reduction effect is added ($\kg=100$). This effect includes closing the reflex angle ($\rgf=\mathsf{True}$) to smooth the perimeter inducing a compression effect on the perimeter. Using a high $\kg$ value creates a circular shaped swarm and stabilises the structure (Fig.~\ref{fig:tightPerim}).
 
 \begin{figure}[H]
 	\begin{center}
@@ -417,7 +417,7 @@ The resultant effect is that the perimeter agents are able to have more internal
 \end{figure}
 %\FloatBarrier
 
-The effect of the parameters effects the swarm by causing a change in the distribution of the agents compared to the baseline. Figure~\ref{fig:tightPerimDistance} shows that the perimeter agents ($S_{p}$) are now closer together but also shows that the distribution of the p\textrightarrow i and i\textrightarrow p agents ($S_{i}$, $S_{o}$) are now of a similar distance apart which allows the internal agents to form a regular hexagonal lattice.
+The effect of the parameters effects the swarm change the distribution of the agents. Figure~\ref{fig:tightPerimDistance} shows that the perimeter agents ($S_{p}$) are now closer together and that the distribution of the p\textrightarrow i and i\textrightarrow p agents ($S_{i}$, $S_{o}$) are now of a similar distance apart which allows the internal agents to form a regular hexagonal lattice.
 
 \begin{figure}[H]
 	\begin{center}
@@ -428,7 +428,7 @@ The effect of the parameters effects the swarm by causing a change in the distri
 %\FloatBarrier
 
 \subsubsection{Perimeter Expansion}
-The basis of this experiment is to use the new model to generate a swarm that allows a swarm to expand from a condensed deployment state and increase the distance between perimeter-based agents while maintaining a dense core. This would be useful when a swarm is moving into an area that could disable or harm agents to reduce the number of agents and would limit the number of agents that would be lost from the swarm. This effect has the added benefit in that the swarm will also exhibit a self-healing property due to the internal compression.
+The basis of this experiment is to use the new model to generate a swarm that allows a swarm to expand from a condensed deployment state and increase the distance between perimeter-based agents while maintaining a dense core. This would be useful when a swarm is moving into an area that could disable or harm agents to reduce the number of agents and limit the number of agents that would be lost from the swarm. This effect has the added benefit in that the swarm will also exhibit a self-healing property due to the internal compression.
 
 The parameters shown in equation~\ref{eq:rbexp2},~\ref{eq:krexp2}~and~\ref{eq:kcexp2} are designed to create a distancing between perimeter\textrightarrow perimeter agents by holding them steady with an increased cohesion weighting (150.0) and at the same time creating a high degree of repulsion between non-perimeter\textrightarrow perimeter agents (1000.0) i.e. the non-perimeter agents repel the perimeter agents as shown in figure~\ref{fig:perimExpand2}.
 
@@ -456,7 +456,7 @@ The parameters shown in equation~\ref{eq:rbexp2},~\ref{eq:krexp2}~and~\ref{eq:kc
 \end{bmatrix}
 \end{equation}
 
-As well as those changes a gap reduction effect is added ($\kg=50$). This effects, which includes closing the reflex angle ($\rgf=\mathsf{True}$), has the effect of `smoothing' the perimeter to create the circular shape as shown in figure~\ref{fig:perimExpand1}.
+As well as those changes a gap reduction effect is added ($\kg=50$). This effects, which includes closing the reflex angle ($\rgf=\mathsf{True}$), has the effect of `smoothing' the perimeter to create a circular shape as shown in figure~\ref{fig:perimExpand1}.
 
 \begin{figure}[H]
 	\begin{center}
@@ -512,7 +512,7 @@ Examining the distances more closely it can be seen that the standard deviation 
 
 \subsubsection{$\kg$ gap reduction}
 
-The aim of this experiment is to show the effect of using the gap reduction mechanism on it own to see the part it play in the new model. The reduction method is an extension of the method used by Eliot et al.~\cite{eliot2018metric}. The mechanics are the same but the reflex angle is identified as a gap to add additional control to a perimeters structure. The $\rb$, $\kr$ and $\kc$ values are all set to the baseline and $kg=100$.
+The aim of this experiment is to show the effect of using the gap reduction mechanism on it own to see the part it plays in the new model. The reduction method is an extension of the method used by Eliot et al.~\cite{eliot2018metric}. The mechanics are the same but the reflex angle can be identified as a gap to add additional control to a perimeters structure. The $\rb$, $\kr$ and $\kc$ values are all set to the baseline and $kg=100$.
 
 Figure~\ref{fig:gap1} shows the final (step 3000) of the simulation. It shows that the swarm has expanded from its initial state and due to the effects of $\kg$ the swarms has formed a compressed circular swarm.
 
@@ -603,9 +603,9 @@ Figure~\ref{fig:voidPerimDistance} shows that the perimeter agents are closer to
 %\FloatBarrier
 
 \section{Conclusions and future work}\label{conclusions}
-From the initial simulations it is possible to show that the technique is able to successfully restructure swarms into usable configurations based upon the requirements of 4 distinct relationships with a swarm. Also, by adjusting the gap reducing vector to not use the reflex angles it is possible to allow the perimeter agents to circulate around areas that form naturally on the perimeter. This requires more analysis to fully realise its potential and application. The effect can be seem in the video at \url{https://youtu.be/E4Q4hk4KrWA}. Additionally it is possible to remove voids and therefore surround obstacles. The metrics show that the algorithm does have an impact on swarm stability to exhibit these new features but the impact is consistent throughout the swarms lifetime as it migrates into different structures.
+From the initial simulations it is possible to show that the technique is able to successfully restructure swarms into usable configurations based upon the requirements of 4 distinct relationships. Also, by adjusting the gap reduction vector $\kg$ to not use the reflex angles it is possible to allow the perimeter agents to circulate around areas that form naturally on the perimeter. This requires more analysis to fully realise its potential and application. The effect can be seem in the video at \url{https://youtu.be/E4Q4hk4KrWA}. Additionally it is possible to remove voids and therefore surround obstacles. The metric show that the algorithm does have an impact on swarm stability to exhibit these new features but the impact is consistent throughout the swarms lifetime as it migrates into different structures.
 
-Going forward the new model will be examined based upon the introduction of direction and obstacles. Initial testing shows that the model holds up well including the improvement in self-healing as demonstrated in figure~\ref{fig:packedSelfHealing} which shows an obstacle being introduced and removed in a packed perimeter swarm. Figure~\ref{fig:future8} shows the impact on the inter-agent distances.
+Going forward the new model will be examined based upon alternative magnitude based metrics and the introduction of a directional bias along with obstacle avoidance/surrounding. Initial testing shows that the model holds up well including the improvement in self-healing as demonstrated in figure~\ref{fig:packedSelfHealing} which shows an obstacle being introduced and removed in a packed perimeter swarm. Figure~\ref{fig:future8} shows the impact the obstacle introduction has upon the inter-agent distances.
 
 \begin{figure*}[!ht]
   \begin{center}
