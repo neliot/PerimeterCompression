@@ -110,16 +110,14 @@ v_c(b) = \frac{1}{\card{n_c(b)}} \sum_{b' \in n_c(b)}(\vbb{b}{b'})
 The repulsion component of an agent's movement is derived from its interaction with its repulsion neighbours $n_r(b)$ (Eq.~\ref{eq:repulsion1a}) in a swarm ($\mathcal{S}$). Repulsion neighbours are identified as agents that are within the agent's ($b$) repulsion field ($\rb$).
 
 \begin{equation}\label{eq:repulsion1a}
-n_r(b) = \{b' \in \mathcal{S} : b \neq b' \land \card{\vbb{b}{b'}} \leq \rb)\}
+n_r(b) = \{b' \in \mathcal{S} : b \neq b' \land \card{\vbb{b}{b'}} \leq \rb\}
 \end{equation}
 
 The repulsion is then calculated as the average of all the vectors created by the agent ($b$) to the neighbours ($b'$) (Eg.~\ref{eq:repulsion2a}) and its proximity ($\magn{\vbb{b}{b'}} - \rb$). Where $\card{n_r(b)}$ denotes the cardinality of $n_r(b)$. This vector is then scaled to `balance' the effect as shown is Equation~\ref{eq:resultantVector1a} where $\kc$ is applied.
 
 \begin{equation}\label{eq:repulsion2a}
-v_r(b) = \frac{1}{\card{n_r(b)}}\sum_{b' \in n_r(b)} \left(\card{\vbb{b}{b'}} - R \, \right)\widehat{\left(\vbb{b}{b'}\right)}
+v_r(b) = \frac{1}{\card{n_r(b)}}\sum_{b' \in n_r(b)} \left(1 - \frac{R}{\magn{\vbb{b}{b'}}} \, \right)\left(\vbb{b}{b'}\right)
 \end{equation}
-
-Here, $\widehat{\vbb{b}{b'}}$ denotes $\vbb{b}{b'}$ normalized to unit length.
 
 \section{New Inter-agent Model}
 In this paper, we propose that the behaviour of an agent should be modified depending on its relationship with a neighbour using the status of whether or not it is on a \emph{perimeter} agent. Figure~\ref{fig:simplePerim2} shows a simple swarm. Perimeter agents are highlighted in \textcolor{red}{red} and can form part of an inner or outer boundary. A swarm can also contain non-perimeter agents which are shown in black.
@@ -176,7 +174,9 @@ b_i, b'' = b_{(i+1)\%n}$ for some $i \in \{0,..,n-1\}$. Where $\%$ indicates the
 \end{enumerate}
 
 \subsection{$\rb$, $\kr$ and $\kc$}\label{sec:rbkrkc} 
-This section discusses the application of the new $\rb$, $\kr$ and $\kc$ two dimensional ($2\times2$) arrays structured as shown below:
+The new model replaces the constants $\rb$, $\kr$ and $\kc$ with two-dimensional ($2\times2$) \emph{arrays} $\rb$, $\kr$ and $\kc$ and modifies eq \ref{eq:resultantVector1a} as set out later in this section. 
+
+The arrays are structured to distinguish cases in which a pair of agents is (perimeter, perimeter), (perimeter, internal), (internal, perimeter), or (internal, internal) as shown below:
 
 \[
   \kbordermatrix{
@@ -186,13 +186,8 @@ This section discusses the application of the new $\rb$, $\kr$ and $\kc$ two dim
   }
 \]
 
-Where \emph{i} represents an internal agent and \emph{p} is a perimeter agent. If we consider Figure~\ref{fig:simplePerim2} then agents $18\rightarrow 21$ would be internal to internal ($i-i$), $18\rightarrow 39$ would be internal to perimeter ($i-p$), $39\rightarrow 19$ would be perimeter to internal ($p-i$) and $41\rightarrow 40$ would be perimeter to perimeter ($p-p$).
+where \emph{i} represents an internal agent and \emph{p} is a perimeter agent. The perimeter test on agents (False/True) indexes in the rows and columns of these arrays. If we consider Figure~\ref{fig:simplePerim2} then agents $18\rightarrow 21$ would be internal to internal ($i-i$), $18\rightarrow 39$ would be internal to perimeter ($i-p$), $39\rightarrow 19$ would be perimeter to internal ($p-i$) and $41\rightarrow 40$ would be perimeter to perimeter ($p-p$).\\~
 
-The new model requires each agent to modify their inter-agent repulsion and cohesion vectors based upon their perimeter status and each neighbour's perimeter status. The basic perimeter control technique is shown in Equation~\ref{eq:newModel2} where $\kc$ is integrated into $v_c(b)$ and, $\kr$ and $\rb$ are integrated into $v_r(b)$.
-
-\begin{equation}\label{eq:newModel2}
-v(b) = v_c(b) + v_r(b)
-\end{equation}\\
 
 \subsubsection{Cohesion vector}~\\
 Cohesion neighbours are identified as described in Equation~\ref{eq:cohesion1}. The cohesion influence is then calculated as shown in Equation~\ref{eq:coh2}.
@@ -239,10 +234,12 @@ $\kg$ is a weighting for the gap-filling vector allowing the combination of it w
 A stricter alternative to this is to choose the first consecutive neighbour pair $b',b''$ that satisfy condition (1), ignoring condition (2).  This would then exclude any reflex angles that create a `gap'.Again, $v_g(b)$ is defined by eq (\ref{eq:gap1}) if such a pair exists, or 0 otherwise.
 
 \subsection{Resultant vector}
-The resultant vector is simply the sum of the cohesion, repulsion and gap-filling vectors as shown in Equation~\ref{eq:res} and a resulant swarm segment is shown in Figure~\ref{fig:swarmExample}
+The coefficients $\kc, \kr$ have been absorbed into the definitions of $v_c(b), v_r(b)$ so that, with the inclusion of gap-filling, equation \ref{eq:resultantVector1a} has become now a simple sum:
 \begin{equation}\label{eq:res}
 	v(b) = v_c(b) + v_r(b) + v_g(b) 
 \end{equation}
+
+To help illustrate perimeter/internal agent relationships, swarms are depicted as in Figure~\ref{fig:swarmExample}. The numerically labelled nodes are agents: black if internal, red if on the perimeter; and the lines joining agents denote \emph{neighbouring} agents as defined by equation \ref{eq:cohesion1}.
 
 \begin{figure}[H]
 	\begin{center}
@@ -254,7 +251,9 @@ The resultant vector is simply the sum of the cohesion, repulsion and gap-fillin
 
 \subsection{Relationship-based swarm effects}
 
-The introduction of the arrays allows for specific relationships to effect the movement of agents. Using uniform arrays results in a simple cohesion/repulsion based swarm with all agents exhibiting the same properties similar to the original model discussed in \S~\ref{sec:basicModel}. However, modifying the arrays for specific relationships can induce emergent behaviours such as perimeter packing as discussed in \S~\ref{sec:perimCompress}.
+With the array form of $\rb, \kc, \kr$ we can now investigate the effect of pair-wise perimeter/internal relationships between agents on movement of the swarm and evolution of its structure and shape.
+
+Using uniform arrays results in a simple cohesion/repulsion based swarm with all agents exhibiting the same properties similar to the original model discussed in \S~\ref{sec:basicModel}. However, modifying the arrays for specific relationships can induce emergent behaviours such as perimeter packing as discussed in \S~\ref{sec:perimCompress}.
 
 \subsubsection{Cohesion model}~\\
 When using Equation~\ref{eq:coh2} one array is used, $k_c$. This array is used to scale the cohesion vector generated between an agent pair which is proportional to their distance apart, which will be within $C$ as shown in Equation~\ref{eq:repulsion1a}. Consider the array shown in Equation~\ref{eq:kcexample1}.
@@ -267,7 +266,7 @@ When using Equation~\ref{eq:coh2} one array is used, $k_c$. This array is used t
 	\end{bmatrix}
 \end{equation}
 
-For a given agent pair their perimeter status will be calculated and applied to the array. If both agents are perimeter based then the value selected would be $k_c[P_b,P_{b'}]\Rightarrow 500$. If the agent pair were perimeter $\rightarrow$ non-perimeter then the value selected would be $k_c[P_b,P_{b'}]\Rightarrow 1$. This configuration would cause inter-perimeter agents to tend to move towards each other more strongly than any other relationship.
+For a given agent pair their perimeter status will be calculated and applied to the array. If both agents are perimeter based then the value selected would be $k_c[P_b,P_{b'}] = 500$. If the agent pair were perimeter $\rightarrow$ non-perimeter then the value selected would be $k_c[P_b,P_{b'}] = 1$. This configuration would cause inter-perimeter agents to tend to move towards each other more strongly than any other relationship.\\~
 
 \subsubsection{Repulsion model}~\\
 When using Equation~\ref{eq:rep2} two arrays are used $\kr$ and $\rb$. $\kr$ is used to scale the resultant repulsion vector that is generated. $\rb$ is the radius of the repulsion field and is used to generate the proportion of the repulsion vector that is applied. Therefore consider the following two arrays (Eq's~\ref{eq:rexample1}~and~\ref{eq:krexample1}):
@@ -288,7 +287,7 @@ When using Equation~\ref{eq:rep2} two arrays are used $\kr$ and $\rb$. $\kr$ is 
 	\end{bmatrix}
 \end{equation}
 
-For a given agent pair their perimeter status will be calculated and applied to the arrays. If both agents are perimeter based then the values selected would be $\rb[P_b,P_{b'}]\Rightarrow 0.8$ and $\kr[P_b,P_{b'}]\Rightarrow 335$. If the agent pair were perimeter $\rightarrow$ non-perimeter then the values selected would be $\rb[P_b,P_{b'}]\Rightarrow 2$ and $\kr[P_b,P_{b'}]\Rightarrow 67$.\\
+For a given agent pair their perimeter status will be calculated and applied to the arrays. If both agents are perimeter based then the values selected would be $\rb[P_b,P_{b'}] = 0.8$ and $\kr[P_b,P_{b'}] = 335$. If the agent pair were perimeter $\rightarrow$ non-perimeter then the values selected would be $\rb[P_b,P_{b'}] = 2$ and $\kr[P_b,P_{b'}] = 67$.\\
 
 \section{Experimental results\label{sec:ExperimentalResults}}
 The new modelling method allows for a highly configurable swarm. Each configuration has an impact on the swarm's structure. These changes are analysed using the inter-agent distances. The experimental results show the effects on the swarm in terms of inter-agent distances categorised by relationship. This section will cover four experiments and includes a baseline swarm for comparison.
