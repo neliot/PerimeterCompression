@@ -211,7 +211,7 @@ perimeter\textrightarrow non-perimeter, or perimeter\textrightarrow perimeter.\\
 Now $v_r(b)$ is defined by Equation~\ref{eq:rep2}
 \small
 \begin{equation}\label{eq:rep2}
-	v_r(b) = \frac{1}{\magn{n_r(b)}}\sum_{b' \in n_r(b)} \kr[p_b,p_{b'}] \left(1 - \frac{\rb[p_b,p_{b'}]}{\vbb{b}{b'}} \, \right) (\vbb{b}{b'})
+	v_r(b) = \frac{1}{\card{n_r(b)}}\sum_{b' \in n_r(b)} \kr[p_b,p_{b'}] \left(1 - \frac{\rb[p_b,p_{b'}]}{\magn{\vbb{b}{b'}}} \, \right) (\vbb{b}{b'})
 \end{equation}
 \normalsize
 where $p_b = \prm(b)$, $p_{b'} = \prm(b')$, and $\kr$ is a $2\times 2$ boolean-indexed array of constants that determine the weight of a component of the repulsion vector according to whether the interaction between $b,b'$ is between non-perimeter\textrightarrow non-perimeter, non-perimeter\textrightarrow perimeter, perimeter\textrightarrow non-perimeter, or perimeter\textrightarrow perimeter.
